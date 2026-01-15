@@ -4,9 +4,6 @@
 
 ### Developer | Tester | Researcher | Tech Enthusiast
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Now-blue?style=for-the-badge&logo=globe)](https://shadhinnandi.github.io/shadhinnandi/)
-[![Email](https://img.shields.io/badge/Email-Connect-red?style=for-the-badge&logo=gmail)](mailto:shadhin332@gmail.com)
-
 </div>
 
 ---
