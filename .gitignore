@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build outputs & cache
+dist/
+.parcel-cache/
+.parcel-dev/
+
+# Source code (keep locally, don't push to GitHub)
+src/
+package.json
+
+# Environment files
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
