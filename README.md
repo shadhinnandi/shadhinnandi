@@ -30,7 +30,6 @@ I'm a passionate developer and researcher focused on **Bioinformatics**, **Digit
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat-square&logo=arduino&logoColor=white)
 
 **Backend**
 ![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black)
@@ -39,6 +38,7 @@ I'm a passionate developer and researcher focused on **Bioinformatics**, **Digit
 ![Spring%20Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat-square&logo=arduino&logoColor=white)
 
 **Database**
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
@@ -54,6 +54,8 @@ I'm a passionate developer and researcher focused on **Bioinformatics**, **Digit
 
 **Applications**
 ![Windows](https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows&logoColor=white)
+![macOS](https://img.shields.io/badge/macOS-000000?style=flat-square&logo=apple&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 
 </div>
 
@@ -113,38 +115,6 @@ I'm always open to collaborations, research opportunities, and interesting proje
 _Explore my portfolio and projects. Let's create something amazing together!_
 
 ⭐ If you like what you see, give me a star! It means a lot 🌟
-
-</div>
-2. Creates a `gh-pages` branch
-3. Deploys the built files to GitHub Pages
-
-### Manual Building
-To build the project locally:
-```bash
-npm run build
-```
-
-The built files will be generated in the root directory.
-
-## 📁 Project Structure
-
-```
-src/
-├── index.html          # Main HTML file
-├── styles.scss         # Main SCSS file
-├── assets/            # Images and other assets
-├── data/              # Configuration files
-├── sass/              # SCSS components and layouts
-└── scripts/           # JavaScript files
-```
-
-## 🔧 Customization
-
-You can customize various aspects of the portfolio:
-- Update content in `index.html`
-- Modify styles in the `sass` directory
-- Configure scroll animations in `data/scrollRevealConfig.js`
-- Add/modify projects in the projects section
 
 ## 📞 Contact
 
