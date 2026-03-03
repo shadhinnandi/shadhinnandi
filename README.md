@@ -24,9 +24,12 @@ I'm a passionate developer and researcher focused on Bioinformatics, Digital Ima
 
 🧬 Researching: Bioinformatics & Image Processing | 🤖 Building: ML Solutions | 🧪 Testing: Quality Assurance
 
+## 🚀 Quick Links
 
+- 🌐 [Live Portfolio](https://shadhinnandi.github.io/shadhinnandi/) - See my work in action
+- 📄 [Download Resume](https://shadhinnandi.github.io/shadhinnandi/assets/resume.pdf) - View my CV
 
-Currently working as **Undergraduate Teaching Assistant** at UIU CSE Department for 8+ months.
+---
 ## 🛠️ Tech Stack
 
 <div align="center">
@@ -64,7 +67,6 @@ Currently working as **Undergraduate Teaching Assistant** at UIU CSE Department 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 
 </div>
-📫 Reach me at: **shadhin332@gmail.com**
 
 ---
 
@@ -169,7 +171,7 @@ Currently working as **Undergraduate Teaching Assistant** at UIU CSE Department 
 ## 📌 Featured Projects
 
 <p align="center">
-  <a href="https://github.com/shadhinnandi/UIU-grading-calculator">
+  <a href="https://shadhinnandi.github.io/UIU-grading-calculator/">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=shadhinnandi&repo=UIU-grading-calculator&theme=tokyonight&hide_border=true" alt="UIU Grading Calculator"/>
   </a>
 </p>
