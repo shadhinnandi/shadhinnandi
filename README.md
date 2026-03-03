@@ -122,13 +122,11 @@ I'm a passionate developer and researcher focused on Bioinformatics, Digital Ima
 - ✅ **Research-Driven Development** - Applying academic knowledge to real-world problems  
 - ✅ **Full-Stack Expertise** - From frontend interfaces to backend algorithms  
 - ✅ **Quality Assurance** - Both automated and manual testing best practices  
-- ✅ **Bioinformatics & ML** - Advanced computational and data science capabilities  
+- ✅ **Bioinformatics** - Advanced computational and data science capabilities  
 - ✅ **Hardware Integration** - IoT and embedded systems proficiency  
 - ✅ **Machine Learning** and Automation for intelligent systems
 - ✅ **Robotics** and Internet of Things (IoT) integration  
 - ✅ **Human-Computer Interaction** (HCI) and UI/UX design
-- ✅ **Research & Development** in emerging technologies
-- ✅ **Bioinformatics** and computational genomics
 - ✅ **Digital Image Processing** and Deep Learning applications
 
 ---
