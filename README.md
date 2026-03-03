@@ -54,6 +54,9 @@ Currently working as **Undergraduate Teaching Assistant** at UIU CSE Department 
   <a href="https://shadhinnandi.github.io/dev/" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"/>
   </a>
+  <a href="https://github.com/shadhinnandi/shadhinnandi/raw/main/resume.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/Resume-4285F4?style=for-the-badge&logo=googledocs&logoColor=white" alt="Resume"/>
+  </a>
 </p>
 
 ---

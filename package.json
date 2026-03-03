@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-latest",
+  "private": true,
+  "workspaces": [
+    "dev"
+  ],
+  "scripts": {
+    "start": "npm --workspace dev run start",
+    "build": "npm --workspace dev run build",
+    "build:watch": "npm --workspace dev run build:watch",
+    "serve:dist": "npm --workspace dev run serve:dist"
+  }
+}
