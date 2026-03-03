@@ -11,7 +11,6 @@
 </p>
 
 <p align="center">
-  <a href="https://git.io/typing-svg"><img src="https://img.shields.io/badge/CGPA-3.92%2F4.00-brightgreen?style=for-the-badge" alt="CGPA"/></a>
   <img src="https://img.shields.io/badge/CSE-Engineer-blue?style=for-the-badge" alt="CSE Engineer"/>
   <img src="https://img.shields.io/badge/Teaching-Assistant-orange?style=for-the-badge" alt="Teaching Assistant"/>
 </p>
