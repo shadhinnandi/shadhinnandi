@@ -10,11 +10,6 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=36BCF7&center=true&vCenter=true&width=435&lines=CSE+Student+%40+UIU;Developer+%7C+Researcher;Teaching+Assistant;Problem+Solver" alt="Typing SVG" />
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/CSE-Engineer-blue?style=for-the-badge" alt="CSE Engineer"/>
-  <img src="https://img.shields.io/badge/Teaching-Assistant-orange?style=for-the-badge" alt="Teaching Assistant"/>
-</p>
-
 ---
 
 ## 👨‍💻 About Me
