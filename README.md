@@ -22,7 +22,7 @@ I'm a passionate developer and researcher focused on Bioinformatics, Digital Ima
 
 <ul>
   <li>🌐 <a href="https://shadhinnandi.github.io/shadhinnandi/" target="_blank">Live Portfolio</a></li>
-  <li>📄 <a href="https://shadhinnandi.github.io/shadhinnandi/resume.pdf" target="_blank">View Resume</a></li>
+  <li>📄 <a href="https://github.com/shadhinnandi/shadhinnandi/blob/main/resume.pdf" target="_blank">View Resume</a></li>
 </ul>
 
 ---
