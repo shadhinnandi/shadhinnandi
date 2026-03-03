@@ -20,8 +20,8 @@ I'm a passionate developer and researcher focused on Bioinformatics, Digital Ima
 
 ## 🚀 Quick Links
 
-- 🌐 [Live Portfolio](https://shadhinnandi.github.io/shadhinnandi/) - See my work in action
-- 📄 [Download Resume](https://shadhinnandi.github.io/shadhinnandi/resume.pdf) - View my CV
+- 🌐 [Live Portfolio](https://shadhinnandi.github.io/shadhinnandi/) 
+- 📄 [View Resume](./resume.pdf)
 
 ---
 ## 🛠️ Tech Stack
