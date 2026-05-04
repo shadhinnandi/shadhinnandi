@@ -137,11 +137,14 @@ I'm a passionate developer and researcher focused on Bioinformatics, Digital Ima
   <img src="https://github-profile-trophy.vercel.app/?username=shadhinnandi&theme=tokyonight&no-frame=true&row=1&column=7" alt="GitHub Trophies"/>
 </p>
 
+- 🥉 **3rd Runners-up** among  teams in **UIU CSE Project Show (Fall 2025)** for "**Vortex Arena — Real-Time Multiplayer Survival Game**" – by Falmouth Falcons
 - 🥉 **3rd Runners-up** among 73 teams in **UIU CSE Project Show (Summer 2025)** for "**Automated River Analysis Marine (ARAM)**" – a smart autonomous river monitoring system by Team ReBuggers
 
-- 👨‍🏫 **Undergraduate Teaching Assistant** at UIU CSE Department (8+ months)
-  - Assisted in OOP (Java), ICS (C), and DSA (C++) courses
-  - Conducted labs, hands-on classes, and project guidance
+## 🎓 Experiences
+
+- 👨‍🏫 **Undergraduate Teaching Assistant** at UIU CSE Department (1 year and 2 months+)
+  - Assisted in OOP (Java), ICS (C), and DSA 1 & 2 (C++), Electronics courses
+  - Supported practical learning by conducting lab sessions, delivering hands-on guidance, and mentoring students through academic projects.
 
 ---
 
