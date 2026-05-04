@@ -137,8 +137,8 @@ I'm a passionate developer and researcher focused on Bioinformatics, Digital Ima
   <img src="https://github-profile-trophy.vercel.app/?username=shadhinnandi&theme=tokyonight&no-frame=true&row=1&column=7" alt="GitHub Trophies"/>
 </p>
 
-- 🥉 **3rd Runners-up** among  teams in **UIU CSE Project Show (Fall 2025)** for "**Vortex Arena — Real-Time Multiplayer Survival Game**" – by Falmouth Falcons
-- 🥉 **3rd Runners-up** among 73 teams in **UIU CSE Project Show (Summer 2025)** for "**Automated River Analysis Marine (ARAM)**" – a smart autonomous river monitoring system by Team ReBuggers
+- 🥉 **3rd Runners-up** among 93 teams in **UIU CSE Project Show (Fall 2025)** for A𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐎𝐛𝐣𝐞𝐜𝐭 𝐎𝐫𝐢𝐞𝐧𝐭𝐞𝐝 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐢𝐧𝐠 𝐋𝐚𝐛𝐨𝐫𝐚𝐭𝐨𝐫𝐲 category, 𝐏𝐫𝐨𝐣𝐞𝐜𝐭 𝐓𝐢𝐭𝐭𝐥𝐞: "**Vortex Arena — Real-Time Multiplayer Survival Game**" – by Falmouth Falcons
+- 🥉 **3rd Runners-up** among 73 teams in **UIU CSE Project Show (Summer 2025)** for 𝐌𝐢𝐜𝐫𝐨𝐩𝐫𝐨𝐜𝐞𝐬𝐬𝐨𝐫𝐬 𝐚𝐧𝐝 𝐌𝐢𝐜𝐫𝐨𝐜𝐨𝐧𝐭𝐫𝐨𝐥𝐥𝐞𝐫𝐬 𝐋𝐚𝐛𝐨𝐫𝐚𝐭𝐨𝐫𝐲 category, 𝐏𝐫𝐨𝐣𝐞𝐜𝐭 𝐓𝐢𝐭𝐭𝐥𝐞: "**Automated River Analysis Marine (ARAM)**" – a smart autonomous river monitoring system by Team ReBuggers
 
 ## 🎓 Experiences
 
