@@ -6,6 +6,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   base: process.env.BASE_PATH || '/',
   plugins: [react()],
+  base: pricess.env.VITE_BASE_PATH || "/shadhinnandi",
   build: {
     assetsInlineLimit: 0,
     rollupOptions: {
