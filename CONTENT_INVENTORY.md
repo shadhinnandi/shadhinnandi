@@ -1,0 +1,34 @@
+# Content inventory
+
+Every fact on the site traces to one of these sources. Nothing was added without a source.
+
+| Source | Used for |
+|---|---|
+| `evidence/resume.pdf` | Education (dates, CGPA 3.93, 119 credits, HSC/SSC), UGA role and courses, project summaries for Vortex Arena, Shombhar, Durjog Prohori and ARAM, achievements, skills, LinkedIn/GitHub/Codeforces links, interests |
+| `evidence/Certificate_Shadhin Nandi.pdf`, `evidence/LOR_Shadhin Nandi.pdf` | CodeAlpha Machine Learning virtual internship, 20 Aug – 20 Sep 2026, and the quoted line from the recommendation |
+| `evidence/Evidence_0112230604_ShadhinNandi.pdf` | The 11 Grameenphone Academy certificates (titles and dates) |
+| `evidence/vortex arena photo/*`, `evidence/ARAM photo/*`, `evidence/Project Show/*` | Project Show certificates (Fall 2025 and Summer 2025), trophies, stage and team photos, Vortex Arena start screen, ARAM prototype |
+| `evidence/durjog prohori/*`, `evidence/farmers market place/*` | Screenshots and project reports (also published under `public/documents/`) |
+| `evidence/DP photo.png`, `evidence/photo of UGA.jpeg` | Portrait; UIU campus photo (cropped so the handwritten student ID on the envelope is not shown) |
+| GitHub repositories (all 11 cloned and read) | Technical details, stacks, results and screenshots for each project |
+| Previous portfolio (`shadhinnandi.github.io/shadhinnandi`) | Email address, Instagram link, ClickUp and Cisco Packet Tracer |
+
+### Images created during the build
+
+- **UIUFund** and **Beginner C Programming UI**: screenshots of each repository's own frontend, taken after running it locally. No mock-ups.
+- **Credit Scoring Model**: the ROC-curve chart produced by running the repository's pipeline on its included dataset.
+- **SICA**: figures taken from `results/figures/` in the repository.
+- **Disease Prediction** and **Speech Emotion Recognition** have no screenshots, so they appear as text-only entries.
+
+## Please confirm or supply
+
+1. **Vortex Arena scope.** The resume describes a server-authoritative multiplayer game with a shrinking play area and a Godot client. The public repository contains the Spring Boot backend and a single-player HTML5 Canvas client, and lists multiplayer under future work. The site shows both and notes the difference on the project page (`details.scope` in `src/data/projects.js`). If the Godot client lives in another repository, add its link and remove that note.
+2. **Instagram.** The old portfolio links `instagram.com/shadhinnandii`, but the GitHub profile appears to list `00sdn`. The site uses `shadhinnandii`; change it in `src/data/profile.js` if that is wrong.
+3. **Email.** `shadhin332@gmail.com` comes from the old portfolio, because the resume does not show an email address.
+4. **Grameenphone Academy vs. Academia.** The resume says "Grameenphone Academia" and the certificates say "Grameenphone Academy". The site uses the certificate name.
+5. **ML repositories and the CodeAlpha internship.** The Credit Scoring, Disease Prediction and Speech Emotion Recognition repositories were committed during the internship, but nothing states they were internship tasks, so the site does not link them to it. If they were, add them to the internship entry in `src/data/experience.js`.
+6. **UIUFund and Durjog Prohori.** The course, team and your role are not documented, so none is shown. Durjog Prohori and ARAM have no public repository.
+7. **Coursework.** Only courses documented in certificates or READMEs are listed (CSE 2118, CSE 4326, CSE 2215, Computer Security). Machine Learning and Human-Computer Interaction appear in the ELMS Extractor screenshot but are not listed. Add any others you want shown.
+8. **Published documents.** Your CodeAlpha certificate, letter of recommendation and two project reports are served publicly from `public/documents/`. The letter includes CodeAlpha's contact details. Remove any files you would rather not publish, together with their links in `src/data/`.
+9. **Research.** The Research page lists areas of interest only (ML, bioinformatics including enhancer–promoter interaction, computer vision, HCI). SICA is presented as a Computer Security course project on the Academic page. Add research work to `src/data/research.js` when it exists.
+10. **Academic vs. Projects split.** Course projects (`type: 'academic'`) are Vortex Arena, SICA, Shombhar, ARAM and Beginner C Programming UI. UIUFund and Durjog Prohori stay under Projects because their course is not documented; set `type: 'academic'` on either if it was a course project.
