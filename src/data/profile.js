@@ -1,38 +1,61 @@
 import { image, publicUrl } from '../lib/media';
 
-// Sources: evidence/resume.pdf (links, location), the previous portfolio at
-// shadhinnandi.github.io/shadhinnandi (email, Instagram), GitHub profile.
+// Identity, positioning and contact channels. Facts trace to the resume, the
+// previous portfolio and the GitHub profile (see CONTENT_INVENTORY.md).
 export const profile = {
   name: 'Shadhin Nandi',
-  roles: ['Software Engineer', 'Undergraduate Teaching Assistant'],
-  discipline: 'Computer Science & Engineering',
-  focus: ['AI/ML', 'Software Development', 'Research'],
+  role: 'Computer Science',
   location: 'Dhaka, Bangladesh',
   university: 'United International University',
+  universityShort: 'UIU',
   portrait: image('portrait', 'Portrait of Shadhin Nandi in a navy blazer and white shirt'),
 
-  // Short introduction used on the home page (2–3 lines).
-  intro:
-    'I study Computer Science & Engineering at United International University and work as an Undergraduate Teaching Assistant in its CSE department. I build full-stack web applications, games and machine learning pipelines, and I am interested in research across AI/ML, bioinformatics, computer vision and HCI.',
+  // Hero: one statement, one supporting line.
+  headline: 'Computer Science & Engineering student with a strong interest in teaching and hands-on technical work.',
+  summary:
+    'I am a final-year Computer Science & Engineering student at United International University, where I have guided lab sessions as an Undergraduate Teaching Assistant since March 2025. I also build full-stack applications, work with machine learning and computer vision, and am doing research on enhancer-promoter interaction prediction.',
 
-  // Longer About page copy. Every statement maps to the resume, repositories or evidence files.
-  about: [
-    'I am a final-year Computer Science & Engineering student at United International University (UIU) in Dhaka, expected to graduate in January 2027 with a current CGPA of 3.93 out of 4.00. Since March 2025 I have worked as an Undergraduate Teaching Assistant, supporting lab sessions in Object-Oriented Programming, Introduction to Computer Systems, Data Structures & Algorithms I and II, and Electronics.',
-    'Most of my project work is full-stack. I have built a Spring Boot and MySQL backend for a multiplayer arena shooter, a React, Express and MySQL platform for student crowdfunding and peer loans, a PHP and MySQL marketplace for farmers, and a MERN-stack disaster response platform. Two of my course projects, Vortex Arena and the ARAM river-monitoring prototype, placed 3rd Runner-Up at UIU’s CSE Project Show.',
-    'For my Computer Security course, two teammates and I built SICA, a rule-based detector for mid-session HTTP session hijacking that works from web server access logs alone, evaluated on two public datasets and written up as an IEEE-format report under the supervision of Dr. Muhammad Nomani Kabir. I completed a one-month machine learning internship with CodeAlpha in 2026. The research areas I want to pursue are machine learning, bioinformatics, computer vision and human-computer interaction.',
+  // Home "Profile" section: what kind of candidate this is, in two short paragraphs.
+  profile: [
+    'Most of my work is full-stack: REST backends in Spring Boot and Express, relational schemas in MySQL, and React frontends. On the machine-learning side I build Python pipelines with attention to evaluation: stratified splits, class imbalance, cross-validation and seeded, reproducible runs.',
+    'My research is in AI for computational biology: I am currently working on predicting enhancer–promoter interactions from genomic sequence, and I am interested in bioinformatics, protein AI, computer vision and human-centered AI. Since March 2025 I have also guided lab sessions as an Undergraduate Teaching Assistant across five courses.',
   ],
 
-  interests: 'Outside of computing: films, and cooking and trying out different cuisines.',
+  // About page.
+  about: [
+    'I am a final-year Computer Science & Engineering student at United International University in Dhaka, expected to graduate in January 2027 with a CGPA of 3.93 out of 4.00. Since March 2025 I have worked as an Undergraduate Teaching Assistant in the CSE department, guiding lab sessions in Object-Oriented Programming, Introduction to Computer Systems, Data Structures & Algorithms I and II, and Electronics.',
+    'Most of my project work is full-stack. I have built a Spring Boot and MySQL backend for a multiplayer arena shooter, a React, Express and MySQL platform for student crowdfunding and peer loans, a PHP and MySQL marketplace for farmers, and a MERN-stack disaster-response platform. Two course projects, Vortex Arena and the ARAM river-monitoring prototype, placed 3rd Runner-Up at UIU’s CSE Project Show.',
+    'For my Computer Security course, two teammates and I built SICA, a rule-based detector for mid-session HTTP session hijacking that works from web server access logs alone, evaluated on two public log datasets under the supervision of Dr. Muhammad Nomani Kabir. In 2026 I completed a one-month machine learning internship with CodeAlpha.',
+    'My research work is in AI and computational biology. I am currently working on enhancer–promoter interaction prediction from genomic sequences, and on YOLO-based object detection for trash and waste. I am also interested in bioinformatics, protein representation learning and human-centered AI.',
+  ],
+  interests: 'Outside computing: films, and cooking and trying different cuisines.',
 
+  // Contact
+  availability: 'Open to teaching and academic roles, as well as research and software positions.',
   email: 'shadhin332@gmail.com',
   resume: publicUrl('resume/Shadhin_Nandi_Resume.pdf'),
 
-  links: [
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/shadhin-nandi/', handle: 'in/shadhin-nandi' },
-    { label: 'GitHub', href: 'https://github.com/shadhinnandi', handle: 'shadhinnandi' },
-    { label: 'Codeforces', href: 'https://codeforces.com/profile/Shadh', handle: 'Shadh' },
-    { label: 'Instagram', href: 'https://www.instagram.com/shadhinnandii/', handle: 'shadhinnandii' },
-  ],
+  // Primary channels appear in the hero and contact panel; secondary ones only
+  // on the Contact page.
+  links: {
+    linkedin: { label: 'LinkedIn', href: 'https://www.linkedin.com/in/shadhin-nandi/', handle: 'in/shadhin-nandi' },
+    github: { label: 'GitHub', href: 'https://github.com/shadhinnandi', handle: 'shadhinnandi' },
+    codeforces: { label: 'Codeforces', href: 'https://codeforces.com/profile/Shadh', handle: 'Shadh' },
+    instagram: { label: 'Instagram', href: 'https://www.instagram.com/shadhinnandii/', handle: 'shadhinnandii' },
+  },
+
 };
 
-export const githubUrl = 'https://github.com/shadhinnandi';
+export const primaryLinks = [profile.links.github, profile.links.linkedin];
+export const secondaryLinks = [profile.links.codeforces, profile.links.instagram];
+
+// Primary navigation. Education and skills are reachable from the home page
+// and the About page, which keeps the bar short.
+export const navItems = [
+  { to: '/projects', label: 'Work' },
+  { to: '/research', label: 'Research' },
+  { to: '/experience', label: 'Experience' },
+  { to: '/achievements', label: 'Achievements' },
+  { to: '/about', label: 'About' },
+  { to: '/contact', label: 'Contact' },
+];

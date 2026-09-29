@@ -10,7 +10,7 @@ import './styles/components.css';
 import './styles/pages.css';
 
 // Strip the trailing slash from Vite's base so the router works both at "/"
-// and under a sub-path such as "/dev/".
+// and under a sub-path such as "/shadhinnandi/" on GitHub Pages.
 const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || undefined;
 
 createRoot(document.getElementById('root')).render(

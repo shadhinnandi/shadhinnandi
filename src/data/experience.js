@@ -7,11 +7,11 @@ export const experience = [
     id: 'uga-uiu',
     role: 'Undergraduate Teaching Assistant',
     organization: 'Department of CSE, United International University',
-    location: 'Dhaka, Bangladesh',
+    location: 'Dhaka',
     start: 'Mar 2025',
     end: 'Present',
     type: 'Part-time · On-site',
-    summary: 'Teaching support for undergraduate programming, data structures and electronics courses.',
+    summary: 'Lab and teaching support for five undergraduate courses in programming, data structures and electronics.',
     courses: [
       'Object-Oriented Programming (Java)',
       'Introduction to Computer Systems (C)',
@@ -20,9 +20,8 @@ export const experience = [
       'Electronics',
     ],
     points: [
-      'Assist in OOP (Java), Introduction to Computer Systems (C), DSA I and DSA II (C++), and Electronics.',
-      'Guide lab sessions and project-based learning.',
-      'Mentor students, provide academic counselling, and help solve technical problems.',
+      'Guide lab sessions and project-based coursework across the five courses above.',
+      'Mentor students and provide academic counselling, including help working through technical problems in their code.',
     ],
   },
   {
@@ -32,10 +31,10 @@ export const experience = [
     location: 'Remote',
     start: 'Aug 2026',
     end: 'Sep 2026',
-    type: 'Virtual internship · 20 Aug – 20 Sep 2026',
-    summary: 'Completed CodeAlpha’s one-month Virtual Internship Program in Machine Learning.',
+    type: 'Virtual internship',
+    summary: 'One-month virtual internship programme in machine learning, completed with a letter of recommendation.',
     points: [
-      'Completed the one-month Virtual Internship Program in Machine Learning (20 August – 20 September 2026).',
+      'Completed the Machine Learning virtual internship programme, 20 August – 20 September 2026.',
       'Received a letter of recommendation from CodeAlpha on completion.',
     ],
     quote: {
@@ -43,7 +42,12 @@ export const experience = [
       source: 'CodeAlpha letter of recommendation, 20 September 2026',
     },
     documents: [
-      { label: 'Certificate', kind: 'image', image: image('cert-codealpha-ml', 'CodeAlpha certificate of completion for the Machine Learning virtual internship, 20 August to 20 September 2026'), href: publicUrl('documents/codealpha-ml-internship-certificate.pdf') },
+      {
+        label: 'Certificate',
+        kind: 'image',
+        image: image('cert-codealpha-ml', 'CodeAlpha certificate of completion for the Machine Learning virtual internship, 20 August to 20 September 2026'),
+        href: publicUrl('documents/codealpha-ml-internship-certificate.pdf'),
+      },
       { label: 'Letter of recommendation', kind: 'pdf', href: publicUrl('documents/codealpha-recommendation-letter.pdf') },
     ],
   },

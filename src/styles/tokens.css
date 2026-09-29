@@ -1,41 +1,84 @@
 /*
   Design tokens
-  - Warm off-white paper, near-black ink, one brick-red accent.
-  - IBM Plex Sans for text, IBM Plex Mono for metadata only.
-  - 4px base spacing unit; 2–4px radii; 1px rules instead of cards.
+
+  Themes
+    Light is the default token set. Dark applies when the visitor chose it
+    (html[data-theme='dark']) or, with no explicit choice, when the OS prefers
+    dark. public/theme-init.js sets data-theme before first paint.
+
+  Layers (back to front)
+    --bg            page canvas
+    --bg-alt        alternate section band
+    --surface       flat card / solid panel
+    --glass         translucent panel (nav, feature panels)
+    --line          hairline borders and separators
+
+  Type
+    IBM Plex Sans for text, IBM Plex Mono for metadata. Weights 400/500/600.
 */
+
 :root {
   color-scheme: light;
 
-  --bg: #f7f6f2;
-  --bg-sunken: #efede7;
+  /* Surfaces */
+  --bg: #f5f5f7;
+  --bg-alt: #ffffff;
   --surface: #ffffff;
-  --ink: #16181d;
-  --ink-2: #3a3f49;
-  --muted: #626874;
-  --rule: #e1ded6;
-  --rule-strong: #c9c5bb;
-  --accent: #a3401c;
-  --accent-hover: #83310f;
-  --accent-soft: #f4e7df;
-  --focus: #a3401c;
-  --on-ink: #f7f6f2;
-  --img-bg: #eae7e0;
+  --surface-2: #f0f0f2;
+  --glass: rgb(255 255 255 / 0.72);
+  --glass-strong: rgb(255 255 255 / 0.86);
+  --glass-edge: rgb(255 255 255 / 0.9); /* top highlight */
+  --img-bg: #e8e8ec;
 
+  /* Lines */
+  --line: rgb(0 0 0 / 0.08);
+  --line-strong: rgb(0 0 0 / 0.16);
+
+  /* Text */
+  --text: #1d1d1f;
+  --text-2: #424245;
+  --muted: #6b6b70;
+  --on-accent: #ffffff;
+
+  /* Accent: used for links, focus and a few markers only */
+  --accent: #1d5fd6;
+  --accent-hover: #164bb0;
+  --accent-soft: rgb(29 95 214 / 0.1);
+  --focus: #1d5fd6;
+  --award: #8a5a00;
+
+  /* Buttons */
+  --btn-bg: #1d1d1f;
+  --btn-text: #ffffff;
+  --btn-bg-hover: #000000;
+  --chip-bg: rgb(0 0 0 / 0.045);
+
+  /* Depth */
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.04);
+  --shadow-md: 0 1px 2px rgb(0 0 0 / 0.04), 0 8px 24px -6px rgb(0 0 0 / 0.08);
+  --shadow-lg: 0 2px 4px rgb(0 0 0 / 0.04), 0 24px 48px -16px rgb(0 0 0 / 0.14);
+  --blur: 20px;
+  --canvas-glow: radial-gradient(1200px 520px at 50% -180px, rgb(29 95 214 / 0.06), transparent 70%);
+
+  /* Type */
   --font-sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-  --text-xs: 0.8125rem; /* 13 */
-  --text-sm: 0.875rem; /* 14 */
-  --text-base: 1.0625rem; /* 17 */
-  --text-lg: 1.1875rem; /* 19 */
-  --text-xl: 1.375rem; /* 22 */
-  --text-h2: clamp(1.5rem, 1.1rem + 1.2vw, 2rem);
-  --text-h1: clamp(2.25rem, 1.4rem + 3vw, 3.5rem);
+  --fs-display: clamp(2.75rem, 1.9rem + 3.6vw, 4.5rem);
+  --fs-h1: clamp(2.25rem, 1.7rem + 2.2vw, 3.25rem);
+  --fs-h2: clamp(1.75rem, 1.4rem + 1.4vw, 2.375rem);
+  --fs-h3: 1.25rem;
+  --fs-lead: clamp(1.125rem, 1.04rem + 0.35vw, 1.3125rem);
+  --fs-body: 1.0625rem;
+  --fs-sm: 0.9375rem;
+  --fs-xs: 0.8125rem;
+  --fs-label: 0.75rem;
 
-  --leading: 1.6;
-  --leading-tight: 1.2;
+  --lh-body: 1.6;
+  --lh-snug: 1.35;
+  --lh-tight: 1.1;
 
+  /* Space (4px base) */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -45,46 +88,112 @@
   --space-7: 3rem;
   --space-8: 4rem;
   --space-9: 6rem;
+  --space-10: 8rem;
+  --section-y: clamp(4.5rem, 3rem + 5vw, 7.5rem);
 
-  --container: 1120px;
+  /* Layout */
+  --container: 1160px;
   --gutter: 1.5rem;
-  --header-h: 64px;
+  --nav-h: 56px;
+  --nav-top: 12px;
 
-  --radius: 3px;
-  --radius-lg: 4px;
-  --shadow-sm: 0 1px 2px rgb(22 24 29 / 0.06);
-  --shadow-md: 0 8px 24px rgb(22 24 29 / 0.08);
+  /* Shape */
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
 
+  /* Motion */
   --ease: cubic-bezier(0.2, 0, 0, 1);
-  --dur: 180ms;
+  --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
+  --dur-fast: 140ms;
+  --dur: 220ms;
+  --dur-slow: 600ms;
 }
 
 @media (max-width: 640px) {
   :root {
     --gutter: 1rem;
-    --header-h: 56px;
-    --text-base: 1rem;
+    --fs-body: 1rem;
+    --nav-top: 8px;
+    --radius-lg: 18px;
   }
 }
 
+/* Dark: near-black canvas, gunmetal glass. Declared twice so an explicit
+   choice wins over the OS setting in both directions. */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #0a0a0c;
+  --bg-alt: #0f1013;
+  --surface: #15161a;
+  --surface-2: #1b1c21;
+  --glass: rgb(30 31 36 / 0.62);
+  --glass-strong: rgb(24 25 29 / 0.82);
+  --glass-edge: rgb(255 255 255 / 0.07);
+  --img-bg: #1a1b1f;
+
+  --line: rgb(255 255 255 / 0.08);
+  --line-strong: rgb(255 255 255 / 0.16);
+
+  --text: #f2f2f4;
+  --text-2: #c2c3c9;
+  --muted: #8e9099;
+  --on-accent: #0a0a0c;
+
+  --accent: #8ab4ff;
+  --accent-hover: #b0ccff;
+  --accent-soft: rgb(138 180 255 / 0.12);
+  --focus: #8ab4ff;
+  --award: #e2b765;
+
+  --btn-bg: #f2f2f4;
+  --btn-text: #0a0a0c;
+  --btn-bg-hover: #ffffff;
+  --chip-bg: rgb(255 255 255 / 0.06);
+
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-md: 0 1px 2px rgb(0 0 0 / 0.4), 0 12px 32px -8px rgb(0 0 0 / 0.5);
+  --shadow-lg: 0 2px 4px rgb(0 0 0 / 0.4), 0 32px 64px -16px rgb(0 0 0 / 0.7);
+  --canvas-glow: radial-gradient(1200px 560px at 50% -200px, rgb(120 140 180 / 0.12), transparent 70%);
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme='light']) {
     color-scheme: dark;
-    --bg: #121418;
-    --bg-sunken: #0d0f12;
-    --surface: #191c21;
-    --ink: #ecebe6;
-    --ink-2: #c9c8c2;
-    --muted: #9ba0a9;
-    --rule: #2a2e35;
-    --rule-strong: #3b4049;
-    --accent: #e48a63;
-    --accent-hover: #f0a483;
-    --accent-soft: #2d201b;
-    --focus: #e48a63;
-    --on-ink: #121418;
-    --img-bg: #1f2227;
-    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.3);
-    --shadow-md: 0 8px 24px rgb(0 0 0 / 0.35);
+
+    --bg: #0a0a0c;
+    --bg-alt: #0f1013;
+    --surface: #15161a;
+    --surface-2: #1b1c21;
+    --glass: rgb(30 31 36 / 0.62);
+    --glass-strong: rgb(24 25 29 / 0.82);
+    --glass-edge: rgb(255 255 255 / 0.07);
+    --img-bg: #1a1b1f;
+
+    --line: rgb(255 255 255 / 0.08);
+    --line-strong: rgb(255 255 255 / 0.16);
+
+    --text: #f2f2f4;
+    --text-2: #c2c3c9;
+    --muted: #8e9099;
+    --on-accent: #0a0a0c;
+
+    --accent: #8ab4ff;
+    --accent-hover: #b0ccff;
+    --accent-soft: rgb(138 180 255 / 0.12);
+    --focus: #8ab4ff;
+    --award: #e2b765;
+
+    --btn-bg: #f2f2f4;
+    --btn-text: #0a0a0c;
+    --btn-bg-hover: #ffffff;
+    --chip-bg: rgb(255 255 255 / 0.06);
+
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+    --shadow-md: 0 1px 2px rgb(0 0 0 / 0.4), 0 12px 32px -8px rgb(0 0 0 / 0.5);
+    --shadow-lg: 0 2px 4px rgb(0 0 0 / 0.4), 0 32px 64px -16px rgb(0 0 0 / 0.7);
+    --canvas-glow: radial-gradient(1200px 560px at 50% -200px, rgb(120 140 180 / 0.12), transparent 70%);
   }
 }

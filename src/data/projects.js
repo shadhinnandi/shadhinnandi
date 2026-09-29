@@ -1,44 +1,49 @@
 import { image, publicUrl } from '../lib/media';
 
 /*
-  Central project registry. Add a project by appending an object here; the
-  Projects page, project detail route (/projects/:slug) and home preview all
-  read from this list.
+  Project registry. The Work page, the project detail route (/projects/:slug)
+  and the home page all read from this list; order here is display order.
 
-  type:     'academic' | 'personal' | null  (null = not documented)
-            'academic' projects are listed on the Academic page (/academic/:slug);
-            everything else is listed on the Projects page (/projects/:slug)
-  featured: shown on the home page (applies to non-academic projects)
-  domain:   used for the filter on the Projects page
-  details:  optional sections for the detail page — only include sections with
-            real information (problem, solution, features, implementation,
-            contribution, recognition, scope)
+  kind       Short label for where the work came from ('Course project', ...).
+  course     Course or programme the project was built for, if any.
+  period     When it was built, if documented.
+  featured   Shown as a large card on the home and Work pages.
+  area       Used by the filter on the Work page.
+  award      { title, detail } when the project won something.
+  role       Your personal contribution. Left null when it is not documented;
+             fill it in rather than letting the site guess.
+  highlights 2–3 short, technical lines for cards.
+  details    Optional detail-page sections; only include sections with real
+             information: problem, solution, features, implementation,
+             results, contribution, scope.
 
-  Sources for each entry are listed in `sources` and are not rendered.
+  Sources for each fact are listed in CONTENT_INVENTORY.md (not published).
 */
 
 const gh = (repo) => `https://github.com/shadhinnandi/${repo}`;
 
-export const domains = ['Full-stack', 'Machine learning', 'Tools', 'Games'];
+export const areas = ['Full-stack', 'Machine learning', 'Security', 'Embedded', 'Tools', 'Games'];
 
 export const projects = [
   {
     slug: 'vortex-arena',
     title: 'Vortex Arena',
-    tagline: 'Multiplayer arena shooter',
-    domain: 'Games',
-    type: 'academic',
-    context: 'CSE 2118 Advanced OOP Laboratory · Fall 2025',
-    featured: false,
+    tagline: 'Top-down multiplayer arena shooter',
+    area: 'Games',
+    kind: 'Course project',
+    course: 'CSE 2118 Advanced OOP Laboratory',
+    period: 'Fall 2025',
+    featured: true,
+    award: { title: '3rd Runner-Up, CSE Project Show', detail: 'Fall 2025 · among 93 teams' },
+    role: null,
     summary:
-      'A top-down arena shooter with a Java Spring Boot backend that handles accounts, player statistics and inventory, built for the Advanced Object-Oriented Programming Laboratory.',
+      'An arena shooter with a Java Spring Boot backend for accounts, player statistics and inventory, built as a team for the Advanced Object-Oriented Programming Laboratory.',
     highlights: [
-      'Server-authoritative multiplayer with real-time combat and physics.',
-      'Gameplay mechanics include a shrinking play area and live updates.',
-      'Spring Boot 3.5 (Java 17) backend in controller → service → repository layers, persisting players, stats and inventory in MySQL through Spring Data JPA.',
-      'Placed 3rd Runner-Up among 93 teams at the CSE Project Show, Fall 2025.',
+      'Server-authoritative multiplayer with real-time combat and a shrinking play area.',
+      'Layered Spring Boot 3.5 backend (controller, service, repository) persisting players, stats and inventory in MySQL through Spring Data JPA.',
+      'Typed REST endpoints for sessions, stats, inventory sync, combat events and weapon swaps.',
     ],
-    stack: ['Java 17', 'Spring Boot', 'Spring Data JPA', 'MySQL', 'REST', 'Godot', 'HTML5 Canvas', 'Gradle'],
+    stack: ['Java 17', 'Spring Boot', 'Spring Data JPA', 'MySQL', 'Godot', 'HTML5 Canvas', 'Gradle'],
     image: image('vortex-landing', 'Vortex Arena start screen with Single Player, Multiplayer and Exit buttons over a top-down battle map', { position: 'center 30%' }),
     gallery: [
       image('vortex-stage', 'Receiving the 3rd Runner-Up award for Vortex Arena on stage at the CSE Project Show'),
@@ -56,75 +61,76 @@ export const projects = [
         'Enemy bots that spawn in gradual waves, and item pickups that respawn during a match.',
       ],
       implementation: [
-        'Layered Spring Boot application: AuthController and GameController delegate to AuthService and GameService, which use JPA repositories for User, PlayerStats and Inventory entities.',
-        'REST endpoints for login, session start, stats updates, inventory sync, kill handling, healing and weapon swaps; request and response bodies are typed DTOs.',
+        'AuthController and GameController delegate to AuthService and GameService, which use JPA repositories for the User, PlayerStats and Inventory entities.',
+        'REST endpoints for login, session start, stats updates, inventory sync, kill handling, healing and weapon swaps, with typed request and response DTOs.',
         'MySQL schema provided in database/schema.sql; tables are also generated by JPA on first run.',
       ],
       scope:
         'The public repository contains the Spring Boot backend and a single-player browser client rendered with HTML5 Canvas. The multiplayer mode and the Godot client are not included in the repository.',
-      recognition: ['3rd Runner-Up, CSE Project Show 253 (Fall 2025), among 93 teams.'],
     },
-    sources: ['resume.pdf', 'github.com/shadhinnandi/Vortex-Arena', 'evidence/vortex arena photo/*'],
   },
   {
     slug: 'sica',
     title: 'SICA',
-    tagline: 'Session hijacking detection from access logs',
-    domain: 'Security',
-    type: 'academic',
-    context: 'Computer Security course project · 2026',
-    featured: false,
+    tagline: 'Detecting HTTP session hijacking from server access logs',
+    area: 'Security',
+    kind: 'Course project',
+    course: 'Computer Security',
+    period: '2026',
+    featured: true,
+    award: null,
+    role: 'Team of three, supervised by Dr. Muhammad Nomani Kabir',
     summary:
-      'A rule-based detector that flags mid-session HTTP session hijacking using only the IP address and User-Agent that web servers already log. No machine learning, no client changes.',
+      'A security project that detects potential mid-session HTTP session hijacking by analysing changes in client–session bindings in web server access logs. Rule-based, with no client changes.',
     highlights: [
-      'Describes each request by a client binding and detects "binding forks" — an earlier binding returning after a different one, as happens when a victim and an attacker share a session.',
-      'Three explainable checks combine into a risk score; the threshold is calibrated on benign sessions for a 1% alert budget.',
-      'On two public log datasets: ROC AUC 0.884 and 0.851, false-positive rate below 1%, precision above 0.9.',
-      'Reproducible pipeline with seeded experiments, 50 unit and regression tests, and an IEEE-format report.',
+      'Describes every request by its client binding (IP address and network, browser, operating system and device), taken from fields servers already log.',
+      'Flags “binding forks”: an earlier binding returning after a different one, the pattern left when a victim and an attacker replay the same session cookie.',
+      'Three explainable checks combine into a risk score; on two public log datasets the false-positive rate stays below 1%.',
     ],
-    stack: ['Python', 'pandas', 'NumPy', 'SciPy', 'Matplotlib', 'pytest', 'LaTeX'],
+    stack: ['Python', 'pandas', 'NumPy', 'SciPy', 'Matplotlib', 'pytest'],
     image: image('sica-mechanism', 'Diagram comparing a benign network move, a silent takeover and a live hijack; in the live hijack, bindings A and B alternate and each revisit is detected', { position: 'center', fit: 'contain' }),
     gallery: [
-      image('sica-architecture', 'SICA pipeline: request, binding fingerprint, session state, invariants V1 to V3, risk score and alert threshold'),
+      image('sica-architecture', 'SICA pipeline: request, binding fingerprint, session state, checks V1 to V3, risk score and alert threshold', { fit: 'contain' }),
     ],
     github: gh('SICA'),
     demo: null,
     details: {
       problem:
-        'After login, a web application recognises a user only by a session identifier. An attacker who steals it never fails a login, so the attack is hard to see. Pinning a session to one IP address is a common defence, but honest users change networks too and trigger false alarms.',
+        'After login, a web application recognises a user only by a session identifier. An attacker who steals and replays the session cookie never fails a login, so the attack is hard to see. Pinning a session to one IP address is a common defence, but honest users change networks too and trigger false alarms.',
       solution:
-        'SICA builds a client binding for each request (IP address, /24 and /16 network, browser, operating system and device) and runs three checks: agent mutation, graded network discontinuity, and binding fork. Weights are derived from how rare each check is on benign traffic, and every alert names the checks that fired.',
+        'SICA builds a client binding for each request (IP address, /24 and /16 network, browser, operating system and device) and runs three checks: agent mutation, graded network discontinuity, and binding fork. Each check is weighted by how rare it is on benign traffic, the alert threshold is calibrated on benign sessions, and every alert names the checks that fired.',
       implementation: [
         'Constant work per request and a few kilobytes of state per live session; about 55,000 requests per second in Python.',
-        'Experiments E0–E7 cover calibration, baselines (including IP pinning), ablation, scenario sweeps, efficiency and statistical tests.',
-        'A validation step checks the finished result set, including that the detector imports no machine-learning library.',
+        'Experiments cover calibration, baselines (including IP pinning), ablation, scenario sweeps and efficiency, all seeded and reproducible.',
+        '50 unit and regression tests, and a validation step that checks the finished result set.',
       ],
       results: [
-        'W1 (Apache, human browsing): ROC AUC 0.884, recall 0.358, FPR 0.85%, precision 0.906.',
-        'W2 (Nginx, package clients): ROC AUC 0.851, recall 0.229, FPR 0.56%, precision 0.920.',
+        'Apache logs, human browsing: ROC AUC 0.884, recall 0.358, false-positive rate 0.85%, precision 0.906.',
+        'Nginx logs, package clients: ROC AUC 0.851, recall 0.229, false-positive rate 0.56%, precision 0.920.',
         'IP pinning alarms on about 15% of benign sessions under the same setting.',
         'Limitation: attackers who copy the victim’s exact binding, and most silent takeovers, are not visible in access-log fields.',
       ],
       contribution:
-        'First author, with Md. Nurul Alam Siddiqei Ador and Mueen Ishraq Ananta. Supervised by Dr. Muhammad Nomani Kabir, Professor, Department of CSE, UIU.',
+        'Developed with Md. Nurul Alam Siddiqei Ador and Mueen Ishraq Ananta for the Computer Security course, supervised by Dr. Muhammad Nomani Kabir, Professor, Department of CSE, UIU.',
     },
-    sources: ['github.com/shadhinnandi/SICA (README, paper/report.tex, results/)'],
   },
   {
     slug: 'uiufund',
     title: 'UIUFund',
-    tagline: 'Student crowdfunding and peer-loan platform',
-    domain: 'Full-stack',
-    type: null,
-    context: 'React · Express · MySQL',
+    tagline: 'Crowdfunding and peer-loan platform for students',
+    area: 'Full-stack',
+    kind: null,
+    course: null,
+    period: null,
     featured: true,
+    award: null,
+    role: null,
     summary:
-      'A financial support platform for UIU students that combines transparent crowdfunding, peer-to-peer loans, a wallet ledger and a moderated community in one application.',
+      'A financial-support platform for UIU students that combines admin-approved crowdfunding, peer-to-peer loans, a wallet ledger and a moderated community in one application.',
     highlights: [
-      'React 18 and Vite frontend with a separate Express 5 REST API over MySQL.',
-      'Crowdfunding campaigns pass admin approval, then track donors, funds received and spending items with proof uploads.',
-      'Loan requests, offers, acceptance and repayments follow an explicit lifecycle: open, offer accepted, funded, completed, cancelled.',
-      'JWT authentication with bcrypt password hashing and role-protected admin endpoints.',
+      'React 18 and Vite client over a separate Express 5 REST API and MySQL.',
+      'Explicit loan lifecycle (open, offer accepted, funded, completed, cancelled), with balance changes recorded as MySQL transactions.',
+      'JWT authentication, bcrypt password hashing and role-protected admin endpoints.',
     ],
     stack: ['React', 'React Router', 'Vite', 'Node.js', 'Express', 'MySQL', 'JWT', 'Multer'],
     image: image('uiufund-landing', 'UIUFund landing page: "Crowdfunding and Loans Platform for UIU Students" over a photo of the UIU campus'),
@@ -133,11 +139,11 @@ export const projects = [
     demo: null,
     details: {
       problem:
-        'Students who need financial help for fees or emergencies rely on informal requests, with little visibility into how money is raised or spent.',
+        'Students who need help with fees or emergencies rely on informal requests, with little visibility into how money is raised or spent.',
       features: [
         'Browse, sort and donate to approved campaigns; campaign owners see donors, amounts received and approval status.',
         'Spending records with amounts, descriptions and proof files for transparency.',
-        'Loan requests with amount, duration, installment and interest preference; other students submit offers.',
+        'Loan requests with amount, duration, instalment and interest preference; other students submit offers.',
         'Wallet balance and transaction history for donations, loan transfers, repayments and cash-outs.',
         'Community posts with media, reactions, comments and reporting; direct messages; notifications.',
         'Admin tools to approve users and campaigns, moderate posts and review loans.',
@@ -145,82 +151,43 @@ export const projects = [
       implementation: [
         'Express controllers, routes and middleware (auth, admin, upload, errors) over a mysql2 connection pool.',
         'Multer file uploads for campaign images, proofs and post media.',
-        'Balance-affecting operations are recorded as MySQL transactions.',
+        'Balance-affecting operations run inside MySQL transactions.',
       ],
-      scope:
-        'Uses an internal wallet ledger with demo top-ups; it is not connected to a real payment provider.',
+      scope: 'Uses an internal wallet ledger with demo top-ups; it is not connected to a real payment provider.',
     },
-    sources: ['github.com/shadhinnandi/UIU-Funds-and-Crowd-fundings (README, source)', 'landing screenshot captured from the repository frontend'],
-  },
-  {
-    slug: 'shombhar',
-    title: 'Shombhar — The Farmers Market',
-    tagline: 'Direct farm-to-buyer marketplace',
-    domain: 'Full-stack',
-    type: 'academic',
-    context: 'CSE 2215 Database Management Systems Laboratory',
-    featured: false,
-    summary:
-      'A web marketplace that connects farmers directly with customers and wholesalers, removing intermediaries from the agricultural supply chain.',
-    highlights: [
-      'Four roles — customer, farmer, worker and administrator — each with its own panel and permissions.',
-      'Purchase requests let buyers confirm quantity and price before ordering; transactions and charges are recorded.',
-      'Real-time chat between farmers and buyers, plus an article and blog section for farming knowledge.',
-      'Farmers can hire workers and buy tools, fertiliser and machinery; administrators generate and print reports.',
-    ],
-    stack: ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS', 'PHPMailer'],
-    image: image('shombhar-home', 'Shombhar home page with navigation for articles, farmer’s kit, market, hiring and accounts, over a harvest photo'),
-    gallery: [],
-    github: gh('Shombhar_The_Farmers_Market'),
-    demo: null,
-    links: [
-      { label: 'Video demonstration', href: 'https://youtu.be/lyObKZjh4kI' },
-      { label: 'Project report (PDF)', href: publicUrl('documents/shombhar-report.pdf') },
-    ],
-    details: {
-      problem:
-        'Farmers often lose margin to intermediaries and have limited direct access to buyers, while buyers have little visibility into pricing and origin.',
-      solution:
-        'A DBMS-backed marketplace where farmers list produce, buyers purchase directly or in bulk, and all transactions are recorded for transparency.',
-      implementation: [
-        'Relational schema covering users and roles, products, transactions, articles and chats.',
-        'Separate login panels and password-recovery flows per role; email via PHPMailer.',
-        'Admin reporting with printable bills and sales summaries.',
-      ],
-      contribution: 'Built by Team Void (Group 08): Md. Shakibul Hassan Prince, Mahmudul Mashrafe and Shadhin Nandi.',
-    },
-    sources: ['resume.pdf', 'github.com/shadhinnandi/Shombhar_The_Farmers_Market (README)', 'evidence/farmers market place/*'],
   },
   {
     slug: 'durjog-prohori',
     title: 'Durjog Prohori',
     tagline: 'Disaster response and coordination platform',
-    domain: 'Full-stack',
-    type: null,
-    context: 'MERN stack · Bangladesh',
-    featured: true,
+    area: 'Full-stack',
+    kind: null,
+    course: null,
+    period: null,
+    featured: false,
+    award: null,
+    role: null,
     summary:
-      'A real-time disaster management web application that brings citizens, authorities, firefighters and NGOs onto one platform for alerts, reporting and coordinated response.',
+      'A disaster-response web application that puts citizens, authorities, firefighters and NGOs on one platform for alerts, reporting and coordinated response.',
     highlights: [
-      'Real-time disaster response platform with live chat and an alert system.',
-      'Coordinates volunteers, authorities, NGOs, government and affected communities through role-based access.',
-      'Interactive Leaflet maps for live disaster tracking, citizen reporting and SOS requests.',
-      'Bilingual interface in English and Bengali.',
+      'Role-based access for volunteers, authorities, NGOs, government and affected communities.',
+      'Live disaster tracking, citizen reports and SOS requests on interactive Leaflet maps.',
+      'Real-time chat and alerts, with the interface in English and Bengali.',
     ],
     stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Leaflet'],
     image: image('durjog-landing', 'Durjog Prohori landing page in Bengali with login options for users, authorities, firefighters and NGOs over a flood scene'),
     gallery: [],
     github: null,
     demo: null,
-    links: [{ label: 'Project report (PDF)', href: publicUrl('documents/durjog-prohori-report.pdf') }],
+    links: [{ label: 'Project report', href: publicUrl('documents/durjog-prohori-report.pdf'), kind: 'pdf' }],
     details: {
       problem:
-        'Bangladesh faces recurring floods, cyclones, landslides and fires, but disaster information reaches citizens and responders slowly and emergency teams often work without a shared view.',
+        'Bangladesh faces recurring floods, cyclones, landslides and fires, but disaster information reaches citizens and responders slowly, and emergency teams often work without a shared view.',
       solution:
         'A single web platform with role-based dashboards, live disaster tracking on maps, SOS requests, and alerts delivered in both English and Bengali.',
       features: [
-        'Disaster monitor with interactive map and live updates.',
-        'Emergency SOS for citizens; notifications to responders.',
+        'Disaster monitor with an interactive map and live updates.',
+        'Emergency SOS for citizens, with notifications to responders.',
         'Community page and resource coordination across authorities, firefighters and NGOs.',
       ],
       implementation: [
@@ -228,22 +195,91 @@ export const projects = [
         'Leaflet map integration for real-time location data; weather data fetched with caching and error handling.',
       ],
     },
-    sources: ['resume.pdf', 'evidence/durjog prohori/*'],
+  },
+  {
+    slug: 'elms-extractor',
+    title: 'ELMS Extractor',
+    tagline: 'Course roster export tool for UIU ELMS',
+    area: 'Tools',
+    kind: 'Personal project',
+    course: null,
+    period: null,
+    featured: false,
+    award: null,
+    role: null,
+    summary:
+      'Exports participant names and email addresses from UIU ELMS courses, as a Python command-line tool and as a FastAPI backend with a static web interface.',
+    highlights: [
+      'Logs in once and reuses the authenticated ELMS session while it is valid.',
+      'Generates per-course CSV rosters and plain-text email lists, or a ZIP of every course.',
+      'Static front end that can be hosted on GitHub Pages; credentials go only to the user’s own backend.',
+    ],
+    stack: ['Python', 'FastAPI', 'JavaScript', 'HTML', 'CSS'],
+    image: image('elms-dashboard', 'ELMS Extractor course dashboard listing enrolled courses with Extract buttons'),
+    gallery: [image('elms-login', 'ELMS Extractor sign-in screen')],
+    github: gh('Elms_Extractor'),
+    demo: null,
+  },
+  {
+    slug: 'shombhar',
+    title: 'Shombhar',
+    tagline: 'Farm-to-buyer marketplace',
+    area: 'Full-stack',
+    kind: 'Course project',
+    course: 'CSE 2215 Database Management Systems Laboratory',
+    period: null,
+    featured: false,
+    award: null,
+    role: 'Team of three (Team Void)',
+    summary:
+      'A web marketplace that connects farmers directly with customers and wholesalers, removing intermediaries from the agricultural supply chain.',
+    highlights: [
+      'Four roles (customer, farmer, worker and administrator), each with its own panel and permissions.',
+      'Purchase requests let buyers confirm quantity and price before ordering; transactions and charges are recorded.',
+      'Real-time chat between farmers and buyers, and printable admin reports.',
+    ],
+    stack: ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS', 'PHPMailer'],
+    image: image('shombhar-home', 'Shombhar home page with navigation for articles, farmer’s kit, market, hiring and accounts, over a harvest photo'),
+    gallery: [],
+    github: gh('Shombhar_The_Farmers_Market'),
+    demo: null,
+    links: [
+      { label: 'Video walkthrough', href: 'https://youtu.be/lyObKZjh4kI', kind: 'video' },
+      { label: 'Project report', href: publicUrl('documents/shombhar-report.pdf'), kind: 'pdf' },
+    ],
+    details: {
+      problem:
+        'Farmers often lose margin to intermediaries and have limited direct access to buyers, while buyers have little visibility into pricing and origin.',
+      solution:
+        'A database-backed marketplace where farmers list produce, buyers purchase directly or in bulk, and every transaction is recorded.',
+      features: [
+        'Article and blog section for farming knowledge.',
+        'Farmers can hire workers and buy tools, fertiliser and machinery.',
+      ],
+      implementation: [
+        'Relational schema covering users and roles, products, transactions, articles and chats.',
+        'Separate login panels and password-recovery flows per role; email via PHPMailer.',
+        'Admin reporting with printable bills and sales summaries.',
+      ],
+      contribution: 'Built by Team Void (Group 08): Md. Shakibul Hassan Prince, Mahmudul Mashrafe and Shadhin Nandi.',
+    },
   },
   {
     slug: 'aram',
     title: 'ARAM',
-    tagline: 'Autonomous River Monitoring',
-    domain: 'Embedded',
-    type: 'academic',
-    context: 'CSE 4326 Microprocessors & Microcontrollers Lab · Summer 2025',
+    tagline: 'Autonomous river monitoring prototype',
+    area: 'Embedded',
+    kind: 'Course project',
+    course: 'CSE 4326 Microprocessors & Microcontrollers Lab',
+    period: 'Summer 2025',
     featured: false,
+    award: { title: '3rd Runner-Up, CSE Project Show', detail: 'Summer 2025 · among 73 teams' },
+    role: null,
     summary:
       'A floating autonomous prototype for real-time river water-level tracking, with sensor readings shown on a live map.',
     highlights: [
-      'Autonomous river monitoring system for real-time water-level tracking.',
+      'Microcontroller-driven platform that tracks river water level in real time.',
       'Sensor data integrated with live mapping for environmental monitoring and alerts.',
-      'Placed 3rd Runner-Up among 73 teams at the CSE Project Show, Summer 2025.',
     ],
     stack: ['Microcontroller', 'Sensors', 'Map integration'],
     image: image('aram-prototype', 'ARAM prototype: a pontoon platform with an electronics enclosure and sensor mast floating on water', { position: 'center 45%' }),
@@ -252,47 +288,23 @@ export const projects = [
     ],
     github: null,
     demo: null,
-    details: {
-      recognition: ['3rd Runner-Up, CSE Project Show 252 (Summer 2025), among 73 teams.'],
-    },
-    sources: ['resume.pdf', 'evidence/ARAM photo/*'],
-  },
-  {
-    slug: 'elms-extractor',
-    title: 'ELMS Extractor',
-    tagline: 'Course roster export tool for UIU ELMS',
-    domain: 'Tools',
-    type: 'personal',
-    context: 'Python CLI + web API',
-    featured: true,
-    summary:
-      'Exports participant names and email addresses from UIU ELMS courses, as a Python command-line tool and as a FastAPI backend with a static web interface.',
-    highlights: [
-      'Logs in once and reuses the authenticated ELMS session while it is valid.',
-      'Lists enrolled courses and generates per-course CSV rosters and plain-text email lists, or a ZIP of every course.',
-      'FastAPI endpoints behind a static HTML/JS front end that can be hosted on GitHub Pages; credentials go only to the user’s own backend.',
-    ],
-    stack: ['Python', 'FastAPI', 'JavaScript', 'HTML', 'CSS'],
-    image: image('elms-dashboard', 'ELMS Extractor course dashboard listing enrolled courses with Extract buttons'),
-    gallery: [image('elms-login', 'ELMS Extractor sign-in screen')],
-    github: gh('Elms_Extractor'),
-    demo: null,
-    sources: ['github.com/shadhinnandi/Elms_Extractor'],
   },
   {
     slug: 'credit-scoring',
     title: 'Credit Scoring Model',
     tagline: 'Creditworthiness classification',
-    domain: 'Machine learning',
-    type: null,
-    context: 'Python · scikit-learn',
+    area: 'Machine learning',
+    kind: null,
+    course: null,
+    period: null,
     featured: false,
+    award: null,
+    role: null,
     summary:
-      'Predicts whether an applicant is creditworthy from income, debt, payment history and credit-utilisation features, comparing three classifiers with credit-risk metrics.',
+      'Predicts whether an applicant is creditworthy from income, debt, payment-history and credit-utilisation features, comparing three classifiers with credit-risk metrics.',
     highlights: [
-      'Compares Logistic Regression, Decision Tree and Random Forest with stratified splits and five-fold ROC-AUC cross-validation.',
-      'Engineered debt, income and payment features; median imputation, scaling and one-hot encoding.',
-      'SMOTE oversampling on the training set, GridSearchCV tuning and decision-threshold analysis.',
+      'Logistic Regression, Decision Tree and Random Forest compared with stratified splits and five-fold ROC-AUC cross-validation.',
+      'SMOTE on the training set only, GridSearchCV tuning and decision-threshold analysis.',
     ],
     stack: ['Python', 'scikit-learn', 'imbalanced-learn', 'pandas', 'Matplotlib', 'seaborn'],
     image: image('credit-roc', 'ROC curves for Logistic Regression (AUC 0.9287), Decision Tree (0.8400) and Random Forest (0.9172)', { fit: 'contain', caption: 'ROC curves produced by running the repository pipeline on its included dummy dataset.' }),
@@ -300,25 +312,29 @@ export const projects = [
     github: gh('Credit-Scoring-Model-Using-Machine-Learning'),
     demo: null,
     details: {
+      implementation: [
+        'Engineered debt, income and payment features; median imputation, scaling and one-hot encoding.',
+      ],
       scope:
         'Educational prototype trained on a simulated 10,000-record dataset; the figures are not evidence of real-world lending accuracy.',
     },
-    sources: ['github.com/shadhinnandi/Credit-Scoring-Model-Using-Machine-Learning'],
   },
   {
     slug: 'disease-prediction',
-    title: 'Disease Prediction from Medical Data',
-    tagline: 'Classification on structured medical features',
-    domain: 'Machine learning',
-    type: null,
-    context: 'Python · scikit-learn · XGBoost',
+    title: 'Disease Prediction',
+    tagline: 'Classification on structured medical data',
+    area: 'Machine learning',
+    kind: null,
+    course: null,
+    period: null,
     featured: false,
+    award: null,
+    role: null,
     summary:
-      'A reproducible classification workflow that compares linear, margin-based, ensemble and boosting models on heart disease, diabetes and breast cancer datasets.',
+      'A reproducible workflow that compares linear, margin-based, ensemble and boosting classifiers on heart disease, diabetes and breast cancer datasets.',
     highlights: [
-      'Logistic Regression, SVM, Random Forest and XGBoost evaluated with accuracy, precision, recall, F1 and ROC AUC.',
+      'Logistic Regression, SVM, Random Forest and XGBoost evaluated on accuracy, precision, recall, F1 and ROC AUC.',
       'Stratified 80/20 splits, median imputation and standard scaling with fixed random states.',
-      'Single-file command-line pipeline; datasets are regenerated deterministically if missing.',
     ],
     stack: ['Python', 'scikit-learn', 'XGBoost', 'pandas', 'NumPy'],
     image: null,
@@ -326,106 +342,116 @@ export const projects = [
     github: gh('Disease-Prediction-from-Medical-Data'),
     demo: null,
     details: {
+      implementation: ['Single-file command-line pipeline; datasets are regenerated deterministically if missing.'],
       scope: 'Uses synthetic datasets that follow common medical dataset formats, for testing and reproducibility.',
     },
-    sources: ['github.com/shadhinnandi/Disease-Prediction-from-Medical-Data'],
   },
   {
     slug: 'speech-emotion-recognition',
     title: 'Speech Emotion Recognition',
     tagline: 'Emotion classification from audio features',
-    domain: 'Machine learning',
-    type: null,
-    context: 'Python · NumPy · TensorFlow',
+    area: 'Machine learning',
+    kind: null,
+    course: null,
+    period: null,
     featured: false,
+    award: null,
+    role: null,
     summary:
-      'An end-to-end pipeline that classifies speech into angry, happy, neutral and sad using energy, zero-crossing, spectral and MFCC-style features.',
+      'An end-to-end pipeline that classifies speech as angry, happy, neutral or sad from energy, zero-crossing, spectral and MFCC-style features.',
     highlights: [
-      'Offline NumPy baseline that runs without a deep learning framework, plus a lightweight 16-bit PCM WAV feature extractor.',
+      'NumPy baseline that runs without a deep-learning framework, plus a lightweight 16-bit PCM WAV feature extractor.',
       'Optional TensorFlow CNN and bidirectional LSTM model builders.',
-      'Deterministic dataset generation and JSON metrics output for CI smoke tests and downstream use.',
     ],
     stack: ['Python', 'NumPy', 'TensorFlow', 'librosa'],
     image: null,
     gallery: [],
     github: gh('Emotion-Recognition-from-Speech'),
     demo: null,
-    sources: ['github.com/shadhinnandi/Emotion-Recognition-from-Speech'],
+    details: {
+      implementation: ['Deterministic dataset generation and JSON metrics output for CI smoke tests and downstream use.'],
+    },
   },
   {
     slug: 'beginner-c-programming-ui',
-    title: 'Beginner C Programming UI',
+    title: 'Beginner C Programming',
     tagline: 'Interactive C programming curriculum',
-    domain: 'Tools',
-    type: 'academic',
-    context: 'Learning material for ICS, SPL and DSA preparation',
+    area: 'Tools',
+    kind: 'Learning resource',
+    course: 'For ICS, SPL and DSA preparation',
+    period: null,
     featured: false,
+    award: null,
+    role: null,
     summary:
-      'A web-based chapter reader for a C programming curriculum, from introductory programming concepts to file handling, aligned with UIU’s introductory courses.',
+      'A web-based chapter reader for a C programming curriculum, from first programs to file handling, aligned with UIU’s introductory courses.',
     highlights: [
-      'Chapters from Introduction to Programming through loops, functions, arrays, strings, basic projects and file handling, written in Markdown.',
-      'Markdown parsed in the browser with Marked; code blocks highlighted with Highlight.js.',
-      'Keyboard navigation between chapters; built with Vite and deployed to GitHub Pages through GitHub Actions.',
+      'Chapters from introduction to programming through loops, functions, arrays, strings and file handling, written in Markdown.',
+      'Markdown rendered in the browser with Marked and Highlight.js; deployed to GitHub Pages through GitHub Actions.',
     ],
     stack: ['JavaScript', 'Vite', 'Marked', 'Highlight.js', 'GitHub Actions'],
     image: image('beginner-c', 'Beginner C landing page: "Master C Programming and problem solving" with Start learning and View on GitHub buttons'),
     gallery: [],
     github: gh('Beginner-C-Programming-UI'),
     demo: 'https://shadhinnandi.github.io/Beginner-C-Programming-UI/',
-    sources: ['github.com/shadhinnandi/Beginner-C-Programming-UI'],
+    details: {
+      features: ['Keyboard navigation between chapters.'],
+    },
   },
   {
     slug: 'uiu-grading-calculator',
     title: 'UIU Grading Calculator',
     tagline: 'GPA, CGPA and retake calculator',
-    domain: 'Tools',
-    type: 'personal',
-    context: 'HTML · CSS · JavaScript',
+    area: 'Tools',
+    kind: 'Personal project',
+    course: null,
+    period: null,
     featured: false,
+    award: null,
+    role: null,
     summary:
-      'A browser tool for UIU students that calculates semester GPA and CGPA under the university’s grading policy, including retakes.',
+      'A browser tool that calculates semester GPA and CGPA under UIU’s grading policy, including retakes.',
     highlights: [
-      'Applies UIU retake logic: the new grade replaces the old one while credits stay the same.',
+      'Applies UIU retake rules: the new grade replaces the old one while credits stay the same.',
       'Tracks completed credits and recalculates CGPA as courses are added.',
-      'Static site hosted on GitHub Pages; no setup needed.',
     ],
     stack: ['HTML', 'CSS', 'JavaScript'],
     image: image('uiugc', 'UIU Grading Calculator form with current academic status, add new course and added courses sections'),
     gallery: [],
     github: gh('UIU-grading-calculator'),
     demo: 'https://shadhinnandi.github.io/UIU-grading-calculator/',
-    sources: ['github.com/shadhinnandi/UIU-grading-calculator'],
   },
   {
     slug: 'mini-car-racing',
-    title: 'Mini Car Racing Game',
+    title: 'Mini Car Racing',
     tagline: 'Browser racing game',
-    domain: 'Games',
-    type: 'personal',
-    context: 'HTML5 Canvas · JavaScript',
+    area: 'Games',
+    kind: 'Personal project',
+    course: null,
+    period: null,
     featured: false,
+    award: null,
+    role: null,
     summary:
-      'An endless-road racing game in vanilla JavaScript: dodge traffic, collect power-ups and push your score as the speed increases.',
+      'An endless-road racing game in vanilla JavaScript: dodge traffic, collect power-ups and push the score as speed increases.',
     highlights: [
-      'Canvas rendering with speed that increases over time and an on-screen speedometer.',
-      'Invincibility power-ups, score tracking, game-over and restart flow.',
-      'Sound effects generated in the browser, with no external audio files or libraries.',
+      'Canvas rendering with increasing speed, invincibility power-ups and a restart flow.',
+      'Sound effects synthesised in the browser, with no audio files or libraries.',
     ],
     stack: ['JavaScript', 'HTML5 Canvas', 'CSS'],
     image: image('car-racing', 'Mini Car Racing Game: two cars on a three-lane green track with score and speed display'),
     gallery: [],
     github: gh('Mini-Car-Racing-Game'),
     demo: 'https://shadhinnandi.github.io/Mini-Car-Racing-Game/',
-    sources: ['github.com/shadhinnandi/Mini-Car-Racing-Game'],
   },
 ];
 
 export const getProject = (slug) => projects.find((p) => p.slug === slug);
-
-export const isAcademic = (p) => p.type === 'academic';
-export const academicProjects = projects.filter(isAcademic);
-export const otherProjects = projects.filter((p) => !isAcademic(p));
-export const featuredProjects = otherProjects.filter((p) => p.featured);
+export const featuredProjects = projects.filter((p) => p.featured);
+export const additionalProjects = projects.filter((p) => !p.featured);
 
 /** Canonical URL of a project's detail page. */
-export const projectPath = (p) => `${isAcademic(p) ? '/academic' : '/projects'}/${p.slug}`;
+export const projectPath = (p) => `/projects/${p.slug}`;
+
+/** "Course project · CSE 2118 … · Fall 2025": whatever is documented. */
+export const projectContext = (p) => [p.kind, p.course, p.period].filter(Boolean);

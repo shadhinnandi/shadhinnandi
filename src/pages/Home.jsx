@@ -1,123 +1,128 @@
 import { Link } from 'react-router-dom';
-import Hero from '../components/Hero.jsx';
-import Section from '../components/Section.jsx';
-import ProjectCard from '../components/ProjectCard.jsx';
-import SkillGroup from '../components/SkillGroup.jsx';
-import Timeline from '../components/Timeline.jsx';
-import AchievementCard from '../components/AchievementCard.jsx';
-import Icon from '../components/Icon.jsx';
+import Hero from '../components/sections/Hero.jsx';
+import Section from '../components/ui/Section.jsx';
+import Reveal from '../components/ui/Reveal.jsx';
+import Icon from '../components/ui/Icon.jsx';
+import FeaturedGrid from '../components/project/FeaturedGrid.jsx';
+import ProjectRow from '../components/project/ProjectRow.jsx';
+import { CurrentResearch, ResearchAreas } from '../components/sections/ResearchBlocks.jsx';
+import ExperienceList from '../components/sections/ExperienceList.jsx';
+import { DegreeCard } from '../components/sections/Education.jsx';
+import SkillTable from '../components/sections/SkillTable.jsx';
+import AchievementsOverview from '../components/sections/AchievementsOverview.jsx';
+import ContactPanel from '../components/sections/ContactPanel.jsx';
 import { profile } from '../data/profile';
-import { degree } from '../data/education';
+import { projects, featuredProjects, additionalProjects } from '../data/projects';
+import { research, currentResearch, researchAreas } from '../data/research';
 import { experience } from '../data/experience';
 import { skills, featuredSkillGroups } from '../data/skills';
-import { featuredProjects, otherProjects, academicProjects, projectPath } from '../data/projects';
-import { awards, featuredAwardIds, gpAcademy } from '../data/achievements';
 import usePageTitle from '../lib/usePageTitle';
 
+// Order: identity → about → projects → teaching → research → academic →
+// skills → achievements → contact.
 export default function Home() {
   usePageTitle(null);
-  const homeAwards = awards.filter((a) => featuredAwardIds.includes(a.id));
+  const moreWork = additionalProjects.slice(0, 4);
+  const homeSkills = skills.filter((g) => featuredSkillGroups.includes(g.group));
 
   return (
     <div className="page page--home">
       <Hero />
 
-      <Section id="about" eyebrow="About" title="Building software, teaching, and research">
-        <p className="lead">{profile.intro}</p>
-        <ul className="link-row">
-          <li>
+      <section id="about" className="section section--profile" aria-labelledby="about-title">
+        <div className="container profile">
+          <Reveal>
+            <h2 id="about-title" className="profile__title">
+              About
+            </h2>
+          </Reveal>
+          <Reveal className="profile__text">
+            {profile.profile.map((p) => (
+              <p key={p.slice(0, 32)}>{p}</p>
+            ))}
             <Link className="text-link" to="/about">
-              View more
+              More about me
               <Icon name="arrowRight" />
             </Link>
-          </li>
-          <li>
-            <a className="text-link" href={profile.resume} download="Shadhin_Nandi_Resume.pdf">
-              Download resume
-              <Icon name="download" />
-            </a>
-          </li>
-        </ul>
-      </Section>
-
-      <Section id="academic" eyebrow="Academic" title="Education and course projects" link={{ to: '/academic', label: 'View academic background' }}>
-        <div className="degree">
-          <h3 className="degree__title">{degree.title}</h3>
-          <p className="degree__school">{degree.institution}</p>
-          <p className="meta">{degree.period}</p>
-          <dl className="facts">
-            {degree.facts.map((f) => (
-              <div key={f.label}>
-                <dt>{f.label}</dt>
-                <dd>{f.value}</dd>
-              </div>
-            ))}
-          </dl>
+          </Reveal>
         </div>
+      </section>
 
-        <h3 className="subhead">Academic projects</h3>
-        <ul className="compact-projects">
-          {academicProjects.map((p) => (
-            <li key={p.slug}>
-              <p className="meta">{p.context}</p>
-              <div>
-                <Link className="compact-projects__title" to={projectPath(p)}>
-                  {p.title}
-                </Link>
-                <span className="compact-projects__tagline"> — {p.tagline}</span>
-                {p.details?.recognition?.[0] && <p className="compact-projects__award small">{p.details.recognition[0]}</p>}
-              </div>
-            </li>
-          ))}
-        </ul>
-      </Section>
+      <Section
+        id="work"
+        title="Selected projects"
+        intro="Three projects that show the range: backend architecture, security engineering and full-stack product work."
+        link={{ to: '/projects', label: `All ${projects.length} projects` }}
+      >
+        <FeaturedGrid projects={featuredProjects} />
 
-      <Section id="experience" eyebrow="Experience" title="Work and teaching" link={{ to: '/experience', label: 'View experience' }}>
-        <Timeline items={experience} compact />
-      </Section>
-
-      <Section id="skills" eyebrow="Skills" title="Technologies I work with" link={{ to: '/skills', label: 'View all skills' }}>
-        <div className="skills-grid">
-          {skills
-            .filter((g) => featuredSkillGroups.includes(g.group))
-            .map((g) => (
-              <SkillGroup key={g.group} group={g} />
+        <Reveal className="more-work">
+          <h3 className="label">More projects</h3>
+          <ul className="project-rows">
+            {moreWork.map((p) => (
+              <ProjectRow key={p.slug} project={p} headingLevel={4} />
             ))}
-        </div>
+          </ul>
+        </Reveal>
       </Section>
 
       <Section
-        id="projects"
-        eyebrow="Projects"
-        title="Selected work"
-        link={{ to: '/projects', label: `All ${otherProjects.length} projects` }}
-        className="section--projects"
+        id="teaching"
+        band
+        title="Teaching & experience"
+        intro="Undergraduate Teaching Assistant in the CSE department at UIU since March 2025."
+        link={{ to: '/experience', label: 'Experience in full' }}
       >
-        <div className="project-list">
-          {featuredProjects.map((p) => (
-            <ProjectCard key={p.slug} project={p} maxPoints={3} />
-          ))}
-        </div>
+        <Reveal>
+          <ExperienceList items={experience} compact />
+        </Reveal>
       </Section>
 
-      <Section id="research" eyebrow="Research" title="Research" link={{ to: '/research', label: 'View research' }}>
-        <p className="lead">Exploring computational methods across AI, bioinformatics, computer vision and HCI.</p>
+      <Section id="research" title="Research" intro={research.title} link={{ to: '/research', label: 'Research areas in detail' }}>
+        <Reveal>
+          <p className="research-summary">{research.summary}</p>
+        </Reveal>
+        <Reveal>
+          {currentResearch.map((item) => (
+            <CurrentResearch key={item.id} item={item} compact />
+          ))}
+        </Reveal>
+        <Reveal className="research-areas">
+          <ResearchAreas areas={researchAreas} />
+        </Reveal>
       </Section>
 
-      <Section id="achievements" eyebrow="Achievements" title="Awards and recognition" link={{ to: '/achievements', label: 'View achievements' }}>
-        <div className="award-list">
-          {homeAwards.map((a) => (
-            <AchievementCard key={a.id} award={a} />
-          ))}
-          <article className="award">
-            <p className="award__date meta">Mar – May 2026</p>
-            <div className="award__body">
-              <h3 className="award__title">{gpAcademy.courses.length} professional development courses</h3>
-              <p className="award__context">{gpAcademy.issuer} · AI, communication, interview preparation, Excel, networking and career readiness</p>
-            </div>
-          </article>
-        </div>
+      <Section id="academic" band title="Academic" link={{ to: '/about#education', label: 'Full education' }}>
+        <Reveal>
+          <DegreeCard photo />
+        </Reveal>
       </Section>
+
+      <Section id="skills" title="Technical skills" intro="Grouped by use. Every item maps to a project, repository or course I taught." link={{ to: '/skills', label: 'Skills with evidence' }}>
+        <Reveal>
+          <SkillTable groups={homeSkills} />
+        </Reveal>
+      </Section>
+
+      <Section
+        id="achievements"
+        band
+        title="Achievements"
+        intro="Recognition for project work, merit scholarships and completed certifications."
+        link={{ to: '/achievements', label: 'All achievements and certificates' }}
+      >
+        <Reveal>
+          <AchievementsOverview />
+        </Reveal>
+      </Section>
+
+      <section id="contact" className="section section--contact" aria-labelledby="contact-title">
+        <div className="container">
+          <Reveal>
+            <ContactPanel headingId="contact-title" />
+          </Reveal>
+        </div>
+      </section>
     </div>
   );
 }

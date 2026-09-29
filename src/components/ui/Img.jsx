@@ -7,7 +7,7 @@ export default function Img({ media, sizes = '100vw', eager = false, className =
   if (objectFit) style.objectFit = objectFit;
   return (
     <img
-      className={className}
+      className={className || undefined}
       src={media.src}
       srcSet={media.srcSet}
       sizes={sizes}

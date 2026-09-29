@@ -3,50 +3,45 @@
 export const skills = [
   {
     group: 'Languages',
-    items: ['C', 'C++', 'Java', 'Python', 'JavaScript', 'PHP', 'SQL'],
-    evidence: 'Resume; teaching in C, C++ and Java; Vortex Arena (Java), UIUFund (JavaScript), Shombhar (PHP), SICA (Python).',
-  },
-  {
-    group: 'Frontend',
-    items: ['HTML', 'CSS', 'React', 'React Router', 'Vite', 'HTML5 Canvas'],
-    evidence: 'UIUFund (React, React Router, Vite), Beginner C Programming UI (Vite), Vortex Arena and Mini Car Racing (Canvas).',
+    items: ['Java', 'Python', 'JavaScript', 'C', 'C++', 'PHP', 'SQL'],
+    evidence: 'Teaching in C, C++ and Java; Vortex Arena (Java), UIUFund (JavaScript), Shombhar (PHP), SICA and the ML repositories (Python).',
   },
   {
     group: 'Backend',
-    items: ['Spring Boot', 'Node.js', 'Express', 'FastAPI', 'REST APIs', 'JWT authentication'],
+    items: ['Spring Boot', 'Node.js', 'Express', 'FastAPI', 'REST APIs', 'JWT auth'],
     evidence: 'Vortex Arena (Spring Boot), UIUFund (Express, JWT), Durjog Prohori (Node.js, Express), ELMS Extractor (FastAPI).',
+  },
+  {
+    group: 'Frontend',
+    items: ['React', 'React Router', 'Vite', 'HTML', 'CSS', 'HTML5 Canvas'],
+    evidence: 'UIUFund (React, React Router, Vite), Beginner C Programming (Vite), Vortex Arena and Mini Car Racing (Canvas).',
   },
   {
     group: 'Databases',
     items: ['MySQL', 'MongoDB', 'Spring Data JPA'],
-    evidence: 'Resume; Vortex Arena (MySQL via Spring Data JPA), UIUFund and Shombhar (MySQL), Durjog Prohori (MongoDB).',
+    evidence: 'Vortex Arena (MySQL via Spring Data JPA), UIUFund and Shombhar (MySQL), Durjog Prohori (MongoDB).',
   },
   {
-    group: 'Machine learning & data',
-    items: ['scikit-learn', 'pandas', 'NumPy', 'XGBoost', 'imbalanced-learn', 'Matplotlib', 'TensorFlow'],
+    group: 'Machine learning',
+    items: ['scikit-learn', 'pandas', 'NumPy', 'XGBoost', 'imbalanced-learn', 'TensorFlow', 'Matplotlib'],
     evidence: 'Credit Scoring, Disease Prediction and Speech Emotion Recognition repositories; CodeAlpha ML internship.',
   },
   {
     group: 'Testing & evaluation',
-    items: ['Experimental evaluation', 'pytest', 'LaTeX'],
-    evidence: 'SICA course project: seeded experiments across two datasets, 50 unit and regression tests, IEEE-format report.',
+    items: ['pytest', 'Experimental evaluation', 'LaTeX'],
+    evidence: 'SICA: seeded experiments across two datasets, 50 unit and regression tests, project report written in LaTeX.',
+  },
+  {
+    group: 'Tools & platforms',
+    items: ['Git', 'GitHub Actions', 'Gradle', 'Linux', 'Godot', 'Figma', 'Jira', 'ClickUp', 'Cisco Packet Tracer'],
+    evidence: 'Resume and previous portfolio; Vortex Arena (Gradle, Godot); Beginner C Programming (GitHub Actions). Also works on macOS and Windows.',
   },
   {
     group: 'Hardware',
     items: ['Microcontrollers', 'Sensors'],
-    evidence: 'ARAM autonomous river monitoring prototype (CSE 4326).',
-  },
-  {
-    group: 'Tools',
-    items: ['Git', 'GitHub', 'Gradle', 'Godot', 'Jira', 'Figma', 'ClickUp', 'Cisco Packet Tracer'],
-    evidence: 'Resume and previous portfolio; Vortex Arena (Gradle, Godot).',
-  },
-  {
-    group: 'Operating systems',
-    items: ['Linux', 'macOS', 'Windows'],
-    evidence: 'Resume.',
+    evidence: 'ARAM autonomous river-monitoring prototype (CSE 4326).',
   },
 ];
 
-// Groups shown on the home page preview.
-export const featuredSkillGroups = ['Languages', 'Backend', 'Databases', 'Machine learning & data'];
+// Groups shown on the home page.
+export const featuredSkillGroups = ['Languages', 'Backend', 'Frontend', 'Databases', 'Machine learning', 'Tools & platforms'];

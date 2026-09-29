@@ -1,67 +1,67 @@
-import { Link, useSearchParams } from 'react-router-dom';
-import PageHeader from '../components/PageHeader.jsx';
-import ProjectCard from '../components/ProjectCard.jsx';
-import { otherProjects as projects, domains as allDomains } from '../data/projects';
-import { githubUrl } from '../data/profile';
+import { useSearchParams } from 'react-router-dom';
+import PageHeader from '../components/ui/PageHeader.jsx';
+import ExternalLink from '../components/ui/ExternalLink.jsx';
+import FeaturedGrid from '../components/project/FeaturedGrid.jsx';
+import ProjectCard from '../components/project/ProjectCard.jsx';
+import { featuredProjects, additionalProjects, areas as allAreas } from '../data/projects';
+import { profile } from '../data/profile';
 import usePageTitle from '../lib/usePageTitle';
 
 export default function Projects() {
-  usePageTitle('Projects', 'Full-stack, machine learning and tooling projects by Shadhin Nandi, with source code on GitHub.');
-  const domains = allDomains.filter((d) => projects.some((p) => p.domain === d));
+  usePageTitle('Work', 'Full-stack, machine learning, security and tooling projects by Shadhin Nandi, with source code and case studies.');
+  const areas = allAreas.filter((a) => additionalProjects.some((p) => p.area === a));
   const [params, setParams] = useSearchParams();
-  const active = domains.includes(params.get('area')) ? params.get('area') : 'All';
-  const shown = active === 'All' ? projects : projects.filter((p) => p.domain === active);
+  const active = areas.includes(params.get('area')) ? params.get('area') : 'All';
+  const shown = active === 'All' ? additionalProjects : additionalProjects.filter((p) => p.area === active);
+  const count = (a) => (a === 'All' ? additionalProjects.length : additionalProjects.filter((p) => p.area === a).length);
 
-  const counts = Object.fromEntries(domains.map((d) => [d, projects.filter((p) => p.domain === d).length]));
-
-  const select = (d) => {
-    if (d === 'All') setParams({}, { replace: true });
-    else setParams({ area: d }, { replace: true });
-  };
+  const select = (a) => setParams(a === 'All' ? {} : { area: a }, { replace: true, preventScrollReset: true });
 
   return (
     <div className="page">
       <PageHeader
-        eyebrow="Projects"
-        title="Projects"
-        lead="Full-stack applications, machine learning pipelines, tools and games. Source code is linked where it is public."
+        label="Work"
+        title="Projects and case studies"
+        lead="Course projects, independent builds and research code. Each case study covers the problem, what was built and how, with source linked where it is public."
       >
         <p className="small muted">
-          Course projects, including the two CSE Project Show placements, are on the{' '}
-          <Link to="/academic">Academic</Link> page. More repositories on{' '}
-          <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-            GitHub
-          </a>
-          .
+          More repositories on{' '}
+          <ExternalLink href={profile.links.github.href}>GitHub</ExternalLink>.
         </p>
       </PageHeader>
 
       <div className="container">
-        <div className="filter" role="group" aria-label="Filter projects by area">
-          {['All', ...domains].map((d) => (
-            <button
-              key={d}
-              type="button"
-              className="filter__btn"
-              aria-pressed={active === d}
-              onClick={() => select(d)}
-            >
-              {d}
-              <span className="filter__count">{d === 'All' ? projects.length : counts[d]}</span>
-            </button>
-          ))}
-        </div>
+        <section className="block" aria-labelledby="featured-title">
+          <h2 id="featured-title" className="block__title">
+            Featured
+          </h2>
+          <FeaturedGrid projects={featuredProjects} eager />
+        </section>
 
-        <p className="visually-hidden" aria-live="polite">
-          Showing {shown.length} {shown.length === 1 ? 'project' : 'projects'}
-          {active !== 'All' ? ` in ${active}` : ''}.
-        </p>
-
-        <div className="project-list project-list--page">
-          {shown.map((p, i) => (
-            <ProjectCard key={p.slug} project={p} headingLevel={2} eagerImage={i === 0} />
-          ))}
-        </div>
+        <section className="block" aria-labelledby="more-title">
+          <div className="block__head">
+            <h2 id="more-title" className="block__title">
+              More projects
+            </h2>
+            <div className="segmented" role="group" aria-label="Filter projects by area">
+              {['All', ...areas].map((a) => (
+                <button key={a} type="button" aria-pressed={active === a} onClick={() => select(a)}>
+                  {a}
+                  <span className="segmented__count">{count(a)}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+          <p className="visually-hidden" aria-live="polite">
+            Showing {shown.length} {shown.length === 1 ? 'project' : 'projects'}
+            {active !== 'All' ? ` in ${active}` : ''}.
+          </p>
+          <div className="card-grid">
+            {shown.map((p) => (
+              <ProjectCard key={p.slug} project={p} />
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );
