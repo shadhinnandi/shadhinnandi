@@ -10,15 +10,11 @@ export const profile = {
   universityShort: 'UIU',
   portrait: image('portrait', 'Portrait of Shadhin Nandi in a navy blazer and white shirt'),
 
-  // Hero: one statement, one supporting line.
-  headline: 'Computer Science & Engineering student with a strong interest in teaching and hands-on technical work.',
-  summary:
-    'I am a final-year Computer Science & Engineering student at United International University, where I have guided lab sessions as an Undergraduate Teaching Assistant since March 2025. I also build full-stack applications, work with machine learning and computer vision, and am doing research on enhancer-promoter interaction prediction.',
-
-  // Home "Profile" section: what kind of candidate this is, in two short paragraphs.
+  // Hero: one statement.
+  headline: 'Final-year Computer Science & Engineering student with a strong interest in teaching and hands-on technical work.',
+  // Home "About" section: a short introduction; the About page has the full version.
   profile: [
-    'Most of my work is full-stack: REST backends in Spring Boot and Express, relational schemas in MySQL, and React frontends. On the machine-learning side I build Python pipelines with attention to evaluation: stratified splits, class imbalance, cross-validation and seeded, reproducible runs.',
-    'My research is in AI for computational biology: I am currently working on predicting enhancer–promoter interactions from genomic sequence, and I am interested in bioinformatics, protein AI, computer vision and human-centered AI. Since March 2025 I have also guided lab sessions as an Undergraduate Teaching Assistant across five courses.',
+    'I am a final-year Computer Science & Engineering student at United International University in Dhaka, expected to graduate in January 2027. Since March 2025 I have worked as an Undergraduate Teaching Assistant in the CSE department, guiding lab sessions in Object-Oriented Programming, Introduction to Computer Systems, Data Structures & Algorithms I and II, Electronics and Microprocessors & Microcontrollers.',
   ],
 
   // About page.

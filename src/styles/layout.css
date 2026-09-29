@@ -75,18 +75,6 @@
 .brand:hover {
   color: var(--text);
 }
-.brand__mark {
-  display: inline-grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 9px;
-  background: var(--btn-bg);
-  color: var(--btn-text);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
 .brand__name {
   font-weight: 600;
   font-size: var(--fs-sm);
@@ -182,11 +170,6 @@
 @media (min-width: 940px) {
   .mobile-nav {
     display: none !important;
-  }
-}
-@media (max-width: 400px) {
-  .brand__name {
-    display: none;
   }
 }
 

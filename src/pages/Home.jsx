@@ -51,7 +51,7 @@ export default function Home() {
       <Section
         id="work"
         title="Selected projects"
-        intro="Three projects that show the range: backend architecture, security engineering and full-stack product work."
+        intro="Three projects that show the range: backend architecture, embedded systems and full-stack product work."
         link={{ to: '/projects', label: `All ${projects.length} projects` }}
       >
         <FeaturedGrid projects={featuredProjects} />

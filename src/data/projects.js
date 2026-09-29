@@ -70,49 +70,29 @@ export const projects = [
     },
   },
   {
-    slug: 'sica',
-    title: 'SICA',
-    tagline: 'Detecting HTTP session hijacking from server access logs',
-    area: 'Security',
+    slug: 'aram',
+    title: 'ARAM',
+    tagline: 'Autonomous river monitoring prototype',
+    area: 'Embedded',
     kind: 'Course project',
-    course: 'Computer Security',
-    period: '2026',
+    course: 'CSE 4326 Microprocessors & Microcontrollers Lab',
+    period: 'Summer 2025',
     featured: true,
-    award: null,
-    role: 'Team of three, supervised by Dr. Muhammad Nomani Kabir',
+    award: { title: '3rd Runner-Up, CSE Project Show', detail: 'Summer 2025 · among 73 teams' },
+    role: null,
     summary:
-      'A security project that detects potential mid-session HTTP session hijacking by analysing changes in client–session bindings in web server access logs. Rule-based, with no client changes.',
+      'A floating autonomous prototype for real-time river water-level tracking, with sensor readings shown on a live map.',
     highlights: [
-      'Describes every request by its client binding (IP address and network, browser, operating system and device), taken from fields servers already log.',
-      'Flags “binding forks”: an earlier binding returning after a different one, the pattern left when a victim and an attacker replay the same session cookie.',
-      'Three explainable checks combine into a risk score; on two public log datasets the false-positive rate stays below 1%.',
+      'Microcontroller-driven platform that tracks river water level in real time.',
+      'Sensor data integrated with live mapping for environmental monitoring and alerts.',
     ],
-    stack: ['Python', 'pandas', 'NumPy', 'SciPy', 'Matplotlib', 'pytest'],
-    image: image('sica-mechanism', 'Diagram comparing a benign network move, a silent takeover and a live hijack; in the live hijack, bindings A and B alternate and each revisit is detected', { position: 'center', fit: 'contain' }),
+    stack: ['Microcontroller', 'Sensors', 'Map integration'],
+    image: image('aram-prototype', 'ARAM prototype: a pontoon platform with an electronics enclosure and sensor mast floating on water', { position: 'center 45%' }),
     gallery: [
-      image('sica-architecture', 'SICA pipeline: request, binding fingerprint, session state, checks V1 to V3, risk score and alert threshold', { fit: 'contain' }),
+      image('aram-award', 'CSE Project Show Summer 2025 certificate and trophy for the Microprocessors and Microcontrollers Lab, 3rd Runner Up'),
     ],
-    github: gh('SICA'),
+    github: null,
     demo: null,
-    details: {
-      problem:
-        'After login, a web application recognises a user only by a session identifier. An attacker who steals and replays the session cookie never fails a login, so the attack is hard to see. Pinning a session to one IP address is a common defence, but honest users change networks too and trigger false alarms.',
-      solution:
-        'SICA builds a client binding for each request (IP address, /24 and /16 network, browser, operating system and device) and runs three checks: agent mutation, graded network discontinuity, and binding fork. Each check is weighted by how rare it is on benign traffic, the alert threshold is calibrated on benign sessions, and every alert names the checks that fired.',
-      implementation: [
-        'Constant work per request and a few kilobytes of state per live session; about 55,000 requests per second in Python.',
-        'Experiments cover calibration, baselines (including IP pinning), ablation, scenario sweeps and efficiency, all seeded and reproducible.',
-        '50 unit and regression tests, and a validation step that checks the finished result set.',
-      ],
-      results: [
-        'Apache logs, human browsing: ROC AUC 0.884, recall 0.358, false-positive rate 0.85%, precision 0.906.',
-        'Nginx logs, package clients: ROC AUC 0.851, recall 0.229, false-positive rate 0.56%, precision 0.920.',
-        'IP pinning alarms on about 15% of benign sessions under the same setting.',
-        'Limitation: attackers who copy the victim’s exact binding, and most silent takeovers, are not visible in access-log fields.',
-      ],
-      contribution:
-        'Developed with Md. Nurul Alam Siddiqei Ador and Mueen Ishraq Ananta for the Computer Security course, supervised by Dr. Muhammad Nomani Kabir, Professor, Department of CSE, UIU.',
-    },
   },
   {
     slug: 'uiufund',
@@ -154,6 +134,51 @@ export const projects = [
         'Balance-affecting operations run inside MySQL transactions.',
       ],
       scope: 'Uses an internal wallet ledger with demo top-ups; it is not connected to a real payment provider.',
+    },
+  },
+  {
+    slug: 'sica',
+    title: 'SICA',
+    tagline: 'Detecting HTTP session hijacking from server access logs',
+    area: 'Security',
+    kind: 'Course project',
+    course: 'Computer Security',
+    period: '2026',
+    featured: false,
+    award: null,
+    role: 'Team of three, supervised by Dr. Muhammad Nomani Kabir',
+    summary:
+      'A security project that detects potential mid-session HTTP session hijacking by analysing changes in client–session bindings in web server access logs. Rule-based, with no client changes.',
+    highlights: [
+      'Describes every request by its client binding (IP address and network, browser, operating system and device), taken from fields servers already log.',
+      'Flags “binding forks”: an earlier binding returning after a different one, the pattern left when a victim and an attacker replay the same session cookie.',
+      'Three explainable checks combine into a risk score; on two public log datasets the false-positive rate stays below 1%.',
+    ],
+    stack: ['Python', 'pandas', 'NumPy', 'SciPy', 'Matplotlib', 'pytest'],
+    image: image('sica-mechanism', 'Diagram comparing a benign network move, a silent takeover and a live hijack; in the live hijack, bindings A and B alternate and each revisit is detected', { position: 'center', fit: 'contain' }),
+    gallery: [
+      image('sica-architecture', 'SICA pipeline: request, binding fingerprint, session state, checks V1 to V3, risk score and alert threshold', { fit: 'contain' }),
+    ],
+    github: gh('SICA'),
+    demo: null,
+    details: {
+      problem:
+        'After login, a web application recognises a user only by a session identifier. An attacker who steals and replays the session cookie never fails a login, so the attack is hard to see. Pinning a session to one IP address is a common defence, but honest users change networks too and trigger false alarms.',
+      solution:
+        'SICA builds a client binding for each request (IP address, /24 and /16 network, browser, operating system and device) and runs three checks: agent mutation, graded network discontinuity, and binding fork. Each check is weighted by how rare it is on benign traffic, the alert threshold is calibrated on benign sessions, and every alert names the checks that fired.',
+      implementation: [
+        'Constant work per request and a few kilobytes of state per live session; about 55,000 requests per second in Python.',
+        'Experiments cover calibration, baselines (including IP pinning), ablation, scenario sweeps and efficiency, all seeded and reproducible.',
+        '50 unit and regression tests, and a validation step that checks the finished result set.',
+      ],
+      results: [
+        'Apache logs, human browsing: ROC AUC 0.884, recall 0.358, false-positive rate 0.85%, precision 0.906.',
+        'Nginx logs, package clients: ROC AUC 0.851, recall 0.229, false-positive rate 0.56%, precision 0.920.',
+        'IP pinning alarms on about 15% of benign sessions under the same setting.',
+        'Limitation: attackers who copy the victim’s exact binding, and most silent takeovers, are not visible in access-log fields.',
+      ],
+      contribution:
+        'Developed with Md. Nurul Alam Siddiqei Ador and Mueen Ishraq Ananta for the Computer Security course, supervised by Dr. Muhammad Nomani Kabir, Professor, Department of CSE, UIU.',
     },
   },
   {
@@ -263,31 +288,6 @@ export const projects = [
       ],
       contribution: 'Built by Team Void (Group 08): Md. Shakibul Hassan Prince, Mahmudul Mashrafe and Shadhin Nandi.',
     },
-  },
-  {
-    slug: 'aram',
-    title: 'ARAM',
-    tagline: 'Autonomous river monitoring prototype',
-    area: 'Embedded',
-    kind: 'Course project',
-    course: 'CSE 4326 Microprocessors & Microcontrollers Lab',
-    period: 'Summer 2025',
-    featured: false,
-    award: { title: '3rd Runner-Up, CSE Project Show', detail: 'Summer 2025 · among 73 teams' },
-    role: null,
-    summary:
-      'A floating autonomous prototype for real-time river water-level tracking, with sensor readings shown on a live map.',
-    highlights: [
-      'Microcontroller-driven platform that tracks river water level in real time.',
-      'Sensor data integrated with live mapping for environmental monitoring and alerts.',
-    ],
-    stack: ['Microcontroller', 'Sensors', 'Map integration'],
-    image: image('aram-prototype', 'ARAM prototype: a pontoon platform with an electronics enclosure and sensor mast floating on water', { position: 'center 45%' }),
-    gallery: [
-      image('aram-award', 'CSE Project Show Summer 2025 certificate and trophy for the Microprocessors and Microcontrollers Lab, 3rd Runner Up'),
-    ],
-    github: null,
-    demo: null,
   },
   {
     slug: 'credit-scoring',

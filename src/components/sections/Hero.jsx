@@ -1,13 +1,12 @@
 import { profile, primaryLinks } from '../../data/profile';
-import { degree } from '../../data/education';
 import Img from '../ui/Img.jsx';
 import Icon from '../ui/Icon.jsx';
 import ExternalLink from '../ui/ExternalLink.jsx';
 
 // Identity, direction and proof points, readable in the first ten seconds.
 const facts = [
-  { label: 'Teaching', value: 'Labs in OOP, Computer Systems, DSA I & II and Electronics at CSE, UIU' },
-  { label: 'Degree', value: `B.Sc. CSE · CGPA ${degree.facts[0].value} · graduating Jan 2027` },
+  { label: 'Teaching', value: 'Undergraduate Teaching Assistant at the Department of CSE, United International University (UIU).' },
+  { label: 'Degree', value: 'B.Sc. CSE at UIU · graduating Jan 2027' },
   { label: 'Recognition', value: '3rd Runner-Up at UIU’s CSE Project Show, twice in 2025' },
 ];
 
@@ -24,7 +23,6 @@ export default function Hero() {
               {profile.name}
             </h1>
             <p className="hero__headline">{profile.headline}</p>
-            <p className="hero__summary">{profile.summary}</p>
 
             <div className="hero__actions">
               <a className="btn btn--primary" href="#work">
@@ -40,6 +38,13 @@ export default function Hero() {
                     </ExternalLink>
                   </li>
                 ))}
+                <li>
+                  <a className="btn btn--ghost" href={profile.resume} target="_blank" rel="noopener" type="application/pdf">
+                    Resume
+                    <Icon name="arrowUpRight" />
+                    <span className="visually-hidden"> (PDF, opens in a new tab)</span>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

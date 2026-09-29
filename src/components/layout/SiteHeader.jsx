@@ -4,8 +4,8 @@ import { navItems, profile } from '../../data/profile';
 import Icon from '../ui/Icon.jsx';
 import ThemeToggle from './ThemeToggle.jsx';
 
-// Floating glass bar. The resume link lives here, and only here, so it is
-// one click away on every page without being repeated through the content.
+// Floating glass bar: name, primary navigation and the theme toggle.
+// The resume link lives in the home hero.
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -47,9 +47,6 @@ export default function SiteHeader() {
       <div className="container">
         <div className="nav-bar">
           <Link to="/" className="brand" aria-label={`${profile.name}, home`}>
-            <span className="brand__mark" aria-hidden="true">
-              SN
-            </span>
             <span className="brand__name">{profile.name}</span>
           </Link>
 
@@ -65,10 +62,6 @@ export default function SiteHeader() {
 
           <div className="nav-actions">
             <ThemeToggle />
-            <a className="btn btn--small btn--quiet" href={profile.resume} target="_blank" rel="noopener" type="application/pdf">
-              Resume
-              <span className="visually-hidden"> (PDF, opens in a new tab)</span>
-            </a>
             <button
               ref={toggleRef}
               type="button"
