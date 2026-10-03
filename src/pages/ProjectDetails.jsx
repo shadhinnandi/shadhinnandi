@@ -58,11 +58,19 @@ export default function ProjectDetails() {
           <h1>{project.title}</h1>
           <p className="lead">{project.summary}</p>
           <AwardNote award={project.award} />
-          {links.length > 0 && (
+          {(project.open || links.length > 0) && (
             <ul className="button-row">
+              {project.open && (
+                <li>
+                  <Link className="btn btn--primary" to={project.open.to}>
+                    {project.open.label}
+                    <Icon name="arrowRight" />
+                  </Link>
+                </li>
+              )}
               {links.map((l, i) => (
                 <li key={l.href}>
-                  <ExternalLink className={`btn ${i === 0 ? 'btn--primary' : 'btn--ghost'}`} href={l.href}>
+                  <ExternalLink className={`btn ${i === 0 && !project.open ? 'btn--primary' : 'btn--ghost'}`} href={l.href}>
                     {l.label}
                     <Icon name={linkIcon[l.kind] || 'arrowUpRight'} />
                   </ExternalLink>

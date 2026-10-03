@@ -29,11 +29,16 @@ export const CSP = [
   "form-action 'none'",
 ].join('; ');
 
-const staticRoutes = ['', 'projects', 'research', 'experience', 'about', 'skills', 'achievements', 'contact'];
+const staticRoutes = ['', 'projects', 'research', 'experience', 'about', 'skills', 'achievements', 'academic', 'contact'];
 
 function projectSlugs() {
   const source = readFileSync(new URL('./src/data/projects.js', import.meta.url), 'utf8');
   return [...source.matchAll(/^\s{4}slug: '([^']+)'/gm)].map((m) => `projects/${m[1]}`);
+}
+
+function courseSlugs() {
+  const source = readFileSync(new URL('./src/data/courses.js', import.meta.url), 'utf8');
+  return [...source.matchAll(/^\s{4}slug: '([^']+)'/gm)].map((m) => `academic/${m[1]}`);
 }
 
 function transformHtml(html) {
@@ -66,7 +71,7 @@ function siteMeta() {
       const robots = ['User-agent: *', 'Allow: /'];
       if (siteUrl) {
         robots.push(`Sitemap: ${siteUrl}sitemap.xml`);
-        const urls = [...staticRoutes, ...projectSlugs()]
+        const urls = [...staticRoutes, ...projectSlugs(), ...courseSlugs()]
           .map((path) => `  <url><loc>${siteUrl}${path}</loc></url>`)
           .join('\n');
         this.emitFile({
@@ -95,6 +100,9 @@ export default defineConfig({
         chunkFileNames: 'assets/[hash].js',
         assetFileNames: (info) => (/\.css$/.test(info.names?.[0] || '') ? 'assets/[hash][extname]' : 'assets/[name]-[hash][extname]'),
         manualChunks(id) {
+          // Markdown and syntax highlighting are only used by courses: keep
+          // them in the lazily loaded course chunk, not the shared vendor one.
+          if (/node_modules[\\/](marked|highlight\.js)[\\/]/.test(id)) return undefined;
           if (id.includes('node_modules')) return 'vendor';
         },
       },

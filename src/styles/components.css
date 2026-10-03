@@ -1319,3 +1319,46 @@
   white-space: nowrap;
   color: var(--text-2);
 }
+
+/* ---------- Course cards (Academic) ---------- */
+/* Built on .card; the title link covers the whole card. */
+.course-card {
+  position: relative;
+}
+.course-card__cover {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 7;
+  background: var(--img-bg) var(--canvas-glow) no-repeat;
+  border-bottom: 1px solid var(--line);
+}
+.course-card__mark {
+  font-family: var(--font-mono);
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text-2);
+  transition: transform 360ms var(--ease-spring);
+}
+.course-card:hover .course-card__mark {
+  transform: scale(1.04);
+}
+.course-card .course-card__link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+.course-card .course-card__link:focus-visible {
+  outline: none;
+}
+.course-card:has(.course-card__link:focus-visible) {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+.course-card__cta {
+  margin-top: var(--space-3);
+}
+.course-card:hover .course-card__cta .icon {
+  transform: translateX(2px);
+}

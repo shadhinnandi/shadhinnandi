@@ -12,6 +12,8 @@ Every fact on the site traces to one of these sources. Nothing was added without
 | `evidence/DP photo.png`, `evidence/photo of UGA.jpeg` | Portrait; UIU campus photo (cropped so the handwritten student ID on the envelope is not shown) |
 | GitHub repositories (all 11 cloned and read) | Technical details, stacks, results and screenshots for each project |
 | Previous portfolio (`shadhinnandi.github.io/shadhinnandi`) | Email address, Instagram link, ClickUp and Cisco Packet Tracer |
+| `Beginner-C-Programming-UI` and `Beginner-C-programming` repositories | The Academic course at `/academic/beginner-c-programming`: course page copy and chapters 00–14 from the UI repository (`src/components/academic/beginner-c/content/`); the question bank from `14-practice-problem-bank/questions.md` and `solutions.md` in the Markdown repository. Repository links and file names were removed from the visible copy; the problem text is unchanged. |
+| Written for this site | The scenario-based problems at the end of each chapter (`content/scenarios/*.md`): original problems; every solution is compiled with GCC and checked against its sample and test outputs by `npm run check:scenarios` (needs `gcc`). All fees, tariffs and programme rules in them are fictional. |
 
 ### Images created during the build
 

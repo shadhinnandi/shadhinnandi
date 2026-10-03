@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { Navigate, Route, Routes, useParams } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import SiteHeader from './components/layout/SiteHeader.jsx';
 import SiteFooter from './components/layout/SiteFooter.jsx';
 import RouteEffects from './components/layout/RouteEffects.jsx';
@@ -13,14 +13,9 @@ const ProjectDetails = lazy(() => import('./pages/ProjectDetails.jsx'));
 const Research = lazy(() => import('./pages/Research.jsx'));
 const Achievements = lazy(() => import('./pages/Achievements.jsx'));
 const Contact = lazy(() => import('./pages/Contact.jsx'));
+const Academic = lazy(() => import('./pages/Academic.jsx'));
+const Course = lazy(() => import('./pages/Course.jsx'));
 const NotFound = lazy(() => import('./pages/NotFound.jsx'));
-
-// Older URLs: course projects used to live under /academic/:slug and
-// education on /academic. Keep those links working.
-function LegacyAcademicProject() {
-  const { slug } = useParams();
-  return <Navigate to={`/projects/${slug}`} replace />;
-}
 
 export default function App() {
   return (
@@ -41,9 +36,10 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/achievements" element={<Achievements />} />
+            <Route path="/academic" element={<Academic />} />
+            {/* Courses; older /academic/:slug project URLs redirect from here too. */}
+            <Route path="/academic/:slug/*" element={<Course />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/academic" element={<Navigate to={{ pathname: '/about', hash: '#education' }} replace />} />
-            <Route path="/academic/:slug" element={<LegacyAcademicProject />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

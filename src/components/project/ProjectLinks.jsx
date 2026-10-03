@@ -5,7 +5,7 @@ import { projectPath } from '../../data/projects';
 
 const extraIcon = { pdf: 'document', video: 'play' };
 
-/** Case study, source, demo and any extra evidence (reports, videos). */
+/** Case study, on-site page, source, demo and any extra evidence (reports, videos). */
 export default function ProjectLinks({ project, caseStudy = true, extras = false }) {
   const t = project.title;
   return (
@@ -14,6 +14,15 @@ export default function ProjectLinks({ project, caseStudy = true, extras = false
         <li>
           <Link className="text-link" to={projectPath(project)}>
             Case study<span className="visually-hidden">: {t}</span>
+            <Icon name="arrowRight" />
+          </Link>
+        </li>
+      )}
+      {project.open && (
+        <li>
+          <Link className="text-link" to={project.open.to}>
+            {project.open.label}
+            <span className="visually-hidden">: {t}</span>
             <Icon name="arrowRight" />
           </Link>
         </li>

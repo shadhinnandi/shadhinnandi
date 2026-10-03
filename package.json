@@ -7,9 +7,12 @@
     "dev": "vite",
     "build": "vite build && node scripts/spa-fallback.mjs",
     "build:gh": "BASE_PATH=/dev/ npm run build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check:scenarios": "node scripts/check-scenario-problems.mjs"
   },
   "dependencies": {
+    "highlight.js": "^11.12.0",
+    "marked": "^12.0.2",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "react-router-dom": "^7.18.4"

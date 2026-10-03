@@ -13,6 +13,9 @@ import { image, publicUrl } from '../lib/media';
   role       Your personal contribution. Left null when it is not documented;
              fill it in rather than letting the site guess.
   highlights 2–3 short, technical lines for cards.
+  open       Optional { to, label }: a page on this site where the project
+             can be used (e.g. a course under /academic), linked in place of
+             an external demo.
   details    Optional detail-page sections; only include sections with real
              information: problem, solution, features, implementation,
              results, contribution, scope.
@@ -393,7 +396,9 @@ export const projects = [
     image: image('beginner-c', 'Beginner C landing page: "Master C Programming and problem solving" with Start learning and View on GitHub buttons'),
     gallery: [],
     github: gh('Beginner-C-Programming-UI'),
-    demo: 'https://shadhinnandi.github.io/Beginner-C-Programming-UI/',
+    demo: null,
+    // The course itself now lives on this site (Academic).
+    open: { to: '/academic/beginner-c-programming', label: 'Open course' },
     details: {
       features: ['Keyboard navigation between chapters.'],
     },
