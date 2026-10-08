@@ -14,6 +14,18 @@
   facts     Short items shown as a quiet mono line on the card.
 */
 
+import javaStats from '../components/academic/beginner-java/stats.json';
+
+/** Real counts of the Java course, written by scripts/check-java-course.mjs. */
+function javaFacts() {
+  return [
+    `${javaStats.chapters} chapters`,
+    `${javaStats.practice.total} practice problems`,
+    `${javaStats.scenarios.total} scenarios`,
+    'GUI, games, projects',
+  ];
+}
+
 export const courses = [
   {
     slug: 'beginner-c-programming',
@@ -23,6 +35,15 @@ export const courses = [
     summary:
       'A comprehensive, structured educational system covering core syntax, program logic, and software foundations. Tailored for academic courses and technical assessments.',
     facts: ['15 chapters', 'Question bank', 'Worked solutions'],
+  },
+  {
+    slug: 'beginner-java-programming',
+    title: 'Object Oriented Programming',
+    mark: '{ OOP }',
+    label: 'OOP · Java · Object-Oriented Design',
+    summary:
+      'A complete Java and Object-Oriented Programming course from fundamentals to practical advanced concepts.',
+    facts: javaFacts(),
   },
 ];
 
