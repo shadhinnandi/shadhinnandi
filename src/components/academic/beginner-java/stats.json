@@ -1,12 +1,34 @@
 {
-  "chapters": 0,
-  "workedExamples": 0,
-  "practice": { "total": 0, "Basic": 0, "Intermediate": 0, "Advanced": 0 },
-  "scenarios": { "total": 0, "Basic": 0, "Intermediate": 0, "Advanced": 0, "tests": 0 },
-  "questionBank": { "total": 0, "topics": 0, "Basic": 0, "Intermediate": 0, "Advanced": 0 },
-  "gui": 0,
-  "games": { "total": 0, "Basic": 0, "Intermediate": 0, "Advanced": 0 },
-  "projects": 0,
-  "projectIdeas": 0,
-  "programs": 0
+  "chapters": 15,
+  "workedExamples": 90,
+  "practice": {
+    "total": 214,
+    "Basic": 73,
+    "Intermediate": 72,
+    "Advanced": 69
+  },
+  "scenarios": {
+    "total": 64,
+    "Basic": 16,
+    "Intermediate": 31,
+    "Advanced": 17,
+    "tests": 197
+  },
+  "questionBank": {
+    "total": 33,
+    "topics": 11,
+    "Basic": 11,
+    "Intermediate": 11,
+    "Advanced": 11
+  },
+  "gui": 10,
+  "games": {
+    "total": 8,
+    "Basic": 4,
+    "Intermediate": 2,
+    "Advanced": 2
+  },
+  "projects": 5,
+  "projectIdeas": 12,
+  "programs": 432
 }
