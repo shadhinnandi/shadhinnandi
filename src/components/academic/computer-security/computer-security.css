@@ -1,0 +1,1591 @@
+/*
+  Computer Security course.
+
+  Follows the portfolio and the Object Oriented Programming course: colour
+  tokens (light and dark), IBM Plex type and quiet surfaces. Every class is
+  prefixed `csec-` and every rule sits under `.csec`, the course root (the
+  portalled reader gets its own `.csec` wrapper). Loaded only with the course
+  chunk.
+*/
+
+.csec {
+  --csec-bar-h: 56px;
+  --csec-site-header: calc(var(--nav-top) + var(--nav-h));
+  --csec-prose: 46rem;
+  --csec-radius: 10px;
+  --csec-error: #b4232f;
+
+  /* Code: light theme (GitHub-like) */
+  --csec-code-bg: #f6f7f9;
+  --csec-code-line: rgb(0 0 0 / 0.08);
+  --csec-code-text: #1f2328;
+  --csec-hl-keyword: #cf222e;
+  --csec-hl-type: #8250df;
+  --csec-hl-title: #6639ba;
+  --csec-hl-string: #0a3069;
+  --csec-hl-number: #0550ae;
+  --csec-hl-comment: #6e7781;
+  --csec-hl-meta: #953800;
+  --csec-hl-attr: #0550ae;
+}
+:root[data-theme='dark'] .csec {
+  --csec-error: #ff8a8f;
+  --csec-code-bg: #121317;
+  --csec-code-line: rgb(255 255 255 / 0.08);
+  --csec-code-text: #e6e8ee;
+  --csec-hl-keyword: #ff7b72;
+  --csec-hl-type: #d2a8ff;
+  --csec-hl-title: #d2a8ff;
+  --csec-hl-string: #a5d6ff;
+  --csec-hl-number: #79c0ff;
+  --csec-hl-comment: #8b949e;
+  --csec-hl-meta: #ffa657;
+  --csec-hl-attr: #79c0ff;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .csec {
+    --csec-error: #ff8a8f;
+    --csec-code-bg: #121317;
+    --csec-code-line: rgb(255 255 255 / 0.08);
+    --csec-code-text: #e6e8ee;
+    --csec-hl-keyword: #ff7b72;
+    --csec-hl-type: #d2a8ff;
+    --csec-hl-title: #d2a8ff;
+    --csec-hl-string: #a5d6ff;
+    --csec-hl-number: #79c0ff;
+    --csec-hl-comment: #8b949e;
+    --csec-hl-meta: #ffa657;
+    --csec-hl-attr: #79c0ff;
+  }
+}
+
+.csec code,
+.csec kbd {
+  font-family: var(--font-mono);
+}
+
+.csec .csec-mark {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-2);
+  padding: 2px 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+/* ===== Course bar (sticky, under the portfolio header) ===== */
+.csec .csec-bar {
+  position: sticky;
+  top: var(--csec-site-header);
+  z-index: 40;
+  margin-top: var(--space-3);
+  background: var(--glass-strong);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border-block: 1px solid var(--line);
+}
+.csec .csec-bar__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  height: var(--csec-bar-h);
+}
+.csec .csec-bar__back {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.csec .csec-bar__back:hover {
+  color: var(--text);
+}
+.csec .csec-bar__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  white-space: nowrap;
+  min-width: 0;
+}
+.csec .csec-bar__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.csec .csec-bar__links {
+  display: flex;
+  gap: var(--space-5);
+  margin-left: auto;
+}
+.csec .csec-bar__links a {
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+  text-decoration: none;
+}
+.csec .csec-bar__links a:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+.csec .csec-bar__cta {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--btn-text);
+  background: var(--btn-bg);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.csec .csec-bar__cta:hover {
+  color: var(--btn-text);
+  background: var(--btn-bg-hover);
+}
+@media (max-width: 860px) {
+  .csec .csec-bar__links {
+    display: none;
+  }
+  .csec .csec-bar__cta {
+    margin-left: auto;
+  }
+  .csec .csec-bar__inner {
+    gap: var(--space-4);
+  }
+}
+@media (max-width: 480px) {
+  .csec .csec-bar__title {
+    display: none;
+  }
+}
+
+/* ===== Landing sections ===== */
+.csec .csec-hero {
+  padding-block: clamp(3rem, 2rem + 4vw, 5.5rem) var(--space-7);
+}
+.csec .csec-hero__title {
+  font-size: var(--fs-h1);
+  max-width: 18ch;
+  margin-bottom: var(--space-4);
+}
+.csec .csec-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+.csec .csec-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin: var(--space-7) 0 0;
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line);
+  max-width: 52rem;
+}
+.csec .csec-stats__item {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2px;
+}
+.csec .csec-stats dt {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+.csec .csec-stats dd {
+  margin: 0;
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.csec .csec-hero__more {
+  margin-top: var(--space-4);
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  max-width: 52rem;
+}
+@media (max-width: 640px) {
+  .csec .csec-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.csec .csec-author {
+  border-block: 1px solid var(--line);
+  background: var(--bg-alt);
+}
+.csec .csec-author__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding-block: var(--space-4);
+}
+.csec .csec-author__avatar {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--chip-bg);
+  border: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--text-2);
+  flex-shrink: 0;
+}
+.csec .csec-author__text {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  line-height: 1.3;
+}
+.csec .csec-author__label {
+  font-size: var(--fs-xs);
+  color: var(--muted);
+}
+.csec .csec-author__name {
+  font-weight: 600;
+}
+.csec .csec-author__link {
+  margin-left: auto;
+  font-size: var(--fs-sm);
+  white-space: nowrap;
+}
+
+.csec .csec-section {
+  padding-block: clamp(3.5rem, 2.5rem + 4vw, 6rem);
+  scroll-margin-top: calc(var(--csec-bar-h) + var(--space-3));
+}
+.csec .csec-section--alt {
+  background: var(--bg-alt);
+  border-block: 1px solid var(--line);
+}
+.csec .csec-section__head {
+  max-width: 46rem;
+  margin-bottom: var(--space-6);
+}
+.csec .csec-section h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--space-4);
+}
+.csec .csec-section__head h2:last-child {
+  margin-bottom: 0;
+}
+
+/* Syllabus */
+.csec .csec-syllabus {
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+.csec .csec-syllabus li {
+  border-bottom: 1px solid var(--line);
+}
+.csec .csec-syllabus__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-2);
+  color: var(--text);
+  text-decoration: none;
+  transition: background var(--dur-fast) var(--ease);
+}
+.csec .csec-syllabus__item:hover {
+  background: var(--chip-bg);
+  color: var(--text);
+}
+.csec .csec-syllabus__idx {
+  flex-shrink: 0;
+  width: 2.75rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+.csec .csec-syllabus__text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: var(--space-4);
+  row-gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+.csec .csec-syllabus__name {
+  font-weight: 500;
+}
+.csec .csec-syllabus__topics {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+.csec .csec-syllabus__arrow {
+  color: var(--muted);
+  transition: transform var(--dur) var(--ease);
+}
+.csec .csec-syllabus__item:hover .csec-syllabus__arrow {
+  transform: translateX(3px);
+  color: var(--text);
+}
+
+/* Footer */
+.csec .csec-footer {
+  border-top: 1px solid var(--line);
+  padding-block: var(--space-6);
+}
+.csec .csec-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4) var(--space-6);
+}
+.csec .csec-footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+}
+.csec .csec-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  font-size: var(--fs-sm);
+}
+.csec .csec-footer__credit {
+  margin: 0 0 0 auto;
+  font-size: var(--fs-xs);
+  color: var(--muted);
+}
+
+/* ===== Reader ===== */
+.csec .csec-reader {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    opacity 0.25s var(--ease),
+    visibility 0s 0.25s;
+}
+.csec .csec-reader.is-open {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.25s var(--ease);
+}
+.csec .csec-reader__panel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+}
+.csec .csec-reader__sidebar {
+  width: 288px;
+  flex-shrink: 0;
+  background: var(--bg-alt);
+  border-right: 1px solid var(--line);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.csec .csec-reader__sidebar-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-4) var(--space-3);
+  border-bottom: 1px solid var(--line);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+.csec .csec-reader__nav {
+  padding: var(--space-2) var(--space-2) var(--space-6);
+}
+.csec .csec-reader__group {
+  margin-top: var(--space-3);
+}
+.csec .csec-reader__group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.csec .csec-reader__group-label {
+  margin: 0 0 var(--space-1);
+  padding: 0 var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.csec .csec-reader__nav-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding: 7px var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-sm);
+  line-height: 1.35;
+  color: var(--text-2);
+  text-decoration: none;
+}
+.csec .csec-reader__nav-item:hover {
+  background: var(--chip-bg);
+  color: var(--text);
+}
+.csec .csec-reader__nav-item.is-active {
+  background: var(--accent-soft);
+  color: var(--text);
+  font-weight: 500;
+}
+.csec .csec-reader__nav-idx {
+  flex-shrink: 0;
+  min-width: 1.75rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--muted);
+}
+.csec .csec-reader__nav-item.is-active .csec-reader__nav-idx {
+  color: var(--accent);
+}
+
+.csec .csec-reader__main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.csec .csec-reader__bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 56px;
+  padding: var(--space-2) var(--space-4);
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+  flex-shrink: 0;
+}
+.csec .csec-reader__icon-btn {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  color: var(--text-2);
+  cursor: pointer;
+}
+.csec .csec-reader__icon-btn:hover {
+  color: var(--text);
+  background: var(--chip-bg);
+}
+.csec .csec-reader__toggle {
+  display: none;
+}
+.csec .csec-reader__heading {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.25;
+}
+.csec .csec-reader__kicker {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.csec .csec-reader__title {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.csec .csec-reader__pager {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: auto;
+}
+.csec .csec-reader__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 12px;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  cursor: pointer;
+}
+.csec .csec-reader__btn:hover:not(:disabled) {
+  background: var(--chip-bg);
+}
+.csec .csec-reader__btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.csec .csec-reader__counter {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  white-space: nowrap;
+  min-width: 3.5rem;
+  text-align: center;
+}
+.csec .csec-reader__progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+}
+.csec .csec-reader__progress span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.csec .csec-reader__content {
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: var(--space-7) var(--space-5) var(--space-8);
+}
+.csec .csec-reader__content:focus {
+  outline: none;
+}
+.csec .csec-reader__status {
+  max-width: var(--csec-prose);
+  margin: var(--space-8) auto;
+  text-align: center;
+  color: var(--muted);
+}
+.csec .csec-reader__status--error {
+  color: var(--csec-error);
+}
+.csec .csec-reader__scrim {
+  display: none;
+}
+.csec .csec-reader__footer-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  max-width: var(--csec-prose);
+  margin: var(--space-8) auto 0;
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line);
+}
+.csec .csec-pager-link {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--csec-radius);
+  text-decoration: none;
+  color: var(--text);
+}
+.csec .csec-pager-link:hover {
+  border-color: var(--line-strong);
+  background: var(--chip-bg);
+  color: var(--text);
+}
+.csec .csec-pager-link--next {
+  text-align: right;
+  grid-column: 2;
+}
+.csec .csec-pager-link__dir {
+  font-size: var(--fs-xs);
+  color: var(--muted);
+}
+.csec .csec-pager-link__name {
+  font-weight: 500;
+  font-size: var(--fs-sm);
+}
+
+@media (max-width: 960px) {
+  .csec .csec-reader__sidebar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition:
+      transform 0.25s var(--ease),
+      visibility 0s 0.25s;
+  }
+  .csec .csec-reader__sidebar.is-open {
+    transform: none;
+    visibility: visible;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.25s var(--ease);
+  }
+  .csec .csec-reader__scrim {
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    background: rgb(0 0 0 / 0.3);
+  }
+  .csec .csec-reader__toggle {
+    display: grid;
+  }
+}
+@media (max-width: 640px) {
+  .csec .csec-reader__bar {
+    padding: var(--space-2) var(--space-3);
+    gap: var(--space-2);
+  }
+  .csec .csec-reader__btn {
+    padding: 0 10px;
+  }
+  .csec .csec-reader__btn-text,
+  .csec .csec-reader__counter {
+    display: none;
+  }
+  .csec .csec-reader__content {
+    padding: var(--space-6) var(--gutter) var(--space-7);
+  }
+  .csec .csec-reader__footer-nav {
+    grid-template-columns: 1fr;
+  }
+  .csec .csec-pager-link--next {
+    grid-column: 1;
+  }
+}
+
+/* ===== Article (lesson, lab, question bank) ===== */
+.csec .csec-article {
+  max-width: var(--csec-prose);
+  margin: 0 auto;
+}
+.csec .csec-article__head {
+  margin-bottom: var(--space-5);
+}
+.csec .csec-article__kicker {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.csec .csec-article__head h1 {
+  font-size: clamp(1.875rem, 1.5rem + 1.6vw, 2.5rem);
+}
+
+.csec .csec-toc {
+  margin: 0 0 var(--space-7);
+  padding: var(--space-4) var(--space-5);
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--csec-radius);
+}
+.csec .csec-toc__label {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.csec .csec-toc__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+  font-size: var(--fs-sm);
+}
+.csec .csec-toc__list--cols {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--space-5);
+}
+.csec .csec-toc__list a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  padding: 2px 0;
+  color: var(--text-2);
+  text-decoration: none;
+}
+.csec .csec-toc__list a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.csec .csec-toc__count {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  color: var(--muted);
+  background: var(--chip-bg);
+  padding: 0 6px;
+  border-radius: var(--radius-pill);
+}
+@media (max-width: 640px) {
+  .csec .csec-toc__list--cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Markdown prose */
+.csec .csec-prose {
+  color: var(--text-2);
+  line-height: 1.7;
+}
+.csec .csec-prose > :first-child {
+  margin-top: 0;
+}
+.csec .csec-prose h2 {
+  font-size: 1.625rem;
+  color: var(--text);
+  margin: var(--space-8) 0 var(--space-4);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line);
+  scroll-margin-top: var(--space-4);
+}
+.csec .csec-prose > h2:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.csec .csec-prose h3 {
+  font-size: 1.25rem;
+  color: var(--text);
+  margin: var(--space-6) 0 var(--space-3);
+}
+.csec .csec-prose h4 {
+  font-size: 1.0625rem;
+  color: var(--text);
+  margin: var(--space-5) 0 var(--space-2);
+}
+.csec .csec-prose p {
+  margin: 0 0 var(--space-4);
+}
+.csec .csec-prose strong {
+  color: var(--text);
+}
+.csec .csec-prose ul,
+.csec .csec-prose ol {
+  margin: 0 0 var(--space-4);
+  padding-left: 1.5rem;
+}
+.csec .csec-prose li {
+  margin-bottom: var(--space-1);
+}
+.csec .csec-prose li > ul,
+.csec .csec-prose li > ol {
+  margin: var(--space-1) 0 0;
+}
+.csec .csec-prose a {
+  color: var(--accent);
+}
+.csec .csec-prose blockquote {
+  margin: var(--space-5) 0;
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.csec .csec-prose blockquote p:last-child {
+  margin-bottom: 0;
+}
+.csec .csec-prose hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: var(--space-6) 0;
+}
+.csec .csec-prose table {
+  display: block;
+  overflow-x: auto;
+  width: max-content;
+  max-width: 100%;
+  margin: var(--space-4) 0 var(--space-5);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+}
+.csec .csec-prose th,
+.csec .csec-prose td {
+  padding: 8px 12px;
+  border: 1px solid var(--line-strong);
+  text-align: left;
+  vertical-align: top;
+}
+.csec .csec-prose th {
+  background: var(--bg-alt);
+  color: var(--text);
+  font-weight: 600;
+}
+.csec .csec-prose :not(pre) > code {
+  font-size: 0.875em;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background: var(--chip-bg);
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+.csec .csec-prose details {
+  margin: var(--space-4) 0;
+  border: 1px solid var(--line);
+  border-radius: var(--csec-radius);
+  padding: 0 var(--space-4);
+}
+.csec .csec-prose details > summary {
+  cursor: pointer;
+  padding: var(--space-3) 0;
+  font-weight: 500;
+  color: var(--text);
+}
+.csec .csec-prose details[open] > summary {
+  border-bottom: 1px solid var(--line);
+  margin-bottom: var(--space-3);
+}
+
+/* Code blocks */
+.csec .csec-prose pre,
+.csec .csec-code pre {
+  margin: var(--space-4) 0 var(--space-5);
+  background: var(--csec-code-bg);
+  border: 1px solid var(--csec-code-line);
+  border-radius: var(--csec-radius);
+  overflow: hidden;
+}
+.csec .csec-prose pre > code,
+.csec .csec-code pre > code {
+  display: block;
+  overflow-x: auto;
+  padding: var(--space-4);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--csec-code-text);
+  background: none;
+  tab-size: 4;
+}
+.csec .csec-code pre {
+  margin: 0 0 var(--space-4);
+}
+.csec .hljs-keyword,
+.csec .hljs-literal,
+.csec .hljs-built_in,
+.csec .hljs-selector-tag {
+  color: var(--csec-hl-keyword);
+}
+.csec .hljs-type,
+.csec .hljs-class .hljs-title,
+.csec .hljs-title.class_ {
+  color: var(--csec-hl-type);
+}
+.csec .hljs-title,
+.csec .hljs-title.function_ {
+  color: var(--csec-hl-title);
+}
+.csec .hljs-string,
+.csec .hljs-char,
+.csec .hljs-regexp {
+  color: var(--csec-hl-string);
+}
+.csec .hljs-number {
+  color: var(--csec-hl-number);
+}
+.csec .hljs-comment,
+.csec .hljs-quote {
+  color: var(--csec-hl-comment);
+  font-style: italic;
+}
+.csec .hljs-meta,
+.csec .hljs-meta .hljs-keyword {
+  color: var(--csec-hl-meta);
+}
+.csec .hljs-attr,
+.csec .hljs-variable,
+.csec .hljs-params {
+  color: var(--csec-hl-attr);
+}
+.csec .hljs-params {
+  color: inherit;
+}
+/* ===== Landing: course areas ===== */
+.csec .csec-areas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+.csec .csec-area {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--space-5);
+}
+.csec .csec-area h3 {
+  margin-bottom: var(--space-2);
+}
+.csec .csec-area p {
+  color: var(--text-2);
+  font-size: var(--fs-sm);
+}
+.csec .csec-area__links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+.csec .csec-area__links a {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--chip-bg);
+  color: var(--text-2);
+  text-decoration: none;
+}
+.csec .csec-area__links a:hover {
+  color: var(--text);
+  background: var(--accent-soft);
+}
+@media (max-width: 760px) {
+  .csec .csec-areas {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Syllabus tags: the papers a topic appeared in */
+.csec .csec-syllabus__tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+  max-width: 13rem;
+}
+.csec .csec-tag {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  padding: 1px 7px;
+  border-radius: var(--radius-pill);
+  background: var(--accent-soft);
+  color: var(--accent);
+  white-space: nowrap;
+}
+.csec .csec-tag--none {
+  background: var(--chip-bg);
+  color: var(--muted);
+}
+@media (max-width: 640px) {
+  .csec .csec-syllabus__item {
+    flex-wrap: wrap;
+  }
+  .csec .csec-syllabus__tags {
+    order: 3;
+    max-width: none;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: calc(2.75rem + var(--space-4));
+  }
+}
+
+/* Exam map */
+.csec .csec-map-wrap {
+  /* containing block for the visually hidden "Not asked" labels, so they are
+     clipped with the table instead of widening the page on small screens */
+  position: relative;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.csec .csec-map {
+  width: 100%;
+  min-width: 40rem;
+  border-collapse: collapse;
+  font-size: var(--fs-sm);
+}
+.csec .csec-map th,
+.csec .csec-map td {
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+.csec .csec-map tbody tr:last-child th,
+.csec .csec-map tbody tr:last-child td {
+  border-bottom: 0;
+}
+.csec .csec-map thead th {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--muted);
+  background: var(--bg-alt);
+  white-space: nowrap;
+}
+.csec .csec-map thead a {
+  color: inherit;
+}
+.csec .csec-map tbody th {
+  font-weight: 500;
+}
+.csec .csec-map tbody th a {
+  color: var(--text);
+  text-decoration: none;
+}
+.csec .csec-map tbody th a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.csec .csec-map td a {
+  display: inline-block;
+  margin: 0 6px 2px 0;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--accent);
+}
+.csec .csec-map__empty {
+  color: var(--muted);
+}
+
+/* Previous papers */
+.csec .csec-papers {
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+.csec .csec-papers li {
+  border-bottom: 1px solid var(--line);
+}
+.csec .csec-papers__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px var(--space-4);
+  padding: var(--space-4) var(--space-2);
+  color: var(--text);
+  text-decoration: none;
+  transition: background var(--dur-fast) var(--ease);
+}
+.csec .csec-papers__item:hover {
+  background: var(--chip-bg);
+  color: var(--text);
+}
+.csec .csec-papers__item:hover .csec-syllabus__arrow {
+  transform: translateX(3px);
+  color: var(--text);
+}
+.csec .csec-papers__idx {
+  width: 2.75rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+.csec .csec-papers__name {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+.csec .csec-papers__meta {
+  flex: 1;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+
+/* Guidelines */
+.csec .csec-notes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5) var(--space-7);
+  margin: 0;
+  max-width: 60rem;
+}
+.csec .csec-notes dt {
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+.csec .csec-notes dd {
+  margin: 0;
+  color: var(--text-2);
+}
+@media (max-width: 760px) {
+  .csec .csec-notes {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Topic page: exam record ===== */
+.csec .csec-asked {
+  margin: 0 0 var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: var(--fs-sm);
+}
+.csec .csec-asked__label {
+  margin: 0 0 var(--space-1);
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.csec .csec-asked__none {
+  margin: 0;
+  color: var(--text-2);
+}
+.csec .csec-asked__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+.csec .csec-asked__list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+}
+.csec .csec-asked__paper {
+  min-width: 7.5rem;
+  font-weight: 500;
+  color: var(--text);
+}
+.csec .csec-asked__qs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+.csec .csec-asked__qs a {
+  color: var(--accent);
+}
+.csec .csec-asked__marks {
+  color: var(--muted);
+  font-size: var(--fs-xs);
+}
+
+/* ===== Previous paper ===== */
+.csec .csec-paper__info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-6);
+  margin: 0 0 var(--space-5);
+  font-size: var(--fs-sm);
+}
+.csec .csec-paper__info dt {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.csec .csec-paper__info dd {
+  margin: 0;
+  color: var(--text);
+}
+.csec .csec-paper__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-block: 1px solid var(--line);
+}
+.csec .csec-paper__meta {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--muted);
+}
+.csec .csec-paper__all,
+.csec .csec-question__toggle {
+  padding: 6px 14px;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+.csec .csec-paper__all:hover,
+.csec .csec-question__toggle:hover {
+  background: var(--chip-bg);
+}
+.csec .csec-question__toggle[aria-expanded='true'] {
+  background: var(--btn-bg);
+  border-color: var(--btn-bg);
+  color: var(--btn-text);
+}
+.csec .csec-paper__how {
+  margin: var(--space-4) 0 var(--space-5);
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+.csec .csec-paper__list {
+  display: grid;
+  /* minmax(0, ...) so a long calculation scrolls inside its box instead of
+     widening every question card */
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+.csec .csec-question {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--csec-radius);
+  padding: var(--space-4) var(--space-5);
+  scroll-margin-top: var(--space-4);
+}
+.csec .csec-question__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+.csec .csec-question__num {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.csec .csec-question__marks {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  white-space: nowrap;
+}
+.csec .csec-question__text {
+  color: var(--text);
+}
+.csec .csec-question__topics {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-2) 0 var(--space-4);
+  padding: 0;
+}
+.csec .csec-question__topics a {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--chip-bg);
+  color: var(--text-2);
+  text-decoration: none;
+}
+.csec .csec-question__topics a:hover {
+  background: var(--accent-soft);
+  color: var(--text);
+}
+.csec .csec-solution {
+  margin-top: var(--space-4);
+  padding-top: var(--space-2);
+  border-top: 1px dashed var(--line-strong);
+}
+.csec .csec-label {
+  margin: var(--space-2) 0 var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+@media (max-width: 640px) {
+  .csec .csec-question {
+    padding: var(--space-4);
+  }
+}
+
+/* ===== Step-by-step working (```calc) ===== */
+.csec .csec-calc {
+  display: grid;
+  grid-template-columns: max-content max-content minmax(0, 1fr);
+  row-gap: 2px;
+  margin: var(--space-3) 0 var(--space-5);
+  padding: var(--space-4) var(--space-5);
+  background: var(--csec-code-bg);
+  border: 1px solid var(--csec-code-line);
+  border-radius: var(--csec-radius);
+  color: var(--csec-code-text);
+  font-size: 0.975rem;
+  line-height: 1.65;
+  overflow-x: auto;
+  font-variant-numeric: tabular-nums;
+}
+.csec .csec-calc__row {
+  display: contents;
+}
+.csec .csec-calc__lhs {
+  grid-column: 1;
+  text-align: right;
+  white-space: nowrap;
+}
+.csec .csec-calc__eq {
+  grid-column: 2;
+  padding-inline: 0.5em;
+}
+.csec .csec-calc__rhs {
+  grid-column: 3;
+}
+.csec .csec-calc__note {
+  margin-left: 1.25em;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+.csec .csec-calc__note::before {
+  content: '[';
+}
+.csec .csec-calc__note::after {
+  content: ']';
+}
+.csec .csec-calc__row--result > span {
+  font-weight: 600;
+  color: var(--text);
+  background: var(--accent-soft);
+  padding-block: 3px;
+  margin-top: var(--space-2);
+}
+.csec .csec-calc__row--result > .csec-calc__lhs {
+  padding-left: 8px;
+  border-radius: 6px 0 0 6px;
+}
+.csec .csec-calc__row--result > .csec-calc__rhs {
+  padding-right: 8px;
+  border-radius: 0 6px 6px 0;
+}
+.csec .csec-calc__text {
+  grid-column: 1 / -1;
+  color: var(--text-2);
+  font-size: var(--fs-sm);
+  margin-top: var(--space-2);
+}
+.csec .csec-calc__text:first-child {
+  margin-top: 0;
+}
+.csec .csec-calc__gap {
+  grid-column: 1 / -1;
+  height: var(--space-2);
+}
+.csec .csec-calc sup,
+.csec .csec-calc sub,
+.csec .csec-prose sup,
+.csec .csec-prose sub {
+  font-size: 0.72em;
+  line-height: 0;
+}
+
+/* ===== Message exchange diagrams (```seq) ===== */
+.csec .csec-seq-wrap {
+  margin: var(--space-4) 0 var(--space-5);
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--csec-radius);
+  background: var(--bg-alt);
+}
+.csec .csec-seq {
+  display: grid;
+  /* columns (two per party) and min-width are set by placeSeqDiagrams() */
+  row-gap: var(--space-3);
+  padding: var(--space-4) var(--space-3) var(--space-5);
+  font-size: var(--fs-sm);
+  line-height: 1.45;
+}
+.csec .csec-seq__head {
+  justify-self: center;
+  z-index: 1;
+  padding: 4px 14px;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+}
+.csec .csec-seq__life {
+  position: relative;
+}
+.csec .csec-seq__life::before {
+  content: '';
+  position: absolute;
+  top: calc(var(--space-3) * -1);
+  bottom: calc(var(--space-5) * -1);
+  left: 50%;
+  border-left: 1.5px dashed var(--line-strong);
+}
+.csec .csec-seq__note {
+  z-index: 1;
+  justify-self: center;
+  max-width: calc(100% - var(--space-3));
+  padding: 6px 10px;
+  text-align: center;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+}
+.csec .csec-seq__msg {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--space-3) 10px;
+}
+.csec .csec-seq__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--accent);
+  text-align: center;
+  background: var(--bg-alt);
+  padding: 0 6px;
+}
+.csec .csec-seq__msg::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  border-top: 1.5px solid var(--accent);
+}
+.csec .csec-seq__msg::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  border: 4.5px solid transparent;
+}
+.csec .csec-seq__msg--right::after {
+  right: -1px;
+  border-left: 8px solid var(--accent);
+  border-right: 0;
+}
+.csec .csec-seq__msg--left::after {
+  left: -1px;
+  border-right: 8px solid var(--accent);
+  border-left: 0;
+}
+
+/* ===== Figures (inline SVG diagrams) ===== */
+.csec .csec-figure {
+  overflow-x: auto;
+  margin: var(--space-4) 0 var(--space-5);
+  padding: var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--csec-radius);
+  background: var(--bg-alt);
+}
+.csec .csec-figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 36rem; /* keeps the labels readable; narrow screens scroll the figure */
+  max-width: 40rem;
+  margin: 0 auto;
+}
+.csec .csec-figure figcaption {
+  margin-top: var(--space-3);
+  text-align: center;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--text-2);
+}
+.csec .csec-fig-line {
+  stroke: var(--line-strong);
+  stroke-width: 2;
+  fill: none;
+}
+.csec .csec-fig-node {
+  fill: var(--surface);
+  stroke: var(--line-strong);
+  stroke-width: 1.5;
+}
+.csec .csec-fig-node--bad {
+  stroke: var(--csec-error);
+  stroke-width: 2;
+}
+.csec .csec-fig-title {
+  fill: var(--text);
+  font: 600 14px var(--font-sans);
+}
+.csec .csec-fig-text {
+  fill: var(--text-2);
+  font: 12.5px var(--font-mono);
+}
+.csec .csec-fig-text--bad {
+  fill: var(--csec-error);
+}
+
+/* Figures from the class notes (figures/*.webp) */
+.csec .csec-figure--image a {
+  display: block;
+}
+.csec .csec-figure--image img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 30rem; /* tall figures stay beside their text; width follows */
+  margin: 0 auto;
+  border-radius: 6px;
+  background: #fff;
+}
+/* Dense figures (tables of addresses) keep a readable size; on narrow
+   screens the figure scrolls sideways instead of shrinking the text */
+.csec .csec-figure--dense img {
+  min-width: 40rem;
+}
+.csec .csec-figure figcaption a {
+  margin-left: var(--space-2);
+  font-weight: 400;
+  font-size: var(--fs-xs);
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* Recreated network figures (inline SVG) */
+.csec .csec-fig-wall {
+  fill: var(--accent-soft);
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+.csec .csec-fig-zone {
+  fill: var(--accent-soft);
+  stroke: none;
+}
+.csec .csec-fig-arrow {
+  stroke: var(--text-2);
+  stroke-width: 2;
+  fill: none;
+}
+.csec .csec-fig-arrow--bad {
+  stroke: var(--csec-error);
+}
+.csec .csec-fig-head {
+  fill: var(--text-2);
+}
+.csec .csec-fig-head--bad {
+  fill: var(--csec-error);
+}
+.csec .csec-fig-packet {
+  fill: var(--surface);
+  stroke: var(--line-strong);
+  stroke-width: 1.2;
+}
+.csec .csec-fig-small {
+  fill: var(--text-2);
+  font: 13px var(--font-mono);
+}
+.csec .csec-fig-rule {
+  fill: var(--text);
+  font: 500 13px var(--font-sans);
+}

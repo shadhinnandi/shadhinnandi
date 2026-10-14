@@ -15,6 +15,7 @@
 */
 
 import javaStats from '../components/academic/beginner-java/stats.json';
+import securityStats from '../components/academic/computer-security/stats.json';
 
 /** Real counts of the Java course, written by scripts/check-java-course.mjs. */
 function javaFacts() {
@@ -24,6 +25,11 @@ function javaFacts() {
     `${javaStats.scenarios.total} scenarios`,
     'GUI, games, projects',
   ];
+}
+
+/** Real counts of the Computer Security course, written by scripts/check-computer-security.mjs. */
+function securityFacts() {
+  return [`${securityStats.topics} topics`, `${securityStats.papers} past papers`, `${securityStats.questions} solved questions`];
 }
 
 export const courses = [
@@ -44,6 +50,15 @@ export const courses = [
     summary:
       'A complete Java and Object-Oriented Programming course from fundamentals to practical advanced concepts.',
     facts: javaFacts(),
+  },
+  {
+    slug: 'computer-security',
+    title: 'Computer Security',
+    mark: '{ SEC }',
+    label: 'CSE 4531 · Cryptography · Network and Web Security',
+    summary:
+      'Exam-focused notes on cryptography, network attacks, malware and web security, with past final exam papers solved step by step.',
+    facts: securityFacts(),
   },
 ];
 

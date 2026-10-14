@@ -1,0 +1,398 @@
+{
+  "topics": 17,
+  "papers": 4,
+  "questions": 40,
+  "marks": 160,
+  "calculations": 85,
+  "perPaper": {
+    "spring-2025": {
+      "questions": 12,
+      "marks": 40
+    },
+    "summer-2025": {
+      "questions": 12,
+      "marks": 40
+    },
+    "fall-2025": {
+      "questions": 8,
+      "marks": 40
+    },
+    "spring-2026": {
+      "questions": 8,
+      "marks": 40
+    }
+  },
+  "asked": {
+    "10": [
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "3(c)",
+        "marks": 4,
+        "id": "summer-2025-q3-c"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "4(a)",
+        "marks": 5,
+        "id": "fall-2025-q4-a"
+      }
+    ],
+    "11": [
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "1(c)",
+        "marks": 4,
+        "id": "spring-2025-q1-c"
+      },
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "2(c)",
+        "marks": 4,
+        "id": "spring-2025-q2-c"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "2(a)",
+        "marks": 3,
+        "id": "summer-2025-q2-a"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "1(b)",
+        "marks": 5,
+        "id": "fall-2025-q1-b"
+      }
+    ],
+    "12": [
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "2(c)",
+        "marks": 4,
+        "id": "summer-2025-q2-c"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "3(a)",
+        "marks": 5,
+        "id": "fall-2025-q3-a"
+      }
+    ],
+    "13": [
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "1(b)",
+        "marks": 3,
+        "id": "spring-2025-q1-b"
+      },
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "2(a)",
+        "marks": 3,
+        "id": "spring-2025-q2-a"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "1(b)",
+        "marks": 3,
+        "id": "summer-2025-q1-b"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "3(b)",
+        "marks": 5,
+        "id": "fall-2025-q3-b"
+      },
+      {
+        "paper": "spring-2026",
+        "name": "Spring 2026",
+        "number": "3(b)",
+        "marks": 4,
+        "id": "spring-2026-q3-b"
+      },
+      {
+        "paper": "spring-2026",
+        "name": "Spring 2026",
+        "number": "4(b)",
+        "marks": 5,
+        "id": "spring-2026-q4-b"
+      }
+    ],
+    "14": [
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "2(b)",
+        "marks": 3,
+        "id": "spring-2025-q2-b"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "2(b)",
+        "marks": 3,
+        "id": "summer-2025-q2-b"
+      },
+      {
+        "paper": "spring-2026",
+        "name": "Spring 2026",
+        "number": "2(b)",
+        "marks": 5,
+        "id": "spring-2026-q2-b"
+      }
+    ],
+    "15": [
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "3(a)",
+        "marks": 3,
+        "id": "spring-2025-q3-a"
+      },
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "3(b)",
+        "marks": 3,
+        "id": "spring-2025-q3-b"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "3(a)",
+        "marks": 3,
+        "id": "summer-2025-q3-a"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "3(b)",
+        "marks": 3,
+        "id": "summer-2025-q3-b"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "4(b)",
+        "marks": 5,
+        "id": "fall-2025-q4-b"
+      },
+      {
+        "paper": "spring-2026",
+        "name": "Spring 2026",
+        "number": "4(a)",
+        "marks": 5,
+        "id": "spring-2026-q4-a"
+      }
+    ],
+    "01": [
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "1(c)",
+        "marks": 4,
+        "id": "spring-2025-q1-c"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "1(c)",
+        "marks": 4,
+        "id": "summer-2025-q1-c"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "2(a)",
+        "marks": 3,
+        "id": "summer-2025-q2-a"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "1(a)",
+        "marks": 5,
+        "id": "fall-2025-q1-a"
+      },
+      {
+        "paper": "spring-2026",
+        "name": "Spring 2026",
+        "number": "3(b)",
+        "marks": 4,
+        "id": "spring-2026-q3-b"
+      }
+    ],
+    "02": [
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "4(a)",
+        "marks": 2,
+        "id": "spring-2025-q4-a"
+      },
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "4(c)",
+        "marks": 4,
+        "id": "spring-2025-q4-c"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "4(a)",
+        "marks": 3,
+        "id": "summer-2025-q4-a"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "4(c)",
+        "marks": 4,
+        "id": "summer-2025-q4-c"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "2(a)",
+        "marks": 5,
+        "id": "fall-2025-q2-a"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "2(b)",
+        "marks": 5,
+        "id": "fall-2025-q2-b"
+      },
+      {
+        "paper": "spring-2026",
+        "name": "Spring 2026",
+        "number": "1(a)",
+        "marks": 6,
+        "id": "spring-2026-q1-a"
+      },
+      {
+        "paper": "spring-2026",
+        "name": "Spring 2026",
+        "number": "1(b)",
+        "marks": 4,
+        "id": "spring-2026-q1-b"
+      }
+    ],
+    "03": [
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "4(b)",
+        "marks": 4,
+        "id": "spring-2025-q4-b"
+      }
+    ],
+    "04": [
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "4(c)",
+        "marks": 4,
+        "id": "spring-2025-q4-c"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "4(c)",
+        "marks": 4,
+        "id": "summer-2025-q4-c"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "2(a)",
+        "marks": 5,
+        "id": "fall-2025-q2-a"
+      },
+      {
+        "paper": "spring-2026",
+        "name": "Spring 2026",
+        "number": "1(a)",
+        "marks": 6,
+        "id": "spring-2026-q1-a"
+      }
+    ],
+    "05": [
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "2(b)",
+        "marks": 5,
+        "id": "fall-2025-q2-b"
+      },
+      {
+        "paper": "spring-2026",
+        "name": "Spring 2026",
+        "number": "1(b)",
+        "marks": 4,
+        "id": "spring-2026-q1-b"
+      }
+    ],
+    "06": [
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "1(a)",
+        "marks": 3,
+        "id": "spring-2025-q1-a"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "1(a)",
+        "marks": 3,
+        "id": "summer-2025-q1-a"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "4(b)",
+        "marks": 3,
+        "id": "summer-2025-q4-b"
+      }
+    ],
+    "07": [
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "3(c)",
+        "marks": 4,
+        "id": "spring-2025-q3-c"
+      },
+      {
+        "paper": "spring-2026",
+        "name": "Spring 2026",
+        "number": "3(a)",
+        "marks": 6,
+        "id": "spring-2026-q3-a"
+      }
+    ],
+    "09": [
+      {
+        "paper": "spring-2026",
+        "name": "Spring 2026",
+        "number": "2(a)",
+        "marks": 5,
+        "id": "spring-2026-q2-a"
+      }
+    ]
+  }
+}

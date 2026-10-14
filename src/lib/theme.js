@@ -5,7 +5,9 @@ import { useCallback, useEffect, useState } from 'react';
 // applies the same logic before first paint so there is no flash, and adds
 // html.motion-ok when scroll-reveal motion is allowed. This module keeps
 // React in sync afterwards.
-// An explicit choice is stored; without one, the OS setting is followed live.
+// The browser / OS setting is the default and is followed live. Only a choice
+// that differs from it is stored; switching back to the system theme clears
+// the stored choice, so the site follows the browser again.
 
 const STORAGE_KEY = 'theme';
 const THEME_COLORS = { light: '#f5f5f7', dark: '#0a0a0c' };
@@ -22,7 +24,8 @@ function readStored() {
 
 function writeStored(value) {
   try {
-    localStorage.setItem(STORAGE_KEY, value);
+    if (value) localStorage.setItem(STORAGE_KEY, value);
+    else localStorage.removeItem(STORAGE_KEY);
   } catch {
     /* preference simply won't persist */
   }
@@ -61,7 +64,7 @@ export function useTheme() {
   const toggle = useCallback(() => {
     setTheme((current) => {
       const next = current === 'dark' ? 'light' : 'dark';
-      writeStored(next);
+      writeStored(next === systemTheme() ? null : next);
       applyTheme(next, true);
       return next;
     });

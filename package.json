@@ -9,7 +9,8 @@
     "build:gh": "BASE_PATH=/dev/ npm run build",
     "preview": "vite preview",
     "check:scenarios": "node scripts/check-scenario-problems.mjs",
-    "check:java": "node scripts/check-java-course.mjs"
+    "check:java": "node scripts/check-java-course.mjs",
+    "check:security": "node scripts/check-computer-security.mjs"
   },
   "dependencies": {
     "highlight.js": "^11.12.0",
