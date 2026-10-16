@@ -5,3 +5,15 @@
 .csec.csec--web .csec-prose th > code {
   overflow-wrap: normal;
 }
+
+/* "Cheat Sheet Final" hero button: ash gray background with black text, in both themes. */
+.csec.csec--web .csec-sheet-btn {
+  background: #c4c6c9;
+  border-color: #c4c6c9;
+  color: #000;
+}
+.csec.csec--web .csec-sheet-btn:hover {
+  background: #aeb1b5;
+  border-color: #aeb1b5;
+  color: #000;
+}

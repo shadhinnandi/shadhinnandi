@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { publicUrl } from '../../../lib/media';
 import { PAPERS, TOPICS, askedIn, askedTrimesters, stats } from './content.js';
 
 // Course overview for Web Programming, laid out like the Computer Security
@@ -102,6 +103,16 @@ export default function Landing({ basePath }) {
             <Link to={paperPath(lastPaper.id)} className="btn btn--ghost">
               Latest Question Paper
             </Link>
+            <a
+              href={publicUrl('documents/web-programming/web-programming-reference.pdf')}
+              className="btn btn--ghost csec-sheet-btn"
+              target="_blank"
+              rel="noopener"
+              type="application/pdf"
+              aria-label="Cheat Sheet Final"
+            >
+              Cheat Sheet Final
+            </a>
           </div>
           <dl className="csec-stats">
             {heroStats.map((s) => (
