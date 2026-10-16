@@ -32,7 +32,7 @@ function ScenarioCard({ problem: p, initiallyOpen }) {
           <Markdown source={p.statement} className="oop-prose" />
           <SampleIO input={p.sampleInput} output={p.sampleOutput} />
 
-          <Reveal show="Show solution" hide="Hide solution">
+          <Reveal show="Show solution" hide="Hide solution" copy>
             <JavaCode source={p.solution} />
             <h5 className="oop-label">Explanation</h5>
             <Markdown source={p.explanation} className="oop-prose" />

@@ -14,7 +14,7 @@ export const skills = [
   {
     group: 'Frontend',
     items: ['React', 'React Router', 'Vite', 'HTML', 'CSS', 'HTML5 Canvas'],
-    evidence: 'UIUFund (React, React Router, Vite), Beginner C Programming (Vite), Vortex Arena and Mini Car Racing (Canvas).',
+    evidence: 'UIUFund (React, React Router, Vite), Vortex Arena and Mini Car Racing (Canvas).',
   },
   {
     group: 'Databases',
@@ -34,7 +34,7 @@ export const skills = [
   {
     group: 'Tools & platforms',
     items: ['Git', 'GitHub Actions', 'Gradle', 'Linux', 'Godot', 'Figma', 'Jira', 'ClickUp', 'Cisco Packet Tracer'],
-    evidence: 'Resume and previous portfolio; Vortex Arena (Gradle, Godot); Beginner C Programming (GitHub Actions). Also works on macOS and Windows.',
+    evidence: 'Resume and previous portfolio; Vortex Arena (Gradle, Godot). Also works on macOS and Windows.',
   },
   {
     group: 'Hardware',

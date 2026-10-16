@@ -1,0 +1,61 @@
+/*
+  Copy buttons for academic courses. The same light gray chip with dark text
+  reads well on every course's code background, in light and dark themes.
+*/
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 2px 10px;
+  font: 600 0.75rem/1.2 var(--font-sans, system-ui, sans-serif);
+  color: #111;
+  background: #d9dbde;
+  border: 1px solid #c4c6c9;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.copy-btn:hover {
+  background: #c4c6c9;
+}
+.copy-btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+.copy-btn.is-done {
+  background: #c9e7d2;
+  border-color: #a8d5b5;
+}
+
+/* Answer: the button sits on its own row at the top right. */
+.copy-row {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 0.6rem;
+}
+
+/* Code block: the button sits inside the block's top right corner. The code
+   gets extra top padding so the button never covers the first line. */
+.code-block {
+  position: relative;
+}
+.code-block > .copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+  min-height: 22px;
+  padding: 1px 8px;
+  font-size: 0.7rem;
+}
+.code-block > pre {
+  padding-top: 0 !important;
+}
+.code-block > pre > code {
+  padding-top: 2.4rem !important;
+}
+
+/* While an answer is being copied, its buttons are not part of the text. */
+.is-copying .copy-btn,
+.is-copying .copy-row {
+  display: none !important;
+}

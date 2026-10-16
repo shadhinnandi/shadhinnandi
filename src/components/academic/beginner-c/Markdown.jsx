@@ -2,10 +2,12 @@ import { useEffect, useMemo, useRef } from 'react';
 import { useHref, useNavigate } from 'react-router-dom';
 import { marked } from 'marked';
 import hljs from 'highlight.js/lib/common';
+import { copyText, flashButton } from '../copy.js';
 
 // Renders course Markdown exactly as the original reader did: Marked (GFM,
 // no soft line breaks), then Highlight.js on every code block. Fenced blocks
-// without a language are auto-detected, as before.
+// without a language are auto-detected, as before. Every code block gets a
+// "Copy" button in its top right corner.
 //
 // `inline` renders a single line (no paragraph) inside a <span>.
 //
@@ -31,6 +33,19 @@ export default function Markdown({ source, className, resolveLink, basePath = ''
         /* leave the block as plain text */
       }
     });
+    el.querySelectorAll('pre').forEach((pre) => {
+      if (pre.parentElement.classList.contains('code-block')) return;
+      const wrap = document.createElement('div');
+      wrap.className = 'code-block';
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'copy-btn';
+      button.dataset.copyCode = '';
+      button.textContent = 'Copy';
+      button.setAttribute('aria-label', 'Copy code');
+      pre.replaceWith(wrap);
+      wrap.append(button, pre);
+    });
     if (resolveLink) {
       el.querySelectorAll('a[href]').forEach((a) => {
         const target = resolveLink(a.getAttribute('href'));
@@ -43,6 +58,12 @@ export default function Markdown({ source, className, resolveLink, basePath = ''
   }, [html, resolveLink, basePath, root]);
 
   const onClick = (e) => {
+    const copy = e.target.closest('[data-copy-code]');
+    if (copy) {
+      const code = copy.parentElement.querySelector('pre').textContent.replace(/\n$/, '');
+      copyText(code).then((ok) => flashButton(copy, ok));
+      return;
+    }
     const a = e.target.closest('a[data-to]');
     if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();

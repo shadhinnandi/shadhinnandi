@@ -1,0 +1,253 @@
+/*
+  Course card cover art (CourseArt.jsx). Shapes use the site's tokens; each
+  course adds one muted accent. Dark values follow the site's theme rules:
+  html[data-theme='dark'], or the system setting when no choice is stored.
+*/
+
+.course-art {
+  --ca-accent: var(--accent);
+  --ca-accent-soft: var(--accent-soft);
+  --ca-danger: #b4232f;
+  --ca-kw: #8250df;
+  --ca-str: #0a7a4a;
+  --ca-num: #0550ae;
+  --ca-pp: #b4500a;
+  --ca-fn: #1d5fd6;
+  --ca-type: #8250df;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 360ms var(--ease-spring);
+}
+.course-card:hover .course-art {
+  transform: scale(1.03);
+}
+.course-art--c {
+  --ca-accent: #0e7c6b;
+  --ca-accent-soft: rgb(14 124 107 / 0.12);
+}
+.course-art--oop {
+  --ca-accent: #b5650d;
+  --ca-accent-soft: rgb(181 101 13 / 0.13);
+}
+.course-art--sec {
+  --ca-accent: #1f7a4d;
+  --ca-accent-soft: rgb(31 122 77 / 0.12);
+}
+
+:root[data-theme='dark'] .course-art {
+  --ca-danger: #ff8a8f;
+  --ca-kw: #d2a8ff;
+  --ca-str: #7ee2b8;
+  --ca-num: #79c0ff;
+  --ca-pp: #ffa657;
+  --ca-fn: #8ab4ff;
+  --ca-type: #d2a8ff;
+}
+:root[data-theme='dark'] .course-art--c {
+  --ca-accent: #4fd1b9;
+  --ca-accent-soft: rgb(79 209 185 / 0.14);
+}
+:root[data-theme='dark'] .course-art--oop {
+  --ca-accent: #f0a35a;
+  --ca-accent-soft: rgb(240 163 90 / 0.15);
+}
+:root[data-theme='dark'] .course-art--sec {
+  --ca-accent: #5cc98f;
+  --ca-accent-soft: rgb(92 201 143 / 0.14);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .course-art {
+    --ca-danger: #ff8a8f;
+    --ca-kw: #d2a8ff;
+    --ca-str: #7ee2b8;
+    --ca-num: #79c0ff;
+    --ca-pp: #ffa657;
+    --ca-fn: #8ab4ff;
+    --ca-type: #d2a8ff;
+  }
+  :root:not([data-theme='light']) .course-art--c {
+    --ca-accent: #4fd1b9;
+    --ca-accent-soft: rgb(79 209 185 / 0.14);
+  }
+  :root:not([data-theme='light']) .course-art--oop {
+    --ca-accent: #f0a35a;
+    --ca-accent-soft: rgb(240 163 90 / 0.15);
+  }
+  :root:not([data-theme='light']) .course-art--sec {
+    --ca-accent: #5cc98f;
+    --ca-accent-soft: rgb(92 201 143 / 0.14);
+  }
+}
+
+/* Type */
+.course-art .ca-mono {
+  font-family: var(--font-mono);
+}
+.course-art .ca-sans {
+  font-family: var(--font-sans);
+}
+.course-art .ca-text {
+  fill: var(--text);
+}
+.course-art .ca-text-2,
+.course-art .ca-code {
+  fill: var(--text-2);
+}
+.course-art .ca-muted {
+  fill: var(--muted);
+}
+.course-art .ca-on-accent {
+  fill: var(--on-accent);
+}
+.course-art .ca-accent-text {
+  fill: var(--ca-accent);
+}
+.course-art .ca-kw {
+  fill: var(--ca-kw);
+}
+.course-art .ca-str {
+  fill: var(--ca-str);
+}
+.course-art .ca-num {
+  fill: var(--ca-num);
+}
+.course-art .ca-pp {
+  fill: var(--ca-pp);
+}
+.course-art .ca-fn {
+  fill: var(--ca-fn);
+}
+.course-art .ca-type {
+  fill: var(--ca-type);
+}
+
+/* Shapes */
+.course-art .ca-panel {
+  fill: var(--surface);
+  stroke: var(--line-strong);
+  stroke-width: 1;
+}
+.course-art .ca-bar,
+.course-art .ca-rack,
+.course-art .ca-db-top {
+  fill: var(--surface-2);
+}
+.course-art .ca-db-top {
+  stroke: var(--line-strong);
+}
+.course-art .ca-head-accent {
+  fill: var(--ca-accent-soft);
+}
+.course-art .ca-rule,
+.course-art .ca-line {
+  stroke: var(--line-strong);
+  stroke-width: 1;
+  fill: none;
+}
+.course-art .ca-line {
+  stroke: var(--muted);
+  stroke-width: 1.4;
+}
+.course-art .ca-dashed {
+  stroke-dasharray: 5 4;
+}
+.course-art .ca-hollow {
+  fill: var(--surface);
+  stroke: var(--muted);
+  stroke-width: 1.2;
+}
+.course-art .ca-dot {
+  fill: var(--line-strong);
+}
+.course-art .ca-accent-fill {
+  fill: var(--ca-accent);
+}
+.course-art .ca-input,
+.course-art .ca-address {
+  fill: var(--bg);
+  stroke: var(--line-strong);
+}
+.course-art .ca-address {
+  stroke: none;
+}
+.course-art .ca-chip {
+  fill: var(--ca-accent-soft);
+}
+.course-art .ca-chip-quiet {
+  fill: var(--chip-bg);
+}
+.course-art .ca-flow {
+  stroke: var(--ca-accent);
+  stroke-width: 1.6;
+  fill: none;
+}
+
+/* Beginner C terminal: dark in both themes, like a real terminal. */
+.course-art .ca-term {
+  fill: #15171c;
+  stroke: rgb(255 255 255 / 0.08);
+}
+.course-art .ca-term-dot {
+  fill: rgb(255 255 255 / 0.18);
+}
+.course-art .ca-term-text {
+  fill: #d5d8df;
+}
+.course-art .ca-term-prompt {
+  fill: #4fd1b9;
+}
+.course-art .ca-term-out {
+  fill: #ffffff;
+}
+.course-art .ca-term-cursor {
+  fill: #4fd1b9;
+  opacity: 0.85;
+}
+
+/* Computer Security */
+.course-art .ca-channel {
+  stroke: var(--ca-accent);
+  stroke-width: 2;
+}
+.course-art .ca-shield {
+  fill: var(--surface);
+  stroke: var(--ca-accent);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+}
+.course-art .ca-lock-shackle {
+  fill: none;
+  stroke: var(--ca-accent);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+.course-art .ca-keyhole {
+  fill: var(--surface);
+}
+.course-art .ca-danger-line {
+  stroke: var(--ca-danger);
+  stroke-width: 1.4;
+  stroke-dasharray: 4 4;
+}
+.course-art .ca-danger-stroke {
+  stroke: var(--ca-danger);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  fill: none;
+}
+.course-art .ca-danger-ring {
+  stroke: var(--ca-danger);
+}
+.course-art .ca-danger-text {
+  fill: var(--ca-danger);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .course-art {
+    transition: none;
+  }
+  .course-card:hover .course-art {
+    transform: none;
+  }
+}

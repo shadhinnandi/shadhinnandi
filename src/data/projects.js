@@ -376,34 +376,6 @@ export const projects = [
     },
   },
   {
-    slug: 'beginner-c-programming-ui',
-    title: 'Beginner C Programming',
-    tagline: 'Interactive C programming curriculum',
-    area: 'Tools',
-    kind: 'Learning resource',
-    course: 'For ICS, SPL and DSA preparation',
-    period: null,
-    featured: false,
-    award: null,
-    role: null,
-    summary:
-      'A web-based chapter reader for a C programming curriculum, from first programs to file handling, aligned with UIU’s introductory courses.',
-    highlights: [
-      'Chapters from introduction to programming through loops, functions, arrays, strings and file handling, written in Markdown.',
-      'Markdown rendered in the browser with Marked and Highlight.js; deployed to GitHub Pages through GitHub Actions.',
-    ],
-    stack: ['JavaScript', 'Vite', 'Marked', 'Highlight.js', 'GitHub Actions'],
-    image: image('beginner-c', 'Beginner C landing page: "Master C Programming and problem solving" with Start learning and View on GitHub buttons'),
-    gallery: [],
-    github: gh('Beginner-C-Programming-UI'),
-    demo: null,
-    // The course itself now lives on this site (Academic).
-    open: { to: '/academic/beginner-c-programming', label: 'Open course' },
-    details: {
-      features: ['Keyboard navigation between chapters.'],
-    },
-  },
-  {
     slug: 'uiu-grading-calculator',
     title: 'UIU Grading Calculator',
     tagline: 'GPA, CGPA and retake calculator',

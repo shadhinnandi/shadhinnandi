@@ -36,7 +36,7 @@ function Question({ problem: p }) {
             <Markdown source={p.hint} className="oop-prose" />
           </Reveal>
         )}
-        <Reveal show="Show solution" hide="Hide solution">
+        <Reveal show="Show solution" hide="Hide solution" copy>
           <JavaCode source={p.solution} />
           <h5 className="oop-label">Explanation</h5>
           <Markdown source={p.explanation} className="oop-prose" />

@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Markdown from '../beginner-c/Markdown.jsx';
+import CopyButton from '../CopyButton.jsx';
+import { readText } from '../copy.js';
 import { LEVEL_MARK } from './problems.js';
 
 // Building blocks shared by practice problems, scenario problems and the
@@ -68,16 +70,23 @@ export function SampleIO({ input, output, inputTitle = 'Sample input', outputTit
   );
 }
 
-/** A disclosure with a show/hide label. Content is only rendered once opened. */
-export function Reveal({ show, hide, children, className = '' }) {
+/**
+ * A disclosure with a show/hide label. Content is only rendered once opened.
+ * `copy` adds a "Copy answer" button at the top right of the opened content.
+ */
+export function Reveal({ show, hide, children, className = '', copy = false }) {
   const [seen, setSeen] = useState(false);
+  const bodyRef = useRef(null);
   return (
     <details className={`oop-reveal ${className}`.trim()} onToggle={(e) => e.currentTarget.open && setSeen(true)}>
       <summary>
         <span className="oop-reveal__show">{show}</span>
         <span className="oop-reveal__hide">{hide}</span>
       </summary>
-      <div className="oop-reveal__body">{seen && children}</div>
+      <div className="oop-reveal__body" ref={bodyRef}>
+        {seen && copy && <CopyButton getText={() => readText(bodyRef.current)} />}
+        {seen && children}
+      </div>
     </details>
   );
 }

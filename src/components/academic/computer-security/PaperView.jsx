@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { TOPICS } from './content.js';
 import Prose from './Prose.jsx';
+import CopyButton from '../CopyButton.jsx';
+import { readText } from '../copy.js';
 
 const topicName = Object.fromEntries(TOPICS.map((t) => [t.id, t.name]));
 
@@ -16,6 +18,7 @@ export function hashTarget(hash) {
 
 function Question({ q, open, onToggle, basePath }) {
   const solutionId = `${q.id}-solution`;
+  const answerRef = useRef(null);
   return (
     <article className="csec-question" id={q.id} aria-labelledby={`${q.id}-title`}>
       <header className="csec-question__head">
@@ -46,8 +49,11 @@ function Question({ q, open, onToggle, basePath }) {
       <div id={solutionId} className="csec-solution" hidden={!open}>
         {open && (
           <>
+            <CopyButton getText={() => readText(answerRef.current)} />
             <p className="csec-label">Solution</p>
-            <Prose source={q.solution} />
+            <div ref={answerRef}>
+              <Prose source={q.solution} />
+            </div>
           </>
         )}
       </div>

@@ -1,9 +1,9 @@
 /*
   Object Oriented Programming (Java) course.
 
-  Unlike the Beginner C course, which keeps its own dark identity, this
-  course follows the portfolio: its colour tokens (light and dark), IBM Plex
-  type and quiet surfaces. Every class is prefixed `oop-` and every rule sits
+  This course follows the portfolio: its colour tokens (light and dark),
+  IBM Plex type and quiet surfaces. The Beginner C course uses the same
+  styles (its few extras are in ../beginner-c/beginner-c.css). Every class is prefixed `oop-` and every rule sits
   under `.oop`, the course root (the portalled reader gets its own `.oop`
   wrapper). Loaded only with the course chunk.
 */

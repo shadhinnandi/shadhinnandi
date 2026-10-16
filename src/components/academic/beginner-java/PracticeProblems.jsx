@@ -19,7 +19,7 @@ function PracticeCard({ problem: p }) {
       </header>
       <Markdown source={p.statement} className="oop-prose oop-problem__body" />
       <SampleIO input={p.sampleInput} output={p.sampleOutput} />
-      <Reveal show="Show solution" hide="Hide solution">
+      <Reveal show="Show solution" hide="Hide solution" copy>
         <JavaCode source={p.solution} />
         <h5 className="oop-label">Explanation</h5>
         <Markdown source={p.explanation} className="oop-prose" />

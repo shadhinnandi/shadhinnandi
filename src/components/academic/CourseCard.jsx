@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Icon from '../ui/Icon.jsx';
 import StackList from '../ui/StackList.jsx';
 import { coursePath } from '../../data/courses';
+import CourseArt, { hasCourseArt } from './CourseArt.jsx';
 
 // Course card for the Academic page. Same card recipe as project cards; the
 // title link stretches over the whole card so any click opens the course.
@@ -10,7 +11,7 @@ export default function CourseCard({ course, headingLevel = 3 }) {
   return (
     <article className="card course-card">
       <div className="course-card__cover" aria-hidden="true">
-        <span className="course-card__mark">{course.mark}</span>
+        {hasCourseArt(course.slug) ? <CourseArt slug={course.slug} /> : <span className="course-card__mark">{course.mark}</span>}
       </div>
       <div className="card__body">
         {course.label && <p className="meta">{course.label}</p>}
