@@ -19,7 +19,7 @@ export const profile = {
 
   // About page.
   about: [
-    'I am a final-year Computer Science & Engineering student at United International University in Dhaka, expected to graduate in January 2027. Since March 2025 I have worked as an Undergraduate Teaching Assistant in the CSE department, guiding lab sessions in Object-Oriented Programming, Introduction to Computer Systems, Data Structures & Algorithms I and II, and Electronics.',
+    'I am a final-year Computer Science & Engineering student at United International University in Dhaka, expected to graduate in January 2027. Since March 2025 I have worked as an Undergraduate Teaching Assistant in the CSE department, guiding lab sessions in Object-Oriented Programming, Introduction to Computer Systems, Data Structures & Algorithms I and II, Electronics and Microprocessors & Microcontrollers.',
     'Most of my project work is full-stack. I have built a Spring Boot and MySQL backend for a multiplayer arena shooter, a React, Express and MySQL platform for student crowdfunding and peer loans, a PHP and MySQL marketplace for farmers, and a MERN-stack disaster-response platform. Two course projects, Vortex Arena and the ARAM river-monitoring prototype, placed 3rd Runner-Up at UIU’s CSE Project Show.',
     'For my Computer Security course, two teammates and I built SICA, a rule-based detector for mid-session HTTP session hijacking that works from web server access logs alone, evaluated on two public log datasets under the supervision of Dr. Muhammad Nomani Kabir. In 2026 I completed a one-month machine learning internship with CodeAlpha.',
     'My research work is in AI and computational biology. I am currently working on enhancer–promoter interaction prediction from genomic sequences, and on YOLO-based object detection for trash and waste. I am also interested in bioinformatics, protein representation learning and human-centered AI.',
@@ -48,7 +48,8 @@ export const secondaryLinks = [profile.links.codeforces, profile.links.instagram
 // Primary navigation. Education and skills are reachable from the home page
 // and the About page, which keeps the bar short.
 export const navItems = [
-  { to: '/projects', label: 'Work' },
+  { to: '/projects', label: 'Projects' },
+  { to: '/games', label: 'Games' },
   { to: '/research', label: 'Research' },
   { to: '/experience', label: 'Experience' },
   { to: '/achievements', label: 'Achievements' },

@@ -1,17 +1,9 @@
-import { Link } from 'react-router-dom';
 import PageHeader from '../components/ui/PageHeader.jsx';
 import Img from '../components/ui/Img.jsx';
-import Icon from '../components/ui/Icon.jsx';
 import { DegreeCard } from '../components/sections/Education.jsx';
 import { profile } from '../data/profile';
 import { schooling } from '../data/education';
 import usePageTitle from '../lib/usePageTitle';
-
-const related = [
-  { to: '/experience', label: 'Experience' },
-  { to: '/skills', label: 'Skills with evidence' },
-  { to: '/achievements', label: 'Awards and certificates' },
-];
 
 export default function About() {
   usePageTitle('About', 'About Shadhin Nandi: final-year CSE student at United International University, Undergraduate Teaching Assistant with hands-on work in software, machine learning and research.');
@@ -31,18 +23,6 @@ export default function About() {
           <figure className="about__portrait">
             <Img media={profile.portrait} sizes="280px" />
           </figure>
-          <nav aria-label="Related pages">
-            <ul className="related">
-              {related.map((l) => (
-                <li key={l.to}>
-                  <Link to={l.to}>
-                    {l.label}
-                    <Icon name="arrowRight" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
         </aside>
       </div>
 

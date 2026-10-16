@@ -50,7 +50,9 @@ function ExamRecord({ topicId, basePath }) {
     <aside className="csec-asked" aria-label="Asked in previous papers">
       <p className="csec-asked__label">Asked in previous finals</p>
       {asked.length === 0 ? (
-        <p className="csec-asked__none">Not found in the supplied papers (Spring 2025 to Spring 2026).</p>
+        <p className="csec-asked__none">
+          Not found in the supplied papers ({PAPERS[0].name} to {PAPERS[PAPERS.length - 1].name}).
+        </p>
       ) : (
         <ul className="csec-asked__list">
           {PAPERS.map((p) => {

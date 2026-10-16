@@ -36,7 +36,7 @@ export default function Research() {
 
         <p className="small muted research-footnote">
           Looking for engineering work? Software and security projects, including SICA, are under{' '}
-          <Link to="/projects">Work</Link>.
+          <Link to="/projects">Projects</Link>.
         </p>
       </div>
     </div>

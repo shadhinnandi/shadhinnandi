@@ -156,7 +156,7 @@
   }
 }
 
-@media (max-width: 939px) {
+@media (max-width: 1023px) {
   .nav {
     display: none;
   }
@@ -167,7 +167,7 @@
     display: inline-grid;
   }
 }
-@media (min-width: 940px) {
+@media (min-width: 1024px) {
   .mobile-nav {
     display: none !important;
   }

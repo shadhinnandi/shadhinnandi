@@ -34,37 +34,16 @@
   aspect-ratio: 1;
   object-fit: cover;
 }
-.related {
-  list-style: none;
-  border-top: 1px solid var(--line);
-}
-.related a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--space-3) 0;
-  border-bottom: 1px solid var(--line);
-  font-size: var(--fs-sm);
-  font-weight: 500;
-  color: var(--text);
-  text-decoration: none;
-}
-.related a .icon {
-  color: var(--muted);
-  transition: transform var(--dur) var(--ease);
-}
-.related a:hover .icon {
-  transform: translateX(3px);
-  color: var(--text);
-}
 @media (min-width: 960px) {
   .about {
     grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
     gap: var(--space-8);
   }
 }
+/* The aside only holds the portrait; hiding the whole column avoids an
+   empty grid row (and its gap) below the bio on narrow screens. */
 @media (max-width: 959px) {
-  .about__portrait {
+  .about__aside {
     display: none;
   }
 }

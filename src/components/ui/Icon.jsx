@@ -14,6 +14,8 @@ const paths = {
   check: 'M4 10.5l4 4 8-9',
   award: 'M10 12.5a4.25 4.25 0 1 0 0-8.5 4.25 4.25 0 0 0 0 8.5zM7.3 11.6 6.4 17.5 10 15.6l3.6 1.9-.9-5.9',
   play: 'M6.5 4.5v11l9-5.5z',
+  pause: 'M7 4.5v11M13 4.5v11',
+  restart: 'M4.6 11a5.5 5.5 0 1 0 1.5-5.2M5 3.5v3.3h3.3',
 };
 
 export default function Icon({ name, size = 16, className = '' }) {

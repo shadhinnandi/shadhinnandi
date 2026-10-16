@@ -3,12 +3,14 @@ import PageHeader from '../components/ui/PageHeader.jsx';
 import ExternalLink from '../components/ui/ExternalLink.jsx';
 import FeaturedGrid from '../components/project/FeaturedGrid.jsx';
 import ProjectCard from '../components/project/ProjectCard.jsx';
+import SkillTable from '../components/sections/SkillTable.jsx';
 import { featuredProjects, additionalProjects, areas as allAreas } from '../data/projects';
 import { profile } from '../data/profile';
+import { skills } from '../data/skills';
 import usePageTitle from '../lib/usePageTitle';
 
 export default function Projects() {
-  usePageTitle('Work', 'Full-stack, machine learning, security and tooling projects by Shadhin Nandi, with source code and case studies.');
+  usePageTitle('Projects', 'Full-stack, machine learning, security and tooling projects by Shadhin Nandi, with source code, case studies and the skills each one evidences.');
   const areas = allAreas.filter((a) => additionalProjects.some((p) => p.area === a));
   const [params, setParams] = useSearchParams();
   const active = areas.includes(params.get('area')) ? params.get('area') : 'All';
@@ -20,7 +22,7 @@ export default function Projects() {
   return (
     <div className="page">
       <PageHeader
-        label="Work"
+        label="Projects"
         title="Projects and case studies"
         lead="Course projects, independent builds and research code. Each case study covers the problem, what was built and how, with source linked where it is public."
       >
@@ -31,6 +33,16 @@ export default function Projects() {
       </PageHeader>
 
       <div className="container">
+        <section id="skills" className="block" aria-labelledby="skills-title">
+          <h2 id="skills-title" className="block__title">
+            Skills
+          </h2>
+          <p className="block__intro">
+            Technologies I have used in coursework, teaching and projects. Each group notes where it can be verified.
+          </p>
+          <SkillTable groups={skills} showEvidence />
+        </section>
+
         <section className="block" aria-labelledby="featured-title">
           <h2 id="featured-title" className="block__title">
             Featured

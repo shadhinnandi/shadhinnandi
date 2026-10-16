@@ -1,14 +1,14 @@
 import { image, publicUrl } from '../lib/media';
 
 /*
-  Project registry. The Work page, the project detail route (/projects/:slug)
+  Project registry. The Projects page, the project detail route (/projects/:slug)
   and the home page all read from this list; order here is display order.
 
   kind       Short label for where the work came from ('Course project', ...).
   course     Course or programme the project was built for, if any.
   period     When it was built, if documented.
-  featured   Shown as a large card on the home and Work pages.
-  area       Used by the filter on the Work page.
+  featured   Shown as a large card on the home and Projects pages.
+  area       Used by the filter on the Projects page.
   award      { title, detail } when the project won something.
   role       Your personal contribution. Left null when it is not documented;
              fill it in rather than letting the site guess.

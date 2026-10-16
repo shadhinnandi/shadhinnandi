@@ -98,7 +98,7 @@ export default function Home() {
         </Reveal>
       </Section>
 
-      <Section id="skills" title="Technical skills" intro="Grouped by use. Every item maps to a project, repository or course I taught." link={{ to: '/skills', label: 'Skills with evidence' }}>
+      <Section id="skills" title="Technical skills" intro="Grouped by use. Every item maps to a project, repository or course I taught." link={{ to: '/projects#skills', label: 'Skills with evidence' }}>
         <Reveal>
           <SkillTable groups={homeSkills} />
         </Reveal>

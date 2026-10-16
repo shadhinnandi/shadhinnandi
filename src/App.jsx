@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import SiteHeader from './components/layout/SiteHeader.jsx';
 import SiteFooter from './components/layout/SiteFooter.jsx';
 import RouteEffects from './components/layout/RouteEffects.jsx';
@@ -7,7 +7,6 @@ import Home from './pages/Home.jsx';
 
 const About = lazy(() => import('./pages/About.jsx'));
 const Experience = lazy(() => import('./pages/Experience.jsx'));
-const Skills = lazy(() => import('./pages/Skills.jsx'));
 const Projects = lazy(() => import('./pages/Projects.jsx'));
 const ProjectDetails = lazy(() => import('./pages/ProjectDetails.jsx'));
 const Research = lazy(() => import('./pages/Research.jsx'));
@@ -15,6 +14,8 @@ const Achievements = lazy(() => import('./pages/Achievements.jsx'));
 const Contact = lazy(() => import('./pages/Contact.jsx'));
 const Academic = lazy(() => import('./pages/Academic.jsx'));
 const Course = lazy(() => import('./pages/Course.jsx'));
+const Games = lazy(() => import('./pages/Games.jsx'));
+const Game = lazy(() => import('./pages/Game.jsx'));
 const NotFound = lazy(() => import('./pages/NotFound.jsx'));
 
 export default function App() {
@@ -34,11 +35,14 @@ export default function App() {
             <Route path="/research" element={<Research />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/about" element={<About />} />
-            <Route path="/skills" element={<Skills />} />
+            {/* Skills with evidence now lives at the top of the Projects page. */}
+            <Route path="/skills" element={<Navigate to={{ pathname: '/projects', hash: '#skills' }} replace />} />
             <Route path="/achievements" element={<Achievements />} />
             <Route path="/academic" element={<Academic />} />
             {/* Courses; older /academic/:slug project URLs redirect from here too. */}
             <Route path="/academic/:slug/*" element={<Course />} />
+            <Route path="/games" element={<Games />} />
+            <Route path="/games/:slug" element={<Game />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

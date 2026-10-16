@@ -15,7 +15,7 @@ export default function NotFound() {
           </li>
           <li>
             <Link className="btn btn--ghost" to="/projects">
-              Work
+              Projects
             </Link>
           </li>
         </ul>

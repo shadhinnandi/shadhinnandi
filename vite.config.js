@@ -29,7 +29,7 @@ export const CSP = [
   "form-action 'none'",
 ].join('; ');
 
-const staticRoutes = ['', 'projects', 'research', 'experience', 'about', 'skills', 'achievements', 'academic', 'contact'];
+const staticRoutes = ['', 'projects', 'games', 'research', 'experience', 'about', 'skills', 'achievements', 'academic', 'contact'];
 
 function projectSlugs() {
   const source = readFileSync(new URL('./src/data/projects.js', import.meta.url), 'utf8');
@@ -39,6 +39,11 @@ function projectSlugs() {
 function courseSlugs() {
   const source = readFileSync(new URL('./src/data/courses.js', import.meta.url), 'utf8');
   return [...source.matchAll(/^\s{4}slug: '([^']+)'/gm)].map((m) => `academic/${m[1]}`);
+}
+
+function gameSlugs() {
+  const source = readFileSync(new URL('./src/data/games.js', import.meta.url), 'utf8');
+  return [...source.matchAll(/^\s{4}slug: '([^']+)'/gm)].map((m) => `games/${m[1]}`);
 }
 
 function transformHtml(html) {
@@ -71,7 +76,7 @@ function siteMeta() {
       const robots = ['User-agent: *', 'Allow: /'];
       if (siteUrl) {
         robots.push(`Sitemap: ${siteUrl}sitemap.xml`);
-        const urls = [...staticRoutes, ...projectSlugs(), ...courseSlugs()]
+        const urls = [...staticRoutes, ...projectSlugs(), ...courseSlugs(), ...gameSlugs()]
           .map((path) => `  <url><loc>${siteUrl}${path}</loc></url>`)
           .join('\n');
         this.emitFile({
