@@ -15,10 +15,20 @@ import { loadNumber, submitBest } from './storage.js';
   `create(api)` builds the engine:
     api.input          keyboard / pointer state (see input.js)
     api.reducedMotion  true when the visitor prefers reduced motion
-    api.over(result)   ends the run: { title, score, scoreLabel?, stats?: [[label, value]], win?, best? }
+    api.over(result)   ends the run: { title, score, scoreLabel?, scoreText?, stats?: [[label, value]], win?, best?, bestText? }
+    api.dialog         open(spec) / close() / isOpen(): a panel with choices drawn over the
+                       game (station menus, clues, journal). Game input is off while it is open.
+                       spec = { eyebrow?, title, body?: string | string[], rows?: [[label, value]],
+                                choices: [{ id, label, hint?, disabled?, primary? }], cancel?: id,
+                                onChoose(id) }
+
+  Optional `setup` component: shown on the start and results screens to pick
+  options (track, mode, continue or new game). Its value is passed to
+  engine.reset(options); `Setup.initial()` gives the first value and
+  `value.playLabel` can rename the Play button.
 
   The engine provides:
-    reset()                    start a fresh run
+    reset(options?)            start a fresh run (options come from `setup`)
     update(dt)                 one fixed step of gameplay (only while playing)
     render(ctx, w, h, time)    draw a frame (w, h in CSS pixels)
     idle?(dt)                  background animation behind the start screen
@@ -28,7 +38,7 @@ import { loadNumber, submitBest } from './storage.js';
 const STEP = 1 / 120;
 const MAX_STEPS = 12;
 
-export default function GameShell({ game, create, cursor = 'default' }) {
+export default function GameShell({ game, create, cursor = 'default', setup: Setup = null }) {
   const frameRef = useRef(null);
   const stageRef = useRef(null);
   const canvasRef = useRef(null);
@@ -39,14 +49,37 @@ export default function GameShell({ game, create, cursor = 'default' }) {
   const [best, setBest] = useState(0);
   const overAt = useRef(0);
   const [touchFirst, setTouchFirst] = useState(false);
+  const [options, setOptionsState] = useState(() => (Setup?.initial ? Setup.initial() : null));
+  const optionsRef = useRef(options);
+  const setOptions = useCallback((v) => {
+    optionsRef.current = v;
+    setOptionsState(v);
+  }, []);
+  const [dialog, setDialogState] = useState(null);
+  const dialogRef = useRef(null);
 
   const setPhase = useCallback((p) => {
     phaseRef.current = p;
     setPhaseState(p);
     const a = api.current;
     if (!a) return;
-    a.input.setEnabled(p === 'playing');
+    a.input.setEnabled(p === 'playing' && !dialogRef.current);
     a.kick();
+  }, []);
+
+  const setDialog = useCallback((spec) => {
+    dialogRef.current = spec;
+    setDialogState(spec);
+    const a = api.current;
+    if (a) a.input.setEnabled(phaseRef.current === 'playing' && !spec);
+    if (!spec) canvasRef.current?.focus({ preventScroll: true });
+  }, []);
+
+  const choose = useCallback((id) => {
+    const d = dialogRef.current;
+    const c = d?.choices?.find((x) => x.id === id);
+    if (!d || (c && c.disabled)) return;
+    d.onChoose?.(id);
   }, []);
 
   useEffect(() => {
@@ -73,7 +106,14 @@ export default function GameShell({ game, create, cursor = 'default' }) {
         setBest(record.best);
         setResult({ ...res, best: record.best, isNew: record.isNew });
         overAt.current = performance.now();
+        dialogRef.current = null;
+        setDialogState(null);
         setPhase('over');
+      },
+      dialog: {
+        open: (spec) => setDialog(spec),
+        close: () => setDialog(null),
+        isOpen: () => Boolean(dialogRef.current),
       },
     };
     const engine = create(shared);
@@ -144,12 +184,14 @@ export default function GameShell({ game, create, cursor = 'default' }) {
       engine.destroy?.();
       api.current = null;
     };
-  }, [create, game.slug]);
+  }, [create, game.slug, setDialog]);
 
   const play = useCallback(() => {
     const a = api.current;
     if (!a) return;
-    a.engine.reset();
+    dialogRef.current = null;
+    setDialogState(null);
+    a.engine.reset(optionsRef.current);
     setResult(null);
     setPhase('playing');
     canvasRef.current?.focus({ preventScroll: true });
@@ -168,7 +210,9 @@ export default function GameShell({ game, create, cursor = 'default' }) {
   // Pause when the tab is hidden, the window loses focus, or the visitor
   // clicks outside the game (for example on the navbar).
   useEffect(() => {
-    const onVisibility = () => document.hidden && pause();
+    // A real tab switch also blurs the window; requiring both avoids pausing
+    // on spurious visibility events some browsers fire while the page has focus.
+    const onVisibility = () => document.hidden && !document.hasFocus() && pause();
     const onBlur = () => pause();
     const onPointer = (e) => {
       if (phaseRef.current === 'playing' && !frameRef.current?.contains(e.target)) pause();
@@ -176,6 +220,21 @@ export default function GameShell({ game, create, cursor = 'default' }) {
     const onKey = (e) => {
       if (e.target instanceof Element && e.target.closest('input, textarea, select')) return;
       const p = phaseRef.current;
+      const d = dialogRef.current;
+      if (p === 'playing' && d) {
+        // Number keys pick a choice; Escape takes the cancel choice if there is one.
+        const n = Number(e.key);
+        if (n >= 1 && n <= 9 && d.choices?.[n - 1]) {
+          e.preventDefault();
+          choose(d.choices[n - 1].id);
+          return;
+        }
+        if (e.code === 'Escape' && d.cancel !== undefined) {
+          e.preventDefault();
+          choose(d.cancel);
+          return;
+        }
+      }
       if (e.code === 'Escape' || e.code === 'KeyP') {
         if (p === 'playing') {
           e.preventDefault();
@@ -199,7 +258,7 @@ export default function GameShell({ game, create, cursor = 'default' }) {
       document.removeEventListener('pointerdown', onPointer);
       window.removeEventListener('keydown', onKey);
     };
-  }, [pause, resume, play]);
+  }, [pause, resume, play, choose]);
 
   const inRun = phase === 'playing' || phase === 'paused';
   const controls = touchFirst ? [game.controls.touch, game.controls.keys] : [game.controls.keys, game.controls.touch];
@@ -243,15 +302,18 @@ export default function GameShell({ game, create, cursor = 'default' }) {
 
           {phase === 'ready' && (
             <div className="game-overlay">
-              <div className="game-panel">
+              <div className={`game-panel${Setup ? ' game-panel--setup' : ''}`}>
                 <p className="game-panel__eyebrow">{game.genre}</p>
                 <h2 className="game-panel__title">{game.title}</h2>
                 <p className="game-panel__text">{game.summary}</p>
-                <Controls lists={controls} labels={controlLabels} />
+                <div className="game-panel__grid">
+                  <Controls lists={controls} labels={controlLabels} />
+                  {Setup && <Setup value={options} onChange={setOptions} />}
+                </div>
                 <div className="game-panel__actions">
                   <button type="button" className="game-btn game-btn--primary" onClick={play}>
                     <Icon name="play" />
-                    Play
+                    {options?.playLabel || 'Play'}
                   </button>
                   {best > 0 && (
                     <p className="game-panel__best">
@@ -262,6 +324,8 @@ export default function GameShell({ game, create, cursor = 'default' }) {
               </div>
             </div>
           )}
+
+          {phase === 'playing' && dialog && <GameDialog dialog={dialog} onChoose={choose} />}
 
           {phase === 'paused' && (
             <div className="game-overlay">
@@ -287,12 +351,12 @@ export default function GameShell({ game, create, cursor = 'default' }) {
 
           {phase === 'over' && result && (
             <div className="game-overlay game-overlay--over">
-              <div className="game-panel game-panel--compact">
+              <div className={`game-panel game-panel--compact${Setup ? ' game-panel--sticky' : ''}`}>
                 <p className={`game-panel__eyebrow${result.win ? ' is-win' : ''}`}>{result.subtitle || game.title}</p>
                 <h2 className="game-panel__title">{result.title}</h2>
-                {result.score !== undefined && (
+                {(result.score !== undefined || result.scoreText) && (
                   <p className="game-score">
-                    <span className="game-score__value">{fmt(result.score)}</span>
+                    <span className="game-score__value">{result.scoreText || fmt(result.score)}</span>
                     <span className="game-score__label">{result.scoreLabel || 'Score'}</span>
                   </p>
                 )}
@@ -308,12 +372,17 @@ export default function GameShell({ game, create, cursor = 'default' }) {
                 )}
                 <p className="game-panel__best">
                   {result.isNew ? <span className="game-badge">New best</span> : null}
-                  {game.score} <strong>{fmt(result.best)}</strong>
+                  {result.bestText || (
+                    <>
+                      {game.score} <strong>{fmt(result.best)}</strong>
+                    </>
+                  )}
                 </p>
+                {Setup && <Setup value={options} onChange={setOptions} compact />}
                 <div className="game-panel__actions">
                   <button type="button" className="game-btn game-btn--primary" onClick={play}>
                     <Icon name="restart" />
-                    Play again
+                    {options?.againLabel || 'Play again'}
                   </button>
                   <Link to="/games" className="game-btn game-btn--quiet">
                     All games
@@ -322,6 +391,64 @@ export default function GameShell({ game, create, cursor = 'default' }) {
               </div>
             </div>
           )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function GameDialog({ dialog, onChoose }) {
+  const first = useRef(null);
+  useEffect(() => {
+    first.current?.focus({ preventScroll: true });
+  }, [dialog]);
+  const body = Array.isArray(dialog.body) ? dialog.body : dialog.body ? [dialog.body] : [];
+  let firstEnabled = false;
+  return (
+    <div className="game-dialog">
+      <div className="game-dialog__panel" role="dialog" aria-labelledby="game-dialog-title">
+        {dialog.eyebrow && <p className="game-panel__eyebrow">{dialog.eyebrow}</p>}
+        <h2 id="game-dialog-title" className="game-dialog__title">
+          {dialog.title}
+        </h2>
+        {body.map((t) => (
+          <p key={t} className="game-dialog__text">
+            {t}
+          </p>
+        ))}
+        {dialog.rows?.length > 0 && (
+          <dl className="game-dialog__rows">
+            {dialog.rows.map(([label, value]) => (
+              <div key={label}>
+                <dt>{label}</dt>
+                <dd>{value}</dd>
+              </div>
+            ))}
+          </dl>
+        )}
+        <div className="game-dialog__choices">
+          {dialog.choices.map((c, i) => {
+            const isFirst = !c.disabled && !firstEnabled;
+            if (isFirst) firstEnabled = true;
+            return (
+              <button
+                key={c.id}
+                ref={isFirst ? first : undefined}
+                type="button"
+                className={`game-choice${c.primary ? ' is-primary' : ''}`}
+                disabled={c.disabled}
+                onClick={() => onChoose(c.id)}
+              >
+                <span className="game-choice__key" aria-hidden="true">
+                  {i + 1}
+                </span>
+                <span className="game-choice__label">
+                  {c.label}
+                  {c.hint && <small>{c.hint}</small>}
+                </span>
+              </button>
+            );
+          })}
         </div>
       </div>
     </div>

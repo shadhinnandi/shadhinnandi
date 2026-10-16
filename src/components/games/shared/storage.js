@@ -30,3 +30,31 @@ export function submitBest(key, value) {
   }
   return { best: prev, isNew: false };
 }
+
+/** JSON values (saves, ghost runs). Returns `fallback` if missing, unreadable or blocked. */
+export function loadJSON(key, fallback = null) {
+  try {
+    const raw = window.localStorage.getItem(PREFIX + key);
+    return raw ? JSON.parse(raw) : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+/** Returns true if the value was stored. */
+export function saveJSON(key, value) {
+  try {
+    window.localStorage.setItem(PREFIX + key, JSON.stringify(value));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export function removeKey(key) {
+  try {
+    window.localStorage.removeItem(PREFIX + key);
+  } catch {
+    /* nothing to remove */
+  }
+}

@@ -68,6 +68,45 @@ export const games = [
     },
     score: 'Best score',
   },
+  {
+    slug: 'racer',
+    title: 'Apex Rush',
+    genre: 'Arcade racing',
+    summary:
+      'Race three rivals or your own ghost across a coastal highway, a mountain pass and a city circuit. Drift the corners for boost and chase lap records.',
+    facts: ['3 tracks', 'Rival AI', 'Ghost racing', 'Drift boost'],
+    controls: {
+      keys: ['W or up to accelerate, S or down to brake and reverse', 'A D or left and right to steer', 'Space for the handbrake: drift through corners', 'P or Esc to pause'],
+      touch: ['LEFT and RIGHT buttons to steer', 'GAS and BRAKE on the right', 'DRIFT for the handbrake'],
+    },
+    score: 'Race wins',
+  },
+  {
+    slug: 'adventure',
+    title: 'Lost Horizons',
+    genre: 'Exploration adventure',
+    summary:
+      'Shipwrecked on a mysterious island: explore the forest, caves, ruins and peak, solve ancient puzzles, gather three sun shards and light the beacon.',
+    facts: ['5 regions', '3 puzzles', 'Hidden secrets', 'Saves progress'],
+    controls: {
+      keys: ['WASD or arrow keys to walk', 'E or Space to interact', 'J for the journal, M for the map', 'Walk into a boulder to push it', 'P or Esc to pause'],
+      touch: ['Drag on the left to walk', 'ACT to interact', 'LOG for the journal, MAP for the map'],
+    },
+    score: 'Times completed',
+  },
+  {
+    slug: 'train',
+    title: 'Last Train Home',
+    genre: 'Journey and travel',
+    summary:
+      'Drive the last train north across farmland, mountain passes, the coast and deep forest. Choose your routes, manage fuel and supplies, and gather the pages of a lost letter.',
+    facts: ['9 stations', 'Route choices', 'Day and night', '3 endings'],
+    controls: {
+      keys: ['Hold W or up to open the throttle, S or down to ease off', 'Space to brake; stop by a platform to arrive', 'Number keys pick choices at stations', 'M for the route map, L for the travel log', 'P or Esc to pause'],
+      touch: ['FASTER, SLOWER and BRAKE on the right', 'Tap a choice at each station', 'MAP and LOG at the top right'],
+    },
+    score: 'Journeys completed',
+  },
 ];
 
 export const getGame = (slug) => games.find((g) => g.slug === slug);

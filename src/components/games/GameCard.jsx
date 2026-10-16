@@ -5,8 +5,11 @@ import ShooterPreview from './shooter/Preview.jsx';
 import PoolPreview from './pool/Preview.jsx';
 import RunnerPreview from './runner/Preview.jsx';
 import FlightPreview from './flight/Preview.jsx';
+import RacerPreview from './racer/Preview.jsx';
+import AdventurePreview from './adventure/Preview.jsx';
+import TrainPreview from './train/Preview.jsx';
 
-const previews = { shooter: ShooterPreview, pool: PoolPreview, runner: RunnerPreview, flight: FlightPreview };
+const previews = { shooter: ShooterPreview, pool: PoolPreview, runner: RunnerPreview, flight: FlightPreview, racer: RacerPreview, adventure: AdventurePreview, train: TrainPreview };
 
 // Game card for the Games page. The title link stretches over the whole card
 // so any click opens the game, as on the course cards.

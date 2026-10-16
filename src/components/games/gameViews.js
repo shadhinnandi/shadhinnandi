@@ -7,4 +7,7 @@ export const gameViews = {
   pool: lazy(() => import('./pool/Pool.jsx')),
   runner: lazy(() => import('./runner/Runner.jsx')),
   flight: lazy(() => import('./flight/Flight.jsx')),
+  racer: lazy(() => import('./racer/Racer.jsx')),
+  adventure: lazy(() => import('./adventure/Adventure.jsx')),
+  train: lazy(() => import('./train/Train.jsx')),
 };
