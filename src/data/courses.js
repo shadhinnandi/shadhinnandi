@@ -16,6 +16,7 @@
 
 import javaStats from '../components/academic/beginner-java/stats.json';
 import securityStats from '../components/academic/computer-security/stats.json';
+import webStats from '../components/academic/web-programming/stats.json';
 
 /** Real counts of the Java course, written by scripts/check-java-course.mjs. */
 function javaFacts() {
@@ -30,6 +31,11 @@ function javaFacts() {
 /** Real counts of the Computer Security course, written by scripts/check-computer-security.mjs. */
 function securityFacts() {
   return [`${securityStats.topics} topics`, `${securityStats.papers} past papers`, `${securityStats.questions} solved questions`];
+}
+
+/** Real counts of the Web Programming course, written by scripts/check-web-programming.mjs. */
+function webFacts() {
+  return [`${webStats.topics} topics`, `${webStats.papers} past papers`, `${webStats.questions} solved questions`];
 }
 
 export const courses = [
@@ -59,6 +65,15 @@ export const courses = [
     summary:
       'Exam-focused notes on cryptography, network attacks, malware and web security, with past final exam papers solved step by step.',
     facts: securityFacts(),
+  },
+  {
+    slug: 'web-programming',
+    title: 'Web Programming',
+    mark: '{ WEB }',
+    label: 'CSE 4165 · JavaScript · PHP · MySQL',
+    summary:
+      'From the first script to a full database app: JavaScript on the page, PHP forms with POST, and MySQL with MySQLi, with every past final exam paper solved and tested.',
+    facts: webFacts(),
   },
 ];
 

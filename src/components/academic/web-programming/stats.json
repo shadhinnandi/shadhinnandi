@@ -1,0 +1,776 @@
+{
+  "topics": 20,
+  "papers": 9,
+  "questions": 28,
+  "marks": 280,
+  "codeBlocks": 237,
+  "perPaper": {
+    "fall-2023": {
+      "questions": 3,
+      "marks": 30
+    },
+    "spring-2024": {
+      "questions": 3,
+      "marks": 30
+    },
+    "summer-2024": {
+      "questions": 4,
+      "marks": 40
+    },
+    "fall-2024": {
+      "questions": 3,
+      "marks": 30
+    },
+    "spring-2025": {
+      "questions": 3,
+      "marks": 30
+    },
+    "summer-2025": {
+      "questions": 3,
+      "marks": 30
+    },
+    "fall-2025": {
+      "questions": 3,
+      "marks": 30
+    },
+    "spring-2026-set-a": {
+      "questions": 3,
+      "marks": 30
+    },
+    "spring-2026-set-b": {
+      "questions": 3,
+      "marks": 30
+    }
+  },
+  "asked": {
+    "10": [
+      {
+        "paper": "summer-2024",
+        "name": "Summer 2024",
+        "number": "2",
+        "marks": 10,
+        "id": "summer-2024-q2"
+      }
+    ],
+    "11": [
+      {
+        "paper": "fall-2023",
+        "name": "Fall 2023",
+        "number": "2",
+        "marks": 10,
+        "id": "fall-2023-q2"
+      },
+      {
+        "paper": "spring-2024",
+        "name": "Spring 2024",
+        "number": "2",
+        "marks": 10,
+        "id": "spring-2024-q2"
+      },
+      {
+        "paper": "summer-2024",
+        "name": "Summer 2024",
+        "number": "2",
+        "marks": 10,
+        "id": "summer-2024-q2"
+      },
+      {
+        "paper": "fall-2024",
+        "name": "Fall 2024",
+        "number": "2",
+        "marks": 10,
+        "id": "fall-2024-q2"
+      },
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "2",
+        "marks": 10,
+        "id": "spring-2025-q2"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "2",
+        "marks": 10,
+        "id": "summer-2025-q2"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "1",
+        "marks": 10,
+        "id": "fall-2025-q1"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "2",
+        "marks": 10,
+        "id": "fall-2025-q2"
+      },
+      {
+        "paper": "spring-2026-set-a",
+        "name": "Spring 2026 Set A",
+        "number": "2",
+        "marks": 10,
+        "id": "spring-2026-set-a-q2"
+      },
+      {
+        "paper": "spring-2026-set-b",
+        "name": "Spring 2026 Set B",
+        "number": "2",
+        "marks": 10,
+        "id": "spring-2026-set-b-q2"
+      }
+    ],
+    "12": [
+      {
+        "paper": "spring-2024",
+        "name": "Spring 2024",
+        "number": "2",
+        "marks": 10,
+        "id": "spring-2024-q2"
+      },
+      {
+        "paper": "summer-2024",
+        "name": "Summer 2024",
+        "number": "3",
+        "marks": 10,
+        "id": "summer-2024-q3"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "1",
+        "marks": 10,
+        "id": "fall-2025-q1"
+      }
+    ],
+    "13": [
+      {
+        "paper": "fall-2023",
+        "name": "Fall 2023",
+        "number": "2",
+        "marks": 10,
+        "id": "fall-2023-q2"
+      },
+      {
+        "paper": "spring-2024",
+        "name": "Spring 2024",
+        "number": "2",
+        "marks": 10,
+        "id": "spring-2024-q2"
+      },
+      {
+        "paper": "spring-2024",
+        "name": "Spring 2024",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2024-q3"
+      },
+      {
+        "paper": "summer-2024",
+        "name": "Summer 2024",
+        "number": "2",
+        "marks": 10,
+        "id": "summer-2024-q2"
+      },
+      {
+        "paper": "summer-2024",
+        "name": "Summer 2024",
+        "number": "3",
+        "marks": 10,
+        "id": "summer-2024-q3"
+      },
+      {
+        "paper": "fall-2024",
+        "name": "Fall 2024",
+        "number": "2",
+        "marks": 10,
+        "id": "fall-2024-q2"
+      },
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "2",
+        "marks": 10,
+        "id": "spring-2025-q2"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "2",
+        "marks": 10,
+        "id": "summer-2025-q2"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "1",
+        "marks": 10,
+        "id": "fall-2025-q1"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "2",
+        "marks": 10,
+        "id": "fall-2025-q2"
+      },
+      {
+        "paper": "spring-2026-set-a",
+        "name": "Spring 2026 Set A",
+        "number": "2",
+        "marks": 10,
+        "id": "spring-2026-set-a-q2"
+      },
+      {
+        "paper": "spring-2026-set-b",
+        "name": "Spring 2026 Set B",
+        "number": "2",
+        "marks": 10,
+        "id": "spring-2026-set-b-q2"
+      }
+    ],
+    "14": [
+      {
+        "paper": "fall-2023",
+        "name": "Fall 2023",
+        "number": "3",
+        "marks": 10,
+        "id": "fall-2023-q3"
+      },
+      {
+        "paper": "spring-2024",
+        "name": "Spring 2024",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2024-q3"
+      },
+      {
+        "paper": "summer-2024",
+        "name": "Summer 2024",
+        "number": "4",
+        "marks": 10,
+        "id": "summer-2024-q4"
+      },
+      {
+        "paper": "fall-2024",
+        "name": "Fall 2024",
+        "number": "3",
+        "marks": 10,
+        "id": "fall-2024-q3"
+      },
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2025-q3"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "3",
+        "marks": 10,
+        "id": "summer-2025-q3"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "3",
+        "marks": 10,
+        "id": "fall-2025-q3"
+      },
+      {
+        "paper": "spring-2026-set-a",
+        "name": "Spring 2026 Set A",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2026-set-a-q3"
+      },
+      {
+        "paper": "spring-2026-set-b",
+        "name": "Spring 2026 Set B",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2026-set-b-q3"
+      }
+    ],
+    "15": [
+      {
+        "paper": "fall-2023",
+        "name": "Fall 2023",
+        "number": "3",
+        "marks": 10,
+        "id": "fall-2023-q3"
+      },
+      {
+        "paper": "fall-2024",
+        "name": "Fall 2024",
+        "number": "3",
+        "marks": 10,
+        "id": "fall-2024-q3"
+      },
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2025-q3"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "3",
+        "marks": 10,
+        "id": "summer-2025-q3"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "3",
+        "marks": 10,
+        "id": "fall-2025-q3"
+      },
+      {
+        "paper": "spring-2026-set-a",
+        "name": "Spring 2026 Set A",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2026-set-a-q3"
+      },
+      {
+        "paper": "spring-2026-set-b",
+        "name": "Spring 2026 Set B",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2026-set-b-q3"
+      }
+    ],
+    "16": [
+      {
+        "paper": "fall-2023",
+        "name": "Fall 2023",
+        "number": "3",
+        "marks": 10,
+        "id": "fall-2023-q3"
+      },
+      {
+        "paper": "summer-2024",
+        "name": "Summer 2024",
+        "number": "4",
+        "marks": 10,
+        "id": "summer-2024-q4"
+      },
+      {
+        "paper": "fall-2024",
+        "name": "Fall 2024",
+        "number": "3",
+        "marks": 10,
+        "id": "fall-2024-q3"
+      },
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2025-q3"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "3",
+        "marks": 10,
+        "id": "summer-2025-q3"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "3",
+        "marks": 10,
+        "id": "fall-2025-q3"
+      },
+      {
+        "paper": "spring-2026-set-a",
+        "name": "Spring 2026 Set A",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2026-set-a-q3"
+      },
+      {
+        "paper": "spring-2026-set-b",
+        "name": "Spring 2026 Set B",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2026-set-b-q3"
+      }
+    ],
+    "17": [
+      {
+        "paper": "fall-2023",
+        "name": "Fall 2023",
+        "number": "3",
+        "marks": 10,
+        "id": "fall-2023-q3"
+      },
+      {
+        "paper": "spring-2024",
+        "name": "Spring 2024",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2024-q3"
+      },
+      {
+        "paper": "summer-2024",
+        "name": "Summer 2024",
+        "number": "4",
+        "marks": 10,
+        "id": "summer-2024-q4"
+      },
+      {
+        "paper": "fall-2024",
+        "name": "Fall 2024",
+        "number": "3",
+        "marks": 10,
+        "id": "fall-2024-q3"
+      },
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2025-q3"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "3",
+        "marks": 10,
+        "id": "summer-2025-q3"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "3",
+        "marks": 10,
+        "id": "fall-2025-q3"
+      },
+      {
+        "paper": "spring-2026-set-a",
+        "name": "Spring 2026 Set A",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2026-set-a-q3"
+      },
+      {
+        "paper": "spring-2026-set-b",
+        "name": "Spring 2026 Set B",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2026-set-b-q3"
+      }
+    ],
+    "18": [
+      {
+        "paper": "spring-2024",
+        "name": "Spring 2024",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2024-q3"
+      }
+    ],
+    "19": [
+      {
+        "paper": "fall-2023",
+        "name": "Fall 2023",
+        "number": "3",
+        "marks": 10,
+        "id": "fall-2023-q3"
+      },
+      {
+        "paper": "spring-2024",
+        "name": "Spring 2024",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2024-q3"
+      },
+      {
+        "paper": "summer-2024",
+        "name": "Summer 2024",
+        "number": "4",
+        "marks": 10,
+        "id": "summer-2024-q4"
+      },
+      {
+        "paper": "fall-2024",
+        "name": "Fall 2024",
+        "number": "3",
+        "marks": 10,
+        "id": "fall-2024-q3"
+      },
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2025-q3"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "3",
+        "marks": 10,
+        "id": "summer-2025-q3"
+      },
+      {
+        "paper": "fall-2025",
+        "name": "Fall 2025",
+        "number": "3",
+        "marks": 10,
+        "id": "fall-2025-q3"
+      },
+      {
+        "paper": "spring-2026-set-a",
+        "name": "Spring 2026 Set A",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2026-set-a-q3"
+      },
+      {
+        "paper": "spring-2026-set-b",
+        "name": "Spring 2026 Set B",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2026-set-b-q3"
+      }
+    ],
+    "01": [
+      {
+        "paper": "spring-2024",
+        "name": "Spring 2024",
+        "number": "3",
+        "marks": 10,
+        "id": "spring-2024-q3"
+      }
+    ],
+    "03": [
+      {
+        "paper": "spring-2024",
+        "name": "Spring 2024",
+        "number": "1",
+        "marks": 10,
+        "id": "spring-2024-q1"
+      }
+    ],
+    "04": [
+      {
+        "paper": "fall-2023",
+        "name": "Fall 2023",
+        "number": "1",
+        "marks": 10,
+        "id": "fall-2023-q1"
+      },
+      {
+        "paper": "spring-2024",
+        "name": "Spring 2024",
+        "number": "1",
+        "marks": 10,
+        "id": "spring-2024-q1"
+      },
+      {
+        "paper": "summer-2024",
+        "name": "Summer 2024",
+        "number": "1",
+        "marks": 10,
+        "id": "summer-2024-q1"
+      },
+      {
+        "paper": "fall-2024",
+        "name": "Fall 2024",
+        "number": "1",
+        "marks": 10,
+        "id": "fall-2024-q1"
+      },
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "1",
+        "marks": 10,
+        "id": "spring-2025-q1"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "1",
+        "marks": 10,
+        "id": "summer-2025-q1"
+      },
+      {
+        "paper": "spring-2026-set-a",
+        "name": "Spring 2026 Set A",
+        "number": "1",
+        "marks": 10,
+        "id": "spring-2026-set-a-q1"
+      },
+      {
+        "paper": "spring-2026-set-b",
+        "name": "Spring 2026 Set B",
+        "number": "1",
+        "marks": 10,
+        "id": "spring-2026-set-b-q1"
+      }
+    ],
+    "05": [
+      {
+        "paper": "spring-2024",
+        "name": "Spring 2024",
+        "number": "1",
+        "marks": 10,
+        "id": "spring-2024-q1"
+      },
+      {
+        "paper": "summer-2024",
+        "name": "Summer 2024",
+        "number": "1",
+        "marks": 10,
+        "id": "summer-2024-q1"
+      },
+      {
+        "paper": "fall-2024",
+        "name": "Fall 2024",
+        "number": "1",
+        "marks": 10,
+        "id": "fall-2024-q1"
+      },
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "1",
+        "marks": 10,
+        "id": "spring-2025-q1"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "1",
+        "marks": 10,
+        "id": "summer-2025-q1"
+      },
+      {
+        "paper": "spring-2026-set-a",
+        "name": "Spring 2026 Set A",
+        "number": "1",
+        "marks": 10,
+        "id": "spring-2026-set-a-q1"
+      },
+      {
+        "paper": "spring-2026-set-b",
+        "name": "Spring 2026 Set B",
+        "number": "1",
+        "marks": 10,
+        "id": "spring-2026-set-b-q1"
+      }
+    ],
+    "06": [
+      {
+        "paper": "spring-2026-set-b",
+        "name": "Spring 2026 Set B",
+        "number": "1",
+        "marks": 10,
+        "id": "spring-2026-set-b-q1"
+      }
+    ],
+    "07": [
+      {
+        "paper": "spring-2026-set-a",
+        "name": "Spring 2026 Set A",
+        "number": "1",
+        "marks": 10,
+        "id": "spring-2026-set-a-q1"
+      },
+      {
+        "paper": "spring-2026-set-b",
+        "name": "Spring 2026 Set B",
+        "number": "1",
+        "marks": 10,
+        "id": "spring-2026-set-b-q1"
+      }
+    ],
+    "08": [
+      {
+        "paper": "fall-2023",
+        "name": "Fall 2023",
+        "number": "1",
+        "marks": 10,
+        "id": "fall-2023-q1"
+      },
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "1",
+        "marks": 10,
+        "id": "spring-2025-q1"
+      }
+    ],
+    "09": [
+      {
+        "paper": "fall-2023",
+        "name": "Fall 2023",
+        "number": "1",
+        "marks": 10,
+        "id": "fall-2023-q1"
+      },
+      {
+        "paper": "spring-2024",
+        "name": "Spring 2024",
+        "number": "1",
+        "marks": 10,
+        "id": "spring-2024-q1"
+      },
+      {
+        "paper": "summer-2024",
+        "name": "Summer 2024",
+        "number": "1",
+        "marks": 10,
+        "id": "summer-2024-q1"
+      },
+      {
+        "paper": "fall-2024",
+        "name": "Fall 2024",
+        "number": "1",
+        "marks": 10,
+        "id": "fall-2024-q1"
+      },
+      {
+        "paper": "spring-2025",
+        "name": "Spring 2025",
+        "number": "1",
+        "marks": 10,
+        "id": "spring-2025-q1"
+      },
+      {
+        "paper": "summer-2025",
+        "name": "Summer 2025",
+        "number": "1",
+        "marks": 10,
+        "id": "summer-2025-q1"
+      },
+      {
+        "paper": "spring-2026-set-a",
+        "name": "Spring 2026 Set A",
+        "number": "1",
+        "marks": 10,
+        "id": "spring-2026-set-a-q1"
+      },
+      {
+        "paper": "spring-2026-set-b",
+        "name": "Spring 2026 Set B",
+        "number": "1",
+        "marks": 10,
+        "id": "spring-2026-set-b-q1"
+      }
+    ]
+  }
+}

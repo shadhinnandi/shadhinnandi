@@ -7,4 +7,5 @@ export const courseViews = {
   'beginner-c-programming': lazy(() => import('./beginner-c/BeginnerC.jsx')),
   'beginner-java-programming': lazy(() => import('./beginner-java/JavaCourse.jsx')),
   'computer-security': lazy(() => import('./computer-security/SecurityCourse.jsx')),
+  'web-programming': lazy(() => import('./web-programming/WebCourse.jsx')),
 };

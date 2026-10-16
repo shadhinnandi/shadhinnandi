@@ -1,0 +1,7 @@
+/* Web Programming only: tables here hold many short code words (INSERT,
+   $_POST, ceil). Let them wrap at spaces instead of splitting inside a word;
+   the table itself scrolls sideways on narrow screens. */
+.csec.csec--web .csec-prose td > code,
+.csec.csec--web .csec-prose th > code {
+  overflow-wrap: normal;
+}
