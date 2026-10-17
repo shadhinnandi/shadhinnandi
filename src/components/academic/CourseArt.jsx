@@ -294,11 +294,58 @@ function WebArt() {
   );
 }
 
+/* Biology for Engineers: a eukaryotic cell beside a DNA double helix. */
+const HELIX_A = 'M360.0 140.0 L364.2 149.7 L368.4 159.2 L372.6 168.1 L376.8 176.4 L381.0 183.8 L385.2 190.2 L389.4 195.2 L393.6 199.0 L397.8 201.2 L402.0 202.0 L406.2 201.2 L410.4 199.0 L414.6 195.2 L418.8 190.2 L423.0 183.8 L427.2 176.4 L431.4 168.1 L435.6 159.2 L439.8 149.7 L444.0 140.0 L448.2 130.3 L452.4 120.8 L456.6 111.9 L460.8 103.6 L465.0 96.2 L469.2 89.8 L473.4 84.8 L477.6 81.0 L481.8 78.8 L486.0 78.0 L490.2 78.8 L494.4 81.0 L498.6 84.8 L502.8 89.8 L507.0 96.2 L511.2 103.6 L515.4 111.9 L519.6 120.8 L523.8 130.3 L528.0 140.0 L532.2 149.7 L536.4 159.2 L540.6 168.1 L544.8 176.4 L549.0 183.8 L553.2 190.2 L557.4 195.2 L561.6 199.0 L565.8 201.2 L570.0 202.0 L574.2 201.2 L578.4 199.0 L582.6 195.2 L586.8 190.2 L591.0 183.8 L595.2 176.4 L599.4 168.1 L603.6 159.2 L607.8 149.7 L612.0 140.0';
+const HELIX_B = 'M360.0 140.0 L364.2 130.3 L368.4 120.8 L372.6 111.9 L376.8 103.6 L381.0 96.2 L385.2 89.8 L389.4 84.8 L393.6 81.0 L397.8 78.8 L402.0 78.0 L406.2 78.8 L410.4 81.0 L414.6 84.8 L418.8 89.8 L423.0 96.2 L427.2 103.6 L431.4 111.9 L435.6 120.8 L439.8 130.3 L444.0 140.0 L448.2 149.7 L452.4 159.2 L456.6 168.1 L460.8 176.4 L465.0 183.8 L469.2 190.2 L473.4 195.2 L477.6 199.0 L481.8 201.2 L486.0 202.0 L490.2 201.2 L494.4 199.0 L498.6 195.2 L502.8 190.2 L507.0 183.8 L511.2 176.4 L515.4 168.1 L519.6 159.2 L523.8 149.7 L528.0 140.0 L532.2 130.3 L536.4 120.8 L540.6 111.9 L544.8 103.6 L549.0 96.2 L553.2 89.8 L557.4 84.8 L561.6 81.0 L565.8 78.8 L570.0 78.0 L574.2 78.8 L578.4 81.0 L582.6 84.8 L586.8 89.8 L591.0 96.2 L595.2 103.6 L599.4 111.9 L603.6 120.8 L607.8 130.3 L612.0 140.0';
+const RUNGS = [[368.4, 159.2, 120.8], [385.2, 190.2, 89.8], [402.0, 202.0, 78.0], [418.8, 190.2, 89.8], [435.6, 159.2, 120.8], [452.4, 120.8, 159.2], [469.2, 89.8, 190.2], [486.0, 78.0, 202.0], [502.8, 89.8, 190.2], [519.6, 120.8, 159.2], [536.4, 159.2, 120.8], [553.2, 190.2, 89.8], [570.0, 202.0, 78.0], [586.8, 190.2, 89.8], [603.6, 159.2, 120.8]];
+
+function BioArt() {
+  return (
+    <>
+      {/* cell */}
+      <ellipse className="ca-panel" cx="180" cy="140" rx="138" ry="104" />
+      <ellipse className="ca-cell-cyto" cx="180" cy="140" rx="128" ry="94" />
+      <circle className="ca-head-accent" cx="168" cy="132" r="44" />
+      <circle className="ca-nucleus" cx="168" cy="132" r="44" />
+      <circle className="ca-accent-fill" cx="180" cy="122" r="11" />
+      <path className="ca-chromatin" d="M140 140c10-14 22 10 34-4s20 10 30-2M146 156c12-8 20 6 32-2s18 6 26-4" />
+      {/* mitochondrion */}
+      <ellipse className="ca-organelle" cx="252" cy="170" rx="32" ry="15" transform="rotate(-18 252 170)" />
+      <path className="ca-line" d="M228 176c6-10 10 6 16-4s10 6 16-4s10 4 14-4" />
+      {/* golgi */}
+      <path className="ca-organelle-line" d="M232 86q22 -10 44 6M236 98q20 -8 38 6M240 110q16 -6 30 4" />
+      {/* ER and vesicles */}
+      <path className="ca-organelle-line" d="M96 92q16 18 2 34t6 36M84 104q14 14 2 30t6 30" />
+      <circle className="ca-vesicle" cx="290" cy="128" r="6" />
+      <circle className="ca-vesicle" cx="118" cy="196" r="5" />
+      <circle className="ca-vesicle" cx="214" cy="212" r="4" />
+      <text className="ca-sans ca-muted" x="180" y="268" fontSize="12" textAnchor="middle">
+        cell · nucleus · organelles
+      </text>
+      {/* zoom line from nucleus to DNA */}
+      <path className="ca-line ca-dashed" d="M212 120L356 92M212 146L356 190" />
+      {/* DNA */}
+      {RUNGS.map(([x, y1, y2], i) => (
+        <line key={x} className={i % 2 ? 'ca-rung-b' : 'ca-rung-a'} x1={x} y1={y1} x2={x} y2={y2} />
+      ))}
+      <path className="ca-helix ca-helix--a" d={HELIX_A} />
+      <path className="ca-helix ca-helix--b" d={HELIX_B} />
+      <text className="ca-mono ca-muted" x="487" y="252" fontSize="12" textAnchor="middle">
+        5′ ATG CGT TAC 3′
+      </text>
+      <text className="ca-mono ca-accent-text" x="487" y="36" fontSize="11" fontWeight="600" textAnchor="middle">
+        DNA → RNA → protein
+      </text>
+    </>
+  );
+}
+
 const ART = {
   'beginner-c-programming': { Art: CArt, tone: 'c' },
   'beginner-java-programming': { Art: OopArt, tone: 'oop' },
   'computer-security': { Art: SecArt, tone: 'sec' },
   'web-programming': { Art: WebArt, tone: 'web' },
+  'biology-for-engineers': { Art: BioArt, tone: 'bio' },
 };
 
 /** The cover art for a course, or null when the course has none (the card then shows its mark). */

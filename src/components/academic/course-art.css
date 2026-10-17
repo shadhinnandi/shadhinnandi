@@ -30,6 +30,10 @@
   --ca-accent: #b5650d;
   --ca-accent-soft: rgb(181 101 13 / 0.13);
 }
+.course-art--bio {
+  --ca-accent: #a23b6c;
+  --ca-accent-soft: rgb(162 59 108 / 0.12);
+}
 .course-art--sec {
   --ca-accent: #1f7a4d;
   --ca-accent-soft: rgb(31 122 77 / 0.12);
@@ -52,6 +56,10 @@
   --ca-accent: #f0a35a;
   --ca-accent-soft: rgb(240 163 90 / 0.15);
 }
+:root[data-theme='dark'] .course-art--bio {
+  --ca-accent: #ef8fbd;
+  --ca-accent-soft: rgb(239 143 189 / 0.15);
+}
 :root[data-theme='dark'] .course-art--sec {
   --ca-accent: #5cc98f;
   --ca-accent-soft: rgb(92 201 143 / 0.14);
@@ -73,6 +81,10 @@
   :root:not([data-theme='light']) .course-art--oop {
     --ca-accent: #f0a35a;
     --ca-accent-soft: rgb(240 163 90 / 0.15);
+  }
+  :root:not([data-theme='light']) .course-art--bio {
+    --ca-accent: #ef8fbd;
+    --ca-accent-soft: rgb(239 143 189 / 0.15);
   }
   :root:not([data-theme='light']) .course-art--sec {
     --ca-accent: #5cc98f;
@@ -241,6 +253,63 @@
 }
 .course-art .ca-danger-text {
   fill: var(--ca-danger);
+}
+
+/* Biology for Engineers */
+.course-art .ca-cell-cyto {
+  fill: var(--ca-accent-soft);
+  opacity: 0.45;
+}
+.course-art .ca-nucleus {
+  fill: none;
+  stroke: var(--ca-accent);
+  stroke-width: 2;
+}
+.course-art .ca-chromatin {
+  fill: none;
+  stroke: var(--ca-accent);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+.course-art .ca-organelle {
+  fill: var(--surface-2);
+  stroke: var(--muted);
+  stroke-width: 1.2;
+}
+.course-art .ca-organelle-line {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.course-art .ca-vesicle {
+  fill: var(--surface);
+  stroke: var(--muted);
+  stroke-width: 1.2;
+}
+.course-art .ca-helix {
+  fill: none;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+.course-art .ca-helix--a {
+  stroke: var(--ca-accent);
+}
+.course-art .ca-helix--b {
+  stroke: var(--text-2);
+}
+.course-art .ca-rung-a,
+.course-art .ca-rung-b {
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+.course-art .ca-rung-a {
+  stroke: var(--ca-accent);
+  opacity: 0.55;
+}
+.course-art .ca-rung-b {
+  stroke: var(--muted);
+  opacity: 0.6;
 }
 
 @media (prefers-reduced-motion: reduce) {

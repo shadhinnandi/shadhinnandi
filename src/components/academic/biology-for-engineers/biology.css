@@ -1,0 +1,110 @@
+/* Biology for Engineers: only what differs from the shared course styles
+   in ../computer-security/computer-security.css. */
+
+/* Figures: the source line under each caption */
+.csec.csec--bio .bio-fig-source {
+  display: block;
+  margin-top: 2px;
+  font-size: var(--fs-xs);
+  font-weight: 400;
+  color: var(--muted);
+}
+.csec.csec--bio .csec-figure--image img {
+  max-height: 34rem;
+}
+
+/* Solution cards: the question is the heading */
+.csec.csec--bio .bio-qa__q {
+  margin: 0;
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text);
+}
+.csec.csec--bio .bio-qa__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.csec.csec--bio .bio-qa__tag {
+  padding: 2px 10px;
+  font-size: var(--fs-xs);
+  line-height: 1.6;
+  color: var(--text-2);
+  background: var(--chip-bg);
+  border-radius: 999px;
+}
+.csec.csec--bio .bio-qa__tag > span:first-child {
+  font-weight: 600;
+  color: var(--text);
+}
+.csec.csec--bio .bio-qa__tag--review {
+  color: var(--text);
+  background: var(--accent-soft);
+}
+.csec.csec--bio .bio-qa-group + .bio-qa-group {
+  margin-top: var(--space-7);
+}
+.csec.csec--bio .bio-qa-group__title {
+  margin: var(--space-6) 0 var(--space-3);
+  padding-bottom: var(--space-2);
+  font-size: var(--fs-h2);
+  border-bottom: 1px solid var(--line);
+}
+
+/* Question bank: link to the original paper */
+.csec.csec--bio .bio-original {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--csec-radius);
+}
+.csec.csec--bio .bio-original a {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Callouts written as "> **Note:** ..." blocks */
+.csec.csec--bio .csec-prose blockquote {
+  margin: var(--space-4) 0;
+  padding: var(--space-3) var(--space-4);
+  color: var(--text-2);
+  background: var(--bg-alt);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+}
+.csec.csec--bio .csec-prose blockquote p {
+  margin: 0;
+}
+
+/* Overview: group headings above each list of sections (as in the Java course) */
+.csec.csec--bio .csec-syllabus__group {
+  margin: var(--space-6) 0 var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.csec.csec--bio .bio-landing-group:first-of-type .csec-syllabus__group {
+  margin-top: 0;
+}
+
+/* The question is the whole heading row, and the toggle sits clear of the labels */
+.csec.csec--bio .bio-qa .csec-question__head {
+  display: block;
+}
+.csec.csec--bio .bio-qa__meta + .csec-question__toggle {
+  margin-top: var(--space-4);
+}

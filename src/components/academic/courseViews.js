@@ -8,4 +8,5 @@ export const courseViews = {
   'beginner-java-programming': lazy(() => import('./beginner-java/JavaCourse.jsx')),
   'computer-security': lazy(() => import('./computer-security/SecurityCourse.jsx')),
   'web-programming': lazy(() => import('./web-programming/WebCourse.jsx')),
+  'biology-for-engineers': lazy(() => import('./biology-for-engineers/BiologyCourse.jsx')),
 };

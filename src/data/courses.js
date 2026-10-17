@@ -17,6 +17,7 @@
 import javaStats from '../components/academic/beginner-java/stats.json';
 import securityStats from '../components/academic/computer-security/stats.json';
 import webStats from '../components/academic/web-programming/stats.json';
+import bioStats from '../components/academic/biology-for-engineers/stats.json';
 
 /** Real counts of the Java course, written by scripts/check-java-course.mjs. */
 function javaFacts() {
@@ -36,6 +37,11 @@ function securityFacts() {
 /** Real counts of the Web Programming course, written by scripts/check-web-programming.mjs. */
 function webFacts() {
   return [`${webStats.topics} topics`, `${webStats.papers} past papers`, `${webStats.questions} solved questions`];
+}
+
+/** Real counts of the Biology for Engineers course, written by scripts/check-biology-course.mjs. */
+function biologyFacts() {
+  return [`${bioStats.solutions} solved suggestions`, `${bioStats.figures} slide figures`, `${bioStats.papers} past papers`];
 }
 
 export const courses = [
@@ -74,6 +80,15 @@ export const courses = [
     summary:
       'From the first script to a full database app: JavaScript on the page, PHP forms with POST, and MySQL with MySQLi, with every past final exam paper solved and tested.',
     facts: webFacts(),
+  },
+  {
+    slug: 'biology-for-engineers',
+    title: 'Biology for Engineers',
+    mark: '{ BIO }',
+    label: 'BIO 3105 · Cells · Genetics · Biotechnology · BCI',
+    summary:
+      'From the cell to brain-computer interfaces: midterm and final suggestions with checked solutions beside the original slide figures, and a question bank of previous papers.',
+    facts: biologyFacts(),
   },
 ];
 

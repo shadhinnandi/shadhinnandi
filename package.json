@@ -11,7 +11,8 @@
     "check:scenarios": "node scripts/check-scenario-problems.mjs",
     "check:java": "node scripts/check-java-course.mjs",
     "check:security": "node scripts/check-computer-security.mjs",
-    "check:web": "node scripts/check-web-programming.mjs"
+    "check:web": "node scripts/check-web-programming.mjs",
+    "check:biology": "node scripts/check-biology-course.mjs"
   },
   "dependencies": {
     "highlight.js": "^11.12.0",
