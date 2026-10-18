@@ -340,12 +340,125 @@ function BioArt() {
   );
 }
 
+/* English II: an essay page with an editing mark beside its outline. */
+const OUTLINE = ['Thesis statement', 'Body 1 · topic sentence', 'Body 2 · topic sentence', 'Body 3 · topic sentence', 'Conclusion'];
+
+function EngArt() {
+  return (
+    <>
+      {/* essay page */}
+      <rect className="ca-panel" x="52" y="24" width="300" height="232" rx="10" />
+      <text className="ca-sans ca-text" x="202" y="56" fontSize="15" fontWeight="600" textAnchor="middle">
+        A Rainy Day
+      </text>
+      <rect className="ca-chip" x="76" y="70" width="252" height="34" rx="5" />
+      <path className="ca-rule" d="M84 81H318M84 95H262" />
+      {[122, 136, 150, 172, 186, 200, 222, 236].map((y, i) => (
+        <path key={y} className="ca-rule" d={`M76 ${y}H${i % 3 === 2 ? 270 : 328}`} />
+      ))}
+      {/* edit: goed -> went */}
+      <text className="ca-sans ca-muted" x="120" y="166" fontSize="12">
+        Mark
+      </text>
+      <text className="ca-sans ca-danger-text" x="156" y="166" fontSize="12" textDecoration="line-through">
+        goed
+      </text>
+      <text className="ca-sans ca-accent-text" x="196" y="158" fontSize="12" fontWeight="600">
+        went
+      </text>
+      <path className="ca-danger-stroke" d="M150 170q6 6 12 0" />
+      <text className="ca-mono ca-muted" x="202" y="276" fontSize="11.5" textAnchor="middle">
+        introduction · body · conclusion
+      </text>
+      {/* connector */}
+      <path className="ca-flow" d="M352 140H392" />
+      <circle className="ca-accent-fill" cx="392" cy="140" r="3.5" />
+      {/* outline card */}
+      <rect className="ca-panel" x="400" y="40" width="200" height="200" rx="10" />
+      <rect className="ca-bar" x="400" y="40" width="200" height="30" rx="10" />
+      <text className="ca-mono ca-text-2" x="416" y="60" fontSize="12" fontWeight="600">
+        Outline
+      </text>
+      {OUTLINE.map((t, i) => (
+        <g key={t}>
+          <circle className={i === 0 ? 'ca-accent-fill' : 'ca-hollow'} cx="420" cy={92 + i * 32} r="5" />
+          <text className={`ca-sans ${i === 0 ? 'ca-accent-text' : 'ca-text-2'}`} x="434" y={96 + i * 32} fontSize="12" fontWeight={i === 0 ? 600 : 400}>
+            {t}
+          </text>
+        </g>
+      ))}
+    </>
+  );
+}
+
+/* DSA I: an array laid out in memory and the heap tree it represents. */
+const HEAP = [9, 7, 8, 3, 5, 6, 4];
+const NODE = [
+  [500, 70],
+  [430, 140],
+  [570, 140],
+  [395, 210],
+  [465, 210],
+  [535, 210],
+  [605, 210],
+];
+
+function DsaArt() {
+  return (
+    <>
+      {/* array cells with indices */}
+      <text className="ca-mono ca-muted" x="56" y="66" fontSize="11.5">
+        int a[7]  // contiguous
+      </text>
+      {HEAP.map((v, i) => (
+        <g key={i}>
+          <rect className={i === 0 ? 'ca-chip' : 'ca-panel'} x={56 + i * 42} y="80" width="38" height="38" rx="5" />
+          <text className={`ca-mono ${i === 0 ? 'ca-accent-text' : 'ca-text'}`} x={75 + i * 42} y="105" fontSize="15" fontWeight="600" textAnchor="middle">
+            {v}
+          </text>
+          <text className="ca-mono ca-muted" x={75 + i * 42} y="136" fontSize="10.5" textAnchor="middle">
+            {i}
+          </text>
+        </g>
+      ))}
+      <text className="ca-mono ca-muted" x="56" y="176" fontSize="11.5">
+        left(i) = 2i+1
+      </text>
+      <text className="ca-mono ca-muted" x="56" y="196" fontSize="11.5">
+        right(i) = 2i+2
+      </text>
+      <text className="ca-mono ca-accent-text" x="56" y="232" fontSize="12" fontWeight="600">
+        O(log n) push / pop
+      </text>
+      <path className="ca-flow ca-dashed" d="M356 99H384" />
+      {/* tree edges */}
+      {NODE.slice(1).map(([x, y], j) => {
+        const [px, py] = NODE[Math.floor(j / 2)];
+        return <path key={j} className="ca-line" d={`M${px} ${py}L${x} ${y}`} />;
+      })}
+      {NODE.map(([x, y], i) => (
+        <g key={i}>
+          <circle className={i === 0 ? 'ca-accent-fill' : 'ca-hollow'} cx={x} cy={y} r="18" />
+          <text className={`ca-mono ${i === 0 ? 'ca-on-accent' : 'ca-text'}`} x={x} y={y + 5} fontSize="14" fontWeight="600" textAnchor="middle">
+            {HEAP[i]}
+          </text>
+        </g>
+      ))}
+      <text className="ca-sans ca-muted" x="500" y="262" fontSize="12" textAnchor="middle">
+        max-heap
+      </text>
+    </>
+  );
+}
+
 const ART = {
   'beginner-c-programming': { Art: CArt, tone: 'c' },
   'beginner-java-programming': { Art: OopArt, tone: 'oop' },
   'computer-security': { Art: SecArt, tone: 'sec' },
   'web-programming': { Art: WebArt, tone: 'web' },
   'biology-for-engineers': { Art: BioArt, tone: 'bio' },
+  'english-2': { Art: EngArt, tone: 'eng' },
+  'dsa-1': { Art: DsaArt, tone: 'dsa' },
 };
 
 /** The cover art for a course, or null when the course has none (the card then shows its mark). */

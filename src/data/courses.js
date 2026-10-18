@@ -18,6 +18,9 @@ import javaStats from '../components/academic/beginner-java/stats.json';
 import securityStats from '../components/academic/computer-security/stats.json';
 import webStats from '../components/academic/web-programming/stats.json';
 import bioStats from '../components/academic/biology-for-engineers/stats.json';
+import { ENTRIES as englishEntries, SLIDES as englishSlides } from '../components/academic/english-2/outline.js';
+import { MODULES as dsaModules } from '../components/academic/dsa-1/outline.js';
+import dsaIndex from '../components/academic/dsa-1/problem-index.json';
 
 /** Real counts of the Java course, written by scripts/check-java-course.mjs. */
 function javaFacts() {
@@ -37,6 +40,19 @@ function securityFacts() {
 /** Real counts of the Web Programming course, written by scripts/check-web-programming.mjs. */
 function webFacts() {
   return [`${webStats.topics} topics`, `${webStats.papers} past papers`, `${webStats.questions} solved questions`];
+}
+
+/** Real counts of the DSA I course: modules from its outline, problems from problem-index.json (written after testing). */
+function dsaFacts() {
+  const challenges = dsaIndex.filter((p) => p.topic === 'completion').length;
+  return [`${dsaModules.length} modules`, `${dsaIndex.length - challenges} practice problems`, `${challenges} completion challenges`];
+}
+
+/** Lesson and slide counts of the English II course, read from its outline. */
+function englishFacts() {
+  const lessons = englishEntries.filter((e) => e.group === 'mid' || e.group === 'final').length;
+  const decks = Object.keys(englishSlides).filter((k) => /^(mid|final)-/.test(k)).length;
+  return [`${lessons} lessons`, `${decks} original slide decks`, 'Model answers with copy'];
 }
 
 /** Real counts of the Biology for Engineers course, written by scripts/check-biology-course.mjs. */
@@ -89,6 +105,24 @@ export const courses = [
     summary:
       'From the cell to brain-computer interfaces: midterm and final suggestions with checked solutions beside the original slide figures, and a question bank of previous papers.',
     facts: biologyFacts(),
+  },
+  {
+    slug: 'english-2',
+    title: 'English II',
+    mark: '{ ENG }',
+    label: 'ENG 1013 · Reading · Paragraphs · Essays · Formal writing',
+    summary:
+      'Structured English for university exams: reading and summary, the paragraph and its five types, essays from outline to conclusion, applications, emails and editing, with model answers and new practice for every topic.',
+    facts: englishFacts(),
+  },
+  {
+    slug: 'dsa-1',
+    title: 'Data Structures and Algorithms I',
+    mark: '{ DSA }',
+    label: 'C++17 · Analysis · Linear structures · Trees · Graphs · Sorting',
+    summary:
+      'From memory and Big O to heaps, BSTs, BFS, DFS and Union-Find: every syllabus topic on its own page with proofs, complete C++17 code and tested Easy to Hard problems, plus lab and interview preparation.',
+    facts: dsaFacts(),
   },
 ];
 

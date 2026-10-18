@@ -1,0 +1,300 @@
+/* English II: only what differs from the shared course styles in
+   ../computer-security/computer-security.css. */
+
+/* Overview: group headings above each list of lessons */
+.csec.csec--eng .csec-syllabus__group {
+  margin: var(--space-6) 0 var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.csec.csec--eng .bio-landing-group:first-of-type .csec-syllabus__group {
+  margin-top: 0;
+}
+
+/* Callouts written as "> **Tip:** ..." blocks */
+.csec.csec--eng .csec-prose blockquote {
+  margin: var(--space-4) 0;
+  padding: var(--space-3) var(--space-4);
+  color: var(--text-2);
+  background: var(--bg-alt);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+}
+.csec.csec--eng .csec-prose blockquote p {
+  margin: 0;
+}
+.csec.csec--eng .csec-prose blockquote p + p {
+  margin-top: var(--space-2);
+}
+
+/* Model answers and practice cards */
+.csec.csec--eng .eng-model,
+.csec.csec--eng .eng-practice {
+  max-width: var(--csec-prose);
+  margin: var(--space-5) 0;
+  padding: var(--space-4) var(--space-5);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--csec-radius);
+  scroll-margin-top: var(--space-4);
+}
+.csec.csec--eng .eng-model__head h3 {
+  margin: 0 0 var(--space-3);
+  font-size: var(--fs-h3);
+  line-height: 1.35;
+}
+.csec.csec--eng .eng-model__kicker {
+  margin: 0 0 var(--space-1);
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.csec.csec--eng .eng-model .csec-prose,
+.csec.csec--eng .eng-practice .csec-prose {
+  max-width: none;
+}
+.csec.csec--eng .eng-outline {
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-4) var(--space-3);
+  background: var(--bg-alt);
+  border-radius: 8px;
+}
+.csec.csec--eng .eng-outline .csec-prose > :last-child,
+.csec.csec--eng .eng-note .csec-prose > :last-child,
+.csec.csec--eng .eng-hint .csec-prose > :last-child {
+  margin-bottom: 0;
+}
+.csec.csec--eng .eng-answer {
+  position: relative;
+  margin-top: var(--space-4);
+  padding: var(--space-1) var(--space-4) var(--space-3);
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+}
+.csec.csec--eng .eng-answer > .copy-row {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  margin: 0;
+}
+.csec.csec--eng .eng-answer__text p {
+  margin: 0 0 var(--space-3);
+  line-height: 1.75;
+  color: var(--text);
+}
+.csec.csec--eng .eng-answer__text p:last-child {
+  margin-bottom: 0;
+}
+.csec.csec--eng .eng-answer--letter .eng-answer__text p {
+  line-height: 1.65;
+}
+.csec.csec--eng .eng-note {
+  margin-top: var(--space-3);
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+}
+.csec.csec--eng .eng-note .csec-label,
+.csec.csec--eng .eng-hint .csec-label {
+  margin-bottom: var(--space-1);
+}
+
+/* Practice */
+.csec.csec--eng .eng-practice {
+  border-style: dashed;
+}
+.csec.csec--eng .eng-skill {
+  margin: var(--space-2) 0 0;
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+}
+.csec.csec--eng .eng-skill > span:first-child {
+  margin-right: var(--space-2);
+  padding: 1px 8px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--text);
+  background: var(--chip-bg);
+  border-radius: 999px;
+}
+.csec.csec--eng .eng-practice__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+.csec.csec--eng .eng-hint {
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-4) var(--space-3);
+  background: var(--bg-alt);
+  border-radius: 8px;
+}
+
+/* Full solutions under a question paper */
+.csec.csec--eng .eng-solutions {
+  max-width: var(--csec-prose);
+  margin: var(--space-7) 0 var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 2px solid var(--line-strong);
+  scroll-margin-top: var(--space-4);
+}
+.csec.csec--eng .eng-solutions__title {
+  margin: 0 0 var(--space-2);
+}
+.csec.csec--eng .eng-solutions__lead {
+  margin: 0 0 var(--space-4);
+  color: var(--text-2);
+}
+.csec.csec--eng .eng-solutions__btn {
+  padding: 10px 22px;
+  font-weight: 600;
+  color: var(--btn-text);
+  background: var(--btn-bg);
+  border: 0;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+}
+.csec.csec--eng .eng-solutions__btn[aria-expanded='true'] {
+  color: var(--text);
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+}
+.csec.csec--eng #eng-solutions-body {
+  margin-top: var(--space-5);
+}
+
+/* Lecture slides at the bottom of every lesson */
+.csec.csec--eng .eng-slides {
+  max-width: var(--csec-prose);
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line);
+  scroll-margin-top: var(--space-4);
+}
+.csec.csec--eng .eng-slides h2 {
+  margin: 0 0 var(--space-3);
+  font-size: var(--fs-h3);
+}
+.csec.csec--eng .eng-slides__list {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.csec.csec--eng .eng-slides__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--csec-radius);
+}
+.csec.csec--eng .eng-slides__name {
+  font-size: var(--fs-sm);
+  color: var(--text);
+}
+.csec.csec--eng .eng-slides__links {
+  display: flex;
+  gap: var(--space-4);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+.csec.csec--eng .eng-slides__links a {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .csec.csec--eng .eng-model,
+  .csec.csec--eng .eng-practice {
+    padding: var(--space-4);
+  }
+  .csec.csec--eng .eng-answer {
+    padding-top: var(--space-6);
+  }
+}
+
+/* Original sample images (application, email) */
+.csec.csec--eng .eng-doc img {
+  width: auto;
+  max-height: 38rem;
+}
+
+/* Vocabulary groups */
+.csec.csec--eng .eng-vocab {
+  max-width: var(--csec-prose);
+  margin: var(--space-4) 0;
+  padding: var(--space-4) var(--space-5);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--csec-radius);
+}
+.csec.csec--eng .eng-vocab__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+.csec.csec--eng .eng-vocab__head h3 {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+.csec.csec--eng .eng-vocab__list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: vocab;
+}
+.csec.csec--eng .eng-vocab__item {
+  display: grid;
+  grid-template-columns: minmax(8rem, 11rem) minmax(0, 1fr);
+  gap: 2px var(--space-4);
+  padding: var(--space-2) 0;
+  border-top: 1px solid var(--line);
+}
+.csec.csec--eng .eng-vocab__word {
+  font-weight: 600;
+  color: var(--text);
+}
+.csec.csec--eng .eng-vocab__bn {
+  color: var(--text-2);
+}
+.csec.csec--eng .eng-vocab__sentence {
+  grid-column: 1 / -1;
+  padding-left: var(--space-3);
+  font-style: italic;
+  color: var(--text);
+  border-left: 2px solid var(--accent);
+}
+.csec.csec--eng .eng-vocab__note {
+  display: block;
+  margin-top: 2px;
+  font-size: var(--fs-sm);
+  font-style: normal;
+  color: var(--muted);
+}
+@media (max-width: 640px) {
+  .csec.csec--eng .eng-vocab {
+    padding: var(--space-4);
+  }
+  .csec.csec--eng .eng-vocab__item {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Text blocks (outline templates, letters) wrap instead of scrolling */
+.csec.csec--eng .csec-prose pre code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}

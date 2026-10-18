@@ -1,0 +1,490 @@
+/*
+  Data Structures and Algorithms I: only what differs from the shared course
+  styles in ../beginner-java/java-course.css (layout, typography, themes) and
+  the Easy/Medium/Hard dots in ../beginner-c/beginner-c.css.
+*/
+
+/* Small buttons and links */
+.oop.dsa .dsa-btn,
+.oop.dsa .dsa-status-btns button,
+.oop.dsa .dsa-complete button {
+  padding: 6px 14px;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+}
+.oop.dsa .dsa-btn:hover,
+.oop.dsa .dsa-status-btns button:hover,
+.oop.dsa .dsa-complete button:hover {
+  background: var(--chip-bg);
+}
+.oop.dsa .dsa-btn--quiet {
+  border-color: transparent;
+  color: var(--muted);
+}
+.oop.dsa .dsa-status-btns button[aria-pressed='true'],
+.oop.dsa .dsa-complete button[aria-pressed='true'] {
+  color: var(--btn-text);
+  background: var(--btn-bg);
+  border-color: var(--btn-bg);
+}
+.oop.dsa .dsa-linkbtn {
+  padding: 0;
+  font: inherit;
+  color: var(--accent);
+  background: none;
+  border: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+/* Status marks */
+.oop.dsa .dsa-status {
+  display: inline-grid;
+  place-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--muted);
+  border-radius: 50%;
+}
+.oop.dsa .dsa-status--solved {
+  color: #fff;
+  background: var(--oop-basic);
+}
+.oop.dsa .dsa-status--review {
+  color: var(--text);
+  background: color-mix(in srgb, var(--oop-intermediate) 35%, transparent);
+}
+.oop.dsa .dsa-status-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+.oop.dsa .dsa-nav-done,
+.oop.dsa .dsa-done-mark {
+  margin-left: auto;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--oop-basic);
+}
+.oop.dsa .dsa-done-mark {
+  margin-left: 0;
+}
+
+/* Problem lists (lesson practice and question bank) */
+.oop.dsa .dsa-plist {
+  display: grid;
+  gap: var(--space-2);
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.oop.dsa .dsa-plist__item {
+  display: grid;
+  grid-template-columns: auto 6.6rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-1) var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  color: var(--text);
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--oop-radius);
+  transition: border-color 160ms ease;
+}
+.oop.dsa .dsa-plist__item:hover {
+  border-color: var(--line-strong);
+}
+.oop.dsa .dsa-plist__id {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--muted);
+}
+.oop.dsa .dsa-plist__title {
+  font-weight: 600;
+}
+.oop.dsa .dsa-plist__sub {
+  grid-column: 3 / -1;
+  font-size: var(--fs-xs);
+  color: var(--muted);
+}
+.oop.dsa .dsa-plist--bank .dsa-plist__sub {
+  grid-column: 3;
+}
+.oop.dsa .dsa-plist--bank .oop-level {
+  grid-column: 4;
+  grid-row: 1 / span 2;
+}
+.oop.dsa .dsa-practice__level {
+  margin-top: var(--space-5);
+}
+.oop.dsa .dsa-practice__level h3 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+.oop.dsa .dsa-practice__bank {
+  max-width: var(--oop-prose);
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+}
+
+/* Lesson completion */
+.oop.dsa .dsa-complete {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  max-width: var(--oop-prose);
+  margin: var(--space-7) 0 var(--space-5);
+  padding: var(--space-4) var(--space-5);
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--oop-radius);
+}
+.oop.dsa .dsa-complete p {
+  margin: 0;
+  color: var(--text-2);
+}
+
+/* Problem page */
+.oop.dsa .dsa-problem__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+.oop.dsa .dsa-chip {
+  padding: 2px 10px;
+  font-size: var(--fs-xs);
+  color: var(--text-2);
+  background: var(--chip-bg);
+  border-radius: var(--radius-pill);
+}
+.oop.dsa .dsa-chip--link {
+  color: var(--text);
+  text-decoration: none;
+}
+.oop.dsa .dsa-chip--link:hover {
+  background: var(--accent-soft);
+}
+.oop.dsa .dsa-chip--quiet {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+.oop.dsa .dsa-psec {
+  max-width: var(--oop-prose);
+  margin-top: var(--space-5);
+}
+.oop.dsa .dsa-psec > .oop-label {
+  margin-bottom: var(--space-2);
+}
+.oop.dsa .dsa-hints {
+  display: grid;
+  gap: var(--space-3);
+}
+.oop.dsa .dsa-hint {
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-alt);
+  border-left: 3px solid var(--oop-intermediate);
+  border-radius: 0 8px 8px 0;
+}
+.oop.dsa .dsa-hint .oop-prose > :last-child {
+  margin-bottom: 0;
+}
+.oop.dsa .dsa-hint__n {
+  display: block;
+  margin-bottom: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.oop.dsa .dsa-hints__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.oop.dsa .dsa-problem .oop-problem__reveals {
+  max-width: var(--oop-prose);
+  margin-top: var(--space-6);
+}
+.oop.dsa .dsa-test + .dsa-test {
+  margin-top: var(--space-4);
+}
+.oop.dsa .dsa-problem__tags {
+  max-width: var(--oop-prose);
+  margin-top: var(--space-5);
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+.oop.dsa .dsa-problem__tags span {
+  font-weight: 600;
+  color: var(--text-2);
+}
+.oop.dsa .dsa-problem__back {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+  font-size: var(--fs-sm);
+}
+
+/* Progress meters */
+.oop.dsa .dsa-meter__head {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: 6px;
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+}
+.oop.dsa .dsa-meter__head span:last-child {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+}
+.oop.dsa .dsa-meter__bar {
+  height: 8px;
+  overflow: hidden;
+  background: var(--chip-bg);
+  border-radius: var(--radius-pill);
+}
+.oop.dsa .dsa-meter__bar span {
+  display: block;
+  height: 100%;
+  background: var(--oop-basic);
+  border-radius: inherit;
+  transition: width 300ms ease;
+}
+
+/* Landing: progress panel and module counts */
+.oop.dsa .dsa-progress {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-5);
+}
+.oop.dsa .dsa-progress__bars {
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+}
+.oop.dsa .dsa-progress__next {
+  padding: var(--space-4) var(--space-5);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--oop-radius);
+}
+.oop.dsa .dsa-progress__next ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+.oop.dsa .dsa-progress__next li + li {
+  margin-top: var(--space-1);
+}
+.oop.dsa .dsa-progress__label {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.oop.dsa .dsa-progress__review,
+.oop.dsa .dsa-progress__reset {
+  margin: var(--space-3) 0 0;
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+}
+.oop.dsa .dsa-syllabus__count {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* Question bank */
+.oop.dsa .dsa-qb__summary {
+  display: grid;
+  gap: var(--space-4);
+  max-width: var(--oop-prose);
+  margin: var(--space-5) 0;
+  padding: var(--space-4) var(--space-5);
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--oop-radius);
+}
+.oop.dsa .dsa-qb__by-diff {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+.oop.dsa .dsa-qb__cc {
+  margin: 0;
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+}
+.oop.dsa .dsa-qb__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+.oop.dsa .dsa-field {
+  display: grid;
+  gap: 4px;
+  font-size: var(--fs-xs);
+  color: var(--muted);
+}
+.oop.dsa .dsa-field--search {
+  flex: 1 1 16rem;
+}
+.oop.dsa .dsa-field input,
+.oop.dsa .dsa-field select {
+  min-height: 2.4rem;
+  padding: 0 var(--space-3);
+  font: inherit;
+  font-size: var(--fs-sm);
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+}
+.oop.dsa .dsa-field input:focus-visible,
+.oop.dsa .dsa-field select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+.oop.dsa .dsa-empty {
+  padding: var(--space-5);
+  text-align: center;
+  color: var(--text-2);
+  background: var(--bg-alt);
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--oop-radius);
+}
+
+/* Visualisations */
+.oop.dsa .dsa-viz {
+  max-width: var(--oop-prose);
+  margin: var(--space-5) 0;
+  padding: var(--space-4);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--oop-radius);
+}
+.oop.dsa .dsa-viz__title {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.oop.dsa .dsa-viz__stage {
+  overflow-x: auto;
+}
+.oop.dsa .dsa-viz__stage svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.oop.dsa .dsa-viz__caption {
+  min-height: 2.8em;
+  margin: var(--space-3) 0;
+  font-size: var(--fs-sm);
+  color: var(--text);
+}
+.oop.dsa .dsa-viz__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+.oop.dsa .dsa-viz__step {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  .oop.dsa .dsa-progress {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .oop.dsa .dsa-qb__by-diff {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .oop.dsa .dsa-plist__item {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+  .oop.dsa .dsa-plist__id {
+    grid-column: 2;
+  }
+  .oop.dsa .dsa-plist__title,
+  .oop.dsa .dsa-plist__sub,
+  .oop.dsa .dsa-plist--bank .dsa-plist__sub {
+    grid-column: 2 / -1;
+  }
+  .oop.dsa .dsa-plist--bank .oop-level {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
+/* Chart and diagram parts shared by the visualisations */
+.oop.dsa .dsa-viz__grid {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.oop.dsa .dsa-viz__axis,
+.oop.dsa .dsa-viz__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  fill: var(--muted);
+}
+.oop.dsa .dsa-viz__line {
+  fill: none;
+  stroke-width: 2.2;
+  stroke-linejoin: round;
+}
+.oop.dsa .dsa-viz__line--0 { stroke: #8b949e; }
+.oop.dsa .dsa-viz__line--1 { stroke: #2f81f7; }
+.oop.dsa .dsa-viz__line--2 { stroke: #1f9d55; }
+.oop.dsa .dsa-viz__line--3 { stroke: #b58900; }
+.oop.dsa .dsa-viz__line--4 { stroke: #d1662b; }
+.oop.dsa .dsa-viz__line--5 { stroke: #c2185b; }
+.oop.dsa .dsa-viz__line--6 { stroke: #7e57c2; }
+.oop.dsa .dsa-viz__label--0 { fill: #8b949e; }
+.oop.dsa .dsa-viz__label--1 { fill: #2f81f7; }
+.oop.dsa .dsa-viz__label--2 { fill: #1f9d55; }
+.oop.dsa .dsa-viz__label--3 { fill: #b58900; }
+.oop.dsa .dsa-viz__label--4 { fill: #d1662b; }
+.oop.dsa .dsa-viz__label--5 { fill: #c2185b; }
+.oop.dsa .dsa-viz__label--6 { fill: #7e57c2; }
+.oop.dsa .dsa-viz__range {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+}
+.oop.dsa .dsa-viz__range input {
+  width: min(18rem, 60vw);
+  accent-color: var(--accent);
+}

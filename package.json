@@ -12,7 +12,9 @@
     "check:java": "node scripts/check-java-course.mjs",
     "check:security": "node scripts/check-computer-security.mjs",
     "check:web": "node scripts/check-web-programming.mjs",
-    "check:biology": "node scripts/check-biology-course.mjs"
+    "check:biology": "node scripts/check-biology-course.mjs",
+    "check:english": "node scripts/check-english-course.mjs",
+    "check:dsa": "node scripts/check-dsa-course.mjs"
   },
   "dependencies": {
     "highlight.js": "^11.12.0",

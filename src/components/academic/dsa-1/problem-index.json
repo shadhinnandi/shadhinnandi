@@ -1,0 +1,916 @@
+[
+ {
+  "id": "DSA00-E01",
+  "title": "Safe Total",
+  "topic": "00",
+  "subtopic": "Integer overflow",
+  "difficulty": "Easy",
+  "tags": [
+   "overflow",
+   "long long",
+   "input"
+  ]
+ },
+ {
+  "id": "DSA00-E02",
+  "title": "Digits and Halvings",
+  "topic": "00",
+  "subtopic": "Logarithms",
+  "difficulty": "Easy",
+  "tags": [
+   "logarithm",
+   "loops",
+   "integer arithmetic"
+  ]
+ },
+ {
+  "id": "DSA00-E03",
+  "title": "Minimum, Maximum and Mean",
+  "topic": "00",
+  "subtopic": "Loops and arrays",
+  "difficulty": "Easy",
+  "tags": [
+   "arrays",
+   "loops",
+   "formatting"
+  ]
+ },
+ {
+  "id": "DSA00-E04",
+  "title": "Recursive Digit Sum",
+  "topic": "00",
+  "subtopic": "Recursion",
+  "difficulty": "Easy",
+  "tags": [
+   "recursion",
+   "base case",
+   "digits"
+  ]
+ },
+ {
+  "id": "DSA00-E05",
+  "title": "Gauss Range Sums",
+  "topic": "00",
+  "subtopic": "Summations",
+  "difficulty": "Easy",
+  "tags": [
+   "summation",
+   "formula",
+   "overflow"
+  ]
+ },
+ {
+  "id": "DSA00-M01",
+  "title": "Will It Run in Time?",
+  "topic": "00",
+  "subtopic": "Constraint analysis",
+  "difficulty": "Medium",
+  "tags": [
+   "complexity",
+   "constraints",
+   "overflow"
+  ]
+ },
+ {
+  "id": "DSA00-M02",
+  "title": "Tower of Hanoi",
+  "topic": "00",
+  "subtopic": "Recursion",
+  "difficulty": "Medium",
+  "tags": [
+   "recursion",
+   "induction",
+   "exponential growth"
+  ]
+ },
+ {
+  "id": "DSA00-M03",
+  "title": "Set Algebra",
+  "topic": "00",
+  "subtopic": "Sets",
+  "difficulty": "Medium",
+  "tags": [
+   "sets",
+   "sorting",
+   "union",
+   "intersection"
+  ]
+ },
+ {
+  "id": "DSA00-M04",
+  "title": "Sum of Squares Modulo a Prime",
+  "topic": "00",
+  "subtopic": "Summations and modular arithmetic",
+  "difficulty": "Medium",
+  "tags": [
+   "summation",
+   "modular arithmetic",
+   "overflow"
+  ]
+ },
+ {
+  "id": "DSA00-M05",
+  "title": "Overflow Guard",
+  "topic": "00",
+  "subtopic": "Integer overflow",
+  "difficulty": "Medium",
+  "tags": [
+   "overflow",
+   "undefined behaviour",
+   "long long"
+  ]
+ },
+ {
+  "id": "DSA00-H01",
+  "title": "Modular Exponentiation",
+  "topic": "00",
+  "subtopic": "Recursion and fast power",
+  "difficulty": "Hard",
+  "tags": [
+   "recursion",
+   "divide and conquer",
+   "modular arithmetic",
+   "overflow"
+  ]
+ },
+ {
+  "id": "DSA00-H02",
+  "title": "Geometric Sum Without Division",
+  "topic": "00",
+  "subtopic": "Summations and divide and conquer",
+  "difficulty": "Hard",
+  "tags": [
+   "divide and conquer",
+   "summation",
+   "recursion",
+   "modular arithmetic"
+  ]
+ },
+ {
+  "id": "DSA00-H03",
+  "title": "Counting Subsets with a Target Sum",
+  "topic": "00",
+  "subtopic": "Complexity-aware search (extension: meet in the middle)",
+  "difficulty": "Hard",
+  "tags": [
+   "subsets",
+   "sorting",
+   "binary search",
+   "exponential growth"
+  ]
+ },
+ {
+  "id": "DSA00-H04",
+  "title": "Josephus Survivor",
+  "topic": "00",
+  "subtopic": "Recurrences and induction",
+  "difficulty": "Hard",
+  "tags": [
+   "recurrence",
+   "induction",
+   "recursion",
+   "iteration"
+  ]
+ },
+ {
+  "id": "DSA00-H05",
+  "title": "Prime Power in a Factorial",
+  "topic": "00",
+  "subtopic": "Logarithmic loops and overflow",
+  "difficulty": "Hard",
+  "tags": [
+   "logarithm",
+   "overflow",
+   "number theory",
+   "loops"
+  ]
+ },
+ {
+  "id": "DSA01-E01",
+  "title": "Binary Representation",
+  "topic": "01",
+  "subtopic": "Binary numbers",
+  "difficulty": "Easy",
+  "tags": [
+   "binary",
+   "bits",
+   "conversion"
+  ]
+ },
+ {
+  "id": "DSA01-E02",
+  "title": "Population Count",
+  "topic": "01",
+  "subtopic": "Bit manipulation",
+  "difficulty": "Easy",
+  "tags": [
+   "bits",
+   "popcount",
+   "bit tricks"
+  ]
+ },
+ {
+  "id": "DSA01-E03",
+  "title": "Memory Budget",
+  "topic": "01",
+  "subtopic": "Storage size",
+  "difficulty": "Easy",
+  "tags": [
+   "memory",
+   "sizeof",
+   "overflow"
+  ]
+ },
+ {
+  "id": "DSA01-E04",
+  "title": "Address of an Element",
+  "topic": "01",
+  "subtopic": "Memory addresses",
+  "difficulty": "Easy",
+  "tags": [
+   "arrays",
+   "addresses",
+   "hexadecimal"
+  ]
+ },
+ {
+  "id": "DSA01-E05",
+  "title": "Two's Complement Byte",
+  "topic": "01",
+  "subtopic": "Two's complement",
+  "difficulty": "Easy",
+  "tags": [
+   "two's complement",
+   "binary",
+   "signed integers"
+  ]
+ },
+ {
+  "id": "DSA01-M01",
+  "title": "Row-Major and Column-Major Addresses",
+  "topic": "01",
+  "subtopic": "2D memory layout",
+  "difficulty": "Medium",
+  "tags": [
+   "2D arrays",
+   "row-major",
+   "addresses"
+  ]
+ },
+ {
+  "id": "DSA01-M02",
+  "title": "Feature Flags",
+  "topic": "01",
+  "subtopic": "Bit manipulation",
+  "difficulty": "Medium",
+  "tags": [
+   "bits",
+   "masks",
+   "unsigned"
+  ]
+ },
+ {
+  "id": "DSA01-M03",
+  "title": "Byte Order",
+  "topic": "01",
+  "subtopic": "Endianness",
+  "difficulty": "Medium",
+  "tags": [
+   "bytes",
+   "endianness",
+   "hexadecimal"
+  ]
+ },
+ {
+  "id": "DSA01-M04",
+  "title": "Struct Padding",
+  "topic": "01",
+  "subtopic": "Alignment and padding",
+  "difficulty": "Medium",
+  "tags": [
+   "memory layout",
+   "alignment",
+   "structs"
+  ]
+ },
+ {
+  "id": "DSA01-M05",
+  "title": "Packed Boolean Array",
+  "topic": "01",
+  "subtopic": "Compact representation",
+  "difficulty": "Medium",
+  "tags": [
+   "bitset",
+   "bits",
+   "memory"
+  ]
+ },
+ {
+  "id": "DSA01-H01",
+  "title": "Next Number with the Same Set Bits",
+  "topic": "01",
+  "subtopic": "Bit manipulation",
+  "difficulty": "Hard",
+  "tags": [
+   "bits",
+   "combinatorics",
+   "bit tricks"
+  ]
+ },
+ {
+  "id": "DSA01-H02",
+  "title": "Decoding IEEE 754 Floats",
+  "topic": "01",
+  "subtopic": "Floating-point representation",
+  "difficulty": "Hard",
+  "tags": [
+   "floating point",
+   "bits",
+   "IEEE 754"
+  ]
+ },
+ {
+  "id": "DSA01-H03",
+  "title": "First-Fit Memory Allocator",
+  "topic": "01",
+  "subtopic": "Dynamic memory",
+  "difficulty": "Hard",
+  "tags": [
+   "memory allocation",
+   "contiguous storage",
+   "ordered map"
+  ]
+ },
+ {
+  "id": "DSA01-H04",
+  "title": "Dynamic Array Growth Cost",
+  "topic": "01",
+  "subtopic": "Static vs dynamic arrays",
+  "difficulty": "Hard",
+  "tags": [
+   "dynamic array",
+   "amortised analysis",
+   "overflow"
+  ]
+ },
+ {
+  "id": "DSA01-H05",
+  "title": "Total Set Bits from 1 to n",
+  "topic": "01",
+  "subtopic": "Binary patterns",
+  "difficulty": "Hard",
+  "tags": [
+   "bits",
+   "counting",
+   "overflow"
+  ]
+ },
+ {
+  "id": "DSA02-E01",
+  "title": "Bounded Stack",
+  "topic": "02",
+  "subtopic": "Stack ADT and preconditions",
+  "difficulty": "Easy",
+  "tags": [
+   "stack",
+   "preconditions",
+   "array"
+  ]
+ },
+ {
+  "id": "DSA02-E02",
+  "title": "List ADT on an Array",
+  "topic": "02",
+  "subtopic": "List ADT",
+  "difficulty": "Easy",
+  "tags": [
+   "list",
+   "array",
+   "preconditions"
+  ]
+ },
+ {
+  "id": "DSA02-E03",
+  "title": "Set ADT on a Sorted Array",
+  "topic": "02",
+  "subtopic": "Set ADT",
+  "difficulty": "Easy",
+  "tags": [
+   "set",
+   "sorted array",
+   "binary search"
+  ]
+ },
+ {
+  "id": "DSA02-E04",
+  "title": "Word Frequency Map",
+  "topic": "02",
+  "subtopic": "Map ADT",
+  "difficulty": "Easy",
+  "tags": [
+   "map",
+   "dictionary",
+   "strings"
+  ]
+ },
+ {
+  "id": "DSA02-E05",
+  "title": "Bank Account ADT",
+  "topic": "02",
+  "subtopic": "Invariants",
+  "difficulty": "Easy",
+  "tags": [
+   "invariants",
+   "preconditions",
+   "class design"
+  ]
+ },
+ {
+  "id": "DSA02-M01",
+  "title": "Queue from Two Stacks",
+  "topic": "02",
+  "subtopic": "Implementing one ADT with another",
+  "difficulty": "Medium",
+  "tags": [
+   "queue",
+   "stack",
+   "amortised analysis"
+  ]
+ },
+ {
+  "id": "DSA02-M02",
+  "title": "Stack with Constant-Time Minimum",
+  "topic": "02",
+  "subtopic": "Augmented ADT",
+  "difficulty": "Medium",
+  "tags": [
+   "stack",
+   "invariants",
+   "design"
+  ]
+ },
+ {
+  "id": "DSA02-M03",
+  "title": "Emergency Room Queue",
+  "topic": "02",
+  "subtopic": "Priority Queue ADT",
+  "difficulty": "Medium",
+  "tags": [
+   "priority queue",
+   "heap",
+   "tie-breaking"
+  ]
+ },
+ {
+  "id": "DSA02-M04",
+  "title": "Multiset Inventory",
+  "topic": "02",
+  "subtopic": "Map-based multiset",
+  "difficulty": "Medium",
+  "tags": [
+   "multiset",
+   "map",
+   "counting"
+  ]
+ },
+ {
+  "id": "DSA02-M05",
+  "title": "Circular Buffer Deque",
+  "topic": "02",
+  "subtopic": "Deque ADT from scratch",
+  "difficulty": "Medium",
+  "tags": [
+   "deque",
+   "circular array",
+   "dynamic array"
+  ]
+ },
+ {
+  "id": "DSA02-H01",
+  "title": "LRU Cache",
+  "topic": "02",
+  "subtopic": "Composite ADT (map + list)",
+  "difficulty": "Hard",
+  "tags": [
+   "cache",
+   "hash map",
+   "linked list",
+   "design"
+  ]
+ },
+ {
+  "id": "DSA02-H02",
+  "title": "Text Editor Buffer",
+  "topic": "02",
+  "subtopic": "Two-stack buffer with a cursor",
+  "difficulty": "Hard",
+  "tags": [
+   "stack",
+   "design",
+   "strings"
+  ]
+ },
+ {
+  "id": "DSA02-H03",
+  "title": "Task Manager with Priority Changes",
+  "topic": "02",
+  "subtopic": "Choosing an implementation",
+  "difficulty": "Hard",
+  "tags": [
+   "priority queue",
+   "ordered set",
+   "hash map",
+   "design"
+  ]
+ },
+ {
+  "id": "DSA02-H04",
+  "title": "Undo and Redo on a Set",
+  "topic": "02",
+  "subtopic": "ADT with history",
+  "difficulty": "Hard",
+  "tags": [
+   "stack",
+   "set",
+   "undo",
+   "design"
+  ]
+ },
+ {
+  "id": "DSA02-H05",
+  "title": "Interval Coverage Set",
+  "topic": "02",
+  "subtopic": "Map of disjoint intervals",
+  "difficulty": "Hard",
+  "tags": [
+   "ordered map",
+   "intervals",
+   "invariants"
+  ]
+ },
+ {
+  "id": "DSA03-E01",
+  "title": "Linear Search",
+  "topic": "03",
+  "subtopic": "Brute-force search",
+  "difficulty": "Easy",
+  "tags": [
+   "searching",
+   "arrays",
+   "brute force"
+  ]
+ },
+ {
+  "id": "DSA03-E02",
+  "title": "Euclid's Algorithm with Steps",
+  "topic": "03",
+  "subtopic": "Iterative algorithm design",
+  "difficulty": "Easy",
+  "tags": [
+   "gcd",
+   "iteration",
+   "termination"
+  ]
+ },
+ {
+  "id": "DSA03-E03",
+  "title": "Palindromic Numbers",
+  "topic": "03",
+  "subtopic": "Problem decomposition",
+  "difficulty": "Easy",
+  "tags": [
+   "decomposition",
+   "digits",
+   "loops"
+  ]
+ },
+ {
+  "id": "DSA03-E04",
+  "title": "Fibonacci, Iteratively",
+  "topic": "03",
+  "subtopic": "Iterative versus recursive",
+  "difficulty": "Easy",
+  "tags": [
+   "iteration",
+   "recursion",
+   "fibonacci"
+  ]
+ },
+ {
+  "id": "DSA03-E05",
+  "title": "Collatz Trace",
+  "topic": "03",
+  "subtopic": "Dry runs and tracing",
+  "difficulty": "Easy",
+  "tags": [
+   "tracing",
+   "loops",
+   "simulation"
+  ]
+ },
+ {
+  "id": "DSA03-M01",
+  "title": "Closest Pair Sum by Brute Force",
+  "topic": "03",
+  "subtopic": "Brute force",
+  "difficulty": "Medium",
+  "tags": [
+   "brute force",
+   "pairs",
+   "constraints"
+  ]
+ },
+ {
+  "id": "DSA03-M02",
+  "title": "Activity Selection",
+  "topic": "03",
+  "subtopic": "Greedy strategy",
+  "difficulty": "Medium",
+  "tags": [
+   "greedy",
+   "sorting",
+   "intervals"
+  ]
+ },
+ {
+  "id": "DSA03-M03",
+  "title": "Fewest Banknotes",
+  "topic": "03",
+  "subtopic": "Greedy strategy",
+  "difficulty": "Medium",
+  "tags": [
+   "greedy",
+   "change making",
+   "decomposition"
+  ]
+ },
+ {
+  "id": "DSA03-M04",
+  "title": "First and Last Position",
+  "topic": "03",
+  "subtopic": "Divide and conquer (binary search)",
+  "difficulty": "Medium",
+  "tags": [
+   "binary search",
+   "divide and conquer",
+   "sorted array"
+  ]
+ },
+ {
+  "id": "DSA03-M05",
+  "title": "Majority Element",
+  "topic": "03",
+  "subtopic": "From brute force to a better algorithm",
+  "difficulty": "Medium",
+  "tags": [
+   "voting",
+   "brute force",
+   "correctness"
+  ]
+ },
+ {
+  "id": "DSA03-H01",
+  "title": "Maximum Subarray by Divide and Conquer",
+  "topic": "03",
+  "subtopic": "Divide and conquer",
+  "difficulty": "Hard",
+  "tags": [
+   "divide and conquer",
+   "recursion",
+   "arrays"
+  ]
+ },
+ {
+  "id": "DSA03-H02",
+  "title": "Meeting Rooms",
+  "topic": "03",
+  "subtopic": "Greedy sweep",
+  "difficulty": "Hard",
+  "tags": [
+   "greedy",
+   "sorting",
+   "intervals",
+   "sweep line"
+  ]
+ },
+ {
+  "id": "DSA03-H03",
+  "title": "N-Queens Count",
+  "topic": "03",
+  "subtopic": "Brute force with pruning (backtracking)",
+  "difficulty": "Hard",
+  "tags": [
+   "backtracking",
+   "recursion",
+   "brute force",
+   "bitmask"
+  ]
+ },
+ {
+  "id": "DSA03-H04",
+  "title": "Next Permutation",
+  "topic": "03",
+  "subtopic": "Algorithm design and correctness",
+  "difficulty": "Hard",
+  "tags": [
+   "permutations",
+   "arrays",
+   "design"
+  ]
+ },
+ {
+  "id": "DSA03-H05",
+  "title": "Job Sequencing with Deadlines",
+  "topic": "03",
+  "subtopic": "Greedy with a priority queue",
+  "difficulty": "Hard",
+  "tags": [
+   "greedy",
+   "heap",
+   "scheduling",
+   "exchange argument"
+  ]
+ },
+ {
+  "id": "DSA04-E01",
+  "title": "Loop Iteration Counts",
+  "topic": "04",
+  "subtopic": "Counting loop iterations",
+  "difficulty": "Easy",
+  "tags": [
+   "loops",
+   "summation",
+   "logarithm"
+  ]
+ },
+ {
+  "id": "DSA04-E02",
+  "title": "Order of Growth",
+  "topic": "04",
+  "subtopic": "Growth rates",
+  "difficulty": "Easy",
+  "tags": [
+   "growth rates",
+   "sorting",
+   "big-O"
+  ]
+ },
+ {
+  "id": "DSA04-E03",
+  "title": "Linear Search Comparisons",
+  "topic": "04",
+  "subtopic": "Best, average and worst case",
+  "difficulty": "Easy",
+  "tags": [
+   "searching",
+   "worst case",
+   "best case"
+  ]
+ },
+ {
+  "id": "DSA04-E04",
+  "title": "Duplicate Detection",
+  "topic": "04",
+  "subtopic": "Improving a quadratic algorithm",
+  "difficulty": "Easy",
+  "tags": [
+   "sorting",
+   "complexity",
+   "duplicates"
+  ]
+ },
+ {
+  "id": "DSA04-E05",
+  "title": "Harmonic Loop Count",
+  "topic": "04",
+  "subtopic": "Harmonic loops",
+  "difficulty": "Easy",
+  "tags": [
+   "loops",
+   "harmonic series",
+   "counting"
+  ]
+ },
+ {
+  "id": "DSA04-M01",
+  "title": "Smallest Witness n₀",
+  "topic": "04",
+  "subtopic": "Formal Big-O definitions",
+  "difficulty": "Medium",
+  "tags": [
+   "big-O",
+   "proofs",
+   "binary search"
+  ]
+ },
+ {
+  "id": "DSA04-M02",
+  "title": "Pairs with a Given Sum",
+  "topic": "04",
+  "subtopic": "From O(n²) to O(n)",
+  "difficulty": "Medium",
+  "tags": [
+   "hashing",
+   "counting",
+   "complexity"
+  ]
+ },
+ {
+  "id": "DSA04-M03",
+  "title": "Best Window Sum",
+  "topic": "04",
+  "subtopic": "Sliding window",
+  "difficulty": "Medium",
+  "tags": [
+   "sliding window",
+   "arrays",
+   "complexity"
+  ]
+ },
+ {
+  "id": "DSA04-M04",
+  "title": "Guess the Complexity",
+  "topic": "04",
+  "subtopic": "Empirical growth analysis",
+  "difficulty": "Medium",
+  "tags": [
+   "growth rates",
+   "doubling experiment",
+   "analysis"
+  ]
+ },
+ {
+  "id": "DSA04-M05",
+  "title": "Count Smaller Elements",
+  "topic": "04",
+  "subtopic": "Preprocessing for many queries",
+  "difficulty": "Medium",
+  "tags": [
+   "sorting",
+   "binary search",
+   "complexity"
+  ]
+ },
+ {
+  "id": "DSA04-H01",
+  "title": "Exact Harmonic Count for Huge n",
+  "topic": "04",
+  "subtopic": "Beating Θ(n) with structure",
+  "difficulty": "Hard",
+  "tags": [
+   "math",
+   "block decomposition",
+   "harmonic series"
+  ]
+ },
+ {
+  "id": "DSA04-H02",
+  "title": "Pairs Within Distance",
+  "topic": "04",
+  "subtopic": "Sorting plus two pointers",
+  "difficulty": "Hard",
+  "tags": [
+   "two pointers",
+   "sorting",
+   "counting"
+  ]
+ },
+ {
+  "id": "DSA04-H03",
+  "title": "Subarrays Summing to K",
+  "topic": "04",
+  "subtopic": "Prefix sums with hashing",
+  "difficulty": "Hard",
+  "tags": [
+   "prefix sums",
+   "hashing",
+   "counting",
+   "complexity"
+  ]
+ },
+ {
+  "id": "DSA04-H04",
+  "title": "K-th Smallest Pair Distance",
+  "topic": "04",
+  "subtopic": "Binary search on the answer",
+  "difficulty": "Hard",
+  "tags": [
+   "binary search",
+   "two pointers",
+   "sorting",
+   "complexity"
+  ]
+ },
+ {
+  "id": "DSA04-H05",
+  "title": "Zero-Sum Triplets",
+  "topic": "04",
+  "subtopic": "From O(n³) to O(n²)",
+  "difficulty": "Hard",
+  "tags": [
+   "two pointers",
+   "sorting",
+   "counting"
+  ]
+ }
+]

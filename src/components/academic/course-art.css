@@ -34,6 +34,14 @@
   --ca-accent: #a23b6c;
   --ca-accent-soft: rgb(162 59 108 / 0.12);
 }
+.course-art--dsa {
+  --ca-accent: #6a4bc4;
+  --ca-accent-soft: rgb(106 75 196 / 0.12);
+}
+.course-art--eng {
+  --ca-accent: #3e5bb5;
+  --ca-accent-soft: rgb(62 91 181 / 0.12);
+}
 .course-art--sec {
   --ca-accent: #1f7a4d;
   --ca-accent-soft: rgb(31 122 77 / 0.12);
@@ -60,6 +68,14 @@
   --ca-accent: #ef8fbd;
   --ca-accent-soft: rgb(239 143 189 / 0.15);
 }
+:root[data-theme='dark'] .course-art--dsa {
+  --ca-accent: #b7a1ff;
+  --ca-accent-soft: rgb(183 161 255 / 0.15);
+}
+:root[data-theme='dark'] .course-art--eng {
+  --ca-accent: #93a9f2;
+  --ca-accent-soft: rgb(147 169 242 / 0.15);
+}
 :root[data-theme='dark'] .course-art--sec {
   --ca-accent: #5cc98f;
   --ca-accent-soft: rgb(92 201 143 / 0.14);
@@ -85,6 +101,14 @@
   :root:not([data-theme='light']) .course-art--bio {
     --ca-accent: #ef8fbd;
     --ca-accent-soft: rgb(239 143 189 / 0.15);
+  }
+  :root:not([data-theme='light']) .course-art--dsa {
+    --ca-accent: #b7a1ff;
+    --ca-accent-soft: rgb(183 161 255 / 0.15);
+  }
+  :root:not([data-theme='light']) .course-art--eng {
+    --ca-accent: #93a9f2;
+    --ca-accent-soft: rgb(147 169 242 / 0.15);
   }
   :root:not([data-theme='light']) .course-art--sec {
     --ca-accent: #5cc98f;
