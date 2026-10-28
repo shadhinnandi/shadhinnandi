@@ -21,8 +21,10 @@ export const experience = [
       'Microprocessors & Microcontrollers Laboratory',
     ],
     points: [
-      'Guide lab sessions and project-based coursework across the six courses above.',
-      'Mentor students and provide academic counselling, including help working through technical problems in their code.',
+      'Supported faculty in delivering instruction across 8 course sections, reinforcing concepts, guiding assignments, and mentoring students through course projects.',
+      'Mentored 50 probationary students through academic counseling to improve academic performance and study strategies.',
+      'Provided technical guidance to 3 award-winning teams at the CSE Project Show.',
+      'Supported academic administration through exam invigilation, question preparation, script evaluation, and marksheet analysis.',
     ],
   },
   {

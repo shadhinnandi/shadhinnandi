@@ -5,7 +5,7 @@ import { DIFFICULTIES } from './content.js';
 import { resolveLink } from './links.js';
 import { setLessonDone, useProgress } from './progress.js';
 import { DifficultyTag, StatusMark } from './ProblemParts.jsx';
-import { VIZ } from './viz/index.js';
+import { VIZ } from './viz/index.jsx';
 
 const slugify = (s) =>
   s

@@ -7,8 +7,8 @@ export const degree = {
   location: 'Dhaka, Bangladesh',
   period: 'Oct 2022 – Jan 2027 (expected)',
   facts: [
-    { label: 'CGPA', value: '3.93', unit: '/ 4.00' },
-    { label: 'Credits completed', value: '130' },
+    { label: 'CGPA', value: '3.96', unit: '/ 4.00' },
+    { label: 'Credits completed', value: '128' },
   ],
   photo: image(
     'uiu-campus',

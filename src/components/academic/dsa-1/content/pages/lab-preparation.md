@@ -4,13 +4,28 @@ A DSA I laboratory tests whether you can implement structures from scratch, trac
 
 ## Implementation-from-scratch drills
 
-Write each in under 20 minutes without notes: array stack with overflow/underflow; circular queue; singly linked list (insert, delete, reverse); BST insert/search/delete; max-heap push/pop and heap sort; merge sort; Lomuto quick sort; BFS distances; DSU with path compression.
+Write each in under 20 minutes without notes, then check yourself against the linked problem:
+
+| Drill | Practice problem |
+|---|---|
+| Array stack with overflow/underflow | [DSA02-E01](problem:DSA02-E01) |
+| Circular queue | [DSA10-E02](problem:DSA10-E02) |
+| Singly linked list: insert, delete, reverse | [DSA08-E01](problem:DSA08-E01), [DSA08-E04](problem:DSA08-E04), [DSA08-E05](problem:DSA08-E05) |
+| Doubly linked list with a sentinel | [DSA08-M04](problem:DSA08-M04) |
+| Tree traversals, recursive and iterative | [DSA11-E01](problem:DSA11-E01), [DSA11-M01](problem:DSA11-M01) |
+| BST insert, search, delete | [DSA15-E01](problem:DSA15-E01), [DSA15-M01](problem:DSA15-M01) |
+| Max-heap push/pop and heap sort | [DSA14-E01](problem:DSA14-E01), [DSA16A-E01](problem:DSA16A-E01) |
+| Merge sort and quick sort | [DSA16B-E01](problem:DSA16B-E01), [DSA16C-E01](problem:DSA16C-E01) |
+| Counting and radix sort | [DSA16D-E01](problem:DSA16D-E01), [DSA16D-E04](problem:DSA16D-E04) |
+| BFS distances and DFS | [DSA13-E04](problem:DSA13-E04), [DSA13-E02](problem:DSA13-E02) |
+| DSU with path compression | [DSA17-E01](problem:DSA17-E01) |
 
 ## Output prediction and tracing
 
 1. Trace insertion sort on [5, 2, 4, 6, 1, 3] after each pass (answer: [Module 05](topic:correctness-and-recurrences)).
 2. Give preorder, inorder and postorder of the tree in [Module 11](topic:trees).
-3. Show the array after build-heap on [4, 10, 3, 5, 1] (answer: [10, 5, 3, 4, 1]).
+3. Show the array after build-heap on [4, 10, 3, 5, 1] (answer: [10, 5, 3, 4, 1]; full trace in [DSA16A-E03](problem:DSA16A-E03)).
+4. Give the array after one Lomuto partition of [3, 8, 2, 5, 1, 4, 7, 6] ([DSA16C-E02](problem:DSA16C-E02)).
 
 ## Debugging incorrect implementations
 

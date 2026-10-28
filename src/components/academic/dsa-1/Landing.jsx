@@ -95,7 +95,9 @@ export default function Landing({ basePath }) {
       <section className="oop-hero" id="top">
         <div className="container">
           <p className="label">DSA I · C++17 · Analysis · Data structures · Sorting · Graphs</p>
-          <h1 className="oop-hero__title">Data Structures and Algorithms, from first principles to interview-ready.</h1>
+          <h1 className="oop-hero__title dsa-hero__title">
+            <span>Data Structures and Algorithms,</span> <span>from first principles to interview-ready.</span>
+          </h1>
           <p className="lead">
             Every topic of the DSA I syllabus on its own page: intuition, definitions, pseudocode, complete C++17 code, dry runs, proofs and
             complexity, then at least fifteen problems from Easy to Hard with tested reference solutions.

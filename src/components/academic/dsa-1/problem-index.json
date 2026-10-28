@@ -912,5 +912,3166 @@
    "sorting",
    "counting"
   ]
+ },
+ {
+  "id": "DSA05-E01",
+  "title": "Insertion Sort Trace",
+  "topic": "05",
+  "subtopic": "Loop invariants",
+  "difficulty": "Easy",
+  "tags": [
+   "insertion sort",
+   "invariant",
+   "tracing"
+  ]
+ },
+ {
+  "id": "DSA05-E02",
+  "title": "Selection Sort Counts",
+  "topic": "05",
+  "subtopic": "Exact operation counts",
+  "difficulty": "Easy",
+  "tags": [
+   "selection sort",
+   "counting",
+   "invariant"
+  ]
+ },
+ {
+  "id": "DSA05-E03",
+  "title": "Linear Recurrence by Iteration",
+  "topic": "05",
+  "subtopic": "Recurrence relations",
+  "difficulty": "Easy",
+  "tags": [
+   "recurrence",
+   "iteration",
+   "modular arithmetic"
+  ]
+ },
+ {
+  "id": "DSA05-E04",
+  "title": "Binary Search Steps",
+  "topic": "05",
+  "subtopic": "Binary search invariant",
+  "difficulty": "Easy",
+  "tags": [
+   "binary search",
+   "invariant",
+   "counting"
+  ]
+ },
+ {
+  "id": "DSA05-E05",
+  "title": "Integer Square Root",
+  "topic": "05",
+  "subtopic": "Invariant-based search",
+  "difficulty": "Easy",
+  "tags": [
+   "binary search",
+   "invariant",
+   "overflow"
+  ]
+ },
+ {
+  "id": "DSA05-M01",
+  "title": "Recursion Tree Cost",
+  "topic": "05",
+  "subtopic": "Recursion trees",
+  "difficulty": "Medium",
+  "tags": [
+   "recurrence",
+   "recursion tree",
+   "divide and conquer"
+  ]
+ },
+ {
+  "id": "DSA05-M02",
+  "title": "Merge Sort Worst-Case Comparisons",
+  "topic": "05",
+  "subtopic": "Recurrences with floors and ceilings",
+  "difficulty": "Medium",
+  "tags": [
+   "recurrence",
+   "merge sort",
+   "memoisation"
+  ]
+ },
+ {
+  "id": "DSA05-M03",
+  "title": "Dutch National Flag",
+  "topic": "05",
+  "subtopic": "Multi-region invariants",
+  "difficulty": "Medium",
+  "tags": [
+   "partition",
+   "invariant",
+   "two pointers"
+  ]
+ },
+ {
+  "id": "DSA05-M04",
+  "title": "Calls of Naive Fibonacci",
+  "topic": "05",
+  "subtopic": "Recurrence for running time",
+  "difficulty": "Medium",
+  "tags": [
+   "recurrence",
+   "induction",
+   "recursion"
+  ]
+ },
+ {
+  "id": "DSA05-M05",
+  "title": "Valid Stack Sequence",
+  "topic": "05",
+  "subtopic": "Data structure invariants",
+  "difficulty": "Medium",
+  "tags": [
+   "stack",
+   "simulation",
+   "invariant"
+  ]
+ },
+ {
+  "id": "DSA05-H01",
+  "title": "Total Binary Search Iterations",
+  "topic": "05",
+  "subtopic": "Recurrences for average cost",
+  "difficulty": "Hard",
+  "tags": [
+   "recurrence",
+   "binary search",
+   "memoisation"
+  ]
+ },
+ {
+  "id": "DSA05-H02",
+  "title": "Binary Counter Flips",
+  "topic": "05",
+  "subtopic": "Amortised analysis by induction",
+  "difficulty": "Hard",
+  "tags": [
+   "amortised analysis",
+   "bits",
+   "induction"
+  ]
+ },
+ {
+  "id": "DSA05-H03",
+  "title": "Unequal Split Recurrence",
+  "topic": "05",
+  "subtopic": "Recursion trees with unequal splits",
+  "difficulty": "Hard",
+  "tags": [
+   "recurrence",
+   "memoisation",
+   "recursion tree"
+  ]
+ },
+ {
+  "id": "DSA05-H04",
+  "title": "Find the Duplicate",
+  "topic": "05",
+  "subtopic": "Proof by contradiction (pigeonhole)",
+  "difficulty": "Hard",
+  "tags": [
+   "cycle detection",
+   "pigeonhole",
+   "invariant"
+  ]
+ },
+ {
+  "id": "DSA05-H05",
+  "title": "Maximum Circular Subarray",
+  "topic": "05",
+  "subtopic": "Invariant-based scans",
+  "difficulty": "Hard",
+  "tags": [
+   "Kadane",
+   "invariant",
+   "arrays"
+  ]
+ },
+ {
+  "id": "DSA06-E01",
+  "title": "Which Case?",
+  "topic": "06",
+  "subtopic": "Applying the three cases",
+  "difficulty": "Easy",
+  "tags": [
+   "master theorem",
+   "recurrences",
+   "exact arithmetic"
+  ]
+ },
+ {
+  "id": "DSA06-E02",
+  "title": "Fast Power with Call Count",
+  "topic": "06",
+  "subtopic": "T(n) = T(n/2) + 1",
+  "difficulty": "Easy",
+  "tags": [
+   "divide and conquer",
+   "recursion",
+   "modular arithmetic"
+  ]
+ },
+ {
+  "id": "DSA06-E03",
+  "title": "Divide-and-Conquer Maximum",
+  "topic": "06",
+  "subtopic": "T(n) = 2T(n/2) + 1",
+  "difficulty": "Easy",
+  "tags": [
+   "divide and conquer",
+   "recursion",
+   "maximum"
+  ]
+ },
+ {
+  "id": "DSA06-E04",
+  "title": "The Combine Step: Merging",
+  "topic": "06",
+  "subtopic": "f(n) of merge sort",
+  "difficulty": "Easy",
+  "tags": [
+   "merging",
+   "two pointers",
+   "linear time"
+  ]
+ },
+ {
+  "id": "DSA06-E05",
+  "title": "Counting the Recursion Tree",
+  "topic": "06",
+  "subtopic": "Leaves and levels",
+  "difficulty": "Easy",
+  "tags": [
+   "recursion tree",
+   "master theorem",
+   "counting"
+  ]
+ },
+ {
+  "id": "DSA06-M01",
+  "title": "Counting Inversions",
+  "topic": "06",
+  "subtopic": "Merge sort, case 2",
+  "difficulty": "Medium",
+  "tags": [
+   "merge sort",
+   "divide and conquer",
+   "counting"
+  ]
+ },
+ {
+  "id": "DSA06-M02",
+  "title": "Peak Finding",
+  "topic": "06",
+  "subtopic": "T(n) = T(n/2) + 1",
+  "difficulty": "Medium",
+  "tags": [
+   "binary search",
+   "divide and conquer"
+  ]
+ },
+ {
+  "id": "DSA06-M03",
+  "title": "Level Costs of a Recursion Tree",
+  "topic": "06",
+  "subtopic": "Why the three cases exist",
+  "difficulty": "Medium",
+  "tags": [
+   "recursion tree",
+   "master theorem",
+   "geometric series"
+  ]
+ },
+ {
+  "id": "DSA06-M04",
+  "title": "Fibonacci by Fast Doubling",
+  "topic": "06",
+  "subtopic": "Logarithmic divide and conquer",
+  "difficulty": "Medium",
+  "tags": [
+   "divide and conquer",
+   "recursion",
+   "modular arithmetic"
+  ]
+ },
+ {
+  "id": "DSA06-M05",
+  "title": "Strassen versus Naive Multiplications",
+  "topic": "06",
+  "subtopic": "Case 1 with different a",
+  "difficulty": "Medium",
+  "tags": [
+   "master theorem",
+   "recurrences",
+   "matrices"
+  ]
+ },
+ {
+  "id": "DSA06-H01",
+  "title": "Closest Pair of Points",
+  "topic": "06",
+  "subtopic": "T(n) = 2T(n/2) + O(n log n) or O(n)",
+  "difficulty": "Hard",
+  "tags": [
+   "divide and conquer",
+   "geometry",
+   "sorting"
+  ]
+ },
+ {
+  "id": "DSA06-H02",
+  "title": "Karatsuba Multiplication",
+  "topic": "06",
+  "subtopic": "T(n) = 3T(n/2) + O(n)",
+  "difficulty": "Hard",
+  "tags": [
+   "divide and conquer",
+   "big integers",
+   "master theorem"
+  ]
+ },
+ {
+  "id": "DSA06-H03",
+  "title": "Reverse Pairs",
+  "topic": "06",
+  "subtopic": "Augmented merge sort",
+  "difficulty": "Hard",
+  "tags": [
+   "merge sort",
+   "divide and conquer",
+   "two pointers"
+  ]
+ },
+ {
+  "id": "DSA06-H04",
+  "title": "K-th Element of Two Sorted Arrays",
+  "topic": "06",
+  "subtopic": "Logarithmic divide and conquer",
+  "difficulty": "Hard",
+  "tags": [
+   "divide and conquer",
+   "binary search",
+   "sorted arrays"
+  ]
+ },
+ {
+  "id": "DSA06-H05",
+  "title": "Merge k Sorted Lists by Pairing",
+  "topic": "06",
+  "subtopic": "Divide and conquer over k",
+  "difficulty": "Hard",
+  "tags": [
+   "divide and conquer",
+   "merging",
+   "recursion"
+  ]
+ },
+ {
+  "id": "DSA07-E01",
+  "title": "Reverse in Place",
+  "topic": "07",
+  "subtopic": "Two-pointer traversal",
+  "difficulty": "Easy",
+  "tags": [
+   "arrays",
+   "two pointers",
+   "in-place"
+  ]
+ },
+ {
+  "id": "DSA07-E02",
+  "title": "Range Sums with Prefix Sums",
+  "topic": "07",
+  "subtopic": "Prefix sums",
+  "difficulty": "Easy",
+  "tags": [
+   "prefix sums",
+   "arrays",
+   "queries"
+  ]
+ },
+ {
+  "id": "DSA07-E03",
+  "title": "Grade Frequencies",
+  "topic": "07",
+  "subtopic": "Frequency arrays",
+  "difficulty": "Easy",
+  "tags": [
+   "counting",
+   "frequency array",
+   "arrays"
+  ]
+ },
+ {
+  "id": "DSA07-E04",
+  "title": "Rotate Right by k",
+  "topic": "07",
+  "subtopic": "In-place transformations",
+  "difficulty": "Easy",
+  "tags": [
+   "arrays",
+   "rotation",
+   "reversal"
+  ]
+ },
+ {
+  "id": "DSA07-E05",
+  "title": "Row and Column Sums",
+  "topic": "07",
+  "subtopic": "2D traversal",
+  "difficulty": "Easy",
+  "tags": [
+   "matrix",
+   "2D arrays",
+   "traversal"
+  ]
+ },
+ {
+  "id": "DSA07-M01",
+  "title": "Spiral Order",
+  "topic": "07",
+  "subtopic": "Matrix traversal",
+  "difficulty": "Medium",
+  "tags": [
+   "matrix",
+   "boundaries",
+   "simulation"
+  ]
+ },
+ {
+  "id": "DSA07-M02",
+  "title": "Submatrix Sums",
+  "topic": "07",
+  "subtopic": "2D prefix sums",
+  "difficulty": "Medium",
+  "tags": [
+   "prefix sums",
+   "matrix",
+   "queries"
+  ]
+ },
+ {
+  "id": "DSA07-M03",
+  "title": "Range Updates with a Difference Array",
+  "topic": "07",
+  "subtopic": "Difference arrays",
+  "difficulty": "Medium",
+  "tags": [
+   "difference array",
+   "prefix sums",
+   "updates"
+  ]
+ },
+ {
+  "id": "DSA07-M04",
+  "title": "Deduplicate a Sorted Array",
+  "topic": "07",
+  "subtopic": "In-place compaction",
+  "difficulty": "Medium",
+  "tags": [
+   "two pointers",
+   "in-place",
+   "arrays"
+  ]
+ },
+ {
+  "id": "DSA07-M05",
+  "title": "Rotate a Matrix 90°",
+  "topic": "07",
+  "subtopic": "In-place matrix transformation",
+  "difficulty": "Medium",
+  "tags": [
+   "matrix",
+   "in-place",
+   "transpose"
+  ]
+ },
+ {
+  "id": "DSA07-H01",
+  "title": "Product of All Others",
+  "topic": "07",
+  "subtopic": "Prefix and suffix products",
+  "difficulty": "Hard",
+  "tags": [
+   "prefix products",
+   "arrays",
+   "modular arithmetic"
+  ]
+ },
+ {
+  "id": "DSA07-H02",
+  "title": "Trapping Rain Water",
+  "topic": "07",
+  "subtopic": "Two pointers with running maxima",
+  "difficulty": "Hard",
+  "tags": [
+   "two pointers",
+   "arrays",
+   "prefix maxima"
+  ]
+ },
+ {
+  "id": "DSA07-H03",
+  "title": "Longest Increasing Subsequence",
+  "topic": "07",
+  "subtopic": "Arrays with binary search",
+  "difficulty": "Hard",
+  "tags": [
+   "binary search",
+   "arrays",
+   "greedy"
+  ]
+ },
+ {
+  "id": "DSA07-H04",
+  "title": "Shortest Subarray with Sum at Least S",
+  "topic": "07",
+  "subtopic": "Sliding window",
+  "difficulty": "Hard",
+  "tags": [
+   "sliding window",
+   "two pointers",
+   "arrays"
+  ]
+ },
+ {
+  "id": "DSA07-H05",
+  "title": "Dynamic Array from Scratch",
+  "topic": "07",
+  "subtopic": "Static vs dynamic arrays",
+  "difficulty": "Hard",
+  "tags": [
+   "dynamic array",
+   "amortised analysis",
+   "memory"
+  ]
+ },
+ {
+  "id": "DSA08-E01",
+  "title": "Build a List at Both Ends",
+  "topic": "08",
+  "subtopic": "Head and tail insertion",
+  "difficulty": "Easy",
+  "tags": [
+   "linked list",
+   "head",
+   "tail"
+  ]
+ },
+ {
+  "id": "DSA08-E02",
+  "title": "Length and Sum",
+  "topic": "08",
+  "subtopic": "Traversal",
+  "difficulty": "Easy",
+  "tags": [
+   "linked list",
+   "traversal"
+  ]
+ },
+ {
+  "id": "DSA08-E03",
+  "title": "Search a List",
+  "topic": "08",
+  "subtopic": "Sequential search",
+  "difficulty": "Easy",
+  "tags": [
+   "linked list",
+   "searching"
+  ]
+ },
+ {
+  "id": "DSA08-E04",
+  "title": "Delete Every Occurrence",
+  "topic": "08",
+  "subtopic": "Deletion with a dummy node",
+  "difficulty": "Easy",
+  "tags": [
+   "linked list",
+   "deletion",
+   "sentinel"
+  ]
+ },
+ {
+  "id": "DSA08-E05",
+  "title": "Reverse a List",
+  "topic": "08",
+  "subtopic": "Pointer reversal",
+  "difficulty": "Easy",
+  "tags": [
+   "linked list",
+   "reversal",
+   "pointers"
+  ]
+ },
+ {
+  "id": "DSA08-M01",
+  "title": "Merge Two Sorted Lists",
+  "topic": "08",
+  "subtopic": "Merging by relinking",
+  "difficulty": "Medium",
+  "tags": [
+   "linked list",
+   "merging",
+   "dummy node"
+  ]
+ },
+ {
+  "id": "DSA08-M02",
+  "title": "Middle Node",
+  "topic": "08",
+  "subtopic": "Slow and fast pointers",
+  "difficulty": "Medium",
+  "tags": [
+   "linked list",
+   "two pointers"
+  ]
+ },
+ {
+  "id": "DSA08-M03",
+  "title": "Remove the k-th from the End",
+  "topic": "08",
+  "subtopic": "Gap pointers",
+  "difficulty": "Medium",
+  "tags": [
+   "linked list",
+   "two pointers",
+   "deletion"
+  ]
+ },
+ {
+  "id": "DSA08-M04",
+  "title": "Doubly Linked Deque",
+  "topic": "08",
+  "subtopic": "Doubly linked lists",
+  "difficulty": "Medium",
+  "tags": [
+   "doubly linked list",
+   "deque",
+   "pointers"
+  ]
+ },
+ {
+  "id": "DSA08-M05",
+  "title": "Cycle Detection",
+  "topic": "08",
+  "subtopic": "Floyd's algorithm",
+  "difficulty": "Medium",
+  "tags": [
+   "linked list",
+   "cycle detection",
+   "two pointers"
+  ]
+ },
+ {
+  "id": "DSA08-H01",
+  "title": "Reverse in Groups of k",
+  "topic": "08",
+  "subtopic": "Segment reversal",
+  "difficulty": "Hard",
+  "tags": [
+   "linked list",
+   "reversal",
+   "pointers"
+  ]
+ },
+ {
+  "id": "DSA08-H02",
+  "title": "Circular List Elimination",
+  "topic": "08",
+  "subtopic": "Circular linked lists",
+  "difficulty": "Hard",
+  "tags": [
+   "circular list",
+   "simulation",
+   "josephus"
+  ]
+ },
+ {
+  "id": "DSA08-H03",
+  "title": "Palindrome List in O(1) Space",
+  "topic": "08",
+  "subtopic": "Reversing half a list",
+  "difficulty": "Hard",
+  "tags": [
+   "linked list",
+   "palindrome",
+   "two pointers"
+  ]
+ },
+ {
+  "id": "DSA08-H04",
+  "title": "Add Two Big Numbers as Lists",
+  "topic": "08",
+  "subtopic": "Lists as digit sequences",
+  "difficulty": "Hard",
+  "tags": [
+   "linked list",
+   "big integers",
+   "carry"
+  ]
+ },
+ {
+  "id": "DSA08-H05",
+  "title": "Merge Sort a Linked List",
+  "topic": "08",
+  "subtopic": "Sorting lists",
+  "difficulty": "Hard",
+  "tags": [
+   "linked list",
+   "merge sort",
+   "divide and conquer"
+  ]
+ },
+ {
+  "id": "DSA09-E01",
+  "title": "Balanced Brackets",
+  "topic": "09",
+  "subtopic": "Bracket matching",
+  "difficulty": "Easy",
+  "tags": [
+   "stack",
+   "brackets",
+   "validation"
+  ]
+ },
+ {
+  "id": "DSA09-E02",
+  "title": "Reverse with a Stack",
+  "topic": "09",
+  "subtopic": "LIFO order",
+  "difficulty": "Easy",
+  "tags": [
+   "stack",
+   "strings",
+   "reversal"
+  ]
+ },
+ {
+  "id": "DSA09-E03",
+  "title": "Evaluate Postfix",
+  "topic": "09",
+  "subtopic": "Postfix evaluation",
+  "difficulty": "Easy",
+  "tags": [
+   "stack",
+   "expressions",
+   "postfix"
+  ]
+ },
+ {
+  "id": "DSA09-E04",
+  "title": "Backspace Editor",
+  "topic": "09",
+  "subtopic": "Stack simulation",
+  "difficulty": "Easy",
+  "tags": [
+   "stack",
+   "strings",
+   "simulation"
+  ]
+ },
+ {
+  "id": "DSA09-E05",
+  "title": "Linked Stack",
+  "topic": "09",
+  "subtopic": "Linked-list implementation",
+  "difficulty": "Easy",
+  "tags": [
+   "stack",
+   "linked list",
+   "underflow"
+  ]
+ },
+ {
+  "id": "DSA09-M01",
+  "title": "Infix to Postfix",
+  "topic": "09",
+  "subtopic": "Shunting-yard conversion",
+  "difficulty": "Medium",
+  "tags": [
+   "stack",
+   "expressions",
+   "precedence"
+  ]
+ },
+ {
+  "id": "DSA09-M02",
+  "title": "Evaluate an Infix Expression",
+  "topic": "09",
+  "subtopic": "Two-stack evaluation",
+  "difficulty": "Medium",
+  "tags": [
+   "stack",
+   "expressions",
+   "parsing"
+  ]
+ },
+ {
+  "id": "DSA09-M03",
+  "title": "Next Greater Element",
+  "topic": "09",
+  "subtopic": "Monotonic stack (extension)",
+  "difficulty": "Medium",
+  "tags": [
+   "monotonic stack",
+   "arrays"
+  ]
+ },
+ {
+  "id": "DSA09-M04",
+  "title": "Minimum Insertions to Balance",
+  "topic": "09",
+  "subtopic": "Counter as a stack",
+  "difficulty": "Medium",
+  "tags": [
+   "stack",
+   "brackets",
+   "greedy"
+  ]
+ },
+ {
+  "id": "DSA09-M05",
+  "title": "Evaluate Prefix",
+  "topic": "09",
+  "subtopic": "Prefix evaluation",
+  "difficulty": "Medium",
+  "tags": [
+   "stack",
+   "expressions",
+   "prefix"
+  ]
+ },
+ {
+  "id": "DSA09-H01",
+  "title": "Largest Rectangle in a Histogram",
+  "topic": "09",
+  "subtopic": "Monotonic stack (extension)",
+  "difficulty": "Hard",
+  "tags": [
+   "monotonic stack",
+   "arrays",
+   "optimisation"
+  ]
+ },
+ {
+  "id": "DSA09-H02",
+  "title": "Simplify a Path",
+  "topic": "09",
+  "subtopic": "Stack of components",
+  "difficulty": "Hard",
+  "tags": [
+   "stack",
+   "strings",
+   "parsing"
+  ]
+ },
+ {
+  "id": "DSA09-H03",
+  "title": "Stock Span",
+  "topic": "09",
+  "subtopic": "Monotonic stack (extension)",
+  "difficulty": "Hard",
+  "tags": [
+   "monotonic stack",
+   "arrays"
+  ]
+ },
+ {
+  "id": "DSA09-H04",
+  "title": "Longest Valid Parentheses",
+  "topic": "09",
+  "subtopic": "Index stack",
+  "difficulty": "Hard",
+  "tags": [
+   "stack",
+   "brackets",
+   "strings"
+  ]
+ },
+ {
+  "id": "DSA09-H05",
+  "title": "Decode Nested Repeats",
+  "topic": "09",
+  "subtopic": "Stack replacing recursion",
+  "difficulty": "Hard",
+  "tags": [
+   "stack",
+   "strings",
+   "recursion"
+  ]
+ },
+ {
+  "id": "DSA10-E01",
+  "title": "Queue Operations",
+  "topic": "10",
+  "subtopic": "Queue ADT",
+  "difficulty": "Easy",
+  "tags": [
+   "queue",
+   "FIFO",
+   "simulation"
+  ]
+ },
+ {
+  "id": "DSA10-E02",
+  "title": "Circular Queue",
+  "topic": "10",
+  "subtopic": "Wraparound indexing",
+  "difficulty": "Easy",
+  "tags": [
+   "circular queue",
+   "array",
+   "overflow"
+  ]
+ },
+ {
+  "id": "DSA10-E03",
+  "title": "Ticket Counter",
+  "topic": "10",
+  "subtopic": "FIFO service",
+  "difficulty": "Easy",
+  "tags": [
+   "queue",
+   "simulation",
+   "prefix sums"
+  ]
+ },
+ {
+  "id": "DSA10-E04",
+  "title": "Card Rotation",
+  "topic": "10",
+  "subtopic": "Queue simulation",
+  "difficulty": "Easy",
+  "tags": [
+   "queue",
+   "simulation"
+  ]
+ },
+ {
+  "id": "DSA10-E05",
+  "title": "Deque Palindrome Check",
+  "topic": "10",
+  "subtopic": "Deque",
+  "difficulty": "Easy",
+  "tags": [
+   "deque",
+   "strings"
+  ]
+ },
+ {
+  "id": "DSA10-M01",
+  "title": "Sliding Window Maximum",
+  "topic": "10",
+  "subtopic": "Monotonic deque",
+  "difficulty": "Medium",
+  "tags": [
+   "deque",
+   "sliding window",
+   "arrays"
+  ]
+ },
+ {
+  "id": "DSA10-M02",
+  "title": "Single Teller Waiting Times",
+  "topic": "10",
+  "subtopic": "Queue simulation with arrivals",
+  "difficulty": "Medium",
+  "tags": [
+   "queue",
+   "simulation",
+   "scheduling"
+  ]
+ },
+ {
+  "id": "DSA10-M03",
+  "title": "Requests in the Last 3 Seconds",
+  "topic": "10",
+  "subtopic": "Time-window queue",
+  "difficulty": "Medium",
+  "tags": [
+   "queue",
+   "sliding window",
+   "streaming"
+  ]
+ },
+ {
+  "id": "DSA10-M04",
+  "title": "Binary Numbers by BFS Order",
+  "topic": "10",
+  "subtopic": "Queue-driven generation",
+  "difficulty": "Medium",
+  "tags": [
+   "queue",
+   "strings",
+   "generation"
+  ]
+ },
+ {
+  "id": "DSA10-M05",
+  "title": "Round-Robin Scheduling",
+  "topic": "10",
+  "subtopic": "CPU scheduling queue",
+  "difficulty": "Medium",
+  "tags": [
+   "queue",
+   "scheduling",
+   "simulation"
+  ]
+ },
+ {
+  "id": "DSA10-H01",
+  "title": "Shortest Subarray with Sum at Least K",
+  "topic": "10",
+  "subtopic": "Monotonic deque on prefix sums",
+  "difficulty": "Hard",
+  "tags": [
+   "deque",
+   "prefix sums",
+   "optimisation"
+  ]
+ },
+ {
+  "id": "DSA10-H02",
+  "title": "Multi-Level Priority Queue",
+  "topic": "10",
+  "subtopic": "Priority queue from queues",
+  "difficulty": "Hard",
+  "tags": [
+   "priority queue",
+   "queue",
+   "scheduling"
+  ]
+ },
+ {
+  "id": "DSA10-H03",
+  "title": "Circular Tour",
+  "topic": "10",
+  "subtopic": "Circular route reasoning",
+  "difficulty": "Hard",
+  "tags": [
+   "greedy",
+   "circular array",
+   "queue"
+  ]
+ },
+ {
+  "id": "DSA10-H04",
+  "title": "Queue with Minimum",
+  "topic": "10",
+  "subtopic": "Queue from two min-stacks",
+  "difficulty": "Hard",
+  "tags": [
+   "queue",
+   "stack",
+   "amortised analysis"
+  ]
+ },
+ {
+  "id": "DSA10-H05",
+  "title": "Task Scheduler with Cooldown",
+  "topic": "10",
+  "subtopic": "Priority queue plus waiting queue",
+  "difficulty": "Hard",
+  "tags": [
+   "priority queue",
+   "queue",
+   "greedy",
+   "simulation"
+  ]
+ },
+ {
+  "id": "DSA11-E01",
+  "title": "Three Depth-First Traversals",
+  "topic": "11",
+  "subtopic": "Preorder, inorder, postorder",
+  "difficulty": "Easy",
+  "tags": [
+   "binary tree",
+   "traversal",
+   "recursion"
+  ]
+ },
+ {
+  "id": "DSA11-E02",
+  "title": "Height, Size and Leaves",
+  "topic": "11",
+  "subtopic": "Basic tree algorithms",
+  "difficulty": "Easy",
+  "tags": [
+   "binary tree",
+   "recursion",
+   "height"
+  ]
+ },
+ {
+  "id": "DSA11-E03",
+  "title": "Level-Order Traversal",
+  "topic": "11",
+  "subtopic": "Breadth-first traversal",
+  "difficulty": "Easy",
+  "tags": [
+   "binary tree",
+   "queue",
+   "BFS"
+  ]
+ },
+ {
+  "id": "DSA11-E04",
+  "title": "Full, Complete, Perfect",
+  "topic": "11",
+  "subtopic": "Binary tree shapes",
+  "difficulty": "Easy",
+  "tags": [
+   "binary tree",
+   "definitions",
+   "BFS"
+  ]
+ },
+ {
+  "id": "DSA11-E05",
+  "title": "Depths in a General Tree",
+  "topic": "11",
+  "subtopic": "General trees",
+  "difficulty": "Easy",
+  "tags": [
+   "general tree",
+   "parent array",
+   "depth"
+  ]
+ },
+ {
+  "id": "DSA11-M01",
+  "title": "Iterative Inorder for Deep Trees",
+  "topic": "11",
+  "subtopic": "Iterative traversal",
+  "difficulty": "Medium",
+  "tags": [
+   "binary tree",
+   "stack",
+   "iteration"
+  ]
+ },
+ {
+  "id": "DSA11-M02",
+  "title": "Rebuild from Preorder and Inorder",
+  "topic": "11",
+  "subtopic": "Traversal reconstruction",
+  "difficulty": "Medium",
+  "tags": [
+   "binary tree",
+   "reconstruction",
+   "recursion"
+  ]
+ },
+ {
+  "id": "DSA11-M03",
+  "title": "Diameter of a Binary Tree",
+  "topic": "11",
+  "subtopic": "Post-order computation",
+  "difficulty": "Medium",
+  "tags": [
+   "binary tree",
+   "recursion",
+   "height"
+  ]
+ },
+ {
+  "id": "DSA11-M04",
+  "title": "Mirror and Symmetry",
+  "topic": "11",
+  "subtopic": "Structural recursion",
+  "difficulty": "Medium",
+  "tags": [
+   "binary tree",
+   "recursion",
+   "symmetry"
+  ]
+ },
+ {
+  "id": "DSA11-M05",
+  "title": "Lowest Common Ancestor by Depths",
+  "topic": "11",
+  "subtopic": "Parent pointers",
+  "difficulty": "Medium",
+  "tags": [
+   "tree",
+   "LCA",
+   "depth"
+  ]
+ },
+ {
+  "id": "DSA11-H01",
+  "title": "Maximum Path Sum",
+  "topic": "11",
+  "subtopic": "Tree dynamic computation",
+  "difficulty": "Hard",
+  "tags": [
+   "binary tree",
+   "recursion",
+   "optimisation"
+  ]
+ },
+ {
+  "id": "DSA11-H02",
+  "title": "Zigzag Level Order",
+  "topic": "11",
+  "subtopic": "Level-order variants",
+  "difficulty": "Hard",
+  "tags": [
+   "binary tree",
+   "BFS",
+   "deque"
+  ]
+ },
+ {
+  "id": "DSA11-H03",
+  "title": "Iterative Postorder",
+  "topic": "11",
+  "subtopic": "Iterative traversal",
+  "difficulty": "Hard",
+  "tags": [
+   "binary tree",
+   "stack",
+   "iteration"
+  ]
+ },
+ {
+  "id": "DSA11-H04",
+  "title": "Expression Tree",
+  "topic": "11",
+  "subtopic": "Trees for expressions",
+  "difficulty": "Hard",
+  "tags": [
+   "expression tree",
+   "stack",
+   "recursion"
+  ]
+ },
+ {
+  "id": "DSA11-H05",
+  "title": "Subtree Sizes in a General Tree",
+  "topic": "11",
+  "subtopic": "Bottom-up aggregation",
+  "difficulty": "Hard",
+  "tags": [
+   "general tree",
+   "parent array",
+   "iteration"
+  ]
+ },
+ {
+  "id": "DSA12-E01",
+  "title": "Vertex Degrees",
+  "topic": "12",
+  "subtopic": "Undirected graphs",
+  "difficulty": "Easy",
+  "tags": [
+   "graph",
+   "degree",
+   "edge list"
+  ]
+ },
+ {
+  "id": "DSA12-E02",
+  "title": "Adjacency Matrix",
+  "topic": "12",
+  "subtopic": "Matrix representation",
+  "difficulty": "Easy",
+  "tags": [
+   "graph",
+   "adjacency matrix"
+  ]
+ },
+ {
+  "id": "DSA12-E03",
+  "title": "Edge Queries",
+  "topic": "12",
+  "subtopic": "Constant-time edge tests",
+  "difficulty": "Easy",
+  "tags": [
+   "graph",
+   "adjacency matrix",
+   "queries"
+  ]
+ },
+ {
+  "id": "DSA12-E04",
+  "title": "In- and Out-Degrees",
+  "topic": "12",
+  "subtopic": "Directed graphs",
+  "difficulty": "Easy",
+  "tags": [
+   "directed graph",
+   "degree"
+  ]
+ },
+ {
+  "id": "DSA12-E05",
+  "title": "Loops and Parallel Edges",
+  "topic": "12",
+  "subtopic": "Input validation",
+  "difficulty": "Easy",
+  "tags": [
+   "graph",
+   "edge list",
+   "set"
+  ]
+ },
+ {
+  "id": "DSA12-M01",
+  "title": "Sorted Adjacency Lists",
+  "topic": "12",
+  "subtopic": "Adjacency lists",
+  "difficulty": "Medium",
+  "tags": [
+   "graph",
+   "adjacency list",
+   "sorting"
+  ]
+ },
+ {
+  "id": "DSA12-M02",
+  "title": "Reverse a Directed Graph",
+  "topic": "12",
+  "subtopic": "Transpose graph",
+  "difficulty": "Medium",
+  "tags": [
+   "directed graph",
+   "adjacency list",
+   "transpose"
+  ]
+ },
+ {
+  "id": "DSA12-M03",
+  "title": "Lightest Incident Edge",
+  "topic": "12",
+  "subtopic": "Weighted graphs",
+  "difficulty": "Medium",
+  "tags": [
+   "weighted graph",
+   "edge list",
+   "minimum"
+  ]
+ },
+ {
+  "id": "DSA12-M04",
+  "title": "Common Neighbours",
+  "topic": "12",
+  "subtopic": "Sorted adjacency lists",
+  "difficulty": "Medium",
+  "tags": [
+   "graph",
+   "adjacency list",
+   "two pointers"
+  ]
+ },
+ {
+  "id": "DSA12-M05",
+  "title": "Grid as a Graph",
+  "topic": "12",
+  "subtopic": "Implicit graphs",
+  "difficulty": "Medium",
+  "tags": [
+   "grid",
+   "implicit graph",
+   "modelling"
+  ]
+ },
+ {
+  "id": "DSA12-H01",
+  "title": "Counting Triangles",
+  "topic": "12",
+  "subtopic": "Degree ordering",
+  "difficulty": "Hard",
+  "tags": [
+   "graph",
+   "triangles",
+   "adjacency list",
+   "optimisation"
+  ]
+ },
+ {
+  "id": "DSA12-H02",
+  "title": "Universal Sink",
+  "topic": "12",
+  "subtopic": "Matrix representation tricks",
+  "difficulty": "Hard",
+  "tags": [
+   "adjacency matrix",
+   "elimination",
+   "directed graph"
+  ]
+ },
+ {
+  "id": "DSA12-H03",
+  "title": "Valid Course Order",
+  "topic": "12",
+  "subtopic": "DAG modelling (extension)",
+  "difficulty": "Hard",
+  "tags": [
+   "directed graph",
+   "DAG",
+   "topological order"
+  ]
+ },
+ {
+  "id": "DSA12-H04",
+  "title": "Can This Degree Sequence Exist?",
+  "topic": "12",
+  "subtopic": "Graph theory and sorting",
+  "difficulty": "Hard",
+  "tags": [
+   "graph theory",
+   "sorting",
+   "prefix sums"
+  ]
+ },
+ {
+  "id": "DSA12-H05",
+  "title": "Friends of Friends",
+  "topic": "12",
+  "subtopic": "Neighbourhoods at distance two",
+  "difficulty": "Hard",
+  "tags": [
+   "graph",
+   "adjacency list",
+   "BFS"
+  ]
+ },
+ {
+  "id": "DSA13-E01",
+  "title": "BFS Order",
+  "topic": "13",
+  "subtopic": "Breadth-first search",
+  "difficulty": "Easy",
+  "tags": [
+   "BFS",
+   "queue",
+   "graph"
+  ]
+ },
+ {
+  "id": "DSA13-E02",
+  "title": "DFS Order",
+  "topic": "13",
+  "subtopic": "Depth-first search",
+  "difficulty": "Easy",
+  "tags": [
+   "DFS",
+   "recursion",
+   "graph"
+  ]
+ },
+ {
+  "id": "DSA13-E03",
+  "title": "Connected Components",
+  "topic": "13",
+  "subtopic": "Disconnected graphs",
+  "difficulty": "Easy",
+  "tags": [
+   "BFS",
+   "components",
+   "graph"
+  ]
+ },
+ {
+  "id": "DSA13-E04",
+  "title": "Shortest Hops",
+  "topic": "13",
+  "subtopic": "Unweighted shortest paths",
+  "difficulty": "Easy",
+  "tags": [
+   "BFS",
+   "shortest path",
+   "graph"
+  ]
+ },
+ {
+  "id": "DSA13-E05",
+  "title": "Is There a Route?",
+  "topic": "13",
+  "subtopic": "Reachability",
+  "difficulty": "Easy",
+  "tags": [
+   "BFS",
+   "components",
+   "queries"
+  ]
+ },
+ {
+  "id": "DSA13-M01",
+  "title": "Counting Islands",
+  "topic": "13",
+  "subtopic": "Flood fill",
+  "difficulty": "Medium",
+  "tags": [
+   "grid",
+   "flood fill",
+   "BFS"
+  ]
+ },
+ {
+  "id": "DSA13-M02",
+  "title": "Escape the Maze",
+  "topic": "13",
+  "subtopic": "BFS on grids",
+  "difficulty": "Medium",
+  "tags": [
+   "grid",
+   "BFS",
+   "shortest path"
+  ]
+ },
+ {
+  "id": "DSA13-M03",
+  "title": "Two Teams (Bipartite Check)",
+  "topic": "13",
+  "subtopic": "BFS colouring",
+  "difficulty": "Medium",
+  "tags": [
+   "BFS",
+   "bipartite",
+   "colouring"
+  ]
+ },
+ {
+  "id": "DSA13-M04",
+  "title": "Undirected Cycle",
+  "topic": "13",
+  "subtopic": "Cycle detection",
+  "difficulty": "Medium",
+  "tags": [
+   "DFS",
+   "cycle",
+   "graph"
+  ]
+ },
+ {
+  "id": "DSA13-M05",
+  "title": "Directed Cycle",
+  "topic": "13",
+  "subtopic": "DFS colours",
+  "difficulty": "Medium",
+  "tags": [
+   "DFS",
+   "directed graph",
+   "cycle"
+  ]
+ },
+ {
+  "id": "DSA13-H01",
+  "title": "Fire Spread",
+  "topic": "13",
+  "subtopic": "Multi-source BFS",
+  "difficulty": "Hard",
+  "tags": [
+   "BFS",
+   "grid",
+   "multi-source"
+  ]
+ },
+ {
+  "id": "DSA13-H02",
+  "title": "Print a Shortest Route",
+  "topic": "13",
+  "subtopic": "Path reconstruction",
+  "difficulty": "Hard",
+  "tags": [
+   "BFS",
+   "parent array",
+   "shortest path"
+  ]
+ },
+ {
+  "id": "DSA13-H03",
+  "title": "Word Ladder",
+  "topic": "13",
+  "subtopic": "BFS on implicit graphs",
+  "difficulty": "Hard",
+  "tags": [
+   "BFS",
+   "strings",
+   "implicit graph"
+  ]
+ },
+ {
+  "id": "DSA13-H04",
+  "title": "Largest Group",
+  "topic": "13",
+  "subtopic": "Iterative DFS at scale",
+  "difficulty": "Hard",
+  "tags": [
+   "DFS",
+   "stack",
+   "components"
+  ]
+ },
+ {
+  "id": "DSA13-H05",
+  "title": "Knight Moves",
+  "topic": "13",
+  "subtopic": "BFS on a state space",
+  "difficulty": "Hard",
+  "tags": [
+   "BFS",
+   "grid",
+   "implicit graph"
+  ]
+ },
+ {
+  "id": "DSA14-E01",
+  "title": "Max-Heap from Scratch",
+  "topic": "14",
+  "subtopic": "Insert and extract",
+  "difficulty": "Easy",
+  "tags": [
+   "heap",
+   "sift up",
+   "sift down"
+  ]
+ },
+ {
+  "id": "DSA14-E02",
+  "title": "Is It a Max-Heap?",
+  "topic": "14",
+  "subtopic": "Heap property",
+  "difficulty": "Easy",
+  "tags": [
+   "heap",
+   "array",
+   "validation"
+  ]
+ },
+ {
+  "id": "DSA14-E03",
+  "title": "Build a Heap",
+  "topic": "14",
+  "subtopic": "Bottom-up build-heap",
+  "difficulty": "Easy",
+  "tags": [
+   "heap",
+   "build-heap",
+   "sift down"
+  ]
+ },
+ {
+  "id": "DSA14-E04",
+  "title": "The k Largest",
+  "topic": "14",
+  "subtopic": "Priority queue",
+  "difficulty": "Easy",
+  "tags": [
+   "priority queue",
+   "top-k"
+  ]
+ },
+ {
+  "id": "DSA14-E05",
+  "title": "Heap Indices",
+  "topic": "14",
+  "subtopic": "Array representation",
+  "difficulty": "Easy",
+  "tags": [
+   "heap",
+   "indexing",
+   "complete tree"
+  ]
+ },
+ {
+  "id": "DSA14-M01",
+  "title": "k-th Largest in a Stream",
+  "topic": "14",
+  "subtopic": "Fixed-size min-heap",
+  "difficulty": "Medium",
+  "tags": [
+   "heap",
+   "streaming",
+   "top-k"
+  ]
+ },
+ {
+  "id": "DSA14-M02",
+  "title": "Merge k Sorted Arrays",
+  "topic": "14",
+  "subtopic": "Heap of list heads",
+  "difficulty": "Medium",
+  "tags": [
+   "heap",
+   "merging",
+   "k-way merge"
+  ]
+ },
+ {
+  "id": "DSA14-M03",
+  "title": "Joining Ropes",
+  "topic": "14",
+  "subtopic": "Greedy with a heap",
+  "difficulty": "Medium",
+  "tags": [
+   "heap",
+   "greedy",
+   "Huffman"
+  ]
+ },
+ {
+  "id": "DSA14-M04",
+  "title": "Running Median",
+  "topic": "14",
+  "subtopic": "Two heaps",
+  "difficulty": "Medium",
+  "tags": [
+   "heap",
+   "median",
+   "streaming"
+  ]
+ },
+ {
+  "id": "DSA14-M05",
+  "title": "Delete at an Index",
+  "topic": "14",
+  "subtopic": "Restoring the heap property",
+  "difficulty": "Medium",
+  "tags": [
+   "heap",
+   "sift up",
+   "sift down"
+  ]
+ },
+ {
+  "id": "DSA14-H01",
+  "title": "Shortest Job First",
+  "topic": "14",
+  "subtopic": "Scheduling with a heap",
+  "difficulty": "Hard",
+  "tags": [
+   "heap",
+   "scheduling",
+   "simulation"
+  ]
+ },
+ {
+  "id": "DSA14-H02",
+  "title": "k Closest Points",
+  "topic": "14",
+  "subtopic": "Bounded max-heap",
+  "difficulty": "Hard",
+  "tags": [
+   "heap",
+   "geometry",
+   "top-k"
+  ]
+ },
+ {
+  "id": "DSA14-H03",
+  "title": "Top k Frequent Words",
+  "topic": "14",
+  "subtopic": "Heap with custom order",
+  "difficulty": "Hard",
+  "tags": [
+   "heap",
+   "hashing",
+   "strings"
+  ]
+ },
+ {
+  "id": "DSA14-H04",
+  "title": "Smallest Range Covering k Lists",
+  "topic": "14",
+  "subtopic": "Heap over list heads",
+  "difficulty": "Hard",
+  "tags": [
+   "heap",
+   "k-way merge",
+   "sliding window"
+  ]
+ },
+ {
+  "id": "DSA14-H05",
+  "title": "Build-Heap versus Repeated Insertion",
+  "topic": "14",
+  "subtopic": "Build-heap analysis",
+  "difficulty": "Hard",
+  "tags": [
+   "heap",
+   "build-heap",
+   "analysis"
+  ]
+ },
+ {
+  "id": "DSA15-E01",
+  "title": "Insert and Inorder",
+  "topic": "15",
+  "subtopic": "BST insertion",
+  "difficulty": "Easy",
+  "tags": [
+   "BST",
+   "insertion",
+   "inorder"
+  ]
+ },
+ {
+  "id": "DSA15-E02",
+  "title": "Search",
+  "topic": "15",
+  "subtopic": "BST search",
+  "difficulty": "Easy",
+  "tags": [
+   "BST",
+   "search"
+  ]
+ },
+ {
+  "id": "DSA15-E03",
+  "title": "Minimum and Maximum",
+  "topic": "15",
+  "subtopic": "Extreme keys",
+  "difficulty": "Easy",
+  "tags": [
+   "BST",
+   "minimum",
+   "maximum"
+  ]
+ },
+ {
+  "id": "DSA15-E04",
+  "title": "Height Depends on Order",
+  "topic": "15",
+  "subtopic": "Degenerate trees",
+  "difficulty": "Easy",
+  "tags": [
+   "BST",
+   "height",
+   "worst case"
+  ]
+ },
+ {
+  "id": "DSA15-E05",
+  "title": "Count Keys in a Range",
+  "topic": "15",
+  "subtopic": "Range traversal",
+  "difficulty": "Easy",
+  "tags": [
+   "BST",
+   "range query",
+   "pruning"
+  ]
+ },
+ {
+  "id": "DSA15-M01",
+  "title": "Delete Keys",
+  "topic": "15",
+  "subtopic": "The three deletion cases",
+  "difficulty": "Medium",
+  "tags": [
+   "BST",
+   "deletion",
+   "successor"
+  ]
+ },
+ {
+  "id": "DSA15-M02",
+  "title": "Predecessor and Successor",
+  "topic": "15",
+  "subtopic": "Order queries",
+  "difficulty": "Medium",
+  "tags": [
+   "BST",
+   "successor",
+   "predecessor"
+  ]
+ },
+ {
+  "id": "DSA15-M03",
+  "title": "Is It a BST?",
+  "topic": "15",
+  "subtopic": "BST validation",
+  "difficulty": "Medium",
+  "tags": [
+   "BST",
+   "validation",
+   "bounds"
+  ]
+ },
+ {
+  "id": "DSA15-M04",
+  "title": "k-th Smallest Key",
+  "topic": "15",
+  "subtopic": "Inorder rank",
+  "difficulty": "Medium",
+  "tags": [
+   "BST",
+   "inorder",
+   "rank"
+  ]
+ },
+ {
+  "id": "DSA15-M05",
+  "title": "Balanced BST from Sorted Keys",
+  "topic": "15",
+  "subtopic": "Avoiding degeneracy",
+  "difficulty": "Medium",
+  "tags": [
+   "BST",
+   "divide and conquer",
+   "balanced tree"
+  ]
+ },
+ {
+  "id": "DSA15-H01",
+  "title": "Lowest Common Ancestor in a BST",
+  "topic": "15",
+  "subtopic": "Using the ordering",
+  "difficulty": "Hard",
+  "tags": [
+   "BST",
+   "LCA",
+   "search"
+  ]
+ },
+ {
+  "id": "DSA15-H02",
+  "title": "Two Keys with a Given Sum",
+  "topic": "15",
+  "subtopic": "Inorder plus two pointers",
+  "difficulty": "Hard",
+  "tags": [
+   "BST",
+   "inorder",
+   "two pointers"
+  ]
+ },
+ {
+  "id": "DSA15-H03",
+  "title": "Rebuild from Preorder",
+  "topic": "15",
+  "subtopic": "BST reconstruction",
+  "difficulty": "Hard",
+  "tags": [
+   "BST",
+   "preorder",
+   "recursion"
+  ]
+ },
+ {
+  "id": "DSA15-H04",
+  "title": "Floor and Ceiling",
+  "topic": "15",
+  "subtopic": "Closest-key queries",
+  "difficulty": "Hard",
+  "tags": [
+   "BST",
+   "floor",
+   "ceiling"
+  ]
+ },
+ {
+  "id": "DSA15-H05",
+  "title": "Greater-Sum Transformation",
+  "topic": "15",
+  "subtopic": "Reverse inorder",
+  "difficulty": "Hard",
+  "tags": [
+   "BST",
+   "inorder",
+   "accumulation"
+  ]
+ },
+ {
+  "id": "DSA16A-E01",
+  "title": "Heap Sort Ascending",
+  "topic": "16A",
+  "subtopic": "Heap sort",
+  "difficulty": "Easy",
+  "tags": [
+   "heap sort",
+   "in-place",
+   "sorting"
+  ]
+ },
+ {
+  "id": "DSA16A-E02",
+  "title": "Descending with a Min-Heap",
+  "topic": "16A",
+  "subtopic": "Heap orientation",
+  "difficulty": "Easy",
+  "tags": [
+   "heap sort",
+   "min-heap",
+   "sorting"
+  ]
+ },
+ {
+  "id": "DSA16A-E03",
+  "title": "Extraction Trace",
+  "topic": "16A",
+  "subtopic": "Dry run",
+  "difficulty": "Easy",
+  "tags": [
+   "heap sort",
+   "tracing"
+  ]
+ },
+ {
+  "id": "DSA16A-E04",
+  "title": "Counting Swaps",
+  "topic": "16A",
+  "subtopic": "Operation counting",
+  "difficulty": "Easy",
+  "tags": [
+   "heap sort",
+   "counting",
+   "analysis"
+  ]
+ },
+ {
+  "id": "DSA16A-E05",
+  "title": "Heap Sort Is Not Stable",
+  "topic": "16A",
+  "subtopic": "Stability",
+  "difficulty": "Easy",
+  "tags": [
+   "heap sort",
+   "stability"
+  ]
+ },
+ {
+  "id": "DSA16A-M01",
+  "title": "The k Smallest, Sorted",
+  "topic": "16A",
+  "subtopic": "Partial heap sort",
+  "difficulty": "Medium",
+  "tags": [
+   "heap",
+   "partial sort"
+  ]
+ },
+ {
+  "id": "DSA16A-M02",
+  "title": "Nearly Sorted Array",
+  "topic": "16A",
+  "subtopic": "Small heap window",
+  "difficulty": "Medium",
+  "tags": [
+   "heap",
+   "sorting",
+   "k-sorted"
+  ]
+ },
+ {
+  "id": "DSA16A-M03",
+  "title": "Heap Sort Strings",
+  "topic": "16A",
+  "subtopic": "Comparison sorting of strings",
+  "difficulty": "Medium",
+  "tags": [
+   "heap sort",
+   "strings"
+  ]
+ },
+ {
+  "id": "DSA16A-M04",
+  "title": "Sort Points by Distance",
+  "topic": "16A",
+  "subtopic": "Custom keys",
+  "difficulty": "Medium",
+  "tags": [
+   "heap sort",
+   "comparator",
+   "geometry"
+  ]
+ },
+ {
+  "id": "DSA16A-M05",
+  "title": "Stability Check",
+  "topic": "16A",
+  "subtopic": "Comparing sorts",
+  "difficulty": "Medium",
+  "tags": [
+   "heap sort",
+   "stable sort",
+   "stability"
+  ]
+ },
+ {
+  "id": "DSA16A-H01",
+  "title": "d-ary Heap Sort",
+  "topic": "16A",
+  "subtopic": "Generalised heaps",
+  "difficulty": "Hard",
+  "tags": [
+   "heap sort",
+   "d-ary heap",
+   "analysis"
+  ]
+ },
+ {
+  "id": "DSA16A-H02",
+  "title": "Halve the Largest",
+  "topic": "16A",
+  "subtopic": "Greedy with a max-heap",
+  "difficulty": "Hard",
+  "tags": [
+   "heap",
+   "greedy",
+   "simulation"
+  ]
+ },
+ {
+  "id": "DSA16A-H03",
+  "title": "No Two Neighbours Equal",
+  "topic": "16A",
+  "subtopic": "Max-heap scheduling",
+  "difficulty": "Hard",
+  "tags": [
+   "heap",
+   "greedy",
+   "strings"
+  ]
+ },
+ {
+  "id": "DSA16A-H04",
+  "title": "k-th Smallest in a Sorted Matrix",
+  "topic": "16A",
+  "subtopic": "Heap over rows",
+  "difficulty": "Hard",
+  "tags": [
+   "heap",
+   "matrix",
+   "k-way merge"
+  ]
+ },
+ {
+  "id": "DSA16A-H05",
+  "title": "Bricks and Ladders",
+  "topic": "16A",
+  "subtopic": "Min-heap of choices",
+  "difficulty": "Hard",
+  "tags": [
+   "heap",
+   "greedy"
+  ]
+ },
+ {
+  "id": "DSA16B-E01",
+  "title": "Merge Sort",
+  "topic": "16B",
+  "subtopic": "Top-down merge sort",
+  "difficulty": "Easy",
+  "tags": [
+   "merge sort",
+   "recursion",
+   "sorting"
+  ]
+ },
+ {
+  "id": "DSA16B-E02",
+  "title": "Counting Comparisons",
+  "topic": "16B",
+  "subtopic": "Cost of merging",
+  "difficulty": "Easy",
+  "tags": [
+   "merge sort",
+   "counting",
+   "analysis"
+  ]
+ },
+ {
+  "id": "DSA16B-E03",
+  "title": "Stable Ranking",
+  "topic": "16B",
+  "subtopic": "Stability",
+  "difficulty": "Easy",
+  "tags": [
+   "merge sort",
+   "stability",
+   "records"
+  ]
+ },
+ {
+  "id": "DSA16B-E04",
+  "title": "Bottom-Up Passes",
+  "topic": "16B",
+  "subtopic": "Iterative merge sort",
+  "difficulty": "Easy",
+  "tags": [
+   "merge sort",
+   "iteration",
+   "tracing"
+  ]
+ },
+ {
+  "id": "DSA16B-E05",
+  "title": "Recursion Shape",
+  "topic": "16B",
+  "subtopic": "Recursion tree",
+  "difficulty": "Easy",
+  "tags": [
+   "merge sort",
+   "recursion tree",
+   "analysis"
+  ]
+ },
+ {
+  "id": "DSA16B-M01",
+  "title": "Two-Key Ordering by Stable Passes",
+  "topic": "16B",
+  "subtopic": "Stability for multi-key sorting",
+  "difficulty": "Medium",
+  "tags": [
+   "merge sort",
+   "stability",
+   "records"
+  ]
+ },
+ {
+  "id": "DSA16B-M02",
+  "title": "External Sort Planning",
+  "topic": "16B",
+  "subtopic": "External merge sort",
+  "difficulty": "Medium",
+  "tags": [
+   "merge sort",
+   "external sorting",
+   "analysis"
+  ]
+ },
+ {
+  "id": "DSA16B-M03",
+  "title": "Sorted Union",
+  "topic": "16B",
+  "subtopic": "Merge with deduplication",
+  "difficulty": "Medium",
+  "tags": [
+   "merging",
+   "sets",
+   "two pointers"
+  ]
+ },
+ {
+  "id": "DSA16B-M04",
+  "title": "Merge Overlapping Intervals",
+  "topic": "16B",
+  "subtopic": "Sorting then a linear merge",
+  "difficulty": "Medium",
+  "tags": [
+   "sorting",
+   "intervals",
+   "merging"
+  ]
+ },
+ {
+  "id": "DSA16B-M05",
+  "title": "Natural Runs",
+  "topic": "16B",
+  "subtopic": "Natural merge sort",
+  "difficulty": "Medium",
+  "tags": [
+   "merge sort",
+   "runs",
+   "analysis"
+  ]
+ },
+ {
+  "id": "DSA16B-H01",
+  "title": "Smaller Elements to the Right",
+  "topic": "16B",
+  "subtopic": "Merge sort with indices",
+  "difficulty": "Hard",
+  "tags": [
+   "merge sort",
+   "counting",
+   "divide and conquer"
+  ]
+ },
+ {
+  "id": "DSA16B-H02",
+  "title": "Range Sum Count",
+  "topic": "16B",
+  "subtopic": "Merge sort on prefix sums",
+  "difficulty": "Hard",
+  "tags": [
+   "merge sort",
+   "prefix sums",
+   "counting"
+  ]
+ },
+ {
+  "id": "DSA16B-H03",
+  "title": "Ranking Disagreement",
+  "topic": "16B",
+  "subtopic": "Inversions between rankings",
+  "difficulty": "Hard",
+  "tags": [
+   "merge sort",
+   "inversions",
+   "permutations"
+  ]
+ },
+ {
+  "id": "DSA16B-H04",
+  "title": "Median of Two Sorted Arrays",
+  "topic": "16B",
+  "subtopic": "Merging without merging",
+  "difficulty": "Hard",
+  "tags": [
+   "binary search",
+   "sorted arrays",
+   "divide and conquer"
+  ]
+ },
+ {
+  "id": "DSA16B-H05",
+  "title": "Sorting with Limited Memory",
+  "topic": "16B",
+  "subtopic": "Run generation and k-way merge",
+  "difficulty": "Hard",
+  "tags": [
+   "merge sort",
+   "heap",
+   "external sorting"
+  ]
+ },
+ {
+  "id": "DSA16C-E01",
+  "title": "Quick Sort with Lomuto",
+  "topic": "16C",
+  "subtopic": "Lomuto partition",
+  "difficulty": "Easy",
+  "tags": [
+   "quick sort",
+   "partition",
+   "recursion"
+  ]
+ },
+ {
+  "id": "DSA16C-E02",
+  "title": "One Lomuto Partition",
+  "topic": "16C",
+  "subtopic": "Partition dry run",
+  "difficulty": "Easy",
+  "tags": [
+   "quick sort",
+   "Lomuto",
+   "tracing"
+  ]
+ },
+ {
+  "id": "DSA16C-E03",
+  "title": "One Hoare Partition",
+  "topic": "16C",
+  "subtopic": "Hoare partition",
+  "difficulty": "Easy",
+  "tags": [
+   "quick sort",
+   "Hoare",
+   "tracing"
+  ]
+ },
+ {
+  "id": "DSA16C-E04",
+  "title": "Comparisons on Sorted Input",
+  "topic": "16C",
+  "subtopic": "Worst case",
+  "difficulty": "Easy",
+  "tags": [
+   "quick sort",
+   "worst case",
+   "counting"
+  ]
+ },
+ {
+  "id": "DSA16C-E05",
+  "title": "Quickselect",
+  "topic": "16C",
+  "subtopic": "Selection by partition",
+  "difficulty": "Easy",
+  "tags": [
+   "quickselect",
+   "partition",
+   "selection"
+  ]
+ },
+ {
+  "id": "DSA16C-M01",
+  "title": "Three-Way Partition",
+  "topic": "16C",
+  "subtopic": "Handling duplicates",
+  "difficulty": "Medium",
+  "tags": [
+   "quick sort",
+   "three-way partition",
+   "duplicates"
+  ]
+ },
+ {
+  "id": "DSA16C-M02",
+  "title": "Robust Randomised Quick Sort",
+  "topic": "16C",
+  "subtopic": "Random pivot plus three-way partition",
+  "difficulty": "Medium",
+  "tags": [
+   "quick sort",
+   "randomisation",
+   "duplicates"
+  ]
+ },
+ {
+  "id": "DSA16C-M03",
+  "title": "Recursion Depth",
+  "topic": "16C",
+  "subtopic": "Space analysis",
+  "difficulty": "Medium",
+  "tags": [
+   "quick sort",
+   "recursion depth",
+   "analysis"
+  ]
+ },
+ {
+  "id": "DSA16C-M04",
+  "title": "k-th Largest with Median-of-Three",
+  "topic": "16C",
+  "subtopic": "Pivot selection",
+  "difficulty": "Medium",
+  "tags": [
+   "quickselect",
+   "median of three",
+   "selection"
+  ]
+ },
+ {
+  "id": "DSA16C-M05",
+  "title": "Nuts and Bolts",
+  "topic": "16C",
+  "subtopic": "Partition by a foreign pivot",
+  "difficulty": "Medium",
+  "tags": [
+   "quick sort",
+   "partition",
+   "matching"
+  ]
+ },
+ {
+  "id": "DSA16C-H01",
+  "title": "Median of Medians",
+  "topic": "16C",
+  "subtopic": "Worst-case linear selection",
+  "difficulty": "Hard",
+  "tags": [
+   "selection",
+   "divide and conquer",
+   "worst case"
+  ]
+ },
+ {
+  "id": "DSA16C-H02",
+  "title": "Rainbow Sort",
+  "topic": "16C",
+  "subtopic": "Partitioning by value ranges",
+  "difficulty": "Hard",
+  "tags": [
+   "quick sort",
+   "partition",
+   "divide and conquer"
+  ]
+ },
+ {
+  "id": "DSA16C-H03",
+  "title": "Top k Frequent Numbers",
+  "topic": "16C",
+  "subtopic": "Quickselect on frequencies",
+  "difficulty": "Hard",
+  "tags": [
+   "quickselect",
+   "hashing",
+   "selection"
+  ]
+ },
+ {
+  "id": "DSA16C-H04",
+  "title": "Introsort Fallback",
+  "topic": "16C",
+  "subtopic": "Guarding against the worst case",
+  "difficulty": "Hard",
+  "tags": [
+   "quick sort",
+   "heap sort",
+   "introsort"
+  ]
+ },
+ {
+  "id": "DSA16C-H05",
+  "title": "Meet at the Median",
+  "topic": "16C",
+  "subtopic": "Selection for optimisation",
+  "difficulty": "Hard",
+  "tags": [
+   "quickselect",
+   "median",
+   "optimisation"
+  ]
+ },
+ {
+  "id": "DSA16D-E01",
+  "title": "Counting Sort",
+  "topic": "16D",
+  "subtopic": "Counting sort",
+  "difficulty": "Easy",
+  "tags": [
+   "counting sort",
+   "linear time"
+  ]
+ },
+ {
+  "id": "DSA16D-E02",
+  "title": "Stable Counting Sort of Records",
+  "topic": "16D",
+  "subtopic": "Stability with prefix sums",
+  "difficulty": "Easy",
+  "tags": [
+   "counting sort",
+   "stability",
+   "prefix sums"
+  ]
+ },
+ {
+  "id": "DSA16D-E03",
+  "title": "Sort the Letters",
+  "topic": "16D",
+  "subtopic": "Small alphabets",
+  "difficulty": "Easy",
+  "tags": [
+   "counting sort",
+   "strings"
+  ]
+ },
+ {
+  "id": "DSA16D-E04",
+  "title": "LSD Radix Sort",
+  "topic": "16D",
+  "subtopic": "Radix sort",
+  "difficulty": "Easy",
+  "tags": [
+   "radix sort",
+   "counting sort",
+   "digits"
+  ]
+ },
+ {
+  "id": "DSA16D-E05",
+  "title": "Bucket Sort",
+  "topic": "16D",
+  "subtopic": "Bucket sort",
+  "difficulty": "Easy",
+  "tags": [
+   "bucket sort",
+   "floating point",
+   "distribution"
+  ]
+ },
+ {
+  "id": "DSA16D-M01",
+  "title": "Radix Sort with Negatives",
+  "topic": "16D",
+  "subtopic": "Key transformation",
+  "difficulty": "Medium",
+  "tags": [
+   "radix sort",
+   "negative numbers"
+  ]
+ },
+ {
+  "id": "DSA16D-M02",
+  "title": "Radix Sort Words",
+  "topic": "16D",
+  "subtopic": "LSD on characters",
+  "difficulty": "Medium",
+  "tags": [
+   "radix sort",
+   "strings"
+  ]
+ },
+ {
+  "id": "DSA16D-M03",
+  "title": "Maximum Gap",
+  "topic": "16D",
+  "subtopic": "Pigeonhole buckets",
+  "difficulty": "Medium",
+  "tags": [
+   "bucket sort",
+   "pigeonhole",
+   "linear time"
+  ]
+ },
+ {
+  "id": "DSA16D-M04",
+  "title": "H-Index",
+  "topic": "16D",
+  "subtopic": "Counting instead of sorting",
+  "difficulty": "Medium",
+  "tags": [
+   "counting sort",
+   "linear time"
+  ]
+ },
+ {
+  "id": "DSA16D-M05",
+  "title": "Sort by Frequency",
+  "topic": "16D",
+  "subtopic": "Two counting passes",
+  "difficulty": "Medium",
+  "tags": [
+   "counting sort",
+   "frequency"
+  ]
+ },
+ {
+  "id": "DSA16D-H01",
+  "title": "64-bit Radix Sort",
+  "topic": "16D",
+  "subtopic": "Radix sort with a large base",
+  "difficulty": "Hard",
+  "tags": [
+   "radix sort",
+   "bits",
+   "performance"
+  ]
+ },
+ {
+  "id": "DSA16D-H02",
+  "title": "Keys up to n²",
+  "topic": "16D",
+  "subtopic": "Choosing the radix",
+  "difficulty": "Hard",
+  "tags": [
+   "radix sort",
+   "linear time"
+  ]
+ },
+ {
+  "id": "DSA16D-H03",
+  "title": "First Missing Positive",
+  "topic": "16D",
+  "subtopic": "Cyclic placement sort",
+  "difficulty": "Hard",
+  "tags": [
+   "linear time",
+   "in-place",
+   "array"
+  ]
+ },
+ {
+  "id": "DSA16D-H04",
+  "title": "MSD Radix Sort of Strings",
+  "topic": "16D",
+  "subtopic": "Most-significant-digit radix",
+  "difficulty": "Hard",
+  "tags": [
+   "radix sort",
+   "strings",
+   "recursion"
+  ]
+ },
+ {
+  "id": "DSA16D-H05",
+  "title": "Rank Transform",
+  "topic": "16D",
+  "subtopic": "Compressing keys for counting sort",
+  "difficulty": "Hard",
+  "tags": [
+   "coordinate compression",
+   "sorting",
+   "counting"
+  ]
+ },
+ {
+  "id": "DSA17-E01",
+  "title": "Union and Same-Group Queries",
+  "topic": "17",
+  "subtopic": "DSU basics",
+  "difficulty": "Easy",
+  "tags": [
+   "union-find",
+   "DSU",
+   "connectivity"
+  ]
+ },
+ {
+  "id": "DSA17-E02",
+  "title": "Hash Set Operations",
+  "topic": "17",
+  "subtopic": "Set ADT membership",
+  "difficulty": "Easy",
+  "tags": [
+   "set",
+   "hashing",
+   "membership"
+  ]
+ },
+ {
+  "id": "DSA17-E03",
+  "title": "Intersection of Two Lists",
+  "topic": "17",
+  "subtopic": "Intersection with hashing",
+  "difficulty": "Easy",
+  "tags": [
+   "set",
+   "intersection",
+   "hashing"
+  ]
+ },
+ {
+  "id": "DSA17-E04",
+  "title": "Distinct Values",
+  "topic": "17",
+  "subtopic": "Uniqueness",
+  "difficulty": "Easy",
+  "tags": [
+   "set",
+   "counting",
+   "hashing"
+  ]
+ },
+ {
+  "id": "DSA17-E05",
+  "title": "Components with DSU",
+  "topic": "17",
+  "subtopic": "Connectivity",
+  "difficulty": "Easy",
+  "tags": [
+   "union-find",
+   "components",
+   "graph"
+  ]
+ },
+ {
+  "id": "DSA17-M01",
+  "title": "Symmetric Difference",
+  "topic": "17",
+  "subtopic": "Ordered set operations",
+  "difficulty": "Medium",
+  "tags": [
+   "set",
+   "set operations",
+   "ordered set"
+  ]
+ },
+ {
+  "id": "DSA17-M02",
+  "title": "The Redundant Cable",
+  "topic": "17",
+  "subtopic": "Cycle detection with DSU",
+  "difficulty": "Medium",
+  "tags": [
+   "union-find",
+   "cycle",
+   "graph"
+  ]
+ },
+ {
+  "id": "DSA17-M03",
+  "title": "Group Sizes",
+  "topic": "17",
+  "subtopic": "DSU with sizes",
+  "difficulty": "Medium",
+  "tags": [
+   "union-find",
+   "sizes",
+   "sorting"
+  ]
+ },
+ {
+  "id": "DSA17-M04",
+  "title": "Components Over Time",
+  "topic": "17",
+  "subtopic": "Incremental connectivity",
+  "difficulty": "Medium",
+  "tags": [
+   "union-find",
+   "incremental",
+   "graph"
+  ]
+ },
+ {
+  "id": "DSA17-M05",
+  "title": "Largest Group Over Time",
+  "topic": "17",
+  "subtopic": "Tracking a maximum",
+  "difficulty": "Medium",
+  "tags": [
+   "union-find",
+   "sizes",
+   "incremental"
+  ]
+ },
+ {
+  "id": "DSA17-H01",
+  "title": "Cheapest Network (Kruskal, extension)",
+  "topic": "17",
+  "subtopic": "Kruskal's algorithm (extension)",
+  "difficulty": "Hard",
+  "tags": [
+   "union-find",
+   "MST",
+   "greedy",
+   "sorting"
+  ]
+ },
+ {
+  "id": "DSA17-H02",
+  "title": "Satisfiable Equations",
+  "topic": "17",
+  "subtopic": "Equality constraints",
+  "difficulty": "Hard",
+  "tags": [
+   "union-find",
+   "constraints",
+   "strings"
+  ]
+ },
+ {
+  "id": "DSA17-H03",
+  "title": "First Odd Cycle",
+  "topic": "17",
+  "subtopic": "DSU with parity",
+  "difficulty": "Hard",
+  "tags": [
+   "union-find",
+   "bipartite",
+   "parity"
+  ]
+ },
+ {
+  "id": "DSA17-H04",
+  "title": "Islands Appearing",
+  "topic": "17",
+  "subtopic": "Online grid connectivity",
+  "difficulty": "Hard",
+  "tags": [
+   "union-find",
+   "grid",
+   "incremental"
+  ]
+ },
+ {
+  "id": "DSA17-H05",
+  "title": "Smallest Equivalent String",
+  "topic": "17",
+  "subtopic": "Equivalence classes with a chosen representative",
+  "difficulty": "Hard",
+  "tags": [
+   "union-find",
+   "strings",
+   "equivalence"
+  ]
+ },
+ {
+  "id": "DSA-C01",
+  "title": "Course Registration Planner",
+  "topic": "completion",
+  "subtopic": "Prerequisite graphs",
+  "difficulty": "Hard",
+  "tags": [
+   "graph",
+   "DAG",
+   "heap",
+   "topological order"
+  ]
+ },
+ {
+  "id": "DSA-C02",
+  "title": "Campus Navigation with Closures",
+  "topic": "completion",
+  "subtopic": "Shortest hops with blocked vertices",
+  "difficulty": "Medium",
+  "tags": [
+   "BFS",
+   "graph",
+   "queries"
+  ]
+ },
+ {
+  "id": "DSA-C03",
+  "title": "Nearest Fire Station",
+  "topic": "completion",
+  "subtopic": "Multi-source BFS",
+  "difficulty": "Medium",
+  "tags": [
+   "BFS",
+   "multi-source",
+   "graph"
+  ]
+ },
+ {
+  "id": "DSA-C04",
+  "title": "Hospital Triage with Updates",
+  "topic": "completion",
+  "subtopic": "Priority queue with lazy deletion",
+  "difficulty": "Hard",
+  "tags": [
+   "heap",
+   "priority queue",
+   "lazy deletion"
+  ]
+ },
+ {
+  "id": "DSA-C05",
+  "title": "Browser History",
+  "topic": "completion",
+  "subtopic": "Two stacks for history",
+  "difficulty": "Medium",
+  "tags": [
+   "stack",
+   "design",
+   "simulation"
+  ]
+ },
+ {
+  "id": "DSA-C06",
+  "title": "Print Server Farm",
+  "topic": "completion",
+  "subtopic": "Earliest-free resource",
+  "difficulty": "Medium",
+  "tags": [
+   "heap",
+   "queue",
+   "scheduling"
+  ]
+ },
+ {
+  "id": "DSA-C07",
+  "title": "Live Sales Leaderboard",
+  "topic": "completion",
+  "subtopic": "Ordered set with updates",
+  "difficulty": "Hard",
+  "tags": [
+   "ordered set",
+   "hash map",
+   "ranking"
+  ]
+ },
+ {
+  "id": "DSA-C08",
+  "title": "Network Topology Monitor",
+  "topic": "completion",
+  "subtopic": "Incremental connectivity",
+  "difficulty": "Medium",
+  "tags": [
+   "union-find",
+   "graph",
+   "monitoring"
+  ]
+ },
+ {
+  "id": "DSA-C09",
+  "title": "Friend Suggestions",
+  "topic": "completion",
+  "subtopic": "Neighbourhood counting",
+  "difficulty": "Hard",
+  "tags": [
+   "graph",
+   "hashing",
+   "counting"
+  ]
+ },
+ {
+  "id": "DSA-C10",
+  "title": "Document Search Ranking",
+  "topic": "completion",
+  "subtopic": "Inverted index",
+  "difficulty": "Medium",
+  "tags": [
+   "hash map",
+   "sorting",
+   "search"
+  ]
+ },
+ {
+  "id": "DSA-C11",
+  "title": "Active Users in a Time Window",
+  "topic": "completion",
+  "subtopic": "Sliding window over a stream",
+  "difficulty": "Hard",
+  "tags": [
+   "queue",
+   "hash map",
+   "sliding window"
+  ]
+ },
+ {
+  "id": "DSA-C12",
+  "title": "Memory-Tight Attendance",
+  "topic": "completion",
+  "subtopic": "Bitset representation",
+  "difficulty": "Medium",
+  "tags": [
+   "bitset",
+   "memory",
+   "bits"
+  ]
+ },
+ {
+  "id": "DSA-C13",
+  "title": "Contest Leaderboard",
+  "topic": "completion",
+  "subtopic": "Multi-key sorting and ranking",
+  "difficulty": "Medium",
+  "tags": [
+   "sorting",
+   "comparator",
+   "ranking"
+  ]
+ },
+ {
+  "id": "DSA-C14",
+  "title": "Streaming Response-Time Median",
+  "topic": "completion",
+  "subtopic": "Two-heap median under batches",
+  "difficulty": "Hard",
+  "tags": [
+   "heap",
+   "median",
+   "streaming"
+  ]
+ },
+ {
+  "id": "DSA-C15",
+  "title": "Bridges Closing",
+  "topic": "completion",
+  "subtopic": "Offline deletions by reversal",
+  "difficulty": "Hard",
+  "tags": [
+   "union-find",
+   "offline",
+   "graph"
+  ]
+ },
+ {
+  "id": "DSA-C16",
+  "title": "Limit Order Book",
+  "topic": "completion",
+  "subtopic": "Two heaps with price-time priority",
+  "difficulty": "Hard",
+  "tags": [
+   "heap",
+   "matching",
+   "simulation"
+  ]
+ },
+ {
+  "id": "DSA-C17",
+  "title": "Nearest Available Driver",
+  "topic": "completion",
+  "subtopic": "Ordered set queries",
+  "difficulty": "Medium",
+  "tags": [
+   "ordered set",
+   "BST",
+   "lower bound"
+  ]
+ },
+ {
+  "id": "DSA-C18",
+  "title": "Building Evacuation",
+  "topic": "completion",
+  "subtopic": "Multi-source BFS on grids",
+  "difficulty": "Hard",
+  "tags": [
+   "BFS",
+   "grid",
+   "multi-source"
+  ]
+ },
+ {
+  "id": "DSA-C19",
+  "title": "Calculator with Variables",
+  "topic": "completion",
+  "subtopic": "Expression evaluation with a symbol table",
+  "difficulty": "Hard",
+  "tags": [
+   "stack",
+   "hash map",
+   "parsing"
+  ]
+ },
+ {
+  "id": "DSA-C20",
+  "title": "Cache Hit Ratio",
+  "topic": "completion",
+  "subtopic": "LRU simulation",
+  "difficulty": "Medium",
+  "tags": [
+   "cache",
+   "linked list",
+   "hash map"
+  ]
+ },
+ {
+  "id": "DSA-C21",
+  "title": "Exam ID Audit",
+  "topic": "completion",
+  "subtopic": "Radix sort for 64-bit keys",
+  "difficulty": "Medium",
+  "tags": [
+   "radix sort",
+   "duplicates",
+   "sorting"
+  ]
+ },
+ {
+  "id": "DSA-C22",
+  "title": "Organisation Chart Analytics",
+  "topic": "completion",
+  "subtopic": "Tree aggregation",
+  "difficulty": "Hard",
+  "tags": [
+   "tree",
+   "parent array",
+   "BFS levels"
+  ]
+ },
+ {
+  "id": "DSA-C23",
+  "title": "Room Booking System",
+  "topic": "completion",
+  "subtopic": "Interval search in a BST",
+  "difficulty": "Medium",
+  "tags": [
+   "ordered map",
+   "BST",
+   "intervals"
+  ]
+ },
+ {
+  "id": "DSA-C24",
+  "title": "Students in Several Clubs",
+  "topic": "completion",
+  "subtopic": "k-way merge with counting",
+  "difficulty": "Hard",
+  "tags": [
+   "heap",
+   "merging",
+   "sets"
+  ]
+ },
+ {
+  "id": "DSA-C25",
+  "title": "Duplicate Document Groups",
+  "topic": "completion",
+  "subtopic": "Hashing plus union-find",
+  "difficulty": "Hard",
+  "tags": [
+   "union-find",
+   "hashing",
+   "sorting",
+   "strings"
+  ]
  }
 ]

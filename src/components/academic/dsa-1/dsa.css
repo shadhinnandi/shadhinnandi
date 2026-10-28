@@ -488,3 +488,77 @@
   width: min(18rem, 60vw);
   accent-color: var(--accent);
 }
+
+/* Step-through visualisations */
+.oop.dsa .dsa-viz .oop-filter {
+  margin-bottom: var(--space-3);
+}
+.oop.dsa .dsa-viz__bar,
+.oop.dsa .dsa-viz__node {
+  fill: var(--bg-alt);
+  stroke: var(--line-strong);
+  stroke-width: 1.5;
+  transition: fill 0.2s ease;
+}
+.oop.dsa .dsa-viz__bar.is-hl,
+.oop.dsa .dsa-viz__node.is-hl {
+  fill: var(--accent-soft);
+  stroke: var(--accent);
+  stroke-width: 2.5;
+}
+.oop.dsa .dsa-viz__bar.is-done,
+.oop.dsa .dsa-viz__node.is-done {
+  fill: rgba(31, 157, 85, 0.18);
+  stroke: #1f9d55;
+}
+.oop.dsa .dsa-viz__bar.is-pivot {
+  fill: rgba(181, 137, 0, 0.22);
+  stroke: #b58900;
+  stroke-width: 2.5;
+}
+.oop.dsa .dsa-viz__bar.is-frontier,
+.oop.dsa .dsa-viz__node.is-frontier {
+  fill: rgba(126, 87, 194, 0.18);
+  stroke: #7e57c2;
+  stroke-dasharray: 4 3;
+}
+.oop.dsa .dsa-viz__edge {
+  stroke: var(--line-strong);
+  stroke-width: 1.8;
+  fill: none;
+}
+.oop.dsa .dsa-viz__arrowhead {
+  fill: var(--line-strong);
+}
+.oop.dsa .dsa-viz__val,
+.oop.dsa .dsa-viz__char,
+.oop.dsa .dsa-viz__note {
+  fill: var(--text);
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+.oop.dsa .dsa-viz__char {
+  font-size: 20px;
+}
+.oop.dsa .dsa-viz__char.is-hl {
+  fill: var(--accent);
+  font-weight: 700;
+}
+.oop.dsa .dsa-viz__note {
+  font-size: 12px;
+  fill: var(--muted);
+}
+@media (prefers-reduced-motion: reduce) {
+  .oop.dsa .dsa-viz__bar,
+  .oop.dsa .dsa-viz__node {
+    transition: none;
+  }
+}
+
+/* Landing headline: two deliberate lines instead of a narrow 18ch column */
+.oop.dsa .dsa-hero__title {
+  max-width: none;
+}
+.oop.dsa .dsa-hero__title span {
+  display: block;
+}
