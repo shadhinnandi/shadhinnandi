@@ -38,7 +38,7 @@ export default function ProjectLinks({ project, caseStudy = true, extras = false
       {project.demo && (
         <li>
           <ExternalLink className="text-link text-link--quiet" href={project.demo}>
-            Live demo<span className="visually-hidden"> of {t}</span>
+            {project.demoLabel || 'Live demo'}<span className="visually-hidden"> of {t}</span>
             <Icon name="arrowUpRight" />
           </ExternalLink>
         </li>

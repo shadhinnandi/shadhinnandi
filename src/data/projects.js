@@ -1,4 +1,5 @@
 import { image, publicUrl } from '../lib/media';
+import { DASHRUSH_URL } from './externalUrls';
 
 /*
   Project registry. The Projects page, the project detail route (/projects/:slug)
@@ -71,6 +72,31 @@ export const projects = [
       scope:
         'The public repository contains the Spring Boot backend and a single-player browser client rendered with HTML5 Canvas. The multiplayer mode and the Godot client are not included in the repository.',
     },
+  },
+  {
+    slug: 'dashrush',
+    title: 'DashRush',
+    tagline: 'Browser-based gaming platform',
+    area: 'Games',
+    kind: 'Personal project',
+    course: null,
+    period: null,
+    featured: true,
+    award: null,
+    role: null,
+    summary:
+      'A browser-based gaming platform featuring seven interactive games, fast-paced gameplay, and a seamless gaming experience across devices.',
+    highlights: [
+      'Seven browser games: arena shooter, 8-ball pool, endless runner, arcade flight, racing, exploration adventure and a train journey.',
+      'Canvas-rendered gameplay with keyboard, mouse and touch controls.',
+      'Responsive layout for desktop and mobile with dark and light themes.',
+    ],
+    stack: ['React', 'React Router', 'Vite', 'HTML5 Canvas', 'JavaScript'],
+    image: image('dashrush-logo', 'DashRush logo: stylised DR monogram surrounded by scenes from seven browser games', { position: 'center', fit: 'contain' }),
+    gallery: [],
+    github: null,
+    demo: DASHRUSH_URL,
+    demoLabel: 'Explore DashRush',
   },
   {
     slug: 'aram',

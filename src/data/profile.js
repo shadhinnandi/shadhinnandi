@@ -49,7 +49,6 @@ export const secondaryLinks = [profile.links.codeforces, profile.links.instagram
 // and the About page, which keeps the bar short.
 export const navItems = [
   { to: '/projects', label: 'Projects' },
-  { to: '/games', label: 'Games' },
   { to: '/research', label: 'Research' },
   { to: '/experience', label: 'Experience' },
   { to: '/achievements', label: 'Achievements' },

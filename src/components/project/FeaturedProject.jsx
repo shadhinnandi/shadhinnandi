@@ -12,11 +12,15 @@ export default function FeaturedProject({ project, lead = false, headingLevel = 
   const context = projectContext(project);
   return (
     <article className={`feature${lead ? ' feature--lead' : ''}`}>
-      {project.image && (
+      {project.image && project.demo ? (
+        <a href={project.demo} className="feature__media" tabIndex={-1} aria-hidden="true" target="_blank" rel="noopener noreferrer">
+          <Img media={project.image} sizes={lead ? '(min-width: 960px) 620px, 100vw' : '(min-width: 960px) 540px, 100vw'} eager={eager} />
+        </a>
+      ) : project.image ? (
         <Link to={projectPath(project)} className="feature__media" tabIndex={-1} aria-hidden="true">
           <Img media={project.image} sizes={lead ? '(min-width: 960px) 620px, 100vw' : '(min-width: 960px) 540px, 100vw'} eager={eager} />
         </Link>
-      )}
+      ) : null}
       <div className="feature__body">
         {context.length > 0 && <p className="meta">{context.join(' · ')}</p>}
         <H className="feature__title">

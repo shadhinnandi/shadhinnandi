@@ -11,11 +11,15 @@ export default function ProjectCard({ project, headingLevel = 3 }) {
   const context = projectContext(project);
   return (
     <article className="card">
-      {project.image && (
+      {project.image && project.demo ? (
+        <a href={project.demo} className="card__media" tabIndex={-1} aria-hidden="true" target="_blank" rel="noopener noreferrer">
+          <Img media={project.image} sizes="(min-width: 960px) 360px, (min-width: 640px) 50vw, 100vw" />
+        </a>
+      ) : project.image ? (
         <Link to={projectPath(project)} className="card__media" tabIndex={-1} aria-hidden="true">
           <Img media={project.image} sizes="(min-width: 960px) 360px, (min-width: 640px) 50vw, 100vw" />
         </Link>
-      )}
+      ) : null}
       <div className="card__body">
         <p className="meta">{context.length ? context.join(' · ') : project.area}</p>
         <H className="card__title">

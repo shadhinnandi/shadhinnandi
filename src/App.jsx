@@ -14,8 +14,6 @@ const Achievements = lazy(() => import('./pages/Achievements.jsx'));
 const Contact = lazy(() => import('./pages/Contact.jsx'));
 const Academic = lazy(() => import('./pages/Academic.jsx'));
 const Course = lazy(() => import('./pages/Course.jsx'));
-const Games = lazy(() => import('./pages/Games.jsx'));
-const Game = lazy(() => import('./pages/Game.jsx'));
 const NotFound = lazy(() => import('./pages/NotFound.jsx'));
 
 export default function App() {
@@ -41,8 +39,6 @@ export default function App() {
             <Route path="/academic" element={<Academic />} />
             {/* Courses; older /academic/:slug project URLs redirect from here too. */}
             <Route path="/academic/:slug/*" element={<Course />} />
-            <Route path="/games" element={<Games />} />
-            <Route path="/games/:slug" element={<Game />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

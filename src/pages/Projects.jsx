@@ -25,12 +25,7 @@ export default function Projects() {
         label="Projects"
         title="Projects and case studies"
         lead="Course projects, independent builds and research code. Each case study covers the problem, what was built and how, with source linked where it is public."
-      >
-        <p className="small muted">
-          More repositories on{' '}
-          <ExternalLink href={profile.links.github.href}>GitHub</ExternalLink>.
-        </p>
-      </PageHeader>
+      />
 
       <div className="container">
         <section id="skills" className="block" aria-labelledby="skills-title">
@@ -74,6 +69,11 @@ export default function Projects() {
             ))}
           </div>
         </section>
+
+        <p className="small muted" style={{ textAlign: 'center', paddingBottom: 'var(--space-7)' }}>
+          More repositories on{' '}
+          <ExternalLink href={profile.links.github.href}>GitHub</ExternalLink>.
+        </p>
       </div>
     </div>
   );
