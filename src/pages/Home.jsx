@@ -3,8 +3,7 @@ import Hero from '../components/sections/Hero.jsx';
 import Section from '../components/ui/Section.jsx';
 import Reveal from '../components/ui/Reveal.jsx';
 import Icon from '../components/ui/Icon.jsx';
-import FeaturedGrid from '../components/project/FeaturedGrid.jsx';
-import ProjectRow from '../components/project/ProjectRow.jsx';
+import ProjectCard from '../components/project/ProjectCard.jsx';
 import { CurrentResearch, ResearchAreas } from '../components/sections/ResearchBlocks.jsx';
 import ExperienceList from '../components/sections/ExperienceList.jsx';
 import { DegreeCard } from '../components/sections/Education.jsx';
@@ -12,19 +11,17 @@ import SkillTable from '../components/sections/SkillTable.jsx';
 import AchievementsOverview from '../components/sections/AchievementsOverview.jsx';
 import ContactPanel from '../components/sections/ContactPanel.jsx';
 import { profile } from '../data/profile';
-import { projects, featuredProjects, additionalProjects } from '../data/projects';
+import { projects } from '../data/projects';
 import { research, currentResearch, researchAreas } from '../data/research';
 import { experience } from '../data/experience';
-import { skills, featuredSkillGroups } from '../data/skills';
+import { skills } from '../data/skills';
 import usePageTitle from '../lib/usePageTitle';
 
 // Order: identity → about → projects → teaching → research → academic →
 // skills → achievements → contact.
 export default function Home() {
   usePageTitle(null);
-  const moreWork = additionalProjects.slice(0, 4);
-  const homeSkills = skills.filter((g) => featuredSkillGroups.includes(g.group));
-
+  const homeProjects = projects.slice(0, 6);
   return (
     <div className="page page--home">
       <Hero />
@@ -51,19 +48,16 @@ export default function Home() {
       <Section
         id="work"
         title="Selected projects"
-        intro="Three projects that show the range: backend architecture, embedded systems and full-stack product work."
+        intro="Course projects, independent builds and research code — full-stack, embedded, ML, security and games."
         link={{ to: '/projects', label: `All ${projects.length} projects` }}
       >
-        <FeaturedGrid projects={featuredProjects} />
-
-        <Reveal className="more-work">
-          <h3 className="label">More projects</h3>
-          <ul className="project-rows">
-            {moreWork.map((p) => (
-              <ProjectRow key={p.slug} project={p} headingLevel={4} />
-            ))}
-          </ul>
-        </Reveal>
+        <div className="pgrid">
+          {homeProjects.map((p, i) => (
+            <Reveal key={p.slug} delay={i * 60}>
+              <ProjectCard project={p} eager={i < 3} />
+            </Reveal>
+          ))}
+        </div>
       </Section>
 
       <Section
@@ -100,7 +94,7 @@ export default function Home() {
 
       <Section id="skills" title="Technical skills" intro="Grouped by use. Every item maps to a project, repository or course I taught." link={{ to: '/projects#skills', label: 'Skills with evidence' }}>
         <Reveal>
-          <SkillTable groups={homeSkills} />
+          <SkillTable groups={skills} />
         </Reveal>
       </Section>
 

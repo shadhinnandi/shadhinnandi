@@ -1,5 +1,4 @@
 import { profile, primaryLinks } from '../../data/profile';
-import Img from '../ui/Img.jsx';
 import Icon from '../ui/Icon.jsx';
 import ExternalLink from '../ui/ExternalLink.jsx';
 
@@ -49,9 +48,6 @@ export default function Hero() {
             </div>
           </div>
 
-          <figure className="hero__portrait">
-            <Img media={profile.portrait} sizes="(min-width: 960px) 340px, 112px" eager />
-          </figure>
         </div>
 
         <dl className="hero__facts">

@@ -8,7 +8,7 @@ export const profile = {
   location: 'Dhaka, Bangladesh',
   university: 'United International University',
   universityShort: 'UIU',
-  portrait: image('portrait', 'Portrait of Shadhin Nandi in a navy blazer and white shirt'),
+  portrait: image('portrait', 'Portrait of Shadhin Nandi'),
 
   // Hero: one statement.
   headline: 'Final-year Computer Science & Engineering student with a strong interest in teaching and hands-on technical work.',

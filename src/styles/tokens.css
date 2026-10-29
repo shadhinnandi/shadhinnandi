@@ -92,7 +92,7 @@
   --section-y: clamp(4.5rem, 3rem + 5vw, 7.5rem);
 
   /* Layout */
-  --container: 1160px;
+  --container: 1250px;
   --gutter: 1.5rem;
   --nav-h: 56px;
   --nav-top: 12px;

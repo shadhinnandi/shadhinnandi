@@ -16,6 +16,17 @@ const paths = {
   play: 'M6.5 4.5v11l9-5.5z',
   pause: 'M7 4.5v11M13 4.5v11',
   restart: 'M4.6 11a5.5 5.5 0 1 0 1.5-5.2M5 3.5v3.3h3.3',
+  activity: 'M2.5 10h3l1.5-5 3 10 1.5-5h3l1.5 3h3.5',
+  canvas: 'M3 3h14v14H3zM6 14l2.5-3 2 2 2.5-3 3 4',
+  chart: 'M4 16V9M8 16V5M12 16v-3M16 16V3',
+  chip: 'M7 7h6v6H7zM9 2v3M13 2v3M9 15v3M13 15v3M2 9h3M2 13h3M15 9h3M15 13h3',
+  code: 'M7 5 2.5 10 7 15M13 5l4.5 5-4.5 5M11.5 3.5 8.5 16.5',
+  database: 'M4 5c0-1.1 2.7-2 6-2s6 .9 6 2-2.7 2-6 2-6-.9-6-2zM4 5v5c0 1.1 2.7 2 6 2s6-.9 6-2V5M4 10v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5',
+  'data-science': 'M4 16V9M8 16V5M12 16v-8M16 16V3',
+  flask: 'M8 2v5l-4 8.5A1.7 1.7 0 0 0 5.5 18h9a1.7 1.7 0 0 0 1.5-2.5L12 7V2M6.5 12h7M7 2h6',
+  network: 'M10 3v4M10 7 5 10M10 7l5 3M5 10v4M15 10v4M3 14h4M13 14h4',
+  server: 'M3 4h14v5H3zM3 11h14v5H3zM6 6.5h.01M6 13.5h.01M9 6.5h5M9 13.5h5',
+  shield: 'M10 2.5 16 5v4.5c0 3.7-2.5 6.2-6 8-3.5-1.8-6-4.3-6-8V5zM7 10l2 2 4-4',
 };
 
 export default function Icon({ name, size = 16, className = '' }) {

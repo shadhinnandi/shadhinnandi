@@ -1,21 +1,21 @@
 import { useSearchParams } from 'react-router-dom';
 import PageHeader from '../components/ui/PageHeader.jsx';
 import ExternalLink from '../components/ui/ExternalLink.jsx';
-import FeaturedGrid from '../components/project/FeaturedGrid.jsx';
+import Reveal from '../components/ui/Reveal.jsx';
 import ProjectCard from '../components/project/ProjectCard.jsx';
 import SkillTable from '../components/sections/SkillTable.jsx';
-import { featuredProjects, additionalProjects, areas as allAreas } from '../data/projects';
+import { projects, areas as allAreas } from '../data/projects';
 import { profile } from '../data/profile';
 import { skills } from '../data/skills';
 import usePageTitle from '../lib/usePageTitle';
 
 export default function Projects() {
   usePageTitle('Projects', 'Full-stack, machine learning, security and tooling projects by Shadhin Nandi, with source code, case studies and the skills each one evidences.');
-  const areas = allAreas.filter((a) => additionalProjects.some((p) => p.area === a));
+  const areas = allAreas.filter((a) => projects.some((p) => p.area === a));
   const [params, setParams] = useSearchParams();
   const active = areas.includes(params.get('area')) ? params.get('area') : 'All';
-  const shown = active === 'All' ? additionalProjects : additionalProjects.filter((p) => p.area === active);
-  const count = (a) => (a === 'All' ? additionalProjects.length : additionalProjects.filter((p) => p.area === a).length);
+  const shown = active === 'All' ? projects : projects.filter((p) => p.area === active);
+  const count = (a) => (a === 'All' ? projects.length : projects.filter((p) => p.area === a).length);
 
   const select = (a) => setParams(a === 'All' ? {} : { area: a }, { replace: true, preventScrollReset: true });
 
@@ -35,20 +35,13 @@ export default function Projects() {
           <p className="block__intro">
             Technologies I have used in coursework, teaching and projects. Each group notes where it can be verified.
           </p>
-          <SkillTable groups={skills} showEvidence />
+          <SkillTable groups={skills} />
         </section>
 
-        <section className="block" aria-labelledby="featured-title">
-          <h2 id="featured-title" className="block__title">
-            Featured
-          </h2>
-          <FeaturedGrid projects={featuredProjects} eager />
-        </section>
-
-        <section className="block" aria-labelledby="more-title">
+        <section className="block" aria-labelledby="projects-title">
           <div className="block__head">
-            <h2 id="more-title" className="block__title">
-              More projects
+            <h2 id="projects-title" className="block__title">
+              All projects
             </h2>
             <div className="segmented" role="group" aria-label="Filter projects by area">
               {['All', ...areas].map((a) => (
@@ -63,9 +56,11 @@ export default function Projects() {
             Showing {shown.length} {shown.length === 1 ? 'project' : 'projects'}
             {active !== 'All' ? ` in ${active}` : ''}.
           </p>
-          <div className="card-grid">
-            {shown.map((p) => (
-              <ProjectCard key={p.slug} project={p} />
+          <div className="pgrid">
+            {shown.map((p, i) => (
+              <Reveal key={p.slug} delay={i * 60}>
+                <ProjectCard project={p} eager={i < 3} />
+              </Reveal>
             ))}
           </div>
         </section>

@@ -9,7 +9,7 @@ export default function About() {
   usePageTitle('About', 'About Shadhin Nandi: final-year CSE student at United International University, Undergraduate Teaching Assistant with hands-on work in software, machine learning and research.');
   return (
     <div className="page">
-      <PageHeader label="About" title="About" lead={profile.headline} />
+      <PageHeader label="About" title="About" className="page-header--about" />
 
       <div className="container about">
         <div className="prose">
@@ -21,7 +21,7 @@ export default function About() {
 
         <aside className="about__aside">
           <figure className="about__portrait">
-            <Img media={profile.portrait} sizes="280px" />
+            <Img media={profile.portrait} sizes="390px" />
           </figure>
         </aside>
       </div>

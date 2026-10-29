@@ -424,34 +424,9 @@ export const projects = [
     github: gh('UIU-grading-calculator'),
     demo: 'https://shadhinnandi.github.io/UIU-grading-calculator/',
   },
-  {
-    slug: 'mini-car-racing',
-    title: 'Mini Car Racing',
-    tagline: 'Browser racing game',
-    area: 'Games',
-    kind: 'Personal project',
-    course: null,
-    period: null,
-    featured: false,
-    award: null,
-    role: null,
-    summary:
-      'An endless-road racing game in vanilla JavaScript: dodge traffic, collect power-ups and push the score as speed increases.',
-    highlights: [
-      'Canvas rendering with increasing speed, invincibility power-ups and a restart flow.',
-      'Sound effects synthesised in the browser, with no audio files or libraries.',
-    ],
-    stack: ['JavaScript', 'HTML5 Canvas', 'CSS'],
-    image: image('car-racing', 'Mini Car Racing Game: two cars on a three-lane green track with score and speed display'),
-    gallery: [],
-    github: gh('Mini-Car-Racing-Game'),
-    demo: 'https://shadhinnandi.github.io/Mini-Car-Racing-Game/',
-  },
 ];
 
 export const getProject = (slug) => projects.find((p) => p.slug === slug);
-export const featuredProjects = projects.filter((p) => p.featured);
-export const additionalProjects = projects.filter((p) => !p.featured);
 
 /** Canonical URL of a project's detail page. */
 export const projectPath = (p) => `/projects/${p.slug}`;

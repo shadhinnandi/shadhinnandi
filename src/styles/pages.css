@@ -1,4 +1,7 @@
 /* ---------- About ---------- */
+.page-header--about {
+  padding-bottom: var(--space-4);
+}
 .about {
   display: grid;
   gap: var(--space-7);
@@ -10,6 +13,7 @@
 .prose p {
   margin-bottom: var(--space-5);
   color: var(--text-2);
+  text-align: justify;
 }
 .prose p:first-child {
   color: var(--text);
@@ -22,22 +26,31 @@
   align-content: start;
 }
 .about__portrait {
-  max-width: 260px;
-  padding: 5px;
-  background: var(--surface);
+  width: min(100%, 390px);
+  justify-self: start;
+  margin-top: calc(var(--space-5) * -1);
+  padding: 0;
+  background: var(--img-bg);
   border: 1px solid var(--line);
-  border-radius: 30px;
+  border-radius: var(--radius);
   box-shadow: var(--shadow-md);
+  overflow: hidden;
 }
 .about__portrait img {
-  border-radius: 25px;
-  aspect-ratio: 1;
-  object-fit: cover;
+  width: 100%;
+  display: block;
+  border-radius: inherit;
+  height: auto;
+  object-fit: contain;
+  transform: none;
 }
 @media (min-width: 960px) {
   .about {
     grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
-    gap: var(--space-8);
+    gap: var(--space-5);
+  }
+  .about__portrait {
+    transform: none;
   }
 }
 /* The aside only holds the portrait; hiding the whole column avoids an
