@@ -9,6 +9,12 @@ export const profile = {
   university: 'United International University',
   universityShort: 'UIU',
   portrait: image('portrait', 'Portrait of Shadhin Nandi'),
+  landingPhoto: {
+    src: publicUrl('photos/landing-photo.JPG'),
+    alt: 'Portrait of Shadhin Nandi',
+    width: 937,
+    height: 1136,
+  },
 
   // Hero: one statement.
   headline: 'Final-year Computer Science & Engineering student with a strong interest in teaching and hands-on technical work.',

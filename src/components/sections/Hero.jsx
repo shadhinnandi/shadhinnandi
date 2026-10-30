@@ -1,4 +1,5 @@
 import { profile, primaryLinks } from '../../data/profile';
+import Img from '../ui/Img.jsx';
 import Icon from '../ui/Icon.jsx';
 import ExternalLink from '../ui/ExternalLink.jsx';
 
@@ -6,7 +7,7 @@ import ExternalLink from '../ui/ExternalLink.jsx';
 const facts = [
   { label: 'Teaching', value: 'Undergraduate Teaching Assistant at the Department of CSE, United International University (UIU).' },
   { label: 'Degree', value: 'B.Sc. CSE at UIU · graduating Jan 2027' },
-  { label: 'Recognition', value: '3rd Runner-Up at UIU’s CSE Project Show, twice in 2025' },
+  { label: 'Recognition', value: 'Two-Time Project Show Achiever | UIU CSE, 2025' },
 ];
 
 export default function Hero() {
@@ -48,6 +49,9 @@ export default function Hero() {
             </div>
           </div>
 
+          <figure className="hero__portrait">
+            <Img media={profile.landingPhoto} sizes="(min-width: 960px) 340px, 112px" eager />
+          </figure>
         </div>
 
         <dl className="hero__facts">

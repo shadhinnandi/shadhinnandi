@@ -263,6 +263,22 @@
   gap: var(--space-2);
   list-style: none;
 }
+.hero__portrait {
+  order: -1;
+  width: 104px;
+  padding: 4px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  box-shadow: var(--shadow-md);
+}
+.hero__portrait img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 22px;
+  background: var(--img-bg);
+}
 .hero__facts {
   display: grid;
   margin-top: clamp(2.5rem, 1.5rem + 3vw, 4.5rem);
@@ -300,6 +316,22 @@
   .hero__facts > div + div {
     border-top: 0;
     border-left: 1px solid var(--line);
+  }
+}
+@media (min-width: 960px) {
+  .hero__grid {
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: var(--space-8);
+  }
+  .hero__portrait {
+    order: 0;
+    width: 100%;
+    padding: 6px;
+    border-radius: 34px;
+    justify-self: end;
+  }
+  .hero__portrait img {
+    border-radius: 28px;
   }
 }
 @media (max-width: 480px) {
