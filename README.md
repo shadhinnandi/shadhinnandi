@@ -167,12 +167,21 @@ I'm a passionate developer and researcher focused on Bioinformatics, Digital Ima
   </a>
 </p>
 
-| Project | Description |
-|---------|-------------|
-| 🧮 **UIU Grading Calculator** | Smart grading system for UIU students - calculate CGPA, GPA, and manage retake scenarios |
-| 🌾 **Farmers Market** | Online platform connecting farmers and customers directly for fresh products |
-| 🌊 **ARAM** | Automated River Analysis Marine - smart autonomous river monitoring system |
-| 🚨 **Durjog Prohori** | Disaster Management web app with real-time data and AI coordination |
+| Project | Description | Links |
+|---------|-------------|-------|
+| 🎮 [**Vortex Arena**](https://github.com/shadhinnandi/Vortex-Arena) | Top-down arena shooter with a Spring Boot backend for player accounts, statistics and inventory. | [Source](https://github.com/shadhinnandi/Vortex-Arena) |
+| 🕹️ [**DashRush**](https://shadhinnandi.github.io/dev/projects/dashrush) | Browser gaming platform with seven canvas-based games and responsive keyboard, mouse and touch controls. | [Play](https://shadhinnandi.github.io/dev/projects/dashrush) |
+| 🗺️ [**Ber Hoi**](https://github.com/shadhinnandi/BerHoi-Group-Pickup-Planner) | Group meetup planner for Dhaka that compares fair meeting points, transport assumptions and shared expenses. | [Source](https://github.com/shadhinnandi/BerHoi-Group-Pickup-Planner) · [Live demo](https://berhoi.vercel.app/) |
+| 🌊 [**ARAM**](https://shadhinnandi.github.io/dev/projects/aram) | Autonomous river-monitoring prototype for real-time water-level tracking with sensor data and live mapping. | [Case study](https://shadhinnandi.github.io/dev/projects/aram) |
+| 💸 [**UIUFund**](https://github.com/shadhinnandi/UIU-Funds-and-Crowd-fundings) | Crowdfunding and peer-loan platform for UIU students with campaigns, wallet ledger, offers and community features. | [Source](https://github.com/shadhinnandi/UIU-Funds-and-Crowd-fundings) |
+| 🚨 [**Durjog Prohori**](https://github.com/shadhinnandi/Durjog-Prohori-) | Disaster-response platform connecting citizens, authorities, firefighters and NGOs through reports, alerts and maps. | [Source](https://github.com/shadhinnandi/Durjog-Prohori-) |
+| 🌾 [**Shombhar**](https://github.com/shadhinnandi/Shombhar_The_Farmers_Market) | Farm-to-buyer marketplace with role-based panels, purchase requests, chat, hiring and admin reports. | [Source](https://github.com/shadhinnandi/Shombhar_The_Farmers_Market) · [Video demonstration](https://youtu.be/lyObKZjh4kI) |
+| 🧰 [**ELMS Extractor**](https://github.com/shadhinnandi/Elms_Extractor) | Python and FastAPI tool that exports UIU ELMS course rosters as CSV, text lists or ZIP archives. | [Source](https://github.com/shadhinnandi/Elms_Extractor) |
+| 🛡️ [**SICA**](https://github.com/shadhinnandi/SICA) | Explainable rule-based detector for potential HTTP session hijacking from web-server access logs. | [Source](https://github.com/shadhinnandi/SICA) |
+| 🧮 [**UIU Grading Calculator**](https://github.com/shadhinnandi/UIU-grading-calculator) | GPA and CGPA calculator that applies UIU grading and retake rules. | [Source](https://github.com/shadhinnandi/UIU-grading-calculator) · [Live demo](https://shadhinnandi.github.io/UIU-grading-calculator/) |
+| 📊 [**Credit Scoring Model**](https://github.com/shadhinnandi/Credit-Scoring-Model-Using-Machine-Learning) | Compares classification models for creditworthiness using risk metrics, cross-validation and threshold analysis. | [Source](https://github.com/shadhinnandi/Credit-Scoring-Model-Using-Machine-Learning) |
+| 🧬 [**Disease Prediction**](https://github.com/shadhinnandi/Disease-Prediction-from-Medical-Data) | Machine-learning models for predicting disease outcomes from medical data. | [Source](https://github.com/shadhinnandi/Disease-Prediction-from-Medical-Data) |
+| 🎙️ [**Speech Emotion Recognition**](https://github.com/shadhinnandi/Emotion-Recognition-from-Speech) | Speech-based emotion classification using audio features and machine-learning models. | [Source](https://github.com/shadhinnandi/Emotion-Recognition-from-Speech) |
 
 ---
 
