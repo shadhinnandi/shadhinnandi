@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Ber Hoi group pickup planner</title>
+  <desc id="desc">A stylised preview of the Ber Hoi meetup planning dashboard with a Dhaka map, participant markers and budget cards.</desc>
+  <rect width="1600" height="900" fill="#f6f7f2"/>
+  <rect x="72" y="68" width="1456" height="764" rx="34" fill="#fff" stroke="#d7ddd7" stroke-width="4"/>
+  <rect x="72" y="68" width="1456" height="126" rx="34" fill="#f1f3ed"/>
+  <path d="M72 194h1456" stroke="#d7ddd7" stroke-width="4"/>
+  <rect x="118" y="103" width="66" height="66" rx="16" fill="#178673"/>
+  <text x="151" y="151" fill="#fff" font-family="Arial,sans-serif" font-size="46" font-weight="700" text-anchor="middle">B</text>
+  <text x="214" y="149" fill="#172322" font-family="Arial,sans-serif" font-size="42" font-weight="700">ber hoi</text>
+  <circle cx="390" cy="137" r="10" fill="#ea6b59"/>
+  <text x="124" y="274" fill="#178673" font-family="Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="4">MEETPOINT</text>
+  <text x="124" y="330" fill="#172322" font-family="Arial,sans-serif" font-size="48" font-weight="700">Find a fair place</text>
+  <text x="124" y="370" fill="#65716d" font-family="Arial,sans-serif" font-size="23">Compare distance, travel assumptions and shared costs.</text>
+  <rect x="124" y="424" width="790" height="300" rx="24" fill="#dcebe1"/>
+  <path d="M124 500h790M124 590h790M124 670h790M260 424v300M420 424v300M600 424v300M770 424v300" stroke="#b9d1c2" stroke-width="3"/>
+  <path d="M174 680c95-84 130-16 214-100s94-72 180-45 102-88 188-78 83-35 142-88" fill="none" stroke="#178673" stroke-width="12" stroke-linecap="round"/>
+  <path d="M168 476c77 60 136 35 218 84s129 18 201-30 128 23 189 48 89-17 127-77" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="334" cy="573" r="18" fill="#ea6b59" stroke="#fff" stroke-width="8"/>
+  <circle cx="604" cy="631" r="18" fill="#178673" stroke="#fff" stroke-width="8"/>
+  <circle cx="794" cy="489" r="18" fill="#172322" stroke="#fff" stroke-width="8"/>
+  <rect x="972" y="424" width="500" height="92" rx="18" fill="#f1f3ed"/>
+  <text x="1010" y="461" fill="#65716d" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">BEST MEETING POINT</text>
+  <text x="1010" y="494" fill="#172322" font-family="Arial,sans-serif" font-size="24" font-weight="700">Dhanmondi Lake</text>
+  <rect x="972" y="544" width="238" height="180" rx="18" fill="#178673"/>
+  <text x="1002" y="587" fill="#d9f0e5" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">FAIRNESS</text>
+  <text x="1002" y="660" fill="#fff" font-family="Arial,sans-serif" font-size="54" font-weight="700">92%</text>
+  <rect x="1234" y="544" width="238" height="180" rx="18" fill="#fff3df"/>
+  <text x="1264" y="587" fill="#987044" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">GROUP SIZE</text>
+  <text x="1264" y="660" fill="#172322" font-family="Arial,sans-serif" font-size="54" font-weight="700">5</text>
+</svg>

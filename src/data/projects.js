@@ -99,6 +99,54 @@ export const projects = [
     demoLabel: 'Explore DashRush',
   },
   {
+    slug: 'ber-hoi',
+    title: 'Ber Hoi',
+    tagline: 'Group meetup planner for Dhaka hangouts',
+    area: 'Tools',
+    kind: 'Personal project',
+    course: null,
+    period: null,
+    featured: true,
+    award: null,
+    role: null,
+    summary:
+      'A mobile-friendly planning tool that helps friends agree on a fair meetup point, compare ways to get there and settle shared costs without a long message thread.',
+    highlights: [
+      'Compares curated and custom meetup points using average distance, longest trip, total distance and a fairness score.',
+      'Estimates transport options and group fares for metro, bus, CNG, rickshaw and walking with clear planning-assumption labels.',
+      'Tracks shared expenses, balances and suggested repayments with deterministic cent-level rounding.',
+    ],
+    stack: ['React', 'TypeScript', 'Vite', 'Leaflet', 'React Leaflet', 'Vitest'],
+    image: {
+      src: publicUrl('photos/berhoi-cover.svg'),
+      alt: 'Ber Hoi meetup planner showing a Dhaka map, participant markers, fairness score and group budget',
+      width: 1600,
+      height: 900,
+    },
+    gallery: [],
+    github: 'https://github.com/shadhinnandi/BerHoi-Group-Pickup-Planner.git',
+    demo: 'https://berhoi.vercel.app/',
+    details: {
+      problem:
+        'Planning a group hangout often means trading rough suggestions in a chat, without a shared view of who travels farthest or how the final bill should be split.',
+      solution:
+        'Ber Hoi turns the conversation into a transparent plan: compare meetup candidates, review illustrative travel options and keep expenses and settlements in one saved workspace.',
+      features: [
+        'Add, edit and remove participants with starting neighborhoods and budgets.',
+        'Save plan state in versioned browser storage and export or import JSON backups.',
+        'Share compact snapshot URLs that capture a plan without creating a collaborative room.',
+        'Try a labelled Dhaka demo plan or start a clean plan from scratch.',
+      ],
+      implementation: [
+        'React and TypeScript frontend built with Vite, using Leaflet and OpenStreetMap for the map view.',
+        'Pure domain functions calculate distances, fairness, transport assumptions, expense shares and settlement suggestions.',
+        'Vitest covers the core planning and calculation logic; no account, backend, database or API key is required.',
+      ],
+      scope:
+        'Distance values are neighborhood-level straight-line approximations, and transport fares and durations are illustrative planning assumptions rather than live routing or traffic data.',
+    },
+  },
+  {
     slug: 'aram',
     title: 'ARAM',
     tagline: 'Autonomous river monitoring prototype',
@@ -295,10 +343,10 @@ export const projects = [
     stack: ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS', 'PHPMailer'],
     image: image('shombhar-home', 'Shombhar home page with navigation for articles, farmer’s kit, market, hiring and accounts, over a harvest photo'),
     gallery: [],
-    github: gh('Shombhar_The_Farmers_Market'),
-    demo: null,
+    github: 'https://github.com/shadhinnandi/Shombhar_The_Farmers_Market.git',
+    demo: 'https://youtu.be/lyObKZjh4kI',
+    demoLabel: 'Video demonstration',
     links: [
-      { label: 'Video walkthrough', href: 'https://youtu.be/lyObKZjh4kI', kind: 'video' },
       { label: 'Project report', href: publicUrl('documents/shombhar-report.pdf'), kind: 'pdf' },
     ],
     details: {
