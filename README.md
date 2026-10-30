@@ -75,7 +75,7 @@ I'm a passionate developer and researcher focused on Bioinformatics, Digital Ima
   <a href="https://instagram.com/shadhinnandii/" target="_blank">
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
   </a>
-  <a href="https://shadhinnandi.github.io/dev/" target="_blank">
+  <a href="https://shadhinnandi.vercel.app/" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"/>
   </a>
   <a href="https://github.com/shadhinnandi/shadhinnandi/raw/main/resume.pdf" target="_blank">
@@ -127,10 +127,6 @@ I'm a passionate developer and researcher focused on Bioinformatics, Digital Ima
 
 ## 🏆 Achievements
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=shadhinnandi&theme=tokyonight&no-frame=true&row=1&column=7" alt="GitHub Trophies"/>
-</p>
-
 - 🥉 **3rd Runners-up** among 93 teams in **UIU CSE Project Show (Fall 2025)** for A𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐎𝐛𝐣𝐞𝐜𝐭 𝐎𝐫𝐢𝐞𝐧𝐭𝐞𝐝 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐢𝐧𝐠 𝐋𝐚𝐛𝐨𝐫𝐚𝐭𝐨𝐫𝐲 category, 𝐏𝐫𝐨𝐣𝐞𝐜𝐭 𝐓𝐢𝐭𝐭𝐥𝐞: "**Vortex Arena — Real-Time Multiplayer Survival Game**" – by Falmouth Falcons
 - 🥉 **3rd Runners-up** among 73 teams in **UIU CSE Project Show (Summer 2025)** for 𝐌𝐢𝐜𝐫𝐨𝐩𝐫𝐨𝐜𝐞𝐬𝐬𝐨𝐫𝐬 𝐚𝐧𝐝 𝐌𝐢𝐜𝐫𝐨𝐜𝐨𝐧𝐭𝐫𝐨𝐥𝐥𝐞𝐫𝐬 𝐋𝐚𝐛𝐨𝐫𝐚𝐭𝐨𝐫𝐲 category, 𝐏𝐫𝐨𝐣𝐞𝐜𝐭 𝐓𝐢𝐭𝐭𝐥𝐞: "**Automated River Analysis Marine (ARAM)**" – a smart autonomous river monitoring system by Team ReBuggers
 
@@ -140,40 +136,21 @@ I'm a passionate developer and researcher focused on Bioinformatics, Digital Ima
   - Assisted in OOP (Java), ICS (C), and DSA 1 & 2 (C++), Electronics courses
   - Supported practical learning by conducting lab sessions, delivering hands-on guidance, and mentoring students through academic projects.
 
----
-
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=shadhinnandi&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" width="48%"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=shadhinnandi&theme=tokyonight&hide_border=true" alt="GitHub Streak" width="48%"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shadhinnandi&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=shadhinnandi&theme=tokyo-night&hide_border=true" alt="Contribution Graph"/>
-</p>
-
----
-
 ## 📌 Featured Projects
 
 <p align="center">
-  <a href="https://shadhinnandi.github.io/UIU-grading-calculator/">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=shadhinnandi&repo=UIU-grading-calculator&theme=tokyonight&hide_border=true" alt="UIU Grading Calculator"/>
+  <a href="https://shadhinnandi.vercel.app/">
+    <img src="https://img.shields.io/badge/Explore_my_portfolio-shadhinnandi.vercel.app-178673?style=for-the-badge&logo=vercel&logoColor=white" alt="Explore Shadhin Nandi's portfolio"/>
   </a>
 </p>
 
 | Project | Description | Links |
 |---------|-------------|-------|
-| 🎮 [**Vortex Arena**](https://github.com/shadhinnandi/Vortex-Arena) | Top-down arena shooter with a Spring Boot backend for player accounts, statistics and inventory. | [Source](https://github.com/shadhinnandi/Vortex-Arena) |
 | 🕹️ [**DashRush**](https://shadhinnandi.github.io/dev/projects/dashrush) | Browser gaming platform with seven canvas-based games and responsive keyboard, mouse and touch controls. | [Play](https://shadhinnandi.github.io/dev/projects/dashrush) |
+| 💸 [**UIUFund**](https://github.com/shadhinnandi/UIU-Funds-and-Crowd-fundings) | Crowdfunding and peer-loan platform for UIU students with campaigns, wallet ledger, offers and community features. | [Source](https://github.com/shadhinnandi/UIU-Funds-and-Crowd-fundings) |
+| 🎮 [**Vortex Arena**](https://github.com/shadhinnandi/Vortex-Arena) | Top-down arena shooter with a Spring Boot backend for player accounts, statistics and inventory. | [Source](https://github.com/shadhinnandi/Vortex-Arena) |
 | 🗺️ [**Ber Hoi**](https://github.com/shadhinnandi/BerHoi-Group-Pickup-Planner) | Group meetup planner for Dhaka that compares fair meeting points, transport assumptions and shared expenses. | [Source](https://github.com/shadhinnandi/BerHoi-Group-Pickup-Planner) · [Live demo](https://berhoi.vercel.app/) |
 | 🌊 [**ARAM**](https://shadhinnandi.github.io/dev/projects/aram) | Autonomous river-monitoring prototype for real-time water-level tracking with sensor data and live mapping. | [Case study](https://shadhinnandi.github.io/dev/projects/aram) |
-| 💸 [**UIUFund**](https://github.com/shadhinnandi/UIU-Funds-and-Crowd-fundings) | Crowdfunding and peer-loan platform for UIU students with campaigns, wallet ledger, offers and community features. | [Source](https://github.com/shadhinnandi/UIU-Funds-and-Crowd-fundings) |
 | 🚨 [**Durjog Prohori**](https://github.com/shadhinnandi/Durjog-Prohori-) | Disaster-response platform connecting citizens, authorities, firefighters and NGOs through reports, alerts and maps. | [Source](https://github.com/shadhinnandi/Durjog-Prohori-) |
 | 🌾 [**Shombhar**](https://github.com/shadhinnandi/Shombhar_The_Farmers_Market) | Farm-to-buyer marketplace with role-based panels, purchase requests, chat, hiring and admin reports. | [Source](https://github.com/shadhinnandi/Shombhar_The_Farmers_Market) · [Video demonstration](https://youtu.be/lyObKZjh4kI) |
 | 🧰 [**ELMS Extractor**](https://github.com/shadhinnandi/Elms_Extractor) | Python and FastAPI tool that exports UIU ELMS course rosters as CSV, text lists or ZIP archives. | [Source](https://github.com/shadhinnandi/Elms_Extractor) |
