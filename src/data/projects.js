@@ -279,7 +279,7 @@ export const projects = [
     stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Leaflet'],
     image: image('durjog-landing', 'Durjog Prohori landing page in Bengali with login options for users, authorities, firefighters and NGOs over a flood scene'),
     gallery: [],
-    github: null,
+    github: 'https://github.com/shadhinnandi/Durjog-Prohori-.git',
     demo: null,
     links: [{ label: 'Project report', href: publicUrl('documents/durjog-prohori-report.pdf'), kind: 'pdf' }],
     details: {
