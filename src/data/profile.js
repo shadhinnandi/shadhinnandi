@@ -10,10 +10,10 @@ export const profile = {
   universityShort: 'UIU',
   portrait: image('portrait', 'Portrait of Shadhin Nandi'),
   landingPhoto: {
-    src: publicUrl('photos/landing-photo.JPG'),
+    src: publicUrl('photos/landing-photo.PNG'),
     alt: 'Portrait of Shadhin Nandi',
-    width: 937,
-    height: 1136,
+    width: 1254,
+    height: 1254,
   },
 
   // Hero: one statement.

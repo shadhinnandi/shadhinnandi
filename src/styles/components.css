@@ -348,6 +348,26 @@
     width: 100%;
   }
 }
+@media (max-width: 759px) {
+  .hero__grid {
+    justify-items: center;
+  }
+  .hero__copy {
+    text-align: center;
+  }
+  .hero__headline {
+    margin-inline: auto;
+  }
+  .hero__actions {
+    justify-content: center;
+  }
+  .hero__links {
+    justify-content: center;
+  }
+  .hero__portrait {
+    justify-self: center;
+  }
+}
 
 /* Hero entrance: staggered, once, on first load only */
 .motion-ok .hero__copy > *,
