@@ -3,6 +3,8 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import SiteHeader from './components/layout/SiteHeader.jsx';
 import SiteFooter from './components/layout/SiteFooter.jsx';
 import RouteEffects from './components/layout/RouteEffects.jsx';
+import CustomCursor from './components/interaction/CustomCursor.jsx';
+import IntroOverlay from './components/interaction/IntroOverlay.jsx';
 import Home from './pages/Home.jsx';
 
 const About = lazy(() => import('./pages/About.jsx'));
@@ -19,6 +21,8 @@ const NotFound = lazy(() => import('./pages/NotFound.jsx'));
 export default function App() {
   return (
     <>
+      <CustomCursor />
+      <IntroOverlay />
       <a className="skip-link" href="#main">
         Skip to content
       </a>

@@ -1,0 +1,185 @@
+:root {
+  --cursor-blue: #527bfa;
+  --cursor-violet: #865cf6;
+  --cursor-highlight: #a16bfa;
+}
+
+.custom-cursor {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.custom-cursor__field,
+.custom-cursor__dot {
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.custom-cursor__field {
+  inset: 0;
+  background: radial-gradient(
+    circle 45px at var(--cursor-x) var(--cursor-y),
+    rgb(82 123 250 / 0.19),
+    rgb(134 92 246 / 0.1) 38%,
+    transparent 100%
+  );
+  will-change: background;
+  transition: opacity 200ms var(--ease);
+}
+
+.custom-cursor__dot {
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--cursor-blue), var(--cursor-violet));
+  transform-origin: center;
+  translate: calc(-50% + 6px) calc(-50% + 6px);
+  will-change: transform;
+  transition:
+    width 220ms var(--ease),
+    height 220ms var(--ease),
+    opacity 220ms var(--ease),
+    background 220ms var(--ease),
+    filter 220ms var(--ease);
+}
+
+.custom-cursor__dot::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--cursor-blue), var(--cursor-violet));
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 220ms var(--ease);
+}
+
+.custom-cursor--visible .custom-cursor__dot {
+  opacity: 0.85;
+}
+
+.custom-cursor--interactive .custom-cursor__field {
+  opacity: 1;
+  background: radial-gradient(
+    circle 40px at var(--cursor-x) var(--cursor-y),
+    rgb(82 123 250 / 0.24),
+    rgb(134 92 246 / 0.13) 42%,
+    transparent 100%
+  );
+}
+
+.custom-cursor--interactive .custom-cursor__dot {
+  width: 30px;
+  height: 30px;
+  opacity: 0.95;
+  background: radial-gradient(
+    circle at center,
+    rgb(82 123 250 / 0.2) 0%,
+    rgb(134 92 246 / 0.17) 48%,
+    rgb(134 92 246 / 0.04) 76%,
+    transparent 100%
+  );
+  filter: blur(0.7px);
+}
+
+.custom-cursor--interactive .custom-cursor__dot::after {
+  opacity: 1;
+}
+
+.custom-cursor--native .custom-cursor__field,
+.custom-cursor--native .custom-cursor__dot {
+  opacity: 0;
+}
+
+[data-cursor-magnetic] {
+  transition: translate 220ms var(--ease);
+}
+
+::selection {
+  background: rgb(117 91 245 / 0.22);
+  color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  .custom-cursor--interactive .custom-cursor__field {
+    background: radial-gradient(
+      circle 40px at var(--cursor-x) var(--cursor-y),
+      rgb(82 123 250 / 0.29),
+      rgb(134 92 246 / 0.17) 42%,
+      transparent 100%
+    );
+  }
+
+  .custom-cursor--interactive .custom-cursor__dot {
+    background: radial-gradient(
+      circle at center,
+      rgb(82 123 250 / 0.24) 0%,
+      rgb(134 92 246 / 0.2) 48%,
+      rgb(134 92 246 / 0.06) 76%,
+      transparent 100%
+    );
+  }
+}
+
+:root[data-theme='dark'] .custom-cursor__field {
+  background: radial-gradient(
+    circle 45px at var(--cursor-x) var(--cursor-y),
+    rgb(82 123 250 / 0.25),
+    rgb(134 92 246 / 0.14) 38%,
+    transparent 100%
+  );
+}
+
+:root[data-theme='dark'].custom-cursor--interactive .custom-cursor__field {
+  background: radial-gradient(
+    circle 40px at var(--cursor-x) var(--cursor-y),
+    rgb(82 123 250 / 0.29),
+    rgb(134 92 246 / 0.17) 40%,
+    transparent 100%
+  );
+}
+
+:root[data-theme='light'].custom-cursor--interactive .custom-cursor__field {
+  background: radial-gradient(
+    circle 40px at var(--cursor-x) var(--cursor-y),
+    rgb(82 123 250 / 0.23),
+    rgb(134 92 246 / 0.13) 40%,
+    transparent 100%
+  );
+}
+
+:root[data-theme='dark'].custom-cursor--interactive .custom-cursor__dot {
+  background: radial-gradient(
+    circle at center,
+    rgb(82 123 250 / 0.24) 0%,
+    rgb(134 92 246 / 0.2) 48%,
+    rgb(134 92 246 / 0.06) 76%,
+    transparent 100%
+  );
+}
+
+:root[data-theme='light'].custom-cursor--interactive .custom-cursor__dot {
+  background: radial-gradient(
+    circle at center,
+    rgb(82 123 250 / 0.2) 0%,
+    rgb(134 92 246 / 0.17) 48%,
+    rgb(134 92 246 / 0.04) 76%,
+    transparent 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor__field,
+  .custom-cursor__dot,
+  [data-cursor-magnetic] {
+    transition: none;
+  }
+}

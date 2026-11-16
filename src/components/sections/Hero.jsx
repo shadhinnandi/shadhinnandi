@@ -25,21 +25,21 @@ export default function Hero() {
             <p className="hero__headline">{profile.headline}</p>
 
             <div className="hero__actions">
-              <a className="btn btn--primary" href="#work">
+              <a className="btn btn--primary" href="#work" data-cursor-magnetic>
                 View selected work
                 <Icon name="arrowRight" />
               </a>
               <ul className="hero__links">
                 {primaryLinks.map((l) => (
                   <li key={l.label}>
-                    <ExternalLink className="btn btn--ghost" href={l.href} rel="me">
+                    <ExternalLink className="btn btn--ghost" href={l.href} rel="me" data-cursor-magnetic>
                       {l.label}
                       <Icon name="arrowUpRight" />
                     </ExternalLink>
                   </li>
                 ))}
                 <li>
-                  <a className="btn btn--ghost" href={profile.resume} target="_blank" rel="noopener" type="application/pdf">
+                  <a className="btn btn--ghost" href={profile.resume} target="_blank" rel="noopener" type="application/pdf" data-cursor-magnetic>
                     Resume
                     <Icon name="arrowUpRight" />
                     <span className="visually-hidden"> (PDF, opens in a new tab)</span>

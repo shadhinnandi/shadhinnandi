@@ -8,7 +8,7 @@ export const degree = {
   period: 'Oct 2022 – Jan 2027 (expected)',
   facts: [
     { label: 'CGPA', value: '3.96', unit: '/ 4.00' },
-    { label: 'Credits completed', value: '128' },
+    { label: 'Credits completed', value: '130', unit: '/ 137' },
   ],
   photo: image(
     'uiu-campus',

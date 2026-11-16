@@ -48,7 +48,7 @@ export default function Home() {
       <Section
         id="work"
         title="Selected projects"
-        intro="Course projects, independent builds and research code — full-stack, embedded, ML, security and games."
+        intro="Projects and research exploring the application of computing across software systems, intelligent technologies, and interactive experiences."
         link={{ to: '/projects', label: `All ${projects.length} projects` }}
       >
         <div className="pgrid">

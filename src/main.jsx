@@ -8,6 +8,8 @@ import './styles/base.css';
 import './styles/layout.css';
 import './styles/components.css';
 import './styles/pages.css';
+import './styles/cursor.css';
+import './styles/intro.css';
 
 // Strip the trailing slash from Vite's base so the router works both at "/"
 // and under a sub-path such as "/shadhinnandi/" on GitHub Pages.
