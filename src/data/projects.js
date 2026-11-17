@@ -99,6 +99,41 @@ export const projects = [
     demoLabel: 'Explore DashRush',
   },
   {
+    slug: 'learnbyshadhin',
+    title: 'LearnByShadhin',
+    tagline: 'Independent academic learning platform',
+    area: 'Tools',
+    kind: 'Personal project',
+    course: null,
+    period: null,
+    featured: false,
+    award: null,
+    role: null,
+    summary:
+      'An independent academic learning platform featuring structured courses, organized study materials, and practical explanations designed to make learning more accessible.',
+    highlights: [
+      'Structured course library with organized academic resources and practical explanations.',
+      'Responsive learning experience with accessible navigation across devices.',
+    ],
+    stack: ['React', 'Vite', 'JavaScript', 'CSS'],
+    image: {
+      src: publicUrl('photos/learnbyshadhin-showcase.png'),
+      alt: 'LearnByShadhin academic learning platform showcase',
+      width: 1672,
+      height: 941,
+    },
+    gallery: [],
+    github: null,
+    demo: 'https://learnbyshadhin.vercel.app/',
+    demoLabel: 'Explore LearnByShadhin',
+    details: {
+      implementation: [
+        'React single-page application built with Vite, JavaScript and CSS.',
+        'Course content is organized into dedicated academic sections with responsive layouts.',
+      ],
+    },
+  },
+  {
     slug: 'ber-hoi',
     title: 'Ber Hoi',
     tagline: 'Group meetup planner for Dhaka hangouts',
